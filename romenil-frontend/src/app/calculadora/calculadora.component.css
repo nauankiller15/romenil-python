@@ -375,6 +375,7 @@ header {
   margin-left: -110px;
   margin-top: 50px;
   width: 655px;
+  animation: slide-left 1.4s ease-in-out;
 }
 
 .result-content {
@@ -382,6 +383,7 @@ header {
   background: #1a1a1a;
   border-radius: 5px;
   padding: 15px;
+  animation: slide-left 1.3s ease-in-out;
 }
 
 .result-content ul {

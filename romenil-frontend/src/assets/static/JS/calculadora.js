@@ -27,7 +27,7 @@ window.onload = function () {
     Aqui está o resultado:
     </p>
 
-    <div class="result-content" style="background-color: #1a1a1a; padding: 10px; border-radius: 10px;">
+    <div class="result-content" style="background-color: #1a1a1a; padding: 10px; border-radius: 10px; animation: slide-left 1.3s ease-in-out;">
               <ul style="list-style: none; font-size: 15px;">
                
                 <li>
