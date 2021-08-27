@@ -127,7 +127,7 @@ header {
 
 .dadosConsulta {
   padding: 13px;
-  font-size: 1.23em;
+  font-size: 1em;
   width: 47%;
   display: inline-flex;
   margin: 3vh 4vh 2vh 0px;
@@ -188,6 +188,18 @@ header {
   animation: slide-left 0.6s ease-in-out;
 }
 
+
+.dadosConsulta label {
+  color: #75c400;
+  border-right: 1px solid #272727;
+  line-height: 23px;
+  width: 100%;
+  /* line-height: 40px; */
+  font-size: 20px;
+  margin-top: 13px;
+}
+
+
 /* ANIMAÇÕES */
 @keyframes slide-left {
   0% {
@@ -229,13 +241,6 @@ header {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-.dadosConsulta label {
-  color: #75c400;
-  border-right: 1px solid #272727;
-  line-height: 50px;
-  width: 100%;
 }
 
 .setaAr {

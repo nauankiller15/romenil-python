@@ -11,7 +11,7 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
     $('#fecharBtCardp').on('click', function () {
-      $('#cardapio').fadeOut('100');
+      $('#formulario').fadeOut('100');
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
