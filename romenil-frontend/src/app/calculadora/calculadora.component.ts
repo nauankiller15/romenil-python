@@ -31,8 +31,8 @@ export class CalculadoraComponent implements OnInit {
       $('.cardBtn').slideDown(250);
     });
     $('#refazerIMC').on('click', function () {
-      $('#calculadoraForm').slideDown(250);
-      $('#resultados').slideUp(250);
+      $('#calculadoraForm').slideDown(450);
+      $('#resultados').slideUp(450);
       $('.cardBtn').slideDown(250);
     });
   }
