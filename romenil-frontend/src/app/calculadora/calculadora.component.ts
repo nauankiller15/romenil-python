@@ -24,5 +24,9 @@ export class CalculadoraComponent implements OnInit {
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
+    // 
+    $('#calculated').on('click', function () {
+      $('#calculadoraForm').slideUp('100');
+    });
   }
 }
