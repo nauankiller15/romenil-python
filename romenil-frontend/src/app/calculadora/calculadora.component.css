@@ -201,7 +201,14 @@ header {
 
 .cardBtn {
   margin: 5vh auto;
-  width: 30%;
+  width: 100%;
+  text-align: center;
+  animation: slide-left 1.8s ease-in-out;
+  display: none;
+}
+
+.persist {
+  animation: slide-left 2.2s ease-in-out;
 }
 
 .success {
