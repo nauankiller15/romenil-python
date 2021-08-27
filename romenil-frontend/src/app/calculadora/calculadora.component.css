@@ -359,6 +359,7 @@ header {
   font-family: "Montserrat Bold", sans-serif;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 .form-group button:hover {

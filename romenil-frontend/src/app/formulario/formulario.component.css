@@ -192,6 +192,14 @@ header {
   padding: 10px;
 }
 
+.favMarks{
+  margin: 35px auto;
+  font-size: 41px;
+  width: 56px;
+  color: #75c400;
+  padding: 4px;
+}
+
 .dadosConsulta h3 {
   font-size: 1.2em;
   border-left: 1px solid #272727;

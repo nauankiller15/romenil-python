@@ -110,14 +110,20 @@
                 type="submit"
                 [disabled]="calculadoraForm.form.invalid"
               >
-                Calcular dados
+              <i class="fas fa-calculator" style="margin-right: 10px;"></i>Calcular dados
               </button>
             </div>
           </form>
-          <div class="result-container" id="result"></div>
-          <div class="cardBtn">
-            <div class="persist">COPY PERSUANDINDO A PESSOA!</div>
-            <button class="btn success">Gerar meu Cardápio</button>
+          <div id="resultados">
+            <div class="result-container" id="result"></div>
+            <div class="cardBtn">
+              <button class="btn success" id="refazerIMC">
+                <i class="fas fa-undo" style="margin-right: 10px;"></i>Refazer meu IMC
+              </button>
+              <div style="margin-top: 7vh"></div>
+              <div class="persist">COPY PERSUANDINDO A PESSOA!</div>
+              <button class="btn success"><i class="fas fa-calculator" style="margin-right: 10px;"></i>Gerar meu Cardápio</button>
+            </div>
           </div>
         </div>
       </div>
