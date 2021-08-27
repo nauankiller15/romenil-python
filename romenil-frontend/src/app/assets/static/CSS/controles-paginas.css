@@ -1,0 +1,9 @@
+#sobre {
+  display: none;
+  animation: SobreAnim 1.2s ease-in-out;
+}
+/*  */
+#contato {
+  display: none;
+  animation: TimeAnim 1.2s ease-in-out;
+}

@@ -1,0 +1,43 @@
+.footer {
+    background-color: #131313
+}
+
+.footer-title {
+    margin-bottom: 30px;
+    font-family: Montserrat, sans-serif;
+    color: var(--cor-titulo-footer);
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase
+}
+
+.creditos {
+    border-top: 1px solid var(--border-color-footer);
+    font-size: 14px;
+    width: 100%;
+    line-height: 60px;
+    font-size: 14px;
+    background-color: var(--creditos);
+    color: var(--cor-texto-footer);
+    text-align: center;
+    z-index: 100;
+    font-weight: 500;
+}
+
+.creditos p {
+    text-align: center;
+    padding: 10px;
+}
+
+.creditos a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+.creditos a:hover {
+    border-bottom: 1px transparent;
+}

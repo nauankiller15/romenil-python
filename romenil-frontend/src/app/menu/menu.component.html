@@ -1,0 +1,67 @@
+<div id="menu" class="menu">
+  <div class="circle"></div>
+  <div class="menu-mobile">
+    <ul>
+      <li id="inicioAbrirResponsv">
+        <a><i style="margin-right: 6px" class="fas fa-home"></i>Inicio</a>
+      </li>
+      <li>
+        <a href="#beneficios"
+          ><i style="margin-right: 6px" class="fas fa-info"></i> Sobre</a
+        >
+      </li>
+      <li>
+        <a href="#resultados"
+          ><i style="margin-right: 6px" class="fas fa-id-badge"></i> Contato</a
+        >
+      </li>
+      <li>
+        <a href="#resultados"
+          ><i style="margin-right: 6px" class="fas fa-id-badge"></i>
+          Consultas</a
+        >
+      </li>
+      <li id="">
+        <a
+          ><i style="margin-right: 6px" class="fas fa-sign-in-alt"></i> Login</a
+        >
+      </li>
+      <li>
+        <a href="#"
+          ><i style="margin-right: 6px" class="fab fa-instagram"></i>
+          Instagram</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="burger">
+    <div class="x"></div>
+    <div class="y"></div>
+    <div class="z"></div>
+  </div>
+
+  <div class="position">
+    <div class="logo"></div>
+
+    <nav>
+      <ul id="menutop" class="menuItems">
+        <li id="inicioAbrir">
+          <i style="margin-right: 6px" class="fas fa-home"></i>Inicio
+        </li>
+        <a href="#beneficios">
+          <li><i style="margin-right: 6px" class="fas fa-info"></i>Sobre</li>
+        </a>
+        <a href="#resultados">
+          <li>
+            <i style="margin-right: 6px" class="fas fa-id-badge"></i>Contato
+          </li>
+        </a>
+        <a [routerLink]="['/login']">
+          <li id="loginBt">
+            <i style="margin-right: 6px" class="fas fa-sign-in-alt"></i>Login
+          </li>
+        </a>
+      </ul>
+    </nav>
+  </div>
+</div>

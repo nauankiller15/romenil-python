@@ -1,0 +1,294 @@
+.main-links {
+  margin-top: 8vh;
+  margin-left: 40px;
+}
+
+.container-depoimentos {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 100px;
+  grid-row-gap: 0;
+  text-align: center;
+}
+
+.menu-text,
+.middle-line,
+.vertical-link {
+  margin-left: 15px;
+}
+
+.middle-line {
+  width: 16px;
+  height: 3px;
+  background-color: var(--branco);
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.banner-content-half {
+  width: 100%;
+  margin-top: -15vh;
+  z-index: 800;
+}
+
+/* TROFÉU */
+.posit-trophy img {
+  width: 31px;
+  height: 35px;
+}
+
+.posit-trophy {
+  border: 2px solid #191a1a2e;
+  border-radius: 50%;
+  background-color: var(--azul);
+  margin-top: -33px;
+  position: absolute;
+  padding: 12px;
+  align-items: center;
+  transform: 50% 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/*  */
+
+.container-banner {
+  z-index: 10;
+  margin-right: auto;
+  margin-left: auto;
+  width: 65%;
+  text-align: center;
+}
+
+.link {
+  border-top: 5px solid var(--azul);
+  padding: 6px;
+  margin-right: 28px;
+  box-shadow: inset 0 -2px 0 0 var(---borda-menu2);
+  font-size: 27px;
+  line-height: 28px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.4s;
+  border-bottom: 1px solid var(--azul);
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: var(--azul);
+  transform: translate(0px, -6px);
+}
+
+.contato-mobile {
+  display: none;
+}
+
+.logo {
+  position: absolute;
+  background: url(https://1.bp.blogspot.com/-_l-I4pf8BKU/YJqS6MGOaEI/AAAAAAAAHJo/1ljoJpXIhFgsXbaGHvEgtBx5P4E7McduACLcBGAsYHQ/s0/logo-site.png)
+    no-repeat;
+  background-size: 82%;
+  padding: 68px 236px 10px 2px;
+  cursor: pointer;
+  top: 13px;
+  margin-left: -48px;
+  transition: 0.3s;
+}
+.logo:hover {
+  transform: translate(0px, -7px);
+}
+/*  */
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 98px;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.4s;
+  background: linear-gradient(#0000000a, #f1f1f1);
+  font-family: Montserrat;
+  animation: positMenu 2.2s ease-in-out;
+}
+
+.menu-back {
+  transition: 0.5s;
+  background: #ffffff9e;
+  position: fixed;
+  backdrop-filter: blur(10px);
+}
+
+.menu-back2 {
+  transition: 0.5s;
+  background: #00694d57;
+  position: fixed;
+}
+
+.position {
+  width: 77%;
+  margin: auto;
+}
+/*  */
+
+.front-as-menu {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 45vh;
+}
+
+.front-as-menu a {
+  color: var(--preto);
+  background-color: var(--azul);
+  font-size: 23px;
+  display: inline-grid;
+}
+/*  */
+
+nav {
+  display: none;
+}
+
+nav .menuItems {
+  display: none;
+}
+
+nav .menuItems li {
+  display: none;
+}
+
+nav .menuItems li a.active {
+  display: none;
+}
+
+nav .menuItems li:hover {
+  display: none;
+}
+
+nav .menuItems li::before {
+  display: none;
+}
+
+nav .menuItems li:hover::before {
+  display: none;
+}
+/*  */
+
+@media (min-width: 1000px) {
+  .contato-mobile {
+    display: none;
+  }
+  nav {
+    display: block;
+    position: relative;
+    right: 0;
+  }
+  nav .menuItems {
+    position: absolute;
+    right: -40px;
+    list-style: none;
+    display: flex;
+    top: -6px;
+  }
+  nav .menuItems li {
+    display: block;
+    font-weight: 400;
+    padding: 17px;
+    text-decoration: none;
+    color: #1a2923;
+    font-size: 17px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    margin: 21px 17px 3px -9px;
+  }
+
+  nav .menuItems li a.active {
+    display: block;
+    padding: 21px;
+    color: var(--azul);
+    border-bottom: 2px solid var(--azul);
+  }
+  nav .menuItems li:hover {
+    text-shadow: 0px 1px 3px #fffdfd;
+    display: block;
+    color: #0a0e17;
+    background: var(--azul);
+    transform: scale(0.95) translate(-11px, 0px);
+  }
+  nav .menuItems li::before {
+    display: block;
+    content: attr(data-item);
+    transition: 0.2s;
+    position: absolute;
+    top: 21px;
+    bottom: 0;
+    left: 21px;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    cursor: pointer;
+    color: var(--branco);
+  }
+  nav .menuItems li:hover::before {
+    display: block;
+    width: 72%;
+    height: 130%;
+    transition: all 0.59s ease-in-out;
+  }
+  .contato span {
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    top: 0px;
+  }
+  .contato {
+    font-weight: bold;
+    margin: 21px 10px 19px 9px;
+    color: var(--cor-menu);
+    border: 2px solid var(--cor-borda-menu);
+    padding: 13px 33px;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.5s;
+    text-transform: uppercase;
+  }
+  .contato:hover {
+    color: var(--cor-menu2);
+    transform: translate(0px, -3px);
+  }
+  .contato:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--cor-background-menu);
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: transform 0.4s ease;
+    z-index: 0;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .contato:hover:before {
+    -webkit-transform: scaleX(200);
+    -ms-transform: scaleX(200);
+    transform: scaleX(200);
+    opacity: 1;
+  }
+}

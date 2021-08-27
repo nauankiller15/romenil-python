@@ -1,0 +1,116 @@
+<div id="calculadora">
+  <div class="box-text-calculadora">
+    <div class="text-info-box-calc">
+      <a id="fecharBtCalc">
+        <div class="fechar-button">X</div>
+      </a>
+      <div class="container">
+        <header>
+          <div class="logo-calc"></div>
+        </header>
+
+        <div class="content">
+          <form id="calculadoraForm" #calculadoraForm="ngForm">
+            <div class="form-group">
+              <label for="gender">Seu sexo</label>
+              <select
+                id="gender"
+                class="form-control"
+                #sexo="ngModel"
+                [(ngModel)]="calculadora.sexo"
+                name="sexo"
+                [class.is-invalid]="sexo.invalid && sexo.touched"
+                [class.is-valid]="sexo.valid && sexo.touched"
+                placeholder="Selecione"
+              >
+                <option value="">Selecione aqui</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="age">Sua idade</label>
+              <input
+                class="form-control"
+                #idade="ngModel"
+                [(ngModel)]="calculadora.idade"
+                name="idade"
+                [class.is-invalid]="idade.invalid && idade.touched"
+                [class.is-valid]="idade.valid && idade.touched"
+                required
+                type="number"
+                id="age"
+                placeholder="Digite aqui sua idade"
+              />
+            </div>
+            <div class="form-group">
+              <label for="weight">Seu peso</label>
+              <input
+                type="number"
+                id="weight"
+                class="form-control"
+                #peso="ngModel"
+                [(ngModel)]="calculadora.peso"
+                name="peso"
+                [class.is-invalid]="peso.invalid && peso.touched"
+                [class.is-valid]="peso.valid && peso.touched"
+                required
+                placeholder="Digite aqui seu peso"
+              />
+            </div>
+            <div class="form-group">
+              <label for="height">Sua altura</label>
+              <input
+                type="number"
+                id="height"
+                class="form-control"
+                #altura="ngModel"
+                [(ngModel)]="calculadora.altura"
+                name="altura"
+                [class.is-invalid]="altura.invalid && altura.touched"
+                [class.is-valid]="altura.valid && altura.touched"
+                required
+                placeholder="Digite aqui sua altura"
+              />
+            </div>
+            <div class="form-group">
+              <label for="activity_level">Seu nível de atividade física</label>
+              <select
+                id="activity_level"
+                class="form-control"
+                #nivel_atividade="ngModel"
+                [(ngModel)]="calculadora.nivel_atividade"
+                name="nivel_atividade"
+                [class.is-invalid]="
+                  nivel_atividade.invalid && nivel_atividade.touched
+                "
+                [class.is-valid]="
+                  nivel_atividade.valid && nivel_atividade.touched
+                "
+              >
+                <option>Selecione aqui</option>
+                <option value="1.2">Sedentário</option>
+                <option value="1.375">Pouca atividade</option>
+                <option value="1.55">Atividade moderada</option>
+                <option value="1.725">Atividade intensa</option>
+                <option value="1.9">Atividade muito intensa</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <button
+              id="calculated"
+                style="height: 55px"
+                type="submit"
+                [disabled]="calculadoraForm.form.invalid"
+              >
+                Calcular dados
+              </button>
+            </div>
+          </form>
+          <div class="result-container" id="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

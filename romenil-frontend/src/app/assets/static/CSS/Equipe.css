@@ -1,0 +1,200 @@
+.menutop {
+    width: 100vh;
+    height: 99px;
+}
+
+.container-big-depoimentos {
+    padding-top: 85px;
+    background-image: url(https://1.bp.blogspot.com/-RKeeERC40As/YFZ97GPOaHI/AAAAAAAAG7s/iK15fVQbHRABlV7epyMMrdbt57WJtQERACLcBGAsYHQ/s0/arestas-fundo-circulos-equipe.png), url(https://1.bp.blogspot.com/-DY3gZAzsT9I/YFZ9pnUkyXI/AAAAAAAAG7c/LekTgES2RLwSVva18LJ4F_qd2zo-Mo6PACLcBGAsYHQ/s0/arestas-equipe.png), url(https://1.bp.blogspot.com/-zlyPg3cf9Q4/YFaA3rRflWI/AAAAAAAAG70/2vREqOBqJ1shfkhjxEze864KbEwrrA2sgCLcBGAsYHQ/s0/arestas-equipe2.png), url(https://1.bp.blogspot.com/-b77hDlPNZGo/YFaDKoaPDkI/AAAAAAAAG78/wp0TTzNEr549Q_bWXnG1INdKNMpXMDgnQCLcBGAsYHQ/s0/circulos.png), url(https://1.bp.blogspot.com/-E94JTPrGT08/YFZ90S3R0SI/AAAAAAAAG7k/-gjG6oQ39sUn4M26aK3ozDoOzonv3wTzwCLcBGAsYHQ/s0/arestas%2Bmaiores%2Be%2Bshapes%2Bequipe.png), url(https://1.bp.blogspot.com/-RKeeERC40As/YFZ97GPOaHI/AAAAAAAAG7s/iK15fVQbHRABlV7epyMMrdbt57WJtQERACLcBGAsYHQ/s0/arestas-fundo-circulos-equipe.png);
+    background-position: 0 15%, 100% 0, 160% 20%, 94% 95%, 0 50%, 0 95%, 0px 100%;
+    background-size: auto, auto, auto, auto, auto, auto;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+
+.content-width-depoimentos {
+    width: 100%;
+    margin-left: 14vh;
+}
+
+.section-depo {
+    background-position: 0 0, 100.5% 50%;
+    background-size: auto, contain;
+    background-repeat: repeat, no-repeat;
+    background-color: var(--azul);
+}
+
+.centro-depo {
+    background: var(--azul);
+    padding: 16px;
+    border-bottom: 2px solid;
+    text-align: center;
+    font-size: 77px;
+    width: 68vh;
+    margin: 0 auto;
+    text-shadow: 0 1px 0 var(--branco), 0 0 10px var(--azul);
+    box-shadow: 0 1px 0 var(--branco);
+}
+
+
+/*  */
+
+.tag-job {
+    position: absolute;
+    z-index: 2;
+    font-size: 42px;
+    color: var(--azul);
+    background: var(--preto);
+    border-radius: 50%;
+    padding: 15px;
+    border: 5px solid var(--azul);
+}
+
+.job1 {
+    margin-left: 16vh;
+    margin-top: -5vh;
+}
+
+.job2 {
+    margin-left: 16vh;
+    margin-top: -5vh;
+}
+
+.job3 {
+    margin-left: 16vh;
+    margin-top: -5vh;
+}
+
+.job4 {
+    margin-left: 16vh;
+    margin-top: -5vh;
+}
+
+.job5 {
+    margin-left: 16vh;
+    margin-top: -5vh;
+}
+
+.job6 {
+    margin-left: 16vh;
+    margin-top: -5vh;
+}
+
+.upper {
+    margin-top: 3vh;
+    margin-left: 0vh;
+    text-transform: uppercase;
+    border-top: 0px solid;
+    width: 40vh;
+    background: var(--azul);
+    color: #000000;
+    text-shadow: 0 3px 0 var(--branco), 0 0 10px var(--azul);
+    text-align: center;
+}
+
+
+/* PERSONAGENS */
+
+.profile-picture {
+    width: 380px;
+    height: 401px;
+    border-radius: 50%;
+    border: 9px solid var(--preto);
+    overflow: hidden;
+    background: var(--azul);
+    transition: 0.5s;
+}
+
+.landscape img {
+    height: 100%;
+    left: 16px;
+    bottom: -6px;
+    position: relative;
+}
+
+.joao-scape img {
+    left: 52px;
+}
+
+.nauan-scape img {
+    left: 42px;
+}
+
+.margem-hud {
+    margin-left: 4vh;
+}
+
+.ricardo {
+    background-size: 42%;
+    padding: 150px;
+    margin-top: -10vh;
+    animation: animMarcos 1.2s ease-in-out;
+}
+
+.marcos {
+    background-size: 48%;
+    padding: 150px;
+    margin-top: -15vh;
+    animation: animMarcos 1.8s ease-in-out !important;
+}
+
+.erick {
+    background-size: 52%;
+    padding: 150px;
+    margin-top: -22vh;
+    animation: animMarcos 1.2s ease-in-out;
+}
+
+.gabriel-batata {
+    background-size: 42%;
+    padding: 150px;
+    margin-top: -22vh;
+    animation: animMarcos 1.8s ease-in-out;
+}
+
+.nauan {
+    background-size: 38%;
+    padding: 150px;
+    margin-top: -32vh;
+    animation: animMarcos 1.2s ease-in-out;
+}
+
+.joao-caetano {
+    background-size: 38%;
+    padding: 150px;
+    margin-top: -25vh;
+    animation: animMarcos 1.8s ease-in-out;
+}
+
+
+/*  */
+
+.depoimento-hud {
+    margin: auto;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr
+}
+
+.depoimento-hud li {
+    list-style: none;
+    margin-top: 2vh;
+    display: inline-grid;
+    width: 580px;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.depoimento-hud li:hover {
+    transform: translate(0px, -10px);
+}
+
+.depoimento-hud span {
+    border-bottom: 8px solid;
+    padding: 3px;
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--preto);
+    background: var(--azul);
+    line-height: 75px;
+    text-shadow: 0 2px 0 var(--branco), 0 0 10px var(--azul);
+    box-shadow: 0 2px 0 var(--branco);
+}

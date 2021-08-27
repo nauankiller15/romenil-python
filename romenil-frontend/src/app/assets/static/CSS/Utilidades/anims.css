@@ -1,0 +1,206 @@
+/* APRESENTAÇÃO */
+
+@keyframes positloader {
+  from {
+    transform: translateY(950px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes positBrand {
+  from {
+    transform: translateY(950px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes positDas {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes positTrophy {
+  from {
+    transform: translatex(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes positMenu {
+  from {
+    transform: translateY(-950px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* LOADING ANIMAÇÃO  */
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-opacity: 0;
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-opacity: 0;
+    -webkit-transform: scale(1.1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  50% {
+    opacity: 100;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
+}
+
+/* ANIMAÇÂO DAS CAIXAS DE TEXTOS */
+
+@keyframes go-back1 {
+  from {
+    transform: translateX(5px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* MENU CANTO DE BAIXO POSICOES*/
+
+@keyframes positMenubottom {
+  from {
+    transform: translateY(220px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ANIMAÇÂO PÁGINA SOBRE*/
+
+@keyframes SobreAnim {
+  from {
+    transform: translateX(-900px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ANIMACAO FRONT LETRAS */
+
+.texto-front {
+  color: var(--preto);
+  background: url(https://1.bp.blogspot.com/-X5iby7QqyVg/YJ1Z_j3SlNI/AAAAAAAAHK0/EP7b4Zl8VOMjcPZsLmxLv02FclDp-NENACLcBGAsYHQ/s0/medalhas-fundo.png);
+  background-color: var(--azul);
+  background-repeat: repeat-x;
+  background-size: contain;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  width: 665px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid #191a1a2e;
+  display: block;
+}
+
+.texto-front-mobile {
+  color: var(--preto);
+  background: url(https://1.bp.blogspot.com/-X5iby7QqyVg/YJ1Z_j3SlNI/AAAAAAAAHK0/EP7b4Zl8VOMjcPZsLmxLv02FclDp-NENACLcBGAsYHQ/s0/medalhas-fundo.png);
+  background-color: var(--azul);
+  background-repeat: repeat-x;
+  background-size: contain;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  width: 665px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid #191a1a2e;
+  display: none;
+}
+
+.fundo-ret {
+  background: url(https://1.bp.blogspot.com/-QTzAdxiOMz4/YJqtHhUc8tI/AAAAAAAAHJ0/yQkEbpgPyIU9rkODUTKqCa-_YLmAORnogCLcBGAsYHQ/s0/fundo%2Bret.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 450px;
+  height: 600px;
+  margin: auto;
+  display: block;
+}
+
+.fundo-ret-mobile {
+ display: none;
+}
+
+.partida-se {
+  color: var(--preto);
+  background: var(--azul);
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  width: 575px;
+  padding: 9px;
+}
+
+.cor-verde {
+  color: var(--azul);
+}
+
+.front-as {
+  width: 620px;
+  margin: auto;
+  font-weight: 450;
+  color: var(--branco);
+  text-align: center;
+  font-size: 23px;
+  text-shadow: 0px 1px 0px #000000;
+}
+
+.fundo-verde {
+  background: #0a0e17;
+  z-index: 1;
+  padding: 5px;
+}
