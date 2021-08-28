@@ -26,8 +26,8 @@ export class CalculadoraComponent implements OnInit {
     $('body').addClass('noborder');
     //
     $('#calculated').on('click', function () {
-      $('#calculadoraForm').fadeOut(250);
-      $('#resultados').slideDown(250);
+      $('#calculadoraForm').fadeOut(350);
+      $('#resultados').slideDown(350);
       $('.cardBtn').slideDown(250);
     });
     $('#refazerIMC').on('click', function () {

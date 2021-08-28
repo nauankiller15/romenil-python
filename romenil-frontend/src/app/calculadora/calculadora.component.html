@@ -94,7 +94,7 @@
                   nivel_atividade.valid && nivel_atividade.touched
                 "
               >
-                <option>Selecione aqui</option>
+                <option value="">Selecione aqui</option>
                 <option value="1.2">Sedentário</option>
                 <option value="1.375">Pouca atividade</option>
                 <option value="1.55">Atividade moderada</option>
@@ -110,7 +110,8 @@
                 type="submit"
                 [disabled]="calculadoraForm.form.invalid"
               >
-              <i class="fas fa-calculator" style="margin-right: 10px;"></i>Calcular dados
+                <i class="fas fa-calculator" style="margin-right: 10px"></i
+                >Calcular dados
               </button>
             </div>
           </form>
@@ -118,11 +119,15 @@
             <div class="result-container" id="result"></div>
             <div class="cardBtn">
               <button class="btn success" id="refazerIMC">
-                <i class="fas fa-undo" style="margin-right: 10px;"></i>Refazer meu IMC
+                <i class="fas fa-undo" style="margin-right: 10px"></i>Refazer
+                meu IMC
               </button>
               <div style="margin-top: 7vh"></div>
               <div class="persist">COPY PERSUANDINDO A PESSOA!</div>
-              <button class="btn success"><i class="fas fa-calculator" style="margin-right: 10px;"></i>Gerar meu Cardápio</button>
+              <button class="btn success">
+                <i class="fas fa-calculator" style="margin-right: 10px"></i
+                >Gerar meu Cardápio
+              </button>
             </div>
           </div>
         </div>
