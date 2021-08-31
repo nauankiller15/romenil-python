@@ -17,21 +17,11 @@ const routes: Routes = [
     children: [
       { path: 'login', component: LoginComponent },
       { path: 'create-account', component: CreateAccountComponent },
-      // 
+      //
       { path: 'welcome', component: WelcomeComponent },
       { path: 'calculadora', component: CalculadoraComponent },
       { path: 'cardapios', component: CardapiosComponent },
       { path: 'formulario', component: FormularioComponent },
-    ],
-    canActivate: [AuthGuard],
-  },
-  {
-    path: '',
-    component: AuthenticationComponent,
-    children: [
-      { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent },
-      { path: 'create-account', component: CreateAccountComponent },
     ],
   },
 ];
