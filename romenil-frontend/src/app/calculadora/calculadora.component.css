@@ -59,7 +59,7 @@ header {
   background: #555;
 }
 /*  */
-.box-text-cardapio {
+.box-text-calculadora {
   border-top: 4px solid #75c400;
   /* border-radius: 15px; */
   background: #0a0e17;
@@ -68,7 +68,7 @@ header {
   margin: 14vh auto;
   padding: 10px 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-page 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-calc 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {
@@ -270,7 +270,7 @@ header {
   }
 }
 
-@keyframes slide-page {
+@keyframes slide-calc {
   0% {
     transform: translateY(950px);
     opacity: 0;
