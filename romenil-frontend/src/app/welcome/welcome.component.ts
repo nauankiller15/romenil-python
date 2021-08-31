@@ -12,11 +12,10 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit(): void {
     $('#fecharBtCardp').on('click', function () {
-      $('#calculadora').fadeOut('100');
+      $('#bemvindo').fadeOut('100');
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
-    //
   }
 
 }

@@ -18,13 +18,7 @@ export class CreateAccountComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $('#fecharBtCriar').on('click', function () {
-      $('#criarconta').fadeOut('100');
-    });
-    $('#voltarLogin').on('click', function () {
-      $('#criarconta').fadeOut('100');
-      $('#login').fadeIn('100');
-    });
+
   }
 
   onSubmit(){

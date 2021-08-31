@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {
+
     $('#fecharBtLogin').on('click', function () {
       $('#login').fadeOut('100');
     });

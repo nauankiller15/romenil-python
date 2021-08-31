@@ -19,15 +19,36 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
-    // Animação Login Abrir
-
+    // ANIMAÇÃO LOGIN ABRIR
     $('#loginBt').on('click', function () {
       $('#login').fadeIn('100');
+      $('body').addClass('noborder');
     });
 
-    $('#fecharBt').on('click', function () {
+    $('#loginBtMobile').on('click', function () {
+      $('#login').fadeIn('100');
+      $('body').addClass('noborder');
+    });
+
+    $('#fecharBtLogin').on('click', function () {
       $('#login').fadeOut('100');
+      $('body').removeClass('noborder');
+    });
+    // ANIM BOTÃO CRIAR CONTA
+    $('#abrirConta').on('click', function () {
+      $('#criarconta').fadeIn('100');
+      $('#login').fadeOut('100');
+    });
+
+    // ANIMAÇÃO CRIAR ABRIR
+
+    $('#fecharBtCriar').on('click', function () {
+      $('#criarconta').fadeOut('100');
+      $('body').removeClass('noborder');
+    });
+    $('#voltarLogin').on('click', function () {
+      $('#criarconta').fadeOut('100');
+      $('#login').fadeIn('100');
     });
 
     // MENU RESPONSIVO
