@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
-#calculadora {
+#formulario {
   z-index: 9999;
   width: 100%;
   height: 100%;
@@ -59,7 +59,7 @@ header {
   background: #555;
 }
 /*  */
-.box-text-cardapio {
+.box-text-formulario {
   border-top: 4px solid #75c400;
   /* border-radius: 15px; */
   background: #0a0e17;
@@ -68,7 +68,7 @@ header {
   margin: 14vh auto;
   padding: 10px 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-page 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-page 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {
@@ -114,7 +114,7 @@ header {
   text-align: center;
   background-color: #0a0e17;
   color: #fff;
-  width: 45%;
+  width: 56%;
   margin: -21px auto;
   font-weight: 350;
   animation: scalePlan 1.4s ease-in-out;
@@ -192,6 +192,14 @@ header {
   padding: 10px;
 }
 
+.favMarks {
+  margin: 35px auto;
+  font-size: 41px;
+  width: 56px;
+  color: #75c400;
+  padding: 4px;
+}
+
 .dadosConsulta h3 {
   font-size: 1.2em;
   border-left: 1px solid #272727;
@@ -201,14 +209,7 @@ header {
 
 .cardBtn {
   margin: 5vh auto;
-  width: 100%;
-  text-align: center;
-  animation: slide-left 1.8s ease-in-out;
-  display: none;
-}
-
-.persist {
-  animation: slide-left 2.2s ease-in-out;
+  width: 30%;
 }
 
 .success {
@@ -231,6 +232,17 @@ header {
 @keyframes slide-left {
   0% {
     transform: translateX(-260px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-page {
+  0% {
+    transform: translateY(950px);
     opacity: 0;
   }
   100% {
@@ -262,17 +274,6 @@ header {
 @keyframes slide-bottom {
   0% {
     transform: translateY(500px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-page {
-  0% {
-    transform: translateY(950px);
     opacity: 0;
   }
   100% {
@@ -321,117 +322,19 @@ header {
   transform: translate(0px, -4px);
 }
 
-/* ESTILO DA CALCULADORA */
-
-.container {
-  width: 550px;
-  margin: 0 auto;
-  animation: slide-top 1.7s ease-in-out;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  font-size: 16px;
-  font-family: "Montserrat Semibold", sans-serif;
-  margin-bottom: 0px !important;
-}
-
-.form-group input,
-.form-group select {
-  background: #1a1a1a;
-  width: 100%;
-  height: 45px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  font-size: 14px;
-  padding: 0 15px;
-  outline: none;
-  transition: border-color 0.2s ease-in;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  border: 2px solid #75c400;
-}
-
-.form-group button {
-  background-image: linear-gradient(-90deg, #75c400 0%, #fddb33 100%);
-  border-radius: 5px;
-  border: 0;
-  height: 45px;
-  color: #1a1a1a;
-  font-size: 16px;
-  font-family: "Montserrat Bold", sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 600;
-}
-
-.form-group button:hover {
-  background-image: linear-gradient(-90deg, #75c400 0%, #75c400 100%);
-  transform: translate(0px, -2px);
-}
-
-.form-group:last-child {
-  margin-top: 40px;
-}
-
-.result-container {
-  color: #fff;
-  margin-left: -110px;
-  margin-top: 50px;
-  width: 655px;
-  animation: slide-left 1.4s ease-in-out;
-}
-
-.result-content {
-  margin-top: 10px;
-  background: #1a1a1a;
-  border-radius: 5px;
-  padding: 15px;
-  animation: slide-left 1.3s ease-in-out;
-}
-
-.result-content ul {
-  list-style: none;
-}
-
-.result-content ul li {
-  font-size: 14px;
-  font-weight: bold;
-  font-family: "Montserrat Bold", sans-serif;
-  line-height: 30px;
-}
-
-.result-content ul li strong {
-  color: #83a92f;
-}
-
 @media (max-width: 1100px) {
-  /* ESTILO DA CALCULADORA */
-
-  .result-container {
-    margin-left: 0;
-    margin-top: 50px;
-    color: #fff;
-    width: 100%;
-  }
-
-  .container {
+  /* ESTILO PADD */
+  .mobileEstilo {
+    margin-bottom: 1px !important;
     width: 100% !important;
-    margin: 0 auto;
+  }
+  .favMarks {
+    margin: 35px auto 45px auto !important;
   }
 
   /*  */
   .cardBtn {
-    margin: 7vh auto;
+    margin: auto;
     width: 100%;
   }
 
@@ -450,6 +353,12 @@ header {
     display: inline-grid;
   }
 
+  .dadosConsulta h3 {
+    font-size: 1.1em;
+    padding-left: 20px;
+    padding-bottom: 18px;
+    padding-top: 15px;
+  }
 
   .dadosConsulta label {
     color: #75c400;

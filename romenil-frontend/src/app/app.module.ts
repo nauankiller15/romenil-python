@@ -11,6 +11,7 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { AuthenticationComponent } from './account/authentication/authentication.component';
 import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormularioComponent } from './formulario/formulario.component';
     AuthenticationComponent,
     CardapiosComponent,
     FormularioComponent,
+    WelcomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
