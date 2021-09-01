@@ -16,6 +16,7 @@ export class WelcomeComponent implements OnInit {
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
+
   }
 
 }
