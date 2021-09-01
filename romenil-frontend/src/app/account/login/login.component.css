@@ -53,7 +53,7 @@
 .container {
   width: 80%;
   padding: 15px;
-  margin: 0 auto;
+  margin: 4vh auto;
 }
 
 .form-group {
@@ -102,15 +102,19 @@
 }
 
 .criarBt {
-  margin-top: 10px;
-  border-radius: 10px;
-  background-color: #efefef;
-  transition: 0.3s;
+  border: 1px solid #75c400;
+  color: #75c400;
+  font-weight: 500;
+  width: 100%;
+  background: none;
+  transition: 0.4s;
 }
 
 .criarBt:hover {
-  background-color: #d1d1d1;
-  transform: translate(0px, -3px);
+  background-color: #75c400;
+  color: #202020;
+  font-weight: 500;
+  width: 100%;
 }
 
 .form-group button {
