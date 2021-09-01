@@ -259,14 +259,6 @@ header {
     opacity: 1;
   }
 }
-
-.setaAr {
-  left: 48%;
-  position: absolute;
-  top: 50vh;
-  animation: nextArrow 0.7s infinite alternate;
-}
-
 .text-info-box-cardp {
   margin: auto;
   width: 100%;
@@ -304,10 +296,6 @@ header {
     width: 10%;
     font-size: 32px;
     margin-bottom: 13px;
-  }
-
-  .setaAr {
-    display: none;
   }
   .content-cardap {
     width: 90%;
