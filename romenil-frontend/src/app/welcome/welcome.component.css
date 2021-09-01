@@ -44,19 +44,19 @@ header {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #202020;
+  background: #2d2c31;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0a0e17;
+  background: #75c400;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #a8da5d;
 }
 /*  */
 .box-text-formulario {

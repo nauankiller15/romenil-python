@@ -44,19 +44,19 @@ header {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #202020;
+  background: #2d2c31;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0a0e17;
+  background: #75c400;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #a8da5d;
 }
 /*  */
 .box-text-cardapio {
@@ -121,7 +121,8 @@ header {
 }
 
 .content-cardap {
-  width: 80%;
+  width: 100%;
+  padding: 15px;
   margin: 4vh auto;
 }
 
@@ -298,7 +299,7 @@ header {
   transform: translate(0px, -4px);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
   .favTit {
     width: 10%;
     font-size: 32px;
