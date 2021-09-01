@@ -1,0 +1,4 @@
+__pycache__
+migrations
+variaveis_de_ambiente.py
+db.sqlite3
