@@ -10,11 +10,11 @@
   justify-content: center;
   align-items: center;
 }
- 
+
 .box-text-login {
   border-top: 4px solid #75c400;
   border-radius: 15px;
-  background: var(--branco);
+  background: #0a0e17;
   width: 60vh;
   min-height: 60vh;
   margin: 14vh auto;
@@ -159,4 +159,15 @@
 
 .result-content ul li strong {
   color: #83a92f;
+}
+
+@media (max-width: 1400px) {
+  .box-text-login {
+    border-top: 4px solid #75c400;
+    border-radius: 0px;
+    background: #0a0e17;
+    width: 60vh;
+    min-height: 70vh;
+    margin: 16vh auto;
+  }
 }
