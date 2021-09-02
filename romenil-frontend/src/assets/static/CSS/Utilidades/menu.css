@@ -104,6 +104,27 @@
 }
 /*  */
 
+.fechar-button {
+  cursor: pointer;
+  color: #75c400;
+  font-size: 20px;
+  display: flex;
+  float: right;
+  border-radius: 50px;
+  padding: 0px 12px 1px 12px;
+  margin-right: 15px;
+  margin-top: 11px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: 1px solid #75c400;
+}
+
+.fechar-button:hover {
+  background: var(--azul);
+  color: var(--branco);
+  transform: translate(0px, -4px);
+}
+/*  */
 .menu {
   position: absolute;
   top: 0;

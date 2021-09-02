@@ -267,30 +267,6 @@ header {
   overflow-y: scroll;
 }
 
-.fechar-button {
-  cursor: pointer;
-  color: #696969;
-  font-size: 27px;
-  display: flex;
-  float: right;
-  border-radius: 50px;
-  background: var(--branco);
-  padding: 0px 12px 1px 12px;
-  margin-right: 26px;
-  margin-top: 9px;
-  font-weight: 600;
-  transition: 0.3s;
-  position: absolute;
-  z-index: 99999;
-  right: 10px;
-}
-
-.fechar-button:hover {
-  background: var(--azul);
-  color: var(--branco);
-  transform: translate(0px, -4px);
-}
-
 @media (max-width: 1400px) {
   .favTit {
     width: 10%;
