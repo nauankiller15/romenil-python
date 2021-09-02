@@ -292,6 +292,16 @@ header {
 }
 
 @media (max-width: 1400px) {
+    /* SIDEBAR */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    .box-text-formulario {
+      width: 100%;
+      height: 100%;
+      margin: 14vh auto;
+      padding: 0;
+    }
   .favTit {
     width: 10%;
     font-size: 32px;
