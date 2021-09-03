@@ -12,6 +12,7 @@ import { AuthenticationComponent } from './account/authentication/authentication
 import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     CardapiosComponent,
     FormularioComponent,
     WelcomeComponent,
+    TopBarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
