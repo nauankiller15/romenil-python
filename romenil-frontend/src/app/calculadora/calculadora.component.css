@@ -14,7 +14,7 @@
 }
 
 header {
-  margin-top: 20px;
+  margin-top: 0;
   width: 100%;
   height: 100px;
   display: flex;
@@ -29,6 +29,7 @@ header {
   padding: 68px 236px 10px 2px;
   cursor: pointer;
   transition: 0.5s;
+  z-index: 999;
 }
 
 .logo-calc:hover {
@@ -390,17 +391,27 @@ header {
   color: #83a92f;
 }
 
+.separTe {
+  margin-top: 12vh;
+}
+
 @media (max-width: 1100px) {
-    /* SIDEBAR */
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-    .box-text-formulario {
-      width: 100%;
-      height: 100%;
-      margin: 14vh auto;
-      padding: 0;
-    }
+  .separTe {
+    margin-top: 5vh;
+  }
+  header {
+    margin-top: -60px;
+  }
+  /* SIDEBAR */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  .box-text-calculadora {
+    width: 100%;
+    height: 100%;
+    margin: 14vh auto;
+    padding: 0;
+  }
   /* ESTILO DA CALCULADORA */
 
   .result-container {
@@ -435,7 +446,6 @@ header {
     margin: 3vh 0vh 2vh 0px;
     display: inline-grid;
   }
-
 
   .dadosConsulta label {
     color: #75c400;

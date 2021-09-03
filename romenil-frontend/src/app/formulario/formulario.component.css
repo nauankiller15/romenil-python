@@ -14,7 +14,7 @@
 }
 
 header {
-  margin-top: 20px;
+  margin-top: 0;
   width: 100%;
   height: 100px;
   display: flex;
@@ -29,13 +29,13 @@ header {
   padding: 68px 236px 10px 2px;
   cursor: pointer;
   transition: 0.5s;
+  z-index: 999;
 }
 
 .logo-calc:hover {
   transform: translate(0px, -7px);
 }
 /*  */
-
 
 /* ESTILIZANDO SCROLLBAR */
 /* width */
@@ -67,7 +67,7 @@ header {
   width: 100%;
   height: 100%;
   margin: 14vh auto;
-  padding: 10px 5px 20px 5px;
+  padding: 0 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
   animation: slide-form 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
@@ -299,7 +299,17 @@ header {
   overflow-y: scroll;
 }
 
+.separTe {
+  margin-top: 12vh;
+}
+
 @media (max-width: 1100px) {
+  .separTe {
+    margin-top: 5vh;
+  }
+  header {
+    margin-top: -60px;
+  }
   /* SIDEBAR */
   ::-webkit-scrollbar {
     width: 5px;
