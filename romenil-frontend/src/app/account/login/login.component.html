@@ -7,7 +7,7 @@
       <header>
         <div class="logo-calc"></div>
       </header>
-      <div style="margin-top: 12vh"></div>
+      <div class="separTe"></div>
       <div class="container-cart">
         <h3>Faça o login:</h3>
       </div>
@@ -42,15 +42,17 @@
             class="btn loginBt"
             [disabled]="form.form.invalid"
           >
-            Entrar
+            <i class="fas fa-sign-in-alt" style="margin-right: 10px"></i>Entrar
           </button>
+          <div class="creatS">Ainda não possui uma conta em nosso sistema?</div>
           <button
             id="abrirConta"
             type="button"
             class="btn success"
             routerLink="/create-account"
           >
-            Criar Conta
+            <i class="fas fa-plus-circle" style="margin-right: 10px"></i>Criar
+            uma Conta
           </button>
         </form>
       </div>

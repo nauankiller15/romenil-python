@@ -40,19 +40,20 @@
 }
 
 .nav-links-btn {
-  background-color: #75c400;
-  color: #0a0e17;
+  color: #ffffff;
   padding: 6px 16px;
   font-weight: 500;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
+  border: solid 1px #9e2525;
 }
 .nav-links-btn:hover {
   background-color: transparent;
   color: #fff;
-  padding: 5px 15px;
+  padding: 5px 16px;
   border-radius: 5px;
-  border: solid 1px #75c400;
+  background-color: #731f1f;
+  border: solid 1px #9e2525;
 }
 
 .menu-toggle .bar {
@@ -105,13 +106,14 @@
     padding: 0;
     border: none;
     border-radius: 0;
-    background-color: #0a0e17;
+    background-color: #731f1f;
     color: #fff;
   }
 
   .nav-links-btn:hover {
     border: none;
-    background-color: #75c400;
+    background-color: #9e2525;
+    
   }
   .nav-links:hover {
     background-color: #75c400;

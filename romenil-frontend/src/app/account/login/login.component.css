@@ -217,6 +217,13 @@ header {
   width: 30%;
 }
 
+.creatS {
+  text-align: center;
+  padding: 10px;
+  margin: 2vh 0 1vh 0;
+  border-top: 1px solid #272727;
+}
+
 .success {
   border: 1px solid #75c400;
   color: #75c400;
