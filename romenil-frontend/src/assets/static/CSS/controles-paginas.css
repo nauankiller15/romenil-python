@@ -3,39 +3,6 @@
   animation: SobreAnim 1.2s ease-in-out;
 }
 
-#login {
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #00000094;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#login {
-  display: none;
-}
-
-.box-text-login {
-  border-top: 4px solid var(--cor-tema);
-  border-radius: 15px;
-  background: var(--branco);
-  width: 60vh;
-  min-height: 60vh;
-  margin: 14vh auto;
-}
-
-.text-info-box {
-  margin: auto;
-  width: 85%;
-  margin-top: 13px;
-  padding: 5px;
-}
-
 /* LISTA DE TAREFAS - CSS */
 
 /* BOTÃO DE ADICIONAR */
