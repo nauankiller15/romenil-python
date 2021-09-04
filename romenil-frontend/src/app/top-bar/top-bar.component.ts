@@ -11,6 +11,10 @@ export class TopBarComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    $('.menu-box').on('click', function () {
+      console.log('teste');
+      $('.box-menu').toggle(200);
+    });
     // MENU TOP BAR
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
