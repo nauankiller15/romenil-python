@@ -300,12 +300,19 @@ header {
 }
 
 .separTe {
-  margin-top: 12vh;
+  margin-top: 14vh;
+}
+
+.linhaD {
+  margin-top: 7vh;
 }
 
 @media (max-width: 1100px) {
   .favMarks {
     width: 15%;
+  }
+  .linhaD {
+    margin-top: 4vh;
   }
   .dadosConsulta h3 {
     font-size: 0.9em;
