@@ -95,6 +95,7 @@
 .wrapper.show {
   display: block;
   display: flex;
+  transition: all 0.3s ease;
 }
 
 /*  */
@@ -167,6 +168,25 @@
 @media screen and (max-width: 1100px) {
   .drop-btn {
     line-height: 60px;
+    color: #fff;
+  }
+  .drop-btn:hover {
+    line-height: 60px;
+    color: #fff;
+  }
+
+  .wrapper {
+    z-index: 1001;
+    position: absolute;
+    top: 60px;
+    display: flex;
+    width: 100%;
+    background-color: #0f131d;
+    border-radius: 5px;
+    right: 0;
+    display: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
 
   .nav-container {

@@ -200,7 +200,10 @@ nav .menuItems li:hover::before {
 }
 /*  */
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
+  .fechar-button {
+    display: none;
+  }
   .contato-mobile {
     display: none;
   }
