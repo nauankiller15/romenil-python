@@ -37,3 +37,5 @@ def cpf_is_valid(input_cpf:str):
                     return
 
     raise ValidationError({'CPF': 'CPF inválido'})
+
+
