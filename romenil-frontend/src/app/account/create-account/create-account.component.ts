@@ -13,6 +13,10 @@ export class CreateAccountComponent implements OnInit {
     nome: '',
     email: '',
     password: '',
+    passwordvalid: '',
+    cpf: '',
+    cnpj: '',
+    celular: '',
   }
 
   constructor() { }
