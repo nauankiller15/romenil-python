@@ -64,7 +64,111 @@
   background: #fff;
 }
 
+/* USER BUTTON */
+
+.drop-btn {
+  padding: 0 20px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+}
+
+.drop-btn:hover {
+  padding: 0 20px;
+  color: #75c400;
+}
+
+.wrapper {
+  z-index: 1001;
+  position: absolute;
+  top: 85px;
+  display: flex;
+  width: 300px;
+  background-color: #0f131d;
+  border-radius: 5px;
+  right: 15px;
+  display: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.wrapper.show {
+  display: block;
+  display: flex;
+}
+
+/*  */
+.wrapper .setting-drop {
+  display: none;
+}
+
+.wrapper ul {
+  list-style: none;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.wrapper ul li {
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.wrapper ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #b0b3b8;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.wrapper ul li:hover a {
+  background-color: #75c400;
+  color: #0a0e17;
+  font-weight: 500;
+}
+
+.wrapper ul li a .icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 13px;
+  background-color: #0f141f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  color: #b0b3b8;
+}
+
+.wrapper ul li a i {
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  pointer-events: none;
+}
+
+.wrapper .setting-drop .left-arrows {
+  padding-left: 10px;
+  font-size: 20px;
+  color: #b0b3b8;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+
+.wrapper .setting-drop .left-arrows span {
+  margin-right: 15px;
+}
+
+/* RESPONSIVO */
 @media screen and (max-width: 1100px) {
+  .drop-btn {
+    line-height: 60px;
+  }
+
   .nav-container {
     position: relative;
   }
@@ -113,7 +217,6 @@
   .nav-links-btn:hover {
     border: none;
     background-color: #9e2525;
-    
   }
   .nav-links:hover {
     background-color: #75c400;
