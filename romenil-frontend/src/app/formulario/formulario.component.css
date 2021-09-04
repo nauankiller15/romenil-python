@@ -304,6 +304,21 @@ header {
 }
 
 @media (max-width: 1100px) {
+  .favMarks {
+    width: 15%;
+  }
+  .dadosConsulta h3 {
+    font-size: 0.9em;
+  }
+  .content-cardap h4 {
+    width: 50%;
+  }
+  .atach {
+    font-size: 0.8em;
+  }
+  .option {
+    font-size: 0.9em;
+  }
   .separTe {
     margin-top: 5vh;
   }

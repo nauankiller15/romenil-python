@@ -271,7 +271,33 @@ header {
   margin-top: 12vh;
 }
 
+.cardBtn {
+  margin: 5vh auto;
+  width: 30%;
+}
+
+.success {
+  border: 1px solid #75c400;
+  color: #75c400;
+  font-weight: 500;
+  width: 100%;
+  background: none;
+  transition: 0.4s;
+}
+
+.success:hover {
+  background-color: #75c400;
+  color: #202020;
+  font-weight: 500;
+  width: 100%;
+}
+
 @media (max-width: 1400px) {
+  .cardBtn {
+    margin: auto;
+    width: 100%;
+  }
+
   .separTe {
     margin-top: 5vh;
   }
@@ -296,6 +322,7 @@ header {
   .content-cardap {
     width: 90%;
     margin: 4vh auto;
+    padding: 0;
   }
   .dadosConsulta {
     padding: 13px;
