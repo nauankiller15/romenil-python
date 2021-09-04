@@ -303,6 +303,9 @@ header {
 }
 
 @media (max-width: 1100px) {
+  .linhaE{
+    margin-bottom: 4vh;
+  }
   .separTe {
     margin-top: 10vh;
   }
