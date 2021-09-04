@@ -1,13 +1,37 @@
-from validators.usuario import cpf_is_valid
+from django.utils import timezone
+from django.contrib.auth.models import User
 from django.db.models import CASCADE
+from django.db.models import CharField
 from django.db.models import Model
 from django.db.models import ForeignKey
-from django.contrib.auth.models import User
-from django.db.models import CharField
+
+
+from validators.usuario import cpf_is_valid
+
 
 class Usuario(Model):
-    TEMA_CHOICES = {('default', 'default'), ('dark', 'dark')}
+
+    PLATAFORMAS = {('hotmart', 'hotmart'), ('eduzz', 'eduzz')}
 
     usuario = ForeignKey(User, on_delete=CASCADE)
-    tema = CharField(max_length=7, choices=TEMA_CHOICES)
-    cpf = CharField(max_length=14, validators=cpf_is_valid)
+    cpf = CharField(max_length=14, validators=[cpf_is_valid])
+    celular = CharField(max_length=14)  
+    plataforma = CharField(max_length=14, choices=PLATAFORMAS)  
+
+    def is_active(self):
+        hoje = timezone.now()
+        
+
+
+    
+
+
+class Subscription(Model):
+
+    PLATAFORMAS = {('hotmart', 'hotmart'), ('eduzz', 'eduzz')}
+
+    cpf = CharField(max_length=14, validators=[cpf_is_valid])
+    plataforma = CharField(max_length=14, choices=PLATAFORMAS)  
+    contract_status = CharField(max_length=15)  
+    contract_cancel_date = CharField(max_length=15) 
+
