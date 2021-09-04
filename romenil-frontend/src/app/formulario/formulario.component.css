@@ -14,7 +14,7 @@
 }
 
 header {
-  margin-top: 20px;
+  margin-top: 0;
   width: 100%;
   height: 100px;
   display: flex;
@@ -29,6 +29,7 @@ header {
   padding: 68px 236px 10px 2px;
   cursor: pointer;
   transition: 0.5s;
+  z-index: 999;
 }
 
 .logo-calc:hover {
@@ -44,19 +45,19 @@ header {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #202020;
+  background: #2d2c31;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0a0e17;
+  background: #75c400;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #a8da5d;
 }
 /*  */
 .box-text-formulario {
@@ -66,7 +67,7 @@ header {
   width: 100%;
   height: 100%;
   margin: 14vh auto;
-  padding: 10px 5px 20px 5px;
+  padding: 0 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
   animation: slide-form 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
@@ -298,31 +299,42 @@ header {
   overflow-y: scroll;
 }
 
-.fechar-button {
-  cursor: pointer;
-  color: #696969;
-  font-size: 27px;
-  display: flex;
-  float: right;
-  border-radius: 50px;
-  background: var(--branco);
-  padding: 0px 12px 1px 12px;
-  margin-right: 26px;
-  margin-top: 9px;
-  font-weight: 600;
-  transition: 0.3s;
-  position: absolute;
-  z-index: 99999;
-  right: 10px;
-}
-
-.fechar-button:hover {
-  background: var(--azul);
-  color: var(--branco);
-  transform: translate(0px, -4px);
+.separTe {
+  margin-top: 12vh;
 }
 
 @media (max-width: 1100px) {
+  .favMarks {
+    width: 15%;
+  }
+  .dadosConsulta h3 {
+    font-size: 0.9em;
+  }
+  .content-cardap h4 {
+    width: 50%;
+  }
+  .atach {
+    font-size: 0.8em;
+  }
+  .option {
+    font-size: 0.9em;
+  }
+  .separTe {
+    margin-top: 5vh;
+  }
+  header {
+    margin-top: -60px;
+  }
+  /* SIDEBAR */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  .box-text-formulario {
+    width: 100%;
+    height: 100%;
+    margin: 14vh auto;
+    padding: 0;
+  }
   /* ESTILO PADD */
   .mobileEstilo {
     margin-bottom: 1px !important;
@@ -349,7 +361,7 @@ header {
     padding: 13px;
     font-size: 1.23em;
     width: 100%;
-    margin: 3vh 4vh 2vh 0px;
+    margin: 3vh 0vh 2vh 0px;
     display: inline-grid;
   }
 
