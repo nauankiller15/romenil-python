@@ -1,5 +1,5 @@
 from conta.models import Usuario
-from django.contrib.auth import authenticate, get_user_model
+from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 
 from rest_framework import serializers
@@ -14,21 +14,33 @@ class UsuarioSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Usuario        
-        fields = ['cpf_ou_cnpj', 'celular', 'plataforma']
+        fields = '__all__'
         
     
-class UserSerializer(serializers.ModelSerializer):
+class ContaSerializer(serializers.ModelSerializer):
+
+    def create(self, validated_data):
+        user = User.objects.create(
+            username = validated_data['email'], 
+            first_name = validated_data['first_name'], 
+            last_name = validated_data['last_name'], 
+            email = validated_data['email'], 
+        )
+
+        user.set_password(validated_data['password']) 
+        user.save()
+        
+        return user
     
     class Meta:
         model = User
         extra_kwargs = {
             'password': {'write_only': True},
         }
-        fields = ['username', 'first_name', 'last_name', 'password', 'email']
+        fields = ['id', 'first_name', 'last_name', 'password', 'email']
 
 
 # ========= login ==========================
-User = get_user_model()
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
 jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 jwt_decode_handler = api_settings.JWT_DECODE_HANDLER
@@ -40,9 +52,12 @@ class CustomJWTSerializer(JSONWebTokenSerializer):
     def validate(self, attrs):
 
         password = attrs.get("password")
-        user_obj = User.objects.filter(email=attrs.get("email_cpf_cnpj")).first()
+        username = attrs.get("email_cpf_cnpj")
+
+        user_obj = User.objects.filter(username=username).first()
         if user_obj is None: 
-            usuario = Usuario.objects.filter(cpf_ou_cnpj=attrs.get("email_cpf_cnpj")).first()
+            print('cpf_ou_cnpj', user_obj)
+            usuario = Usuario.objects.filter(cpf_ou_cnpj=username).first()
             if usuario is not None:
                 user_obj = usuario.usuario
 

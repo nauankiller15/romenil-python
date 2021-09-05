@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 // import jwtDecode from 'jwt-decode';
 // import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
-import { Login } from '../login/models';
+import { Conta, Login, Usuario } from '../models';
 
 
 // @Injectable({
@@ -82,9 +82,15 @@ export class AccountService {
     });
   }
      
-  createAccount(account: any) {
-    return new Promise((resolve) => {
-      resolve(true);
+  createAccount(dados: Conta): Observable<any> {
+    return this.httpClient.post(this.baseUrl + 'criar-conta/', dados, {
+      headers: this.httpHeaders,
+    });
+  }
+
+  createUser(dados: Usuario): Observable<any> {
+    return this.httpClient.post(this.baseUrl + 'criar-usuario/', dados, {
+      headers: this.httpHeaders,
     });
   }
 }

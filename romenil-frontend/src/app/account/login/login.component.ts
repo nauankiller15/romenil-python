@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from '../shared/account.service';
-import { Login } from './models';
+import { Login } from '../models';
 
 declare var $: any;
 

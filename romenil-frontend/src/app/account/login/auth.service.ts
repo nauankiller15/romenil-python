@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import jwtDecode from 'jwt-decode';
 import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
-import { Login } from './models';
+import { Login } from '../models';
 
 @Injectable({
   providedIn: 'root'

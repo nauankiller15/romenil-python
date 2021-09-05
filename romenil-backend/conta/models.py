@@ -11,12 +11,9 @@ from validators.usuario import cpf_or_cnpj_valid
 
 class Usuario(Model):
 
-    PLATAFORMAS = {('hotmart', 'hotmart'), ('eduzz', 'eduzz')}
-
     usuario = ForeignKey(User, on_delete=CASCADE)
     cpf_ou_cnpj = CharField(max_length=18, unique=True, validators=[cpf_or_cnpj_valid])
-    celular = CharField(max_length=14)  
-    plataforma = CharField(max_length=14, choices=PLATAFORMAS)  
+    celular = CharField(max_length=15)  
 
     def is_active(self):
         hoje = timezone.now()
@@ -25,10 +22,7 @@ class Usuario(Model):
 
 class Subscription(Model):
 
-    PLATAFORMAS = {('hotmart', 'hotmart'), ('eduzz', 'eduzz')}
-
     cpf = CharField(max_length=14, validators=[cpf_or_cnpj_valid])
-    plataforma = CharField(max_length=14, choices=PLATAFORMAS)  
     contract_status = CharField(max_length=15)  
     contract_cancel_date = CharField(max_length=15) 
 
