@@ -14,7 +14,7 @@ class Usuario(Model):
     PLATAFORMAS = {('hotmart', 'hotmart'), ('eduzz', 'eduzz')}
 
     usuario = ForeignKey(User, on_delete=CASCADE)
-    cpf_ou_cnpj = CharField(max_length=18, validators=[cpf_or_cnpj_valid])
+    cpf_ou_cnpj = CharField(max_length=18, unique=True, validators=[cpf_or_cnpj_valid])
     celular = CharField(max_length=14)  
     plataforma = CharField(max_length=14, choices=PLATAFORMAS)  
 

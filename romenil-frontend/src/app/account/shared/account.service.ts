@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 // import jwtDecode from 'jwt-decode';
 // import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
@@ -75,30 +76,12 @@ export class AccountService {
 
   constructor(private httpClient: HttpClient, private router: Router) {}
 
-  async login(usuario: Login) {
-    const resp = this.httpClient.post(this.baseUrl + 'login/', usuario).subscribe(
-      data => {
-        console.log('success', data);
-        return data;
-      },
-      error => {
-        console.log('oops', error);
-        return error;
-      }
-    );
-
-    // const resp = await this.http.post(this.baseUrl + 'login/', usuario, {
-    //   headers: this.httpHeaders,
-    // }).toPromise();
-    
-    // if (resp && resp.token) {
-    //   localStorage.setItem('token', resp['token']);
-    //   return true;
-    // }
-    // return false;
-    return resp
+  login(dados: Login): Observable<any> {
+    return this.httpClient.post(this.baseUrl + 'login/', dados, {
+      headers: this.httpHeaders,
+    });
   }
-
+     
   createAccount(account: any) {
     return new Promise((resolve) => {
       resolve(true);

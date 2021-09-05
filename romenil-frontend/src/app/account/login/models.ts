@@ -1,4 +1,4 @@
 export class Login {
-    email_ou_cpf = '';
+    email_cpf_cnpj = '';
     password = '';
 }

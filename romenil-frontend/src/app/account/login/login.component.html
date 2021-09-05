@@ -12,6 +12,9 @@
         <h3>Faça o login:</h3>
       </div>
       <div class="container">
+        <div id="espera" class="espera">
+          Carregando... fazer uma animação ou algo do tipo!
+        </div>
         <form (ngSubmit)="onSubmit()" #form="ngForm">
           <div class="form-group">
             <label>E-mail:</label>
@@ -20,7 +23,7 @@
               type="email"
               name="email"
               id="email"
-              [(ngModel)]="login.email_ou_cpf"
+              [(ngModel)]="login.email_cpf_cnpj"
               required
               placeholder="Digite seu email aqui"
             />

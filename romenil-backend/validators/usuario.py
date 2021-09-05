@@ -70,5 +70,3 @@ def cpf_or_cnpj_valid(input:str):
 
         raise ValidationError('CNPJ inválido')
     raise ValidationError('CPF ou CNPJ inválido')
-
-cpf_or_cnpj_valid('94.474.619/0001-81')
