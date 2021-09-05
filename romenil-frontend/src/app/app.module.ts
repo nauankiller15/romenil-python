@@ -13,6 +13,7 @@ import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     WelcomeComponent,
     TopBarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
   providers: [],
   bootstrap: [AppComponent],
 })

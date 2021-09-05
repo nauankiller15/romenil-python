@@ -1,12 +1,20 @@
-from rest_framework.generics import ListCreateAPIView
-from rest_framework.response import Response
+
+from django.contrib.auth import authenticate, get_user_model
 from django.contrib.auth.models import User
+
+from rest_framework import fields, serializers
+from rest_framework.generics import CreateAPIView, ListCreateAPIView
+from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from conta.api.serializers import UserSerializer
 from rest_framework.viewsets import GenericViewSet, ViewSet
 
+from rest_framework_jwt.serializers import JSONWebTokenSerializer
+from rest_framework_jwt.settings import api_settings
 
-class UsuarioViewSet(ListCreateAPIView, GenericViewSet):
+from conta.api.serializers import UserSerializer
+
+
+class UsuarioViewSet(CreateAPIView, GenericViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
@@ -21,6 +29,10 @@ class DadosUsuarioViewSet(ViewSet):
         
         return Response(status=200)
         
+
+
+
+
 
 
     

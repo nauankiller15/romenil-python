@@ -11,9 +11,10 @@ declare var $: any;
 })
 export class LoginComponent implements OnInit {
   login = {
-    email: '',
+    email_ou_cpf: '',
     password: '',
   };
+  
   constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {
