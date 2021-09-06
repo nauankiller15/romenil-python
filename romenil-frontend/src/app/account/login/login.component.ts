@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     this.accountService.login(this.login).subscribe(
       (data) => {
         // navego para a rota vazia novamente
-        this.router.navigate(['/welcome']);
+        this.router.navigate(['']);
         this.toastr.success('Login efetuado com sucesso!');
       },
 
