@@ -28,7 +28,7 @@ export class TopBarComponent implements OnInit {
     const menu_wrapper = <HTMLElement>document.querySelector('.wrapper');
     const menu_bar = <HTMLElement>document.querySelector('.menu-bar');
     const setting_drop = <HTMLElement>document.querySelector('.setting-drop');
-    // const setting_item = <HTMLElement>document.querySelector('.setting-item');
+    const setting_item = <HTMLElement>document.querySelector('.setting-item');
     const back_setting_btn = <HTMLElement>(
       document.querySelector('.back-setting-btn')
     );
