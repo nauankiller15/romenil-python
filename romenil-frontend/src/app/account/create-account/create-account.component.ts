@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Conta, Usuario } from '../models';
+import { AccountService } from '../shared/account.service';
 
 declare var $: any;
 
@@ -9,24 +12,43 @@ declare var $: any;
 })
 export class CreateAccountComponent implements OnInit {
 
-  criarconta = {
-    nome: '',
-    email: '',
-    password: '',
-    passwordvalid: '',
-    cpf: '',
-    cnpj: '',
-    celular: '',
-  }
+  conta = new Conta;
+  usuario = new Usuario;
+  pagina = 'conta';
+  loading = false;
 
-  constructor() { }
+  constructor(private accountService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
 
   }
 
   onSubmit(){
-
+    this.loading = true;
+    this.accountService.createAccount(this.conta).subscribe(
+      data => {
+        this.conta = data;
+        console.log(this.conta);
+        this.usuario.usuario = this.conta.id;
+        this.pagina = 'usuario';
+        this.loading = false;
+      },
+      error => {
+        console.log(error.error)
+      }
+    );
   }
 
+  onSubmitUsuario() {
+    this.loading = true;
+    this.accountService.createUser(this.usuario).subscribe(
+      data => {
+        this.loading = false;
+        this.router.navigate(['login']);
+      },
+      error => {
+        console.log(error.error)
+      }
+    );
+  }
 }

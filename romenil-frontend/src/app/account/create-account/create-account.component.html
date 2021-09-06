@@ -5,99 +5,138 @@
         <div class="logo-calc"></div>
       </header>
       <div class="separTe"></div>
-      <div class="container-cart">
-        <h3>Crie sua conta agora:</h3>
+      <div id='conta' *ngIf="pagina == 'conta'">
+        <div class="container-cart">
+          <h3>Crie sua conta agora:</h3>
+        </div>
+        <div class="container">
+        
+          <form (ngSubmit)="onSubmit()" #formConta="ngForm">
+            <div class="form-group">
+              <label>Nome:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="first_name"
+                id="first_name"
+                [(ngModel)]="conta.first_name"
+                required
+                placeholder="Digite seu nome aqui"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Sobrenome:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="last_name"
+                id="last_name"
+                [(ngModel)]="conta.last_name"
+                required
+                placeholder="Digite seu nome aqui"
+              />
+            </div>
+            
+            <div class="form-group">
+              <label>E-mail:</label>
+              <input
+                class="form-control"
+                type="email"
+                name="email"
+                id="email"
+                [(ngModel)]="conta.email"
+                required
+                placeholder="Digite seu email aqui"
+              />
+            </div>
+
+            
+            <div class="form-group">
+              <label>Senha:</label>
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                id="password"
+                [(ngModel)]="conta.password"
+                required
+                placeholder="Digite sua senha aqui"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Repita a senha:</label>
+              <input
+                class="form-control"
+                type="password"
+                name="password2"
+                id="password2"
+                required
+                placeholder="Digite sua senha novamente aqui"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn criarcontaBt"
+              [disabled]="formConta.form.invalid"
+            >
+            <i class="fas fa-plus" style="margin-right: 10px;"></i>Criar conta
+            </button>
+            <button
+              id="voltarLogin"
+              type="button"
+              class="btn success"
+              routerLink="/login"
+            >
+              <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="container">
-        <form (ngSubmit)="onSubmit()" #form="ngForm">
-          <div class="form-group">
-            <label>Nome:</label>
-            <input
-              class="form-control"
-              type="text"
-              name="nome"
-              id="nome"
-              [(ngModel)]="criarconta.nome"
-              required
-              placeholder="Digite seu nome aqui"
-            />
-          </div>
-          <div class="form-group">
-            <label>CPF / CNPJ:</label>
-            <input
-              class="form-control"
-              type="text"
-              name="cpf"
-              id="cpf"
-              [(ngModel)]="criarconta.cpf"
-              required
-              placeholder="Digite seu CPF ou CNPJ aqui"
-            />
-          </div>
-          <div class="form-group">
-            <label>E-mail:</label>
-            <input
-              class="form-control"
-              type="email"
-              name="email"
-              id="email"
-              [(ngModel)]="criarconta.email"
-              required
-              placeholder="Digite seu email aqui"
-            />
-          </div>
-          <div class="form-group">
-            <label>Celular:</label>
-            <input
-              class="form-control"
-              type="tel"
-              name="celular"
-              id="celular"
-              [(ngModel)]="criarconta.celular"
-              required
-              placeholder="Digite seu celular aqui"
-            />
-          </div>
-          <div class="form-group">
-            <label>Senha:</label>
-            <input
-              class="form-control"
-              type="password"
-              name="password"
-              id="password"
-              [(ngModel)]="criarconta.password"
-              required
-              placeholder="Digite sua senha aqui"
-            />
-          </div>
-          <div class="form-group">
-            <label>Repita a senha:</label>
-            <input
-              class="form-control"
-              type="password"
-              name="password2"
-              id="password2"
-              [(ngModel)]="criarconta.passwordvalid"
-              required
-              placeholder="Digite sua senha novamente aqui"
-            />
-          </div>
-          <button
-            type="submit"
-            class="btn criarcontaBt"
-            [disabled]="form.form.invalid"
-          >
-          <i class="fas fa-plus" style="margin-right: 10px;"></i>Criar conta
-          </button>
-          <button
-            id="voltarLogin"
-            type="button"
-            class="btn success"
-            routerLink="/login"
-          >
-            <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar
-          </button>
-        </form>
+
+      <div id="usuario" *ngIf="pagina == 'usuario'">
+        <div class="container-cart">
+          <h3>Complemente seus dados:</h3>
+        </div>
+        <div class="container">
+          <form (ngSubmit)="onSubmitUsuario()" #formUsuario="ngForm">
+            
+            <div class="form-group">
+              <label>CPF / CNPJ:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="cpf_ou_cnpj"
+                id="cpf_ou_cnpj"
+                [(ngModel)]="usuario.cpf_ou_cnpj"
+                required
+                placeholder="Digite seu CPF ou CNPJ aqui"
+              />
+            </div>
+            
+            <div class="form-group">
+              <label>Celular:</label>
+              <input
+                class="form-control"
+                type="tel"
+                name="celular"
+                id="celular"
+                [(ngModel)]="usuario.celular"
+                required
+                placeholder="Digite seu celular aqui"
+              />
+            </div>
+            
+            <button
+              type="submit"
+              class="btn criarcontaBt"
+              [disabled]="formUsuario.form.invalid"
+            >
+            <i class="fas fa-plus" style="margin-right: 10px;"></i>Adicionar dados
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

@@ -504,3 +504,7 @@ header {
 .form-group:last-child {
   margin-top: 40px;
 }
+
+.espera {
+  display: none;
+}

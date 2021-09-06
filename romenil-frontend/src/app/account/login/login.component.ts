@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from '../shared/account.service';
+import { Login } from '../models';
 
 declare var $: any;
 
@@ -10,10 +11,9 @@ declare var $: any;
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  login = {
-    email: '',
-    password: '',
-  };
+  login = new Login;
+  carregando = false;
+  
   constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {
@@ -29,15 +29,18 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  async onSubmit() {
-    try {
-      const result = await this.accountService.login(this.login);
-      console.log(`Login efetuado: ${result}`);
-
-      // navego para a rota vazia novamente
-      this.router.navigate(['']);
-    } catch (error) {
-      console.error(error);
-    }
+  onSubmit() {
+    this.carregando = true;
+    this.accountService.login(this.login).subscribe(
+      data => {
+        // navego para a rota vazia novamente
+        this.router.navigate(['']);
+      }, 
+     
+      error => {
+        this.carregando = false;
+        console.log(error.error)
+      }
+    );
   }
 }
