@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 import { Conta, Usuario } from '../models';
 import { AccountService } from '../shared/account.service';
 
@@ -8,33 +10,34 @@ declare var $: any;
 @Component({
   selector: 'app-create-account',
   templateUrl: './create-account.component.html',
-  styleUrls: ['./create-account.component.css']
+  styleUrls: ['./create-account.component.css'],
 })
 export class CreateAccountComponent implements OnInit {
-
-  conta = new Conta;
-  usuario = new Usuario;
+  conta = new Conta();
+  usuario = new Usuario();
   pagina = 'conta';
   loading = false;
 
-  constructor(private accountService: AccountService, private router: Router) { }
+  constructor(
+    private toastr: ToastrService,
+    private accountService: AccountService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-  }
-
-  onSubmit(){
+  onSubmit() {
     this.loading = true;
     this.accountService.createAccount(this.conta).subscribe(
-      data => {
+      (data) => {
         this.conta = data;
         console.log(this.conta);
         this.usuario.usuario = this.conta.id;
         this.pagina = 'usuario';
         this.loading = false;
       },
-      error => {
-        console.log(error.error)
+      (error) => {
+        this.toastr.error(error.error);
       }
     );
   }
@@ -42,12 +45,12 @@ export class CreateAccountComponent implements OnInit {
   onSubmitUsuario() {
     this.loading = true;
     this.accountService.createUser(this.usuario).subscribe(
-      data => {
+      (data) => {
         this.loading = false;
-        this.router.navigate(['login']);
+        this.router.navigate(['/login']);
       },
-      error => {
-        console.log(error.error)
+      (error) => {
+        console.log(error.error);
       }
     );
   }

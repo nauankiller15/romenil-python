@@ -36,12 +36,12 @@ export class TopBarComponent implements OnInit {
     drop_btn!.addEventListener('click', function () {
       menu_wrapper!.classList.toggle('show');
     });
-    setting_item!.addEventListener('click', function () {
-      menu_bar!.style.marginLeft = '-300px';
-      setTimeout(() => {
-        setting_drop!.style.display = 'block';
-      }, 100);
-    });
+    // setting_item!.addEventListener('click', function () {
+    //   menu_bar!.style.marginLeft = '-300px';
+    //   setTimeout(() => {
+    //     setting_drop!.style.display = 'block';
+    //   }, 100);
+    // });
     back_setting_btn!.addEventListener('click', function () {
       menu_bar!.style.marginLeft = '0px';
       setting_drop!.style.display = 'none';

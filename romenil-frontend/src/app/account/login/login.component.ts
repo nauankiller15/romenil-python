@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from '../shared/account.service';
+import { ToastrService } from 'ngx-toastr';
+
 import { Login } from '../models';
 
 declare var $: any;
@@ -11,10 +13,14 @@ declare var $: any;
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  login = new Login;
+  login = new Login();
   carregando = false;
-  
-  constructor(private accountService: AccountService, private router: Router) {}
+
+  constructor(
+    private toastr: ToastrService,
+    private accountService: AccountService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     $('body').addClass('noborder');
@@ -32,14 +38,15 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.carregando = true;
     this.accountService.login(this.login).subscribe(
-      data => {
+      (data) => {
         // navego para a rota vazia novamente
-        this.router.navigate(['']);
-      }, 
-     
-      error => {
+        this.router.navigate(['/welcome']);
+        this.toastr.success('Login efetuado com sucesso!');
+      },
+
+      (error) => {
         this.carregando = false;
-        console.log(error.error)
+        this.toastr.error(error.error);
       }
     );
   }

@@ -15,6 +15,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,19 @@ import { HttpClientModule } from '@angular/common/http';
     WelcomeComponent,
     TopBarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
+  imports: [
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 2500,
+      closeButton: true,
+      positionClass: 'toast-bottom-right',
+      enableHtml: true,
+    }),
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
