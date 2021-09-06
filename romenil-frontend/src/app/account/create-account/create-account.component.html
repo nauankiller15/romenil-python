@@ -5,12 +5,11 @@
         <div class="logo-calc"></div>
       </header>
       <div class="separTe"></div>
-      <div id='conta' *ngIf="pagina == 'conta'">
+      <div id="conta" *ngIf="pagina == 'conta'">
         <div class="container-cart">
           <h3>Crie sua conta agora:</h3>
         </div>
         <div class="container">
-        
           <form (ngSubmit)="onSubmit()" #formConta="ngForm">
             <div class="form-group">
               <label>Nome:</label>
@@ -23,21 +22,11 @@
                 required
                 placeholder="Digite seu nome aqui"
               />
+              <span class="symbol-input100">
+                <i class="far fa-user"></i>
+              </span>
             </div>
 
-            <div class="form-group">
-              <label>Sobrenome:</label>
-              <input
-                class="form-control"
-                type="text"
-                name="last_name"
-                id="last_name"
-                [(ngModel)]="conta.last_name"
-                required
-                placeholder="Digite seu nome aqui"
-              />
-            </div>
-            
             <div class="form-group">
               <label>E-mail:</label>
               <input
@@ -49,9 +38,27 @@
                 required
                 placeholder="Digite seu email aqui"
               />
+              <span class="symbol-input100">
+                <i class="fa fa-envelope"></i>
+              </span>
             </div>
 
-            
+            <div class="form-group">
+              <label>Login:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="last_name"
+                id="last_name"
+                [(ngModel)]="conta.last_name"
+                required
+                placeholder="Digite seu login aqui"
+              />
+              <span class="symbol-input100">
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+
             <div class="form-group">
               <label>Senha:</label>
               <input
@@ -63,6 +70,9 @@
                 required
                 placeholder="Digite sua senha aqui"
               />
+              <span class="symbol-input100">
+                <i class="fa fa-lock"></i>
+              </span>
             </div>
 
             <div class="form-group">
@@ -75,13 +85,16 @@
                 required
                 placeholder="Digite sua senha novamente aqui"
               />
+              <span class="symbol-input100">
+                <i class="fa fa-lock"></i>
+              </span>
             </div>
             <button
               type="submit"
               class="btn criarcontaBt"
               [disabled]="formConta.form.invalid"
             >
-            <i class="fas fa-plus" style="margin-right: 10px;"></i>Criar conta
+              <i class="fas fa-plus" style="margin-right: 10px"></i>Criar conta
             </button>
             <button
               id="voltarLogin"
@@ -101,7 +114,6 @@
         </div>
         <div class="container">
           <form (ngSubmit)="onSubmitUsuario()" #formUsuario="ngForm">
-            
             <div class="form-group">
               <label>CPF / CNPJ:</label>
               <input
@@ -113,8 +125,11 @@
                 required
                 placeholder="Digite seu CPF ou CNPJ aqui"
               />
+              <span class="symbol-input100">
+                <i class="fa fa-id-card"></i>
+              </span>
             </div>
-            
+
             <div class="form-group">
               <label>Celular:</label>
               <input
@@ -126,14 +141,26 @@
                 required
                 placeholder="Digite seu celular aqui"
               />
+              <span class="symbol-input100">
+                <i class="fab fa-whatsapp"></i>
+              </span>
             </div>
-            
+
             <button
               type="submit"
               class="btn criarcontaBt"
               [disabled]="formUsuario.form.invalid"
             >
-            <i class="fas fa-plus" style="margin-right: 10px;"></i>Adicionar dados
+              <i class="fas fa-plus" style="margin-right: 10px"></i>Adicionar
+              dados
+            </button>
+            <button
+              id="voltarParaLogin"
+              type="button"
+              class="btn success"
+              routerLink="/create-account"
+            >
+              <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar
             </button>
           </form>
         </div>
