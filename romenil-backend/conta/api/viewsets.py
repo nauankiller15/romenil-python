@@ -32,7 +32,7 @@ class DadosUsuarioViewSet(ViewSet):
 
     def list(self, request):
         self.buscar_dados()
-        # serializer = UserSerializer(request.user)
+        serializer = DadosSerializer(request.user)
         # data = serializer.data
         
         return Response(status=200)

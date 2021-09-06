@@ -39,6 +39,13 @@ class ContaSerializer(serializers.ModelSerializer):
         }
         fields = ['id', 'first_name', 'last_name', 'password', 'email']
 
+class DadosUsuarioSerializer(serializers.ModelSerializer):
+    permispermission_classes = [IsAuthenticated]
+    
+    class Meta:
+        model = Usuario        
+        fields = '__all__'
+
 
 # ========= login ==========================
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
