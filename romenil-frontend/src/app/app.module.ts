@@ -34,8 +34,8 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 232800,
-      extendedTimeOut: 232800,
+      timeOut: 3000,
+      extendedTimeOut: 3000,
       closeButton: true,
       positionClass: 'toast-bottom-right',
       enableHtml: true,
