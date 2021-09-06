@@ -23,6 +23,22 @@
                 placeholder="Digite seu nome aqui"
               />
               <span class="symbol-input100">
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>Sobrenome:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="last_name"
+                id="last_name"
+                [(ngModel)]="conta.last_name"
+                required
+                placeholder="Digite seu sobrenome aqui"
+              />
+              <span class="symbol-input100">
                 <i class="far fa-user"></i>
               </span>
             </div>
@@ -40,22 +56,6 @@
               />
               <span class="symbol-input100">
                 <i class="fa fa-envelope"></i>
-              </span>
-            </div>
-
-            <div class="form-group">
-              <label>Login:</label>
-              <input
-                class="form-control"
-                type="text"
-                name="last_name"
-                id="last_name"
-                [(ngModel)]="conta.last_name"
-                required
-                placeholder="Digite seu login aqui"
-              />
-              <span class="symbol-input100">
-                <i class="fa fa-user"></i>
               </span>
             </div>
 
