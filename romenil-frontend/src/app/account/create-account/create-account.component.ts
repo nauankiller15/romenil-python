@@ -24,7 +24,9 @@ export class CreateAccountComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    $('body').addClass('noborder');
+  }
 
   onSubmit() {
     this.loading = true;
