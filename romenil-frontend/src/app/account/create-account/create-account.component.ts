@@ -39,7 +39,7 @@ export class CreateAccountComponent implements OnInit {
         this.loading = false;
       },
       (error) => {
-        this.toastr.error(error.error);
+        this.toastr.error('Erro na criação da conta');
       }
     );
   }
@@ -50,9 +50,10 @@ export class CreateAccountComponent implements OnInit {
       (data) => {
         this.loading = false;
         this.router.navigate(['/login']);
+        this.toastr.success('Dados cadastrados com sucesso!')
       },
       (error) => {
-        console.log(error.error);
+        this.toastr.error('Erro no complemento dos dados');
       }
     );
   }

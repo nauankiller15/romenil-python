@@ -38,8 +38,8 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     HttpClientModule,
     ToastrModule.forRoot({
-      timeOut: 3022300,
-      extendedTimeOut: 3000223,
+      timeOut: 2800,
+      extendedTimeOut: 3500,
       closeButton: true,
       positionClass: 'toast-bottom-right',
       enableHtml: true,
