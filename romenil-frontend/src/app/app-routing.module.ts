@@ -5,7 +5,7 @@ import { AuthenticationComponent } from './account/authentication/authentication
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { LoginComponent } from './account/login/login.component';
-import { AuthGuard } from './account/shared/auth.guard';
+import { AuthGuard } from './shared/auth.guard';
 import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';

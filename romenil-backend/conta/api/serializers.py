@@ -54,13 +54,14 @@ jwt_decode_handler = api_settings.JWT_DECODE_HANDLER
 jwt_get_username_from_payload = api_settings.JWT_PAYLOAD_GET_USERNAME_HANDLER
 
 class CustomJWTSerializer(JSONWebTokenSerializer):
+
     username_field = 'email_cpf_cnpj'
 
     def validate(self, attrs):
 
         password = attrs.get("password")
         username = attrs.get("email_cpf_cnpj")
-
+        
         user_obj = User.objects.filter(username=username).first()
         if user_obj is None: 
             print('cpf_ou_cnpj', user_obj)

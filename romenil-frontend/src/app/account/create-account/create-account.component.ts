@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 import { Conta, Usuario } from '../models';
-import { AccountService } from '../shared/account.service';
+import { AccountService } from '../../shared/account.service';
 
 declare var $: any;
 

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AccountService } from '../shared/account.service';
 import { ToastrService } from 'ngx-toastr';
+import { Erro } from 'src/app/shared/erros';
+import { AccountService } from '../../shared/account.service';
 
 import { Login } from '../models';
 
@@ -17,10 +18,14 @@ export class LoginComponent implements OnInit {
   carregando = false;
 
   constructor(
-    private toastr: ToastrService,
+    private toastrService: ToastrService,
     private accountService: AccountService,
     private router: Router
-  ) { console.log(this.accountService.autenticado())}
+  ) { 
+    if (this.accountService.autenticado()) {
+      this.router.navigate(['/welcome']);
+    }
+  }
 
   ngOnInit(): void {
     $('body').addClass('noborder');
@@ -42,12 +47,13 @@ export class LoginComponent implements OnInit {
         window.localStorage.setItem('token', data.token);
         // navego para a rota vazia novamente
         this.router.navigate(['/welcome']);
-        this.toastr.success('Login efetuado com sucesso!');
+        this.toastrService.success('Login efetuado com sucesso!');
       },
 
       (error) => {
         this.carregando = false;
-        this.toastr.error('Erro desconhecido!');
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir()        
       }
     );
   }

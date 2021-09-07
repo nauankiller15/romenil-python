@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import jwtDecode from 'jwt-decode';
 import { environment } from 'src/environments/environment';
-import { Conta, Login, Usuario } from '../models';
+import { Conta, Login, Usuario } from '../account/models';
 
 
 @Injectable({
