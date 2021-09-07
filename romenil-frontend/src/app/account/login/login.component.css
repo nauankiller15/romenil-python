@@ -66,7 +66,6 @@ header {
 }
 /*  */
 .box-text-login {
-
   border-top: 4px solid #75c400;
   background-color: #0a0e17;
   background-image: url(),
@@ -523,6 +522,8 @@ header {
   background-image: linear-gradient(-90deg, #75c400 0%, #fddb33 100%);
   transition: 0.3s;
   margin-bottom: 10px;
+  color: #0a0e17;
+  font-weight: 500;
 }
 
 .loginBt:hover {
