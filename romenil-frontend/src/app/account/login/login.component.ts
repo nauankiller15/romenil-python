@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     private toastr: ToastrService,
     private accountService: AccountService,
     private router: Router
-  ) {}
+  ) { console.log(this.accountService.autenticado())}
 
   ngOnInit(): void {
     $('body').addClass('noborder');
@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
     this.carregando = true;
     this.accountService.login(this.login).subscribe(
       (data) => {
+        window.localStorage.setItem('token', data.token);
         // navego para a rota vazia novamente
         this.router.navigate(['/welcome']);
         this.toastr.success('Login efetuado com sucesso!');

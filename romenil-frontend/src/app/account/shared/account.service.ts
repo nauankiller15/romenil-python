@@ -2,68 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-// import jwtDecode from 'jwt-decode';
-// import { ToastrService } from 'ngx-toastr';
+import jwtDecode from 'jwt-decode';
 import { environment } from 'src/environments/environment';
 import { Conta, Login, Usuario } from '../models';
-
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AuthService {
-  
-//   
-  
-//   constructor() {}
-  
-//   async autenticar
-
-//   autenticado() {
-//     const token = this.getAuthorizationToken();
-    
-//     if (token) {
-//       const expirado = this.tokenExpirado(token);
-//       if (!expirado) {
-//         return true;
-//       } else {
-//         localStorage.removeItem('token');
-//       }
-//     }
-//     localStorage.removeItem('token');
-//     return false;
-//   }
-
-//   getAuthorizationToken() {
-//     const token = localStorage.getItem('token');
-//     return token;
-//   }
-
-//   tokenExpirado(token: string) {
-//     const tokenDecode = jwtDecode(token);
-    
-//     if (tokenDecode['exp']) {
-//       const expiracao = tokenDecode['exp']
-//       const dataExpiracao = new Date(0);
-//       dataExpiracao.setUTCSeconds(expiracao);
-
-//       if ( dataExpiracao.valueOf() < new Date().valueOf()) {
-//         return true;
-//       } else {
-//         return false
-//       }
-//     }
-//   }
-
-//   getUserId() {
-//     const token = this.getAuthorizationToken()
-//     const tokenDecode = jwtDecode(token);
-
-//     return tokenDecode['user_id']
-//   }
-// }
-
-
 
 
 @Injectable({
@@ -73,6 +14,7 @@ export class AccountService {
 
   private readonly baseUrl = environment.baseUrl + 'conta/';
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json'});
+  
 
   constructor(private httpClient: HttpClient, private router: Router) {}
 
@@ -93,4 +35,51 @@ export class AccountService {
       headers: this.httpHeaders,
     });
   }
+
+  private getAuthorizationToken() {
+    const token = localStorage.getItem('token');
+    if (token) {
+      return token;
+    } else {
+      return ''
+    }
+  }
+
+  private getDataToken(token: string): Token {
+    let dataToken: Token = jwtDecode(token);
+    return dataToken;
+  }
+
+  private tokenValido(token: string) {
+    let dataToken = this.getDataToken(token);
+    if (dataToken.exp) {
+      const expiracao = dataToken.exp;
+      const dataExpiracao = new Date(0);
+      dataExpiracao.setUTCSeconds(expiracao);
+
+      if ( dataExpiracao.valueOf() < new Date().valueOf()) {
+        return true;
+      }
+    }
+    return false;
+  }    
+
+  autenticado() {
+    const token = this.getAuthorizationToken();
+    
+    if (token) {
+      const tokenValido = this.tokenValido(token);
+      if (tokenValido) {
+        return true;
+      } else {
+        localStorage.removeItem('token');
+      }
+    }
+    return false;
+  }
+}
+
+interface Token {
+  token: string;
+  exp: number;
 }
