@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
       (error) => {
         this.carregando = false;
-        this.toastr.error(error.error);
+        this.toastr.error('Erro desconhecido!');
       }
     );
   }
