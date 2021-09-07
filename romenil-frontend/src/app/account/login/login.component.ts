@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AccountService } from 'src/app/shared/account-service/account.service';
 import { Erro } from 'src/app/shared/erros';
-import { AccountService } from '../../shared/account.service';
-
 import { Login } from '../models';
 
 declare var $: any;
@@ -45,9 +44,8 @@ export class LoginComponent implements OnInit {
     this.accountService.login(this.login).subscribe(
       (data) => {
         window.localStorage.setItem('token', data.token);
-        // navego para a rota vazia novamente
-        this.router.navigate(['/welcome']);
         this.toastrService.success('Login efetuado com sucesso!');
+        this.router.navigate(['/welcome']);
       },
 
       (error) => {

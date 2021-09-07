@@ -12,7 +12,6 @@ export class Conta {
 }
 
 export class Usuario {
-    usuario: number = 0;
     cpf_ou_cnpj = '';
     celular = '';
 }

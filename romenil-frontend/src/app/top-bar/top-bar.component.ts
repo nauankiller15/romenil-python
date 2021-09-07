@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Conta } from '../account/models';
 
 declare var $: any;
 
@@ -8,6 +9,8 @@ declare var $: any;
   styleUrls: ['./top-bar.component.css'],
 })
 export class TopBarComponent implements OnInit {
+  @Input() conta = new Conta();
+  
   constructor() {}
 
   ngOnInit(): void {

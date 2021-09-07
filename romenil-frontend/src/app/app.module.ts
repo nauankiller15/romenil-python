@@ -13,10 +13,11 @@ import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.interceptor';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     HttpClientModule,
     ToastrModule.forRoot({
-      timeOut: 2800,
+      timeOut: 3800,
       extendedTimeOut: 3500,
       closeButton: true,
       positionClass: 'toast-bottom-right',
@@ -46,7 +47,9 @@ import { ToastrModule } from 'ngx-toastr';
       progressBar: true,
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

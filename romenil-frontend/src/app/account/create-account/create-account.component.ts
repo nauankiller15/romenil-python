@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AccountService } from 'src/app/shared/account-service/account.service';
 
 import { Conta, Usuario } from '../models';
-import { AccountService } from '../../shared/account.service';
 
 declare var $: any;
 
@@ -22,7 +22,19 @@ export class CreateAccountComponent implements OnInit {
     private toastr: ToastrService,
     private accountService: AccountService,
     private router: Router
-  ) {}
+  ) {
+    if (this.accountService.autenticado()) {
+      this.accountService.usuario().subscribe(
+        data => {
+          if (data.usuario) {
+            this.router.navigate(['/welcome']);
+          } else {
+            this.pagina = 'usuario';
+          }
+        }
+      );
+    }
+  }
 
   ngOnInit(): void {
     $('body').addClass('noborder');
@@ -33,12 +45,11 @@ export class CreateAccountComponent implements OnInit {
     this.accountService.createAccount(this.conta).subscribe(
       (data) => {
         this.conta = data;
-        console.log(this.conta);
-        this.usuario.usuario = this.conta.id;
-        this.pagina = 'usuario';
-        this.loading = false;
+        this.toastr.success('Conta criada com sucesso');
+        this.router.navigate(['/login']);
       },
       (error) => {
+        this.loading = false;
         this.toastr.error('Erro na criação da conta');
       }
     );
@@ -48,11 +59,11 @@ export class CreateAccountComponent implements OnInit {
     this.loading = true;
     this.accountService.createUser(this.usuario).subscribe(
       (data) => {
-        this.loading = false;
-        this.router.navigate(['/login']);
         this.toastr.success('Dados cadastrados com sucesso!')
+        this.router.navigate(['/welcome']);
       },
       (error) => {
+        this.loading = false;
         this.toastr.error('Erro no complemento dos dados');
       }
     );

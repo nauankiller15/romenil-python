@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import jwtDecode from 'jwt-decode';
 import { environment } from 'src/environments/environment';
-import { Conta, Login, Usuario } from '../account/models';
+import { Conta, Login, Usuario } from 'src/app/account/models';
 
 
 @Injectable({
@@ -36,6 +36,18 @@ export class AccountService {
     });
   }
 
+  conta(): Observable<any> {
+    return this.httpClient.get(this.baseUrl + 'dados/', {
+      headers: this.httpHeaders,
+    });
+  }
+
+  usuario(): Observable<any> {
+    return this.httpClient.get(this.baseUrl + 'usuario/', {
+      headers: this.httpHeaders,
+    });
+  }
+
   private getAuthorizationToken() {
     const token = localStorage.getItem('token');
     if (token) {
@@ -57,7 +69,7 @@ export class AccountService {
       const dataExpiracao = new Date(0);
       dataExpiracao.setUTCSeconds(expiracao);
 
-      if ( dataExpiracao.valueOf() < new Date().valueOf()) {
+      if ( dataExpiracao.valueOf() > new Date().valueOf()) {
         return true;
       }
     }
