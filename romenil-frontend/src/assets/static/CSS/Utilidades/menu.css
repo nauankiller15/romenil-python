@@ -232,6 +232,12 @@ nav .menuItems li:hover::before {
   font-size: 0.95em;
 }
 
+.toast-message {
+  word-wrap: break-word;
+  font-size: 0.8em;
+  line-height: 18px;
+}
+
 @media (max-width: 1100px) {
   .toast-container .ngx-toastr {
     font-size: 0.85em;

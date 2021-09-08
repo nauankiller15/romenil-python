@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.container {
+.containerED {
   width: 35%;
   margin: 6vh auto;
 }
@@ -379,7 +379,7 @@ header {
     margin: 14vh auto;
     padding: 0;
   }
-  .container {
+  .containerED {
     width: 100%;
     padding: 25px;
     margin: auto;

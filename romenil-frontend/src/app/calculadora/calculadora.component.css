@@ -304,7 +304,7 @@ header {
 
 /* ESTILO DA CALCULADORA */
 
-.container {
+.containerED {
   width: 550px;
   margin: 0 auto;
   animation: slide-top 1.7s ease-in-out;
@@ -428,7 +428,7 @@ header {
     width: 100%;
   }
 
-  .container {
+  .containerED {
     width: 100% !important;
     margin: 0 auto;
   }

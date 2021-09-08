@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.container {
+.containerED {
   width: 35%;
   margin: 6vh auto;
 }
@@ -327,7 +327,7 @@ header {
   .box-text-criarAcc {
     background-position: 100% 81%, 80% 1%;
   }
-  .container {
+  .containerED {
     width: 100%;
     padding: 25px;
     margin: auto;
