@@ -50,4 +50,8 @@ export class TopBarComponent implements OnInit {
       setting_drop!.style.display = 'none';
     });
   }
+
+  sair() {
+    localStorage.removeItem('token');
+  }
 }
