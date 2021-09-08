@@ -195,6 +195,7 @@ div.menu-mobile {
         cursor: pointer;
         transition: 0.4s;
         background: var(--azul);
+        color: #000;
     }
     div.menu-mobile ul li:hover {
         color: var(--branco);
