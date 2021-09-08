@@ -246,6 +246,7 @@ header {
   width: 100%;
   background: none;
   transition: 0.4s all ease-in-out;
+  line-height: 40px;
 }
 
 .success:hover {
@@ -524,6 +525,7 @@ header {
   margin-bottom: 10px;
   color: #0a0e17;
   font-weight: 500;
+  line-height: 40px;
 }
 
 .loginBt:hover {

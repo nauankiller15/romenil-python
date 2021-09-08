@@ -17,7 +17,6 @@
                 class="form-control"
                 type="text"
                 name="first_name"
-                id="first_name"
                 [(ngModel)]="conta.first_name"
                 required
                 placeholder="Digite seu nome aqui"
@@ -33,7 +32,6 @@
                 class="form-control"
                 type="text"
                 name="last_name"
-                id="last_name"
                 [(ngModel)]="conta.last_name"
                 required
                 placeholder="Digite seu sobrenome aqui"
@@ -49,7 +47,6 @@
                 class="form-control"
                 type="email"
                 name="email"
-                id="email"
                 [(ngModel)]="conta.email"
                 required
                 placeholder="Digite seu email aqui"
@@ -65,7 +62,6 @@
                 class="form-control"
                 type="password"
                 name="password"
-                id="password"
                 [(ngModel)]="conta.password"
                 required
                 placeholder="Digite sua senha aqui"
@@ -78,10 +74,11 @@
             <div class="form-group">
               <label>Repita a senha:</label>
               <input
+                #confirmacaoSenha
                 class="form-control"
                 type="password"
                 name="password2"
-                id="password2"
+                id="passwordAs"
                 required
                 placeholder="Digite sua senha novamente aqui"
               />
@@ -89,6 +86,9 @@
                 <i class="fa fa-lock"></i>
               </span>
             </div>
+            
+            {{ confirmacaoSenha.className }}
+
             <button
               type="submit"
               class="btn criarcontaBt"

@@ -229,6 +229,7 @@ header {
   width: 100%;
   background: none;
   transition: 0.4s;
+  line-height: 40px;
 }
 
 .success:hover {
@@ -472,6 +473,7 @@ header {
   margin-bottom: 10px;
   color: #0a0e17;
   font-weight: 500;
+  line-height: 40px;
 }
 
 .criarcontaBt:hover {

@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
-import { FormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
@@ -39,6 +41,7 @@ import { NgxLoadingModule } from 'ngx-loading';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NgxLoadingModule.forRoot({}),
     ToastrModule.forRoot({
