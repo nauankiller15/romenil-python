@@ -10,7 +10,7 @@ export class FormularioComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    $('#fecharBtCardp').on('click', function () {
+    $('#fecharBtForm').on('click', function () {
       $('#formulario').fadeOut('100');
       $('body').removeClass('noborder');
     });

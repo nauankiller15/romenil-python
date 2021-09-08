@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.interceptor';
 
+import { NgxLoadingModule } from 'ngx-loading';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,7 @@ import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.inter
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgxLoadingModule.forRoot({}),
     ToastrModule.forRoot({
       timeOut: 3800,
       extendedTimeOut: 3500,
@@ -48,7 +51,7 @@ import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.inter
     }),
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })

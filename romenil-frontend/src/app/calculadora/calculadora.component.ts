@@ -19,7 +19,7 @@ export class CalculadoraComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    $('#fecharBtCardp').on('click', function () {
+    $('#fecharBtCalc').on('click', function () {
       $('#calculadora').fadeOut('100');
       $('body').removeClass('noborder');
     });

@@ -1,7 +1,7 @@
 <div id="bemvindo">
   <div class="box-text-welcome">
     <div class="text-info-box">
-      <a id="fecharBtCardp">
+      <a id="fecharBtWelcome">
         <div class="fechar-button">X</div>
       </a>
       <app-top-bar [conta]="conta"></app-top-bar>
@@ -15,7 +15,7 @@
           <div class="planejamento">
             <h2>Faça sua Consulta Alimentar</h2>
           </div>
-          <h3>Olá "{{conta.first_name}}" bem-vindo(a)</h3>
+          <h3>Olá {{conta.first_name}} {{conta.last_name}} bem-vindo(a)</h3>
         </div>
 
         <div style="padding-top: 30px"></div>
