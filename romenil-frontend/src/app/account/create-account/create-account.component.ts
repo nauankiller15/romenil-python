@@ -39,7 +39,7 @@ export class CreateAccountComponent implements OnInit {
   }
 
   voltar() {
-    this.pagina = 'usuario';
+    this.pagina = 'conta';
   }
   onSubmit() {
     this.loading = true;

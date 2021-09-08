@@ -9,23 +9,25 @@ declare var $: any;
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent implements OnInit {
-
   conta = new Conta();
 
-  constructor(private accountService: AccountService, private toastrService: ToastrService, private router: Router) { 
+  constructor(
+    private accountService: AccountService,
+    private toastrService: ToastrService,
+    private router: Router
+  ) {
     this.verificarDados();
   }
 
   ngOnInit(): void {
-    $('#fecharBtCardp').on('click', function () {
+    $('#fecharBtWelcome').on('click', function () {
       $('#bemvindo').fadeOut('100');
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
-
   }
 
   verificarDados() {
@@ -38,28 +40,28 @@ export class WelcomeComponent implements OnInit {
 
   getUsuario() {
     this.accountService.usuario().subscribe(
-      data => {
+      (data) => {
         if (!data.usuario) {
           this.router.navigate(['/create-account']);
         } else {
           this.getConta();
         }
       },
-      error => {
+      (error) => {
         const erro = new Erro(this.toastrService, error);
-        erro.exibir()   
+        erro.exibir();
       }
     );
   }
 
   getConta() {
     this.accountService.conta().subscribe(
-      data => {
+      (data) => {
         this.conta = data;
       },
-      error => {
+      (error) => {
         const erro = new Erro(this.toastrService, error);
-        erro.exibir()   
+        erro.exibir();
       }
     );
   }
