@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Conta } from '../account/models';
 
 declare var $: any;
@@ -11,7 +12,7 @@ declare var $: any;
 export class TopBarComponent implements OnInit {
   @Input() conta = new Conta();
   
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     $('.menu-box').on('click', function () {
