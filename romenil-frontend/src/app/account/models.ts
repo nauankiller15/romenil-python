@@ -9,6 +9,7 @@ export class Conta {
     last_name = '';
     email = '';
     password = '';
+    password2 = '';
 }
 
 export class Usuario {

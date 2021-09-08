@@ -18,8 +18,8 @@
                 type="text"
                 name="first_name"
                 [(ngModel)]="conta.first_name"
-                required
                 placeholder="Digite seu nome aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-user"></i>
@@ -33,8 +33,8 @@
                 type="text"
                 name="last_name"
                 [(ngModel)]="conta.last_name"
-                required
                 placeholder="Digite seu sobrenome aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="far fa-user"></i>
@@ -48,8 +48,8 @@
                 type="email"
                 name="email"
                 [(ngModel)]="conta.email"
-                required
                 placeholder="Digite seu email aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-envelope"></i>
@@ -59,12 +59,13 @@
             <div class="form-group">
               <label>Senha:</label>
               <input
+                #confirmacaoSenha
                 class="form-control"
                 type="password"
-                name="password"
-                [(ngModel)]="conta.password"
-                required
+                name="confirmacaoSenha"
+                [(ngModel)]="conta.password2"
                 placeholder="Digite sua senha aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-lock"></i>
@@ -74,20 +75,24 @@
             <div class="form-group">
               <label>Repita a senha:</label>
               <input
-                #confirmacaoSenha
+                #password
                 class="form-control"
                 type="password"
-                name="password2"
-                id="passwordAs"
-                required
+                name="password"
+                [(ngModel)]="conta.password"
                 placeholder="Digite sua senha novamente aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-lock"></i>
               </span>
             </div>
-            
-            {{ confirmacaoSenha.className }}
+
+            <small
+              *ngIf="password.value != confirmacaoSenha.value"
+              class="text-danger"
+              >Senha não é igual a confirmação</small
+            >
 
             <button
               type="submit"
