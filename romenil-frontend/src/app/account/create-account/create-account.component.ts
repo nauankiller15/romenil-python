@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from 'src/app/shared/account-service/account.service';
+import { MustMatch } from './must-match.service';
 
 import { Conta, Usuario } from '../models';
+
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 declare var $: any;
 
@@ -18,7 +21,11 @@ export class CreateAccountComponent implements OnInit {
   pagina = 'conta';
   loading = false;
 
+  // registerForm!: FormGroup;
+  // submitted = false;
+
   constructor(
+    private formBuilder: FormBuilder,
     private toastr: ToastrService,
     private accountService: AccountService,
     private router: Router
@@ -35,6 +42,20 @@ export class CreateAccountComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.registerForm = this.formBuilder.group(
+    //   {
+    //     title: ['', Validators.required],
+    //     firstName: ['', Validators.required],
+    //     lastName: ['', Validators.required],
+    //     email: ['', [Validators.required, Validators.email]],
+    //     password: ['', [Validators.required, Validators.minLength(6)]],
+    //     confirmPassword: ['', Validators.required],
+    //     acceptTerms: [false, Validators.requiredTrue],
+    //   },
+    //   {
+    //     validator: MustMatch('password', 'confirmPassword'),
+    //   }
+    // );
     $('body').addClass('noborder');
   }
 
