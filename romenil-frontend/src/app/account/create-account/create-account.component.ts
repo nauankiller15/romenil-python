@@ -24,15 +24,13 @@ export class CreateAccountComponent implements OnInit {
     private router: Router
   ) {
     if (this.accountService.autenticado()) {
-      this.accountService.usuario().subscribe(
-        data => {
-          if (data.usuario) {
-            this.router.navigate(['/welcome']);
-          } else {
-            this.pagina = 'usuario';
-          }
+      this.accountService.usuario().subscribe((data) => {
+        if (data.usuario) {
+          this.router.navigate(['/welcome']);
+        } else {
+          this.pagina = 'usuario';
         }
-      );
+      });
     }
   }
 
@@ -40,6 +38,9 @@ export class CreateAccountComponent implements OnInit {
     $('body').addClass('noborder');
   }
 
+  voltar() {
+    this.pagina = 'usuario';
+  }
   onSubmit() {
     this.loading = true;
     this.accountService.createAccount(this.conta).subscribe(
@@ -59,7 +60,7 @@ export class CreateAccountComponent implements OnInit {
     this.loading = true;
     this.accountService.createUser(this.usuario).subscribe(
       (data) => {
-        this.toastr.success('Dados cadastrados com sucesso!')
+        this.toastr.success('Dados cadastrados com sucesso!');
         this.router.navigate(['/welcome']);
       },
       (error) => {
