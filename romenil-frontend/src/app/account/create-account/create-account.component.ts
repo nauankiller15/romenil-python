@@ -35,7 +35,6 @@ export class CreateAccountComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const element = document.getElementById('passwordAs') as HTMLInputElement;
     $('body').addClass('noborder');
   }
 
