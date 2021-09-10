@@ -268,9 +268,9 @@ header {
   }
 }
 
-@keyframes slide-page-top {
+@keyframes slide-page {
   0% {
-    transform: translateY(950px);
+    transform: translateY(-950px);
     opacity: 0;
   }
   100% {

@@ -43,7 +43,6 @@ import { NgxLoadingModule } from 'ngx-loading';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxLoadingModule.forRoot({}),
     ToastrModule.forRoot({
       timeOut: 3800,
       extendedTimeOut: 3500,
@@ -52,6 +51,7 @@ import { NgxLoadingModule } from 'ngx-loading';
       enableHtml: true,
       progressBar: true,
     }),
+    NgxLoadingModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },

@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function () {
   const form = document.getElementById("calculadoraForm");
   form.addEventListener("submit", handleSubmit);
 
@@ -64,4 +64,4 @@ window.onload = function () {
   function getInputNumberValue(id) {
     return Number(document.getElementById(id).value);
   }
-};
+});
