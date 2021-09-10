@@ -24,8 +24,8 @@
   color: #fff;
   justify-self: start;
   margin-left: 20px;
-  cursor: pointer;
   font-size: 1.1em;
+  opacity: 0;
 }
 
 .nav-menu {

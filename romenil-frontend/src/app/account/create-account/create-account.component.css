@@ -78,7 +78,7 @@ header {
   margin: 14vh auto;
   padding: 10px 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-page-top 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-page-acc 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {
@@ -254,6 +254,17 @@ header {
 @keyframes slide-page {
   0% {
     transform: translateY(-950px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-page-acc {
+  0% {
+    transform: translateY(950px);
     opacity: 0;
   }
   100% {
