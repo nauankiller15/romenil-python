@@ -378,7 +378,7 @@ header {
     width: 100%;
     height: 100%;
     margin: 14vh auto;
-    padding: 0;
+    padding: 10px 0;
     background-position: 100% 0, 22% 0%;
   }
   .containerED {

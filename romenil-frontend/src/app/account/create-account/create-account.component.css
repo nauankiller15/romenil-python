@@ -340,6 +340,10 @@ header {
     width: 5px;
   }
   .box-text-criarAcc {
+    width: 100%;
+    height: 100%;
+    margin: 14vh auto;
+    padding: 10px 0;
     background-position: 100% 81%, 80% 1%;
   }
   .containerED {
