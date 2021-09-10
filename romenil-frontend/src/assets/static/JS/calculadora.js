@@ -1,4 +1,7 @@
-$(document).ready(function () {
+// $(window).load(function() {})  
+// $(document).ready(function() {})
+
+window.onload = function () {
   const form = document.getElementById("calculadoraForm");
   form.addEventListener("submit", handleSubmit);
 
@@ -22,11 +25,9 @@ $(document).ready(function () {
     const gainWeight = maintenance + 450;
 
     const layout = `
-
     <p style="color: #707070; margin-top: -25px; font-weight: 600">
     Aqui está o resultado:
     </p>
-
     <div class="result-content" style="background-color: #1a1a1a; padding: 10px; border-radius: 10px; animation: slide-left 1.3s ease-in-out;">
               <ul style="list-style: none; font-size: 15px;">
                
@@ -64,4 +65,4 @@ $(document).ready(function () {
   function getInputNumberValue(id) {
     return Number(document.getElementById(id).value);
   }
-});
+};
