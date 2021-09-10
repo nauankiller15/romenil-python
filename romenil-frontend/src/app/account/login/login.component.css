@@ -239,6 +239,10 @@ header {
   cursor: pointer;
 }
 
+.forgotPass:hover {
+  transform: translate(0px, -3px);
+}
+
 .success {
   border: 1px solid #75c400;
   color: #75c400;
@@ -360,9 +364,6 @@ header {
     margin-top: 11px;
     font-weight: 600;
   }
-  .box-text-login {
-    background-position: 100% 0, 22% 0%;
-  }
   .separTe {
     margin-top: 5vh;
   }
@@ -377,7 +378,8 @@ header {
     width: 100%;
     height: 100%;
     margin: 14vh auto;
-    padding: 0;
+    padding: 10px 0;
+    background-position: 100% 0, 22% 0%;
   }
   .containerED {
     width: 100%;

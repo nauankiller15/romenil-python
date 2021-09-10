@@ -314,7 +314,7 @@ header {
   }
   .box-text-cardapio {
     margin: 14vh auto;
-    padding: 0;
+    padding: 10px 0;
     background-position: 59% -34%;
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;

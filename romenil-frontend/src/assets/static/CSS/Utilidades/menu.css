@@ -201,6 +201,12 @@ nav .menuItems li:hover::before {
   display: none;
 }
 /*  */
+
+.toast-title {
+  font-weight: bold;
+  margin-top: -8px;
+}
+
 .toast-close-button {
   position: absolute !important;
   right: -5.7em !important;
@@ -241,7 +247,7 @@ nav .menuItems li:hover::before {
 @media (max-width: 1100px) {
   .toast-container .ngx-toastr {
     font-size: 0.85em;
-    width: 355px !important;
+    width: 300px !important;
   }
   .toast-close-button {
     position: absolute !important;
