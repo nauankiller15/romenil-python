@@ -209,6 +209,7 @@ nav .menuItems li:hover::before {
 .toast-title {
   font-weight: bold;
   margin-top: -8px;
+  text-transform: capitalize;
 }
 
 .toast-close-button {
