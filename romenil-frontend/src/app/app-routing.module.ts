@@ -7,21 +7,23 @@ import { LoginComponent } from './account/login/login.component';
 import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AuthGuardService } from './shared/auth-guard/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: AppComponent,
+    canActivate: [AuthGuardService],
     children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'create-account', component: CreateAccountComponent },
-      //
       { path: 'welcome', component: WelcomeComponent },
       { path: 'calculadora', component: CalculadoraComponent },
       { path: 'cardapios', component: CardapiosComponent },
       { path: 'formulario', component: FormularioComponent },
     ],
+    
   },
+  { path: 'login', component: LoginComponent },
+  { path: 'create-account', component: CreateAccountComponent },
 ];
 
 @NgModule({

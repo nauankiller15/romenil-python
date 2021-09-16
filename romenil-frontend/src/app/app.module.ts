@@ -20,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.interceptor';
 
 import { NgxLoadingModule } from 'ngx-loading';
+import { AuthGuardService } from './shared/auth-guard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { NgxLoadingModule } from 'ngx-loading';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },
+    AuthGuardService,
   ],
   bootstrap: [AppComponent],
 })
