@@ -5,7 +5,7 @@
         <div class="fechar-button">X</div>
       </a>
 
-      <app-top-bar></app-top-bar>
+      <app-top-bar [conta]="conta"></app-top-bar>
 
       <div class="container">
         <header>
@@ -16,7 +16,7 @@
           <div class="planejamento">
             <h2>Consulta Alimentar</h2>
           </div>
-          <h3>Olá "fname" faça a sua consulta</h3>
+          <h3>Olá {{conta.first_name}} {{conta.last_name}} faça a sua consulta</h3>
         </div>
 
         <div class="content-cardap">

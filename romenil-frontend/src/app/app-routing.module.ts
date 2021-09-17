@@ -10,6 +10,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
 
 const routes: Routes = [
+  { path: '', component: AppComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'create-account', component: CreateAccountComponent },
   {
     path: '',
     component: AppComponent,
@@ -22,8 +25,6 @@ const routes: Routes = [
     ],
     
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'create-account', component: CreateAccountComponent },
 ];
 
 @NgModule({

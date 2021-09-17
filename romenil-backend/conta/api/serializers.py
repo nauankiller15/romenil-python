@@ -64,7 +64,6 @@ class CustomJWTSerializer(JSONWebTokenSerializer):
         
         user_obj = User.objects.filter(username=username).first()
         if user_obj is None: 
-            print('cpf_ou_cnpj', user_obj)
             usuario = Usuario.objects.filter(cpf_ou_cnpj=username).first()
             if usuario is not None:
                 user_obj = usuario.usuario

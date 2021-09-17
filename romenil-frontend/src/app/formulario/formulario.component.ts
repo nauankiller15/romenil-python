@@ -33,7 +33,7 @@ export class FormularioComponent implements OnInit {
 
   verificarDados() {
     if (this.accountService.autenticado()) {
-      this.getConta();
+      this.getUsuario();
     } else {
       this.router.navigate(['/login']);
     }
@@ -59,7 +59,6 @@ export class FormularioComponent implements OnInit {
     this.accountService.conta().subscribe(
       (data) => {
         this.conta = data;
-        this.getUsuario();
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
