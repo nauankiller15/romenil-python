@@ -32,26 +32,10 @@ export class WelcomeComponent implements OnInit {
 
   verificarDados() {
     if (this.accountService.autenticado()) {
-      this.getUsuario();
+      this.getConta();
     } else {
       this.router.navigate(['/login']);
     }
-  }
-
-  getUsuario() {
-    this.accountService.usuario().subscribe(
-      (data) => {
-        if (!data.usuario) {
-          this.router.navigate(['/create-account']);
-        } else {
-          this.getConta();
-        }
-      },
-      (error) => {
-        const erro = new Erro(this.toastrService, error);
-        erro.exibir();
-      }
-    );
   }
 
   getConta() {

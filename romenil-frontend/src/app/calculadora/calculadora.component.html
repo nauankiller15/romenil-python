@@ -18,7 +18,7 @@
       </div>
       <div class="container">
         <div class="content-cardap">
-          <form id="calculadoraForm" #calculadoraForm="ngForm">
+          <form id="calculadoraForm" #calculadoraForm="ngForm" (submit)="submit()">
             <div class="form-group">
               <label for="gender">Seu sexo</label>
               <select
@@ -52,7 +52,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="weight">Seu peso</label>
+              <label for="weight">Seu peso (em Quilos)</label>
               <input
                 type="number"
                 id="weight"
@@ -67,7 +67,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="height">Sua altura</label>
+              <label for="height">Sua altura (em Centímetros)</label>
               <input
                 type="number"
                 id="height"
@@ -118,7 +118,31 @@
             </div>
           </form>
           <div id="resultados">
-            <div class="result-container" id="result"></div>
+            <div class="result-container" id="result">
+              <p style="color: #707070; margin-top: -25px; font-weight: 600">
+                Aqui está o resultado:
+              </p>
+            
+              <div class="result-content" style="background-color: #1a1a1a; padding: 10px; border-radius: 10px; animation: slide-left 1.3s ease-in-out;">
+                <ul style="list-style: none; font-size: 15px;">
+                  <li>
+                    Seu IMC é <strong style="color: #83a92f;">{{imc | number : '1.2-2'}}</strong>
+                    e você está com <strong style="color: #83a92f;">{{diagnostico}} calorias</strong>
+                  </li>
+
+                  <li>
+                    Para manter o seu peso você precisa consumir em média
+                    <strong style="color: #83a92f;">{{maintenance}} calorias</strong>.
+                  </li>
+                  
+                  <li>
+                    Para perder peso você precisa consumir em média
+                    <strong style="color: #83a92f;">{{loseWeight}} calorias</strong>.
+                  </li>
+                            
+                </ul>
+              </div>
+            </div>
             <div class="cardBtn">
               <button class="btn success" id="refazerIMC">
                 <i class="fas fa-undo" style="margin-right: 10px"></i>Refazer

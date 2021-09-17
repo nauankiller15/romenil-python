@@ -10,13 +10,18 @@ declare var $: any;
 export class CalculadoraComponent implements OnInit {
   calculadora = {
     sexo: '',
-    idade: null,
-    peso: null,
-    altura: null,
+    idade: 0,
+    peso: 0,
+    altura: 0,
     nivel_atividade: '',
   };
+  imc = 0;
+  diagnostico = '';
+  maintenance = 0;
+  loseWeight = 0;
+  gainWeight = 0;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     $('#fecharBtCalc').on('click', function () {
@@ -35,5 +40,40 @@ export class CalculadoraComponent implements OnInit {
       $('#resultados').slideUp(450);
       $('.cardBtn').slideDown(250);
     });
+  }
+
+  calcularIMC() {
+    this.imc = this.calculadora.peso / (this.calculadora.altura * this.calculadora.altura/10000);
+
+    if (this.imc < 18.5) {
+      this.diagnostico = 'abaixo do peso';
+    } else if (this.imc >= 18.5 && this.imc < 25) {
+      this.diagnostico = 'peso ideal';
+    } else if (this.imc >= 25 && this.imc < 30) {
+      this.diagnostico = 'sobrepeso';
+    } else if (this.imc >= 30 && this.imc < 35) {
+      this.diagnostico = 'obesidade leve';
+    } else if (this.imc >= 35 && this.imc < 40) {
+      this.diagnostico = 'obesidade severa';
+    } else {
+      this.diagnostico = 'obesidade mórbida';
+    }
+  }
+
+  calcularTMB() {
+    const tmb = Math.round(
+      this.calculadora.sexo == 'male'
+      ? 66 + (13.8 * this.calculadora.peso) + (5 * this.calculadora.altura) - (6.8 * this.calculadora.idade)
+      : 655 + (9.6 * this.calculadora.peso) + (1.8 * this.calculadora.altura) - (4.7 * this.calculadora.idade)
+    );
+          
+    this.maintenance = Math.round(tmb * Number(this.calculadora.nivel_atividade));
+    this.loseWeight = this.maintenance - 450;
+    this.gainWeight = this.maintenance + 450;
+}
+
+  submit() {
+    this.calcularIMC();
+    this.calcularTMB();
   }
 }

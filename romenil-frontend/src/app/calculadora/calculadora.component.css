@@ -365,6 +365,7 @@ header {
 }
 
 .result-container {
+  /* display: none; */
   color: #fff;
   margin-left: -110px;
   margin-top: 50px;
