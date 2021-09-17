@@ -9,7 +9,9 @@
         <div class="container-cart">
           <h3>Crie sua conta agora:</h3>
         </div>
-        <div class="container">
+        <div class="containerED">
+          <!-- <form (ngSubmit)="onSubmit()" #formConta="ngForm" [formGroup]="registerForm"> -->
+
           <form (ngSubmit)="onSubmit()" #formConta="ngForm">
             <div class="form-group">
               <label>Nome:</label>
@@ -17,10 +19,9 @@
                 class="form-control"
                 type="text"
                 name="first_name"
-                id="first_name"
                 [(ngModel)]="conta.first_name"
-                required
                 placeholder="Digite seu nome aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-user"></i>
@@ -33,10 +34,9 @@
                 class="form-control"
                 type="text"
                 name="last_name"
-                id="last_name"
                 [(ngModel)]="conta.last_name"
-                required
                 placeholder="Digite seu sobrenome aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="far fa-user"></i>
@@ -49,10 +49,9 @@
                 class="form-control"
                 type="email"
                 name="email"
-                id="email"
                 [(ngModel)]="conta.email"
-                required
                 placeholder="Digite seu email aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-envelope"></i>
@@ -62,13 +61,13 @@
             <div class="form-group">
               <label>Senha:</label>
               <input
+                #confirmacaoSenha
                 class="form-control"
                 type="password"
-                name="password"
-                id="password"
-                [(ngModel)]="conta.password"
-                required
+                name="confirmacaoSenha"
+                [(ngModel)]="conta.password2"
                 placeholder="Digite sua senha aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-lock"></i>
@@ -78,17 +77,25 @@
             <div class="form-group">
               <label>Repita a senha:</label>
               <input
+                #password
                 class="form-control"
                 type="password"
-                name="password2"
-                id="password2"
-                required
+                name="password"
+                [(ngModel)]="conta.password"
                 placeholder="Digite sua senha novamente aqui"
+                required
               />
               <span class="symbol-input100">
                 <i class="fa fa-lock"></i>
               </span>
             </div>
+
+            <small
+              class="text-danger"
+              *ngIf="password.value != confirmacaoSenha.value"
+              >Senha não é igual a confirmação</small
+            >
+
             <button
               type="submit"
               class="btn criarcontaBt"
@@ -112,7 +119,7 @@
         <div class="container-cart">
           <h3>Complemente seus dados:</h3>
         </div>
-        <div class="container">
+        <div class="containerED">
           <form (ngSubmit)="onSubmitUsuario()" #formUsuario="ngForm">
             <div class="form-group">
               <label>CPF / CNPJ:</label>
@@ -124,6 +131,8 @@
                 [(ngModel)]="usuario.cpf_ou_cnpj"
                 required
                 placeholder="Digite seu CPF ou CNPJ aqui"
+                minlength="10"
+                maxlength="14"
               />
               <span class="symbol-input100">
                 <i class="fa fa-id-card"></i>
@@ -140,6 +149,8 @@
                 [(ngModel)]="usuario.celular"
                 required
                 placeholder="Digite seu celular aqui"
+                minlength="8"
+                maxlength="11"
               />
               <span class="symbol-input100">
                 <i class="fab fa-whatsapp"></i>

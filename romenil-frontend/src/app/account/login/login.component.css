@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.container {
+.containerED {
   width: 35%;
   margin: 6vh auto;
 }
@@ -239,6 +239,10 @@ header {
   cursor: pointer;
 }
 
+.forgotPass:hover {
+  transform: translate(0px, -3px);
+}
+
 .success {
   border: 1px solid #75c400;
   color: #75c400;
@@ -246,6 +250,7 @@ header {
   width: 100%;
   background: none;
   transition: 0.4s all ease-in-out;
+  line-height: 40px;
 }
 
 .success:hover {
@@ -267,9 +272,9 @@ header {
   }
 }
 
-@keyframes slide-page-top {
+@keyframes slide-page {
   0% {
-    transform: translateY(950px);
+    transform: translateY(-950px);
     opacity: 0;
   }
   100% {
@@ -359,9 +364,6 @@ header {
     margin-top: 11px;
     font-weight: 600;
   }
-  .box-text-login {
-    background-position: 100% 0, 22% 0%;
-  }
   .separTe {
     margin-top: 5vh;
   }
@@ -376,9 +378,10 @@ header {
     width: 100%;
     height: 100%;
     margin: 14vh auto;
-    padding: 0;
+    padding: 10px 0;
+    background-position: 100% 0, 22% 0%;
   }
-  .container {
+  .containerED {
     width: 100%;
     padding: 25px;
     margin: auto;
@@ -524,6 +527,7 @@ header {
   margin-bottom: 10px;
   color: #0a0e17;
   font-weight: 500;
+  line-height: 40px;
 }
 
 .loginBt:hover {

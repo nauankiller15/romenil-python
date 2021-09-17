@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
-import { FormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
@@ -40,8 +42,8 @@ import { AuthGuardService } from './shared/auth-guard/auth.guard';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    NgxLoadingModule.forRoot({}),
     ToastrModule.forRoot({
       timeOut: 3800,
       extendedTimeOut: 3500,
@@ -50,6 +52,7 @@ import { AuthGuardService } from './shared/auth-guard/auth.guard';
       enableHtml: true,
       progressBar: true,
     }),
+    NgxLoadingModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },

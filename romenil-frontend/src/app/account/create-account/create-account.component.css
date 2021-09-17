@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.container {
+.containerED {
   width: 35%;
   margin: 6vh auto;
 }
@@ -65,6 +65,7 @@ header {
   background: #a8da5d;
 }
 /*  */
+
 .box-text-criarAcc {
   border-top: 4px solid #75c400;
   background-color: #0a0e17;
@@ -78,7 +79,7 @@ header {
   margin: 14vh auto;
   padding: 10px 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-page-top 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-page-acc 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {
@@ -229,6 +230,7 @@ header {
   width: 100%;
   background: none;
   transition: 0.4s;
+  line-height: 40px;
 }
 
 .success:hover {
@@ -253,6 +255,17 @@ header {
 @keyframes slide-page {
   0% {
     transform: translateY(-950px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-page-acc {
+  0% {
+    transform: translateY(950px);
     opacity: 0;
   }
   100% {
@@ -311,6 +324,9 @@ header {
 .separTe {
   margin-top: 12vh;
 }
+.center {
+  text-align: center;
+}
 
 @media (max-width: 1100px) {
   .separTe {
@@ -324,9 +340,13 @@ header {
     width: 5px;
   }
   .box-text-criarAcc {
+    width: 100%;
+    height: 100%;
+    margin: 14vh auto;
+    padding: 10px 0;
     background-position: 100% 81%, 80% 1%;
   }
-  .container {
+  .containerED {
     width: 100%;
     padding: 25px;
     margin: auto;
@@ -472,6 +492,7 @@ header {
   margin-bottom: 10px;
   color: #0a0e17;
   font-weight: 500;
+  line-height: 40px;
 }
 
 .criarcontaBt:hover {

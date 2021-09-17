@@ -222,6 +222,7 @@ header {
   width: 100%;
   background: none;
   transition: 0.4s;
+  line-height: 40px;
 }
 
 .success:hover {
@@ -303,7 +304,7 @@ header {
 
 /* ESTILO DA CALCULADORA */
 
-.container {
+.containerED {
   width: 550px;
   margin: 0 auto;
   animation: slide-top 1.7s ease-in-out;
@@ -413,7 +414,7 @@ header {
   }
   .box-text-calculadora {
     margin: 14vh auto;
-    padding: 0;
+    padding: 10px 0;
     background-position: 44% -34%;
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -428,7 +429,7 @@ header {
     width: 100%;
   }
 
-  .container {
+  .containerED {
     width: 100% !important;
     margin: 0 auto;
   }

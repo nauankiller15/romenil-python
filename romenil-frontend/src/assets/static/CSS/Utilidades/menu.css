@@ -201,6 +201,17 @@ nav .menuItems li:hover::before {
   display: none;
 }
 /*  */
+
+.toast-success {
+  background-color: #1e751e !important;
+}
+
+.toast-title {
+  font-weight: bold;
+  margin-top: -8px;
+  text-transform: capitalize;
+}
+
 .toast-close-button {
   position: absolute !important;
   right: -5.7em !important;
@@ -232,10 +243,16 @@ nav .menuItems li:hover::before {
   font-size: 0.95em;
 }
 
+.toast-message {
+  word-wrap: break-word;
+  font-size: 0.8em;
+  line-height: 18px;
+}
+
 @media (max-width: 1100px) {
   .toast-container .ngx-toastr {
     font-size: 0.85em;
-    width: 355px !important;
+    width: 300px !important;
   }
   .toast-close-button {
     position: absolute !important;
