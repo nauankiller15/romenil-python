@@ -75,5 +75,6 @@ export class CalculadoraComponent implements OnInit {
   submit() {
     this.calcularIMC();
     this.calcularTMB();
+    $('#resultados').fadeIn(250);
   }
 }

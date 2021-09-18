@@ -365,6 +365,10 @@ header {
   margin-top: 40px;
 }
 
+#resultados{
+  display: none;
+}
+
 .result-container {
   /* display: none; */
   color: #fff;

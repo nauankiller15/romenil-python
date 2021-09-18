@@ -45,6 +45,8 @@
                 name="idade"
                 [class.is-invalid]="idade.invalid && idade.touched"
                 [class.is-valid]="idade.valid && idade.touched"
+                minlength="2"
+                maxlength="3"
                 required
                 type="number"
                 id="age"
@@ -62,6 +64,8 @@
                 name="peso"
                 [class.is-invalid]="peso.invalid && peso.touched"
                 [class.is-valid]="peso.valid && peso.touched"
+                minlength="2"
+                maxlength="3"
                 required
                 placeholder="Digite aqui seu peso"
               />
@@ -77,6 +81,8 @@
                 name="altura"
                 [class.is-invalid]="altura.invalid && altura.touched"
                 [class.is-valid]="altura.valid && altura.touched"
+                minlength="3"
+                maxlength="3"
                 required
                 placeholder="Digite aqui sua altura"
               />
