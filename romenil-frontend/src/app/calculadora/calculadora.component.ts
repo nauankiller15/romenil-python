@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Conta } from '../account/models';
+import { AccountService } from '../shared/account-service/account.service';
+import { Erro } from '../shared/erros';
+import { Calculadora } from '../calculadora/models';
 
 declare var $: any;
 
@@ -8,20 +13,18 @@ declare var $: any;
   styleUrls: ['./calculadora.component.css'],
 })
 export class CalculadoraComponent implements OnInit {
-  calculadora = {
-    sexo: '',
-    idade: 0,
-    peso: 0,
-    altura: 0,
-    nivel_atividade: '',
-  };
+
+  conta = new Conta();
+  calculadora = {} as Calculadora;
   imc = 0;
   diagnostico = '';
   maintenance = 0;
   loseWeight = 0;
   gainWeight = 0;
 
-  constructor() { }
+  constructor(private accountService: AccountService, private toastrService:ToastrService) { 
+    this.getConta();
+  }
 
   ngOnInit(): void {
     $('#fecharBtCalc').on('click', function () {
@@ -40,6 +43,18 @@ export class CalculadoraComponent implements OnInit {
       $('#resultados').slideUp(450);
       $('.cardBtn').slideDown(250);
     });
+  }
+
+  getConta() {
+    this.accountService.conta().subscribe(
+      (data) => {
+        this.conta = data;
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
   }
 
   calcularIMC() {
