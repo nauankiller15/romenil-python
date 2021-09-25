@@ -143,4 +143,4 @@ CORS_ALLOWED_ORIGINS = []
 if DEBUG:
     CORS_ALLOWED_ORIGINS +=['http://localhost:4200',]
 else:
-    CORS_ALLOWED_ORIGINS +=['',]
+    CORS_ALLOWED_ORIGINS +=['https://www.romenilalencar.com.br', 'https://romenilalencar.com.br',]
