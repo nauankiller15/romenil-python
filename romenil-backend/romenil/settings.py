@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+
 
 from .variaveis_de_ambiente import SECRET_KEY, DEBUG, ALLOWED_HOSTS, DATABASES
 
@@ -136,6 +138,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
+}
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': timedelta(days=30),
 }
 
 CORS_ALLOWED_ORIGINS = []
