@@ -500,3 +500,8 @@ header {
     padding: 44px;
   }
 }
+
+.erro {
+  color: red;
+  font-size: 15px
+}

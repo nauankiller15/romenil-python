@@ -44,14 +44,17 @@
                 name="idade"
                 [class.is-invalid]="idade.invalid && idade.touched"
                 [class.is-valid]="idade.valid && idade.touched"
-                minlength="2"
-                maxlength="3"
-                required
+                min="1"
+                max="110"
                 type="number"
                 id="age"
                 placeholder="Digite aqui sua idade"
+                onkeypress="return event.charCode >= 48"
+                required
               />
+              <span class="erro" *ngIf="1 > idade.value || idade.value > 111">Idade inválida</span>
             </div>
+
             <div class="form-group">
               <label for="weight">Seu peso (em Quilos)</label>
               <input
@@ -80,11 +83,13 @@
                 name="altura"
                 [class.is-invalid]="altura.invalid && altura.touched"
                 [class.is-valid]="altura.valid && altura.touched"
-                minlength="3"
-                maxlength="3"
-                required
+                min="40"
+                max="300"
                 placeholder="Digite aqui sua altura"
+                onkeypress="return event.charCode >= 48"
+                required
               />
+              <span class="erro" *ngIf="40 > altura.value || altura.value > 300">Altura inválida! Use em centímetros</span>
             </div>
             <div class="form-group">
               <label for="activity_level">Seu nível de atividade física</label>
