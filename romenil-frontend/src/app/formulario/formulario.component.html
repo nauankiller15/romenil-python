@@ -24,157 +24,157 @@
           <div class="container-cart">
             <h4>Patologias</h4>
           </div>
-          <div class="dadosConsulta">
-            <h3>Hipertensão?</h3>
+          <form>
+            <div class="dadosConsulta">
+              <h3>Hipertensão?</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
+              <div class="atach">Escolha uma das opções:</div>
               <div class="option">
-                <input
-                  type="radio"
+                <input 
+                  type="radio" 
                   id="hipSim"
-                  name="fav_language"
-                  value="JavaScript"
+                  name="hipertensao" 
+                  [(ngModel)]="patologia.hipertensao" 
+                  [value]="true"
                 />
-                  <label for="hipSim">Sim</label>
+                <label for="hipSim">Sim</label>
               </div>
-
                
               <div class="option">
-                <input
-                  type="radio"
+                <input 
+                  type="radio" 
                   id="hipNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="hipNao">Não</label>
+                  name="hipertensao" 
+                  [(ngModel)]="patologia.hipertensao" 
+                  [value]="false"
+                >
+                <label for="hipNao">Não</label>
               </div>
-            </form>
-          </div>
+            </div>
 
-          <div class="dadosConsulta">
-            <h3>Diabetes?</h3>
+            <div class="dadosConsulta">
+              <h3>Diabetes?</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
+              <div class="atach">Escolha uma das opções:</div>
               <div class="option">
                 <input
-                  type="radio"
+                type="radio"
                   id="diabSim"
-                  name="fav_language"
-                  value="JavaScript"
+                  name="diabetes"
+                  [(ngModel)]="patologia.diabetes"
+                  [value]="true"
                 />
-                  <label for="diabSim">Sim</label>
+                <label for="diabSim">Sim</label>
               </div>
 
-               
               <div class="option">
                 <input
                   type="radio"
                   id="diabNao"
-                  name="fav_language"
-                  value="JavaScript"
+                  name="diabetes"
+                  [(ngModel)]="patologia.diabetes"
+                  [value]="false"
                 />
-                  <label for="diabNao">Não</label>
+                <label for="diabNao">Não</label>
               </div>
-            </form>
-          </div>
+            </div>
 
-          <div class="dadosConsulta">
-            <h3>Hipotireoidismo?</h3>
+            <div class="dadosConsulta">
+              <h3>Hipotireoidismo?</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="hipotireoSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="hipotireoSim">Sim</label>
-              </div>
+              <div class="atach">Escolha uma das opções:</div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="hipotireoSim"
+                    name="hipotireoidismo"
+                    [(ngModel)]="patologia.hipotireoidismo"
+                    [value]="true"
+                  />
+                    <label for="hipotireoSim">Sim</label>
+                </div>
 
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="hipotireoNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="hipotireoNao">Não</label>
-              </div>
-            </form>
-          </div>
+                 
+                <div class="option">
+                  <input
+                    [(ngModel)]="patologia.hipotireoidismo"
+                    type="radio"
+                    id="hipotireoNao"
+                    name="hipotireoidismo"
+                    [value]="false"
+                  />
+                    <label for="hipotireoNao">Não</label>
+                </div>
+            </div>
 
-          <div class="dadosConsulta">
-            <h3>Metabolimo lento?</h3>
+            <div class="dadosConsulta">
+              <h3>Metabolimo lento?</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="metabolismoSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="metabolismoSim">Sim</label>
-              </div>
+              <div class="atach">Escolha uma das opções:</div>
+            
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="metabolismoSim"
+                    name="metabolismo_lento"
+                    [(ngModel)]="patologia.metabolismo_lento"
+                    [value]="true"
+                  />
+                    <label for="metabolismoSim">Sim</label>
+                </div>
 
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="insuficNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="insuficNao">Não</label>
-              </div>
-            </form>
-          </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="metabolismoNao"
+                    name="metabolismo_lento"
+                    [(ngModel)]="patologia.metabolismo_lento"
+                    [value]="false"
+                  />
+                    <label for="metabolismoNao">Não</label>
+                </div>
+            </div>
 
-          <div class="dadosConsulta">
-            <h3>Costuma ter retenção de líquidos?</h3>
+            <div class="dadosConsulta">
+              <h3>Costuma ter retenção de líquidos?</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
+              <div class="atach">Escolha uma das opções:</div>
+              
               <div class="option">
                 <input
                   type="radio"
                   id="retLiquidSim"
-                  name="fav_language"
-                  value="JavaScript"
+                  name="retencao_liquida"
+                  [(ngModel)]="patologia.retencao_liquida"
+                  [value]="true"
                 />
                   <label for="retLiquidSim">Sim</label>
               </div>
-
-               
+                 
               <div class="option">
                 <input
                   type="radio"
                   id="retLiquidNao"
-                  name="fav_language"
-                  value="JavaScript"
+                  name="retencao_liquida"
+                  [(ngModel)]="patologia.retencao_liquida"
+                  [value]="false"
                 />
                   <label for="retLiquidNao">Não</label>
               </div>
-            </form>
-          </div>
+            </div>
 
-          <div class="dadosConsulta">
-            <h3>Tem insônia?</h3>
+            <div class="dadosConsulta">
+              <h3>Tem insônia?</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
+              <div class="atach">Escolha uma das opções:</div>
+              
               <div class="option">
                 <input
                   type="radio"
                   id="isoniaSim"
-                  name="fav_language"
-                  value="JavaScript"
+                  name="insonia"
+                  [(ngModel)]="patologia.insonia"
+                  [value]="true"
                 />
                   <label for="isoniaSim">Sim</label>
               </div>
@@ -184,182 +184,182 @@
                 <input
                   type="radio"
                   id="isoniaNao"
-                  name="fav_language"
-                  value="JavaScript"
+                  name="insonia"
+                  [(ngModel)]="patologia.insonia"
+                  [value]="false"
                 />
                   <label for="isoniaNao">Não</label>
               </div>
-            </form>
-          </div>
+            </div>
 
 
-          <div class="dadosConsulta">
-            <h3>Glúten?</h3>
+            <div class="dadosConsulta">
+              <h3>Glúten?</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="isoniaSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="isoniaSim">Sim</label>
-              </div>
+              <div class="atach">Escolha uma das opções:</div>
+              
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="glutenSim"
+                    name="gluten"
+                    
+                    value="true"
+                  />
+                    <label for="glutenSim">Sim</label>
+                </div>
 
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="isoniaNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="isoniaNao">Não</label>
-              </div>
-            </form>
-          </div>
+                 
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="glutenNao"
+                    name="gluten"
+                    value="false"
+                  />
+                    <label for="glutenNao">Não</label>
+                </div>
+            </div>
 
-          <div class="dadosConsulta">
-            <h3>Constipação? (Vontade de ir ao banheiro)</h3>
+            <div class="dadosConsulta">
+              <h3>Constipação? (Vontade de ir ao banheiro)</h3>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="constipacaoSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="constipacaoSim">Sim</label>
-              </div>
+              <div class="atach">Escolha uma das opções:</div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="constipacaoSim"
+                    name="constipacao"
+                    [(ngModel)]="patologia.constipacao"
+                    [value]="true"
+                  />
+                  <label for="constipacaoSim">Sim</label>
+                </div>
+                 
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="constipacaoNao"
+                    name="constipacao"
+                    [(ngModel)]="patologia.constipacao"
+                    [value]="false"
+                  />
+                    <label for="constipacaoNao">Não</label>
+                </div>
+            </div>
 
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="constipacaoNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="constipacaoNao">Não</label>
-              </div>
-            </form>
-          </div>
+            <div class="dadosConsulta">
+              <h3>Colesterol elevado?</h3>
 
-          <div class="dadosConsulta">
-            <h3>Colesterol elevado?</h3>
+              <div class="atach">Escolha uma das opções:</div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="colesterolSim"
+                    name="colesterol_elevado"
+                    [(ngModel)]="patologia.colesterol_elevado"
+                    [value]="true"
+                  />
+                  <label for="colesterolSim">Sim</label>
+                </div>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="colesterolSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="colesterolSim">Sim</label>
-              </div>
+                 
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="colesterolNao"
+                    name="colesterol_elevado"
+                    [(ngModel)]="patologia.colesterol_elevado"
+                    [value]="false"
+                  />
+                    <label for="colesterolNao">Não</label>
+                </div>
+            </div>
 
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="colesterolNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="colesterolNao">Não</label>
-              </div>
-            </form>
-          </div>
+            <div class="dadosConsulta">
+              <h3>Ansiedade?</h3>
 
-          <div class="dadosConsulta">
-            <h3>Ansiedade?</h3>
+              <div class="atach">Escolha uma das opções:</div>
+              
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="ansiedadeSim"
+                    name="ansiedade"
+                    [(ngModel)]="patologia.ansiedade"
+                    [value]="true"
+                  />
+                    <label for="ansiedadeSim">Sim</label>
+                </div>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="ansiedadeSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="ansiedadeSim">Sim</label>
-              </div>
+                 
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="ansiedadeNao"
+                    name="ansiedade"
+                    [(ngModel)]="patologia.ansiedade"
+                    [value]="false"
+                  />
+                    <label for="ansiedadeNao">Não</label>
+                </div>
+            </div>
 
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="ansiedadeNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="ansiedadeNao">Não</label>
-              </div>
-            </form>
-          </div>
+            <div class="dadosConsulta">
+              <h3>Gordura no fígado (Esteatose hepática)?</h3>
 
-          <div class="dadosConsulta">
-            <h3>Gordura no fígado (Esteatose hepática)?</h3>
+              <div class="atach">Escolha uma das opções:</div>
+             
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="gorduraFigadoSim"
+                    name="gordura_no_figado"
+                    value="true"
+                  />
+                    <label for="gorduraFigadoSim">Sim</label>
+                </div>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="gorduraFigadoSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="gorduraFigadoSim">Sim</label>
-              </div>
+                 
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="gorduraFigadoNao"
+                    name="gordura_no_figado"
+                    value="false"
+                  />
+                    <label for="gorduraFigadoNao">Não</label>
+                </div>
+            </div>
 
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="gorduraFigadoNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="gorduraFigadoNao">Não</label>
-              </div>
-            </form>
-          </div>
+            <div class="dadosConsulta">
+              <h3>Tem anemia?</h3>
 
-          <div class="dadosConsulta">
-            <h3>Tem anemia?</h3>
+              <div class="atach">Escolha uma das opções:</div>
+              
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="anemiaSim"
+                    name="anemia"
+                    value="true"
+                  />
+                    <label for="anemiaSim">Sim</label>
+                </div>
 
-            <div class="atach">Escolha uma das opções:</div>
-            <form>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="anemiaSim"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="anemiaSim">Sim</label>
-              </div>
-
-               
-              <div class="option">
-                <input
-                  type="radio"
-                  id="anemiaNao"
-                  name="fav_language"
-                  value="JavaScript"
-                />
-                  <label for="anemiaNao">Não</label>
-              </div>
-            </form>
-          </div>
+                 
+                <div class="option">
+                  <input
+                    type="radio"
+                    id="anemiaNao"
+                    name="anemia"
+                    value="false"
+                  />
+                    <label for="anemiaNao">Não</label>
+                </div>
+              
+            </div>
+          </form>
 
           <div class="linhaD"></div>
           <div class="favMarks"><i class="fas fa-temperature-high"></i></div>
@@ -555,7 +555,7 @@
           </div>
           <div class="cardBtn">
             <div style="padding-top: 25px"></div>
-            <button routerLink="/cardapios" class="btn success">
+            <button class="btn success" (click)="salvarFormulario()">
               <i class="fas fa-clipboard-check" style="margin-right: 10px"></i
               >Gerar meu Cardápio
             </button>
