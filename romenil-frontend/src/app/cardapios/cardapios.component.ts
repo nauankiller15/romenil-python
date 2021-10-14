@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { ApiService } from '../shared/api-service/api.service';
+import { Erro } from '../shared/erros';
 declare var $: any;
 
 @Component({
@@ -7,7 +10,12 @@ declare var $: any;
   styleUrls: ['./cardapios.component.css'],
 })
 export class CardapiosComponent implements OnInit {
-  constructor() {}
+
+  cardapio = ''
+ 
+  constructor(private apiService: ApiService, private toastrService: ToastrService) {
+    this.getCardapio()
+  }
 
   ngOnInit(): void {
     $('#fecharBtCardp').on('click', function () {
@@ -15,5 +23,17 @@ export class CardapiosComponent implements OnInit {
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
+  }
+
+  getCardapio() {
+    this.apiService.listar('cardapio').subscribe(
+      (data) => {
+        this.cardapio = data.cardapio;
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
   }
 }
