@@ -43,6 +43,13 @@ export class CalculadoraComponent implements OnInit {
       $('#resultados').slideUp(450);
       $('.cardBtn').slideDown(250);
     });
+
+    $('.select1').on('click', function () {
+      $('.choose1').fadeOut(250);
+    });
+    $('.select2').on('click', function () {
+      $('.choose2').fadeOut(250);
+    });
   }
 
   getConta() {

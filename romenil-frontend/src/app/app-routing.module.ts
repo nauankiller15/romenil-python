@@ -8,6 +8,7 @@ import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
+import { ConversaoComponent } from './conversao/conversao.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'calculadora', component: CalculadoraComponent },
       { path: 'cardapios', component: CardapiosComponent },
       { path: 'formulario', component: FormularioComponent },
+      { path: 'conversao', component: ConversaoComponent },
     ],
     
   },

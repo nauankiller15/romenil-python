@@ -18,12 +18,16 @@
       </div>
       <div class="containerED">
         <div class="content-cardap">
-          <form id="calculadoraForm" #calculadoraForm="ngForm" (submit)="submit()">
+          <form
+            id="calculadoraForm"
+            #calculadoraForm="ngForm"
+            (submit)="submit()"
+          >
             <div class="form-group">
               <label for="gender">Seu sexo</label>
               <select
                 id="gender"
-                class="form-control"
+                class="form-control select1"
                 #sexo="ngModel"
                 [(ngModel)]="calculadora.sexo"
                 name="sexo"
@@ -34,6 +38,7 @@
                 <option value="male">Masculino</option>
                 <option value="female">Feminino</option>
               </select>
+              <div class="selecione choose1">Selecione</div>
             </div>
             <div class="form-group">
               <label for="age">Sua idade</label>
@@ -52,7 +57,9 @@
                 onkeypress="return event.charCode >= 48"
                 required
               />
-              <span class="erro" *ngIf="1 > idade.value || idade.value > 111">Idade inválida</span>
+              <span class="erro" *ngIf="1 > idade.value || idade.value > 111"
+                >Idade inválida</span
+              >
             </div>
 
             <div class="form-group">
@@ -89,13 +96,15 @@
                 onkeypress="return event.charCode >= 48"
                 required
               />
-              <span class="erro" *ngIf="40 > altura.value || altura.value > 300">Altura inválida! Use em centímetros</span>
+              <span class="erro" *ngIf="40 > altura.value || altura.value > 300"
+                >Altura inválida! Use em centímetros</span
+              >
             </div>
             <div class="form-group">
               <label for="activity_level">Seu nível de atividade física</label>
               <select
                 id="activity_level"
-                class="form-control"
+                class="form-control select2"
                 #nivel_atividade="ngModel"
                 [(ngModel)]="calculadora.nivel_atividade"
                 name="nivel_atividade"
@@ -112,6 +121,7 @@
                 <option value="1.725">Atividade intensa</option>
                 <option value="1.9">Atividade muito intensa</option>
               </select>
+              <div class="selecione choose2">Selecione</div>
             </div>
 
             <div class="form-group">
@@ -131,24 +141,39 @@
               <p style="color: #707070; margin-top: -25px; font-weight: 600">
                 Aqui está o resultado:
               </p>
-            
-              <div class="result-content" style="background-color: #1a1a1a; padding: 10px; border-radius: 10px; animation: slide-left 1.3s ease-in-out;">
-                <ul style="list-style: none; font-size: 15px;">
+
+              <div
+                class="result-content"
+                style="
+                  background-color: #1a1a1a;
+                  padding: 10px;
+                  border-radius: 10px;
+                  animation: slide-left 1.3s ease-in-out;
+                "
+              >
+                <ul style="list-style: none; font-size: 15px">
                   <li>
-                    Seu IMC é <strong style="color: #83a92f;">{{imc | number : '1.2-2'}}</strong>
-                    e você está com <strong style="color: #83a92f;">{{diagnostico}}.</strong>
+                    Seu IMC é
+                    <strong style="color: #83a92f">{{
+                      imc | number: "1.2-2"
+                    }}</strong>
+                    e você está com
+                    <strong style="color: #83a92f">{{ diagnostico }}.</strong>
                   </li>
 
                   <li>
                     Para manter o seu peso você precisa consumir em média
-                    <strong style="color: #83a92f;">{{maintenance}} calorias</strong>.
+                    <strong style="color: #83a92f"
+                      >{{ maintenance }} calorias</strong
+                    >.
                   </li>
-                  
+
                   <li>
                     Para perder peso você precisa consumir em média
-                    <strong style="color: #83a92f;">{{loseWeight}} calorias</strong>.
+                    <strong style="color: #83a92f"
+                      >{{ loseWeight }} calorias</strong
+                    >.
                   </li>
-                            
                 </ul>
               </div>
             </div>

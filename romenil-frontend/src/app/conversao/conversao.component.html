@@ -1,0 +1,48 @@
+<div id="conversao">
+    <div class="box-text-conversao">
+      <div class="text-info-box">
+        <a id="fecharBtConversao">
+          <div class="fechar-button">X</div>
+        </a>
+        <app-top-bar [conta]="conta"></app-top-bar>
+  
+        <div class="containerED">
+          <header>
+            <div class="logo-calc"></div>
+          </header>
+          <div class="separTe"></div>
+          <div class="container-cart">
+            <div class="planejamento">
+              <h2>Não foi possível localizar sua Inscrição!</h2>
+            </div>
+            <h3>Olá {{conta.first_name}} {{conta.last_name}}, não fique de fora!</h3>
+          </div>
+  
+          <div style="padding-top: 30px"></div>
+          <div class="content-cardap">
+            <div class="dadosConsulta">
+              <h3>
+                <i class="fas fa-exclamation-triangle" style="margin-right: 10px"></i> Copy dando
+                boas vindas ao sistema
+              </h3>
+  
+              <div class="atach">
+                Instruções ou alguma copy informando ao usuário logado, como
+                calcular seu IMC e fazer o formulário que só pode ser feito, após
+                comprar o curso e etc...
+              </div>
+            </div>
+            <div class="cardBtn">
+              <div style="padding-top: 25px"></div>
+              <button id="hideT" routerLink="/calculadora" class="btn success">
+                <i class="fas fa-shopping-basket" style="margin-right: 10px"></i
+                >Garantir a minha Inscrição
+              </button>
+            </div>
+            <div class="linhaE"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
