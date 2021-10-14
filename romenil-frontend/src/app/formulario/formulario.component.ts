@@ -3,7 +3,9 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
+import { ApiService } from '../shared/api-service/api.service';
 import { Erro } from '../shared/erros';
+import { Patologia } from './models';
 declare var $: any;
 
 @Component({
@@ -14,11 +16,13 @@ declare var $: any;
 export class FormularioComponent implements OnInit {
 
   conta = new Conta();
+  patologia = new Patologia; 
 
   constructor(
-    private router: Router, 
+    private apiService: ApiService,
     private accountService: AccountService,
     private toastrService: ToastrService,
+    private router: Router, 
   ) {
     this.verificarDados();
   }
@@ -59,6 +63,20 @@ export class FormularioComponent implements OnInit {
     this.accountService.conta().subscribe(
       (data) => {
         this.conta = data;
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
+  }
+
+  salvarFormulario() {
+    console.log(this.patologia);
+    this.apiService.salvar('patologia', this.patologia).subscribe(
+      (data) => {
+        this.patologia = data;
+        console.log(data);
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);

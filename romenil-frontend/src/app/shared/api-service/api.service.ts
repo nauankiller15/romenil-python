@@ -19,4 +19,10 @@ export class ApiService {
       headers: this.httpHeaders,
     });
   }
+
+  salvar(url: string, dados: any): Observable<any> {
+    return this.httpClient.post(this.baseUrl + url +'/', dados, {
+      headers: this.httpHeaders,
+    });
+  }
 }
