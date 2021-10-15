@@ -111,6 +111,7 @@ header {
   border-top: 2px solid var(--azul);
   padding: 10px 0px 10px 0px;
   animation: slide-top 0.9 ease-in-out;
+  border-radius: 10px;
 }
 
 .container-cart h3 {
