@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Conta } from '../account/models';
+import { AccountService } from '../shared/account-service/account.service';
 import { ApiService } from '../shared/api-service/api.service';
 import { Erro } from '../shared/erros';
 declare var $: any;
@@ -11,10 +13,16 @@ declare var $: any;
 })
 export class CardapiosComponent implements OnInit {
 
+  conta = new Conta();
   cardapio = ''
  
-  constructor(private apiService: ApiService, private toastrService: ToastrService) {
-    this.getCardapio()
+  constructor(
+    private accountService: AccountService,
+    private apiService: ApiService, 
+    private toastrService: ToastrService
+  ) {
+    this.getConta();
+    this.getCardapio();
   }
 
   ngOnInit(): void {
@@ -23,6 +31,18 @@ export class CardapiosComponent implements OnInit {
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
+  }
+
+  getConta() {
+    this.accountService.conta().subscribe(
+      (data) => {
+        this.conta = data;
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
   }
 
   getCardapio() {

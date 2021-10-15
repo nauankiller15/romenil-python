@@ -73,10 +73,9 @@ export class FormularioComponent implements OnInit {
 
   salvarFormulario() {
     console.log(this.patologia);
-    this.apiService.salvar('patologia', this.patologia).subscribe(
+    this.apiService.salvar('formulario/patologia', this.patologia).subscribe(
       (data) => {
-        this.patologia = data;
-        console.log(data);
+        this.router.navigate(['cardapios'])
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);

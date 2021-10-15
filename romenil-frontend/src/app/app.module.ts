@@ -23,7 +23,6 @@ import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.inter
 
 import { NgxLoadingModule } from 'ngx-loading';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
-import { ModeloCardapioComponent } from './modelo-cardapio/modelo-cardapio.component';
 import { ConversaoComponent } from './conversao/conversao.component';
 
 @NgModule({
@@ -38,7 +37,6 @@ import { ConversaoComponent } from './conversao/conversao.component';
     FormularioComponent,
     WelcomeComponent,
     TopBarComponent,
-    ModeloCardapioComponent,
     ConversaoComponent,
   ],
   imports: [
