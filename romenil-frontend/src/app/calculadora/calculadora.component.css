@@ -23,7 +23,7 @@ header {
 }
 
 .logo-calc {
-  background: url(https://1.bp.blogspot.com/-ozY4By3ECfY/YRBrx78dlwI/AAAAAAAAHZQ/vMGDGzdi1QstiFML3aCjNeKdsbMi0nW7wCLcBGAsYHQ/s0/logo%2Bcardap.png)
+  background: url(https://1.bp.blogspot.com/-Btvd0_wQ9BY/YWnLKn2UicI/AAAAAAAAHeI/O7QKGOGxeykiqsYPyYVQTOgfQaFlzxlVACLcBGAsYHQ/s0/logosistema.png)
     no-repeat;
   background-size: 100%;
   padding: 68px 236px 10px 2px;
@@ -51,7 +51,7 @@ header {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #75c400;
+  background: var(--azul);
   border-radius: 10px;
 }
 
@@ -61,9 +61,9 @@ header {
 }
 /*  */
 .box-text-calculadora {
-  border-top: 4px solid #75c400;
+  border-top: 4px solid var(--azul);
   background-color: #0a0e17;
-  background-image: url(https://1.bp.blogspot.com/-fbkz4MAEYi4/YTZ8UNCXXgI/AAAAAAAAHc4/bsNijyLsut8QcjV-fK3i0Nn4syMhXpVEACLcBGAsYHQ/s0/fundo.png);
+  background-image: url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
   background-position: 0% 50%, -24vh 2px;
   background-size: auto, auto;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -108,9 +108,10 @@ header {
 .container-cart {
   width: 80%;
   margin: auto;
-  border-top: 2px solid #75c400;
+  border-top: 2px solid var(--azul);
   padding: 10px 0px 10px 0px;
   animation: slide-top 0.9 ease-in-out;
+  border-radius: 10px;
 }
 
 .container-cart h3 {
@@ -183,7 +184,7 @@ header {
   font-weight: 600;
   text-align: center;
   border-radius: 5px;
-  border: 1px solid #75c400;
+  border: 1px solid var(--azul);
   padding: 3px;
   font-size: 1.4em;
   animation: slide-left 0.6s ease-in-out;
@@ -200,7 +201,7 @@ header {
 
 .dadosConsulta label {
   cursor: pointer;
-  color: #75c400;
+  color: var(--azul);
 }
 
 .atach {
@@ -227,8 +228,8 @@ header {
 }
 
 .success {
-  border: 1px solid #75c400;
-  color: #75c400;
+  border: 1px solid var(--azul);
+  color: var(--azul);
   font-weight: 500;
   width: 100%;
   background: none;
@@ -237,8 +238,8 @@ header {
 }
 
 .success:hover {
-  background-color: #75c400;
-  color: #202020;
+  background-color: var(--azul);
+  color: #e0e0e0;
   font-weight: 500;
   width: 100%;
 }
@@ -319,7 +320,6 @@ header {
   width: 550px;
   margin: 0 auto;
   animation: slide-top 1.7s ease-in-out;
-  background-color: #0a0e17;
 }
 
 .form-group {
@@ -351,11 +351,11 @@ header {
 
 .form-group input:focus,
 .form-group select:focus {
-  border: 2px solid #75c400;
+  border: 2px solid var(--azul);
 }
 
 .form-group button {
-  background-image: linear-gradient(-90deg, #75c400 0%, #fddb33 100%);
+  background-image: linear-gradient(-90deg, var(--azul) 0%, #fddb33 100%);
   border-radius: 5px;
   border: 0;
   height: 45px;
@@ -368,7 +368,7 @@ header {
 }
 
 .form-group button:hover {
-  background-image: linear-gradient(-90deg, #75c400 0%, #75c400 100%);
+  background-image: linear-gradient(-90deg, var(--azul) 0%, var(--azul) 100%);
   transform: translate(0px, -2px);
 }
 
@@ -409,7 +409,7 @@ header {
 }
 
 .result-content ul li strong {
-  color: #83a92f;
+  color: #ff590f;
 }
 
 .separTe {
@@ -471,7 +471,7 @@ header {
   }
 
   .dadosConsulta label {
-    color: #75c400;
+    color: var(--azul);
     border-bottom: 1px solid #272727;
     border-right: none;
     line-height: 50px;
@@ -499,8 +499,8 @@ header {
   .planejamento {
     width: auto;
     padding: 10px;
-    border-left: 2px solid #75c400;
-    border-bottom: 2px solid #75c400;
+    border-left: 2px solid var(--azul);
+    border-bottom: 2px solid var(--azul);
     margin-top: -13vh;
     animation: scalePlan 0.9s ease-in-out;
     border-radius: 0px 8px;

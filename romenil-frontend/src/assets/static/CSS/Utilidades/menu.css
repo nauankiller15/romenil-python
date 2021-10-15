@@ -31,7 +31,7 @@
 
 .banner-content-half {
   width: 100%;
-  margin-top: -15vh;
+  margin-top: -11vh;
   z-index: 800;
 }
 
@@ -116,14 +116,14 @@
   margin-top: 11px;
   font-weight: 600;
   transition: 0.3s;
-  border: 1px solid #75c400;
+  border: 1px solid var(--azul);
   background: var(--azul);
 }
 
 .fechar-button:hover {
   color: var(--branco);
   transform: translate(0px, -4px);
-  border: 1px solid #75c400;
+  border: 1px solid var(--azul);
   background-color: transparent;
 }
 /*  */
@@ -380,4 +380,36 @@ nav .menuItems li:hover::before {
     transform: scaleX(200);
     opacity: 1;
   }
+}
+
+.centerTp {
+  margin: -66px auto;
+  width: 60%;
+  align-items: center;
+  text-align: center;
+}
+
+.sistemaEnter {
+  border: 1px solid var(--azul);
+  background: var(--azul);
+  color: #e0e0e0;
+  font-weight: 500;
+  width: 50%;
+  transition: 0.4s;
+  line-height: 40px;
+}
+
+.sistemaEnter:hover {
+  border: 1px solid var(--azul);
+  background: var(--azul);
+  color: #2b2727;
+  font-weight: 500;
+  transform: translate(0px, -7px);
+}
+
+.marg {
+  width: 100%;
+  height: 67px;
+  position: relative;
+  bottom: -104px;
 }

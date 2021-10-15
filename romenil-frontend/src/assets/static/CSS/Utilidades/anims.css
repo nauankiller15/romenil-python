@@ -153,10 +153,10 @@
 }
 
 .fundo-ret {
-  background: url(https://1.bp.blogspot.com/-QTzAdxiOMz4/YJqtHhUc8tI/AAAAAAAAHJ0/yQkEbpgPyIU9rkODUTKqCa-_YLmAORnogCLcBGAsYHQ/s0/fundo%2Bret.png);
+  background: url(https://1.bp.blogspot.com/-ac0gKYUcMoc/YWnDYKkCBeI/AAAAAAAAHd4/D4knmodtVysg3pBlvw8S7cTp3LlhcgQ9QCLcBGAsYHQ/s0/edit3.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 450px;
+  width: 640px;
   height: 600px;
   margin: auto;
   display: block;
@@ -186,13 +186,13 @@
 }
 
 .cor-verde {
-  color: var(--azul);
+  color: #fff;
 }
 
 .front-as {
   width: 620px;
-  margin: auto;
-  font-weight: 450;
+  margin: 20px auto 20px auto;
+  font-weight: 300;
   color: var(--branco);
   text-align: center;
   font-size: 23px;
@@ -202,5 +202,6 @@
 .fundo-verde {
   background: #0a0e17;
   z-index: 1;
-  padding: 5px;
+  padding: 15px;
+  border-radius: 10px;
 }
