@@ -4,7 +4,7 @@
       <a id="fecharBtCardp">
         <div class="fechar-button">X</div>
       </a>
-      <app-top-bar></app-top-bar>
+      <app-top-bar [conta]="conta"></app-top-bar>
 
       <div class="containerED">
         <header>
@@ -15,10 +15,33 @@
           <div class="planejamento">
             <h2>Planejamento Alimentar</h2>
           </div>
-          <h3>Alimentação de "fname"</h3>
+          <h3>Alimentação de {{conta.first_name}} {{conta.last_name}}</h3>
         </div>
         <div class="content-cardap">
-          <app-modelo-cardapio [cardapio]="cardapio"></app-modelo-cardapio>
+          <h1 *ngIf="cardapio == 'PDISML'">Diabetes e Metabolismo Lento</h1>
+          <h1 *ngIf="cardapio == 'PDISCO'">Diabetes e Constipação</h1>
+          <h1 *ngIf="cardapio == 'PDISIS'">Diabetes e Insonia</h1>
+          <h1 *ngIf="cardapio == 'PDISCE'">Diabetes e Colesterol Elevado</h1>
+          <h1 *ngIf="cardapio == 'PDISAN'">Diabetes e Ansiedade</h1>
+          <h1 *ngIf="cardapio == 'PDISRL'">Diabetes e Retensão Liquida</h1>
+          <h1 *ngIf="cardapio == 'PDISNP'">Diabetes e Diabete Puro</h1>
+
+          <h1 *ngIf="cardapio == 'PHISML'">Hipertensão e Metabolismo Lento</h1>
+          <h1 *ngIf="cardapio == 'PHISCO'">Hipertensão e Constipação</h1>
+          <h1 *ngIf="cardapio == 'PHISIS'">Hipertensão e Insonia</h1>
+          <h1 *ngIf="cardapio == 'PHISCE'">Hipertensão e Colesterol Elevado</h1>
+          <h1 *ngIf="cardapio == 'PHISAN'">Hipertensão e Ansiedade</h1>
+          <h1 *ngIf="cardapio == 'PHISRL'">Hipertensão e Retensão Liquida</h1>
+          <h1 *ngIf="cardapio == 'PHISNP'">Hipertensão Pura</h1>
+
+          <h1 *ngIf="cardapio == 'PNPSML'">Metabolismo Lento</h1>
+          <h1 *ngIf="cardapio == 'PNPSCO'">Constipação</h1>
+          <h1 *ngIf="cardapio == 'PNPSIS'">Insonia</h1>
+          <h1 *ngIf="cardapio == 'PNPSCE'">Colesterol Elevado</h1>
+          <h1 *ngIf="cardapio == 'PNPSAN'">Ansiedade</h1>
+          <h1 *ngIf="cardapio == 'PNPSRL'">Retensão Liquida</h1>
+          <h1 *ngIf="cardapio == 'PNPSNP'">Nenhuma Patologia</h1>
+
         </div>
       </div>
     </div>
