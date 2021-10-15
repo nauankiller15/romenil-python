@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('conta/', include('conta.urls')),
+    path('formulario/', include('formulario.urls')),
     path('cardapio/', include('cardapio.urls')),
     path('admin/', admin.site.urls),
 ]
