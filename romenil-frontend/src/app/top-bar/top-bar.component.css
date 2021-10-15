@@ -43,7 +43,7 @@
 }
 
 .nav-links:hover {
-  color: #75c400;
+  color: var(--azul);
 }
 
 .nav-links-btn {
@@ -82,7 +82,7 @@
 
 .drop-btn:hover {
   padding: 0 20px;
-  color: #75c400;
+  color: var(--azul);
 }
 
 .wrapper {
@@ -202,7 +202,7 @@
   .nav-menu {
     display: grid;
     grid-template-columns: auto;
-    background-color: #75c400;
+    background-color: var(--azul);
     color: #fff;
     margin: 0;
     width: 100%;
@@ -248,7 +248,7 @@
     background-color: #9e2525;
   }
   .nav-links:hover {
-    background-color: #75c400;
+    background-color: var(--azul);
     color: #fff;
     transition: all 0.4s ease-in-out;
   }
