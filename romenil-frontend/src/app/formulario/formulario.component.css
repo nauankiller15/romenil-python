@@ -139,6 +139,7 @@ header {
   margin: -54px auto;
   font-weight: 350;
   animation: scalePlan 1.4s ease-in-out;
+  border-radius: 10px;
 }
 
 .dadosConsulta {
@@ -199,11 +200,15 @@ header {
 }
 
 .favMarks {
-  margin: 35px auto;
+  margin: 16px auto;
   font-size: 41px;
   width: 56px;
   color: var(--azul);
-  padding: 4px;
+  padding: 28px;
+  width: 100px;
+  height: 90px;
+  border-radius: 50%;
+  background: #0a0e17;
 }
 
 .dadosConsulta h3 {

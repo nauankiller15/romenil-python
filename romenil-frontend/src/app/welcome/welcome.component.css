@@ -198,14 +198,6 @@ header {
   padding: 10px;
 }
 
-.favMarks {
-  margin: 35px auto;
-  font-size: 41px;
-  width: 56px;
-  color: var(--azul);
-  padding: 4px;
-}
-
 .dadosConsulta h3 {
   font-size: 1.2em;
   border-left: 1px solid #272727;
@@ -336,9 +328,7 @@ header {
     margin-bottom: 1px !important;
     width: 100% !important;
   }
-  .favMarks {
-    margin: 35px auto 45px auto !important;
-  }
+  
 
   /*  */
   .cardBtn {
