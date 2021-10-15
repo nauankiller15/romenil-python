@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
 import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
@@ -15,15 +16,17 @@ declare var $: any;
 export class CardapiosComponent implements OnInit {
 
   conta = new Conta();
-  cardapio = ''
+  cardapio: any = null
  
   constructor(
     private accountService: AccountService,
     private apiService: ApiService, 
-    private toastrService: ToastrService
+    private sanitizer: DomSanitizer,
+    private toastrService: ToastrService,
   ) {
     this.getConta();
     this.getCardapio();
+    
   }
 
   ngOnInit(): void {
@@ -50,6 +53,9 @@ export class CardapiosComponent implements OnInit {
     this.apiService.getHtml('cardapio').subscribe(
       data => {
         this.cardapio = data;
+        
+        this.cardapio = this.sanitizer.bypassSecurityTrustHtml(this.cardapio);
+        console.log(this.cardapio)
       },
       error => {
         console.log(error);
