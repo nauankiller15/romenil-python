@@ -130,17 +130,6 @@ header {
   margin: 4vh auto;
 }
 
-.dadosConsulta {
-  padding: 13px;
-  font-size: 1em;
-  width: 47%;
-  display: inline-flex;
-  margin: 3vh 4vh 2vh 0px;
-  transition: all 0.5s;
-  box-shadow: 0px 0px 4px 1px #272727;
-  animation: slide-left 1.2s ease-in-out;
-}
-
 .nextDados {
   font-size: 36px;
   color: #fffbfc;
@@ -174,6 +163,25 @@ header {
 
 /*  */
 
+.dadosConsulta {
+  padding: 13px;
+  font-size: 1em;
+  width: 47%;
+  display: inline-flex;
+  margin: 3vh 4vh 2vh 0px;
+  transition: all 0.5s;
+  box-shadow: 0px 0px 4px 1px #272727;
+  animation: slide-left 1.2s ease-in-out;
+}
+
+.dadosConsulta {
+  padding: 13px;
+  font-size: 1.23em;
+  width: 100%;
+  margin: 3vh 0vh 2vh 0px;
+  display: inline-grid;
+}
+
 .dadosConsulta p {
   text-align: justify;
   font-weight: 400;
@@ -201,6 +209,14 @@ header {
   /* line-height: 40px; */
   font-size: 20px;
   margin-top: 13px;
+}
+
+.dadosConsulta label {
+  color: #75c400;
+  border-bottom: 1px solid #272727;
+  border-right: none;
+  line-height: 50px;
+  width: 100%;
 }
 
 .favTit {
@@ -319,31 +335,15 @@ header {
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
-  .favTit {
-    width: 10%;
-    font-size: 32px;
-    margin-bottom: 13px;
-  }
+  
   .content-cardap {
     width: 90%;
     margin: 4vh auto;
     padding: 0;
   }
-  .dadosConsulta {
-    padding: 13px;
-    font-size: 1.23em;
-    width: 100%;
-    margin: 3vh 0vh 2vh 0px;
-    display: inline-grid;
-  }
+  
 
-  .dadosConsulta label {
-    color: #75c400;
-    border-bottom: 1px solid #272727;
-    border-right: none;
-    line-height: 50px;
-    width: 100%;
-  }
+  
 
   .container-cart {
     width: 90%;

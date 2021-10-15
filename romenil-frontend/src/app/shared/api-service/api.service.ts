@@ -10,6 +10,7 @@ export class ApiService {
 
   private readonly baseUrl = environment.baseUrl;
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json'});
+  private httpHeaders2 = new HttpHeaders({ 'Content-Type': 'text/html'});
   
 
   constructor(private httpClient: HttpClient) {}
@@ -17,6 +18,13 @@ export class ApiService {
   listar(url: string): Observable<any> {
     return this.httpClient.get(this.baseUrl + url +'/', {
       headers: this.httpHeaders,
+    });
+  }
+
+  getHtml(url: string): Observable<any> {
+    return this.httpClient.get(this.baseUrl + url +'/', {
+      responseType: 'text',
+      headers: this.httpHeaders2,
     });
   }
 

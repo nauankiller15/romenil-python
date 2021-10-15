@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Conta } from '../account/models';
@@ -46,11 +47,12 @@ export class CardapiosComponent implements OnInit {
   }
 
   getCardapio() {
-    this.apiService.listar('cardapio').subscribe(
-      (data) => {
-        this.cardapio = data.cardapio;
+    this.apiService.getHtml('cardapio').subscribe(
+      data => {
+        this.cardapio = data;
       },
-      (error) => {
+      error => {
+        console.log(error);
         const erro = new Erro(this.toastrService, error);
         erro.exibir();
       }
