@@ -142,13 +142,13 @@ header {
 }
 
 .dadosConsulta {
+  color: #ffffff9c;
   padding: 13px;
-  width: 100%;
-  margin: 3vh 4vh 2vh 0px;
+  width: 65%;
+  margin: auto;
   transition: all 0.5s;
   box-shadow: 0px 0px 4px 1px #272727;
   animation: slide-left 1.2s ease-in-out;
-  background-color: #0a0e17;
 }
 
 .nextDados {
@@ -204,6 +204,8 @@ header {
   border-left: 1px solid #272727;
   border-bottom: 1px solid #272727;
   padding-left: 20px;
+  line-height: 2.2em;
+  text-align: center;
 }
 
 .cardBtn {
@@ -312,7 +314,10 @@ header {
     margin-top: 4vh;
   }
   .dadosConsulta h3 {
-    font-size: 0.9em;
+    font-size: 0.9em !important;
+    padding-left: 0;
+    padding-bottom: 18px;
+    padding-top: 15px;
   }
   .content-cardap h4 {
     width: 50%;
@@ -363,7 +368,7 @@ header {
     padding: 13px;
     font-size: 1.23em;
     width: 100%;
-    margin: 3vh 0vh 2vh 0px;
+    margin: 0vh 0vh 2vh 0px;
     display: inline-grid;
   }
 
