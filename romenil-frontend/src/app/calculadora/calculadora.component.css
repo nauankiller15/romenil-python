@@ -126,7 +126,7 @@ header {
 }
 
 /* SELECIONE */
-.selecione{
+.selecione {
   margin-top: -52px;
   margin-left: 22px;
   position: static;
@@ -224,7 +224,17 @@ header {
 }
 
 .persist {
+  border-radius: 10px;
+  position: relative;
+  text-align: justify;
+  width: 650px;
+  color: #ffffffc9;
+  margin-bottom: 30px;
+  margin-top: 28px;
   animation: slide-left 2.2s ease-in-out;
+  margin-left: -105px;
+  border: 2px solid var(--azul);
+  padding: 23px;
 }
 
 .success {
@@ -239,6 +249,30 @@ header {
 
 .success:hover {
   background-color: var(--azul);
+  color: #e0e0e0;
+  font-weight: 500;
+  width: 100%;
+}
+
+.changelife {
+  background-color: var(--azul) !important;
+  border: 1px solid var(--azul);
+  color: #222222;
+  font-weight: 900;
+  width: 100%;
+  background: none;
+  transition: 0.4s;
+  line-height: 40px;
+  font-size: 23px;
+  margin-top: 5px;
+}
+
+.heartIcon {
+  color: rgb(235, 0, 0);
+}
+
+.changelife:hover {
+  background-color: transparent;
   color: #e0e0e0;
   font-weight: 500;
   width: 100%;
@@ -376,7 +410,7 @@ header {
   margin-top: 40px;
 }
 
-#resultados{
+#resultados {
   display: none;
 }
 
@@ -417,6 +451,20 @@ header {
 }
 
 @media (max-width: 1100px) {
+  .persist {
+    border-radius: 10px;
+    position: relative;
+    text-align: justify;
+    width: 100%;
+    color: #ffffffc9;
+    margin-bottom: 30px;
+    margin-top: 28px;
+    animation: slide-left 2.2s ease-in-out;
+    margin-left: 0px;
+    border: 2px solid var(--azul);
+    padding: 23px;
+    letter-spacing: -1px;
+  }
   .separTe {
     margin-top: 10vh;
   }
@@ -514,5 +562,5 @@ header {
 
 .erro {
   color: red;
-  font-size: 15px
+  font-size: 15px;
 }

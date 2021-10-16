@@ -188,14 +188,31 @@
                 <i class="fas fa-undo" style="margin-right: 10px"></i>Refazer
                 meu IMC
               </button>
-              <div style="margin-top: 7vh"></div>
-              <div class="persist">COPY PERSUANDINDO A PESSOA!</div>
-              <button routerLink="/formulario" class="btn success">
-                <i class="fas fa-clipboard-list" style="margin-right: 10px"></i
-                >Gerar meu Cardápio
+              ou
+              <button class="btn changelife" id="prossegCamp">
+                <i
+                  class="fas fa-heart heartIcon"
+                  style="margin-right: 10px"
+                ></i>
+                MUDAR A MINHA VIDA!
               </button>
             </div>
           </div>
+          <!-- GERAR CARDÁPIO -->
+          <div style="display: none" id="prosseg">
+            <div class="persist">
+              Hmmm, agora você já sabe quais são os resultados, preparei algo
+              para você. Para ter acesso a um cardápio totalmente personalizado
+              por um <b>Nutricionista profissional</b>, que vai te ajudar a
+              manter a saúde e boa forma, é muito simples, clique no botão
+              abaixo...
+            </div>
+            <button routerLink="/formulario" class="btn success">
+              <i class="fas fa-clipboard-list" style="margin-right: 10px"></i
+              >Gerar meu Cardápio
+            </button>
+          </div>
+          <!--  -->
         </div>
       </div>
     </div>

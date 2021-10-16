@@ -43,7 +43,12 @@ export class CalculadoraComponent implements OnInit {
       $('#resultados').slideUp(450);
       $('.cardBtn').slideDown(250);
     });
-
+// GERAR CARDÁPIO ANIM
+$('#prossegCamp').on('click', function () {
+  $('#prosseg').fadeIn(450);
+  $('#resultados').fadeOut(450);
+});
+// 
     $('.select1').on('click', function () {
       $('.choose1').fadeOut(250);
     });

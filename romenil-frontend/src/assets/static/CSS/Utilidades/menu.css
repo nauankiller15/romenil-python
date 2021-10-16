@@ -402,8 +402,8 @@ nav .menuItems li:hover::before {
 .sistemaEnter:hover {
   border: 1px solid var(--azul);
   background: var(--azul);
-  color: #2b2727;
-  font-weight: 500;
+  color: #000000;
+  font-weight: 600;
   transform: translate(0px, -7px);
 }
 
