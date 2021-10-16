@@ -143,7 +143,7 @@ header {
 /* ETIQUETAS */
 .cafeManha {
   color: #fff;
-  background-image: linear-gradient(0deg, #0a0e17 0%, #6a6f41 100%) !important;
+  background-image: linear-gradient(0deg, #0a0e17 0%, #3e4214 100%) !important;
   box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
     0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
     0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
@@ -157,7 +157,7 @@ header {
 }
 .janta {
   color: #fff;
-  background-image: linear-gradient(0deg, #0a0e17 0%, #57416f 100%) !important;
+  background-image: linear-gradient(0deg, #0a0e17 0%, #32263e 100%) !important;
   box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
     0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
     0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
@@ -166,21 +166,16 @@ header {
 /*  */
 
 .dadosConsulta {
-  padding: 13px;
-  font-size: 1em;
-  width: 47%;
-  display: inline-flex;
-  margin: 3vh 4vh 2vh 0px;
   transition: all 0.5s;
   box-shadow: 0px 0px 4px 1px #272727;
-  animation: slide-left 1.2s ease-in-out;
 }
 
 .dadosConsulta {
   padding: 13px;
   font-size: 1.23em;
-  width: 100%;
-  margin: 3vh 0vh 2vh 0px;
+  width: 45%;
+  margin: 3vh 3vh 2vh 3vh;
+  animation: slide-left 1.2s ease-in-out;
   display: inline-grid;
 }
 
@@ -213,20 +208,11 @@ header {
   margin-top: 13px;
 }
 
-.dadosConsulta label {
-  color: #75c400;
-  border-bottom: 1px solid #272727;
-  border-right: none;
-  line-height: 50px;
-  width: 100%;
-}
-
 .favTit {
-  width: 100%;
+  width: 5%;
   font-size: 32px;
   margin-bottom: 13px;
 }
-
 /* ANIMAÇÕES */
 
 @keyframes slide-cardap {
@@ -337,13 +323,12 @@ header {
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
-  
+
   .content-cardap {
     width: 90%;
     margin: 4vh auto;
     padding: 0;
   }
-  
 
   .dadosConsulta label {
     color: var(--azul);
