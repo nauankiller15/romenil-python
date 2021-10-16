@@ -119,10 +119,11 @@ header {
   text-align: center;
   background-color: #0a0e17;
   color: #fff;
-  width: 40%;
+  width: 50%;
   margin: -21px auto;
   font-weight: 350;
   animation: scalePlan 1.4s ease-in-out;
+  border-radius: 10px;
 }
 
 .content-cardap {
@@ -332,7 +333,7 @@ header {
   .box-text-cardapio {
     margin: 14vh auto;
     padding: 10px 0;
-    background-position: 59% -34%;
+    background-position: 59% 0;
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }

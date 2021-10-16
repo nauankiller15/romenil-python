@@ -136,15 +136,27 @@ header {
   background-color: #0a0e17;
   color: #fff;
   width: 40%;
-  margin: -54px auto;
+  margin: -77px auto;
   font-weight: 350;
   animation: scalePlan 1.4s ease-in-out;
   border-radius: 10px;
 }
 
+.margConsulta {
+  width: 90%;
+  margin: auto;
+  align-items: center;
+}
+
+.setMarg {
+  margin-left: 25px;
+  width: 100%;
+  margin-top: 25px;
+}
 .dadosConsulta {
   padding: 13px;
-  width: 100%;
+  display: inline-table;
+  width: 45%;
   margin: 3vh 4vh 2vh 0px;
   transition: all 0.5s;
   box-shadow: 0px 0px 4px 1px #272727;
@@ -199,8 +211,525 @@ header {
   padding: 10px;
 }
 
+/* RADIUS BUTTON */
+.wrapper {
+  display: inline-flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 15px 0px;
+  box-shadow: 5px 5px 30px rgb(0 0 0 / 20%);
+}
+.wrapper .option {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--azul);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot {
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-3:checked:checked ~ .option-3,
+#option-4:checked:checked ~ .option-4 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-3:checked:checked ~ .option-3 .dot,
+#option-4:checked:checked ~ .option-4 .dot {
+  background: #fff;
+}
+#option-3:checked:checked ~ .option-3 .dot::before,
+#option-4:checked:checked ~ .option-4 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-5:checked:checked ~ .option-5,
+#option-6:checked:checked ~ .option-6 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-5:checked:checked ~ .option-5 .dot,
+#option-6:checked:checked ~ .option-6 .dot {
+  background: #fff;
+}
+#option-5:checked:checked ~ .option-5 .dot::before,
+#option-6:checked:checked ~ .option-6 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*  */
+#option-7:checked:checked ~ .option-7,
+#option-8:checked:checked ~ .option-8 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-7:checked:checked ~ .option-7 .dot,
+#option-8:checked:checked ~ .option-8 .dot {
+  background: #fff;
+}
+#option-7:checked:checked ~ .option-7 .dot::before,
+#option-8:checked:checked ~ .option-8 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*  */
+#option-9:checked:checked ~ .option-9,
+#option-10:checked:checked ~ .option-10 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-9:checked:checked ~ .option-9 .dot,
+#option-10:checked:checked ~ .option-10 .dot {
+  background: #fff;
+}
+#option-9:checked:checked ~ .option-9 .dot::before,
+#option-10:checked:checked ~ .option-10 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-11:checked:checked ~ .option-11,
+#option-12:checked:checked ~ .option-12 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-11:checked:checked ~ .option-11 .dot,
+#option-12:checked:checked ~ .option-12 .dot {
+  background: #fff;
+}
+#option-11:checked:checked ~ .option-11 .dot::before,
+#option-12:checked:checked ~ .option-12 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-13:checked:checked ~ .option-13,
+#optiion-14:checked:checked ~ .option-14 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-13:checked:checked ~ .option-13 .dot,
+#optiion-14:checked:checked ~ .option-14 .dot {
+  background: #fff;
+}
+#option-13:checked:checked ~ .option-13 .dot::before,
+#optiion-14:checked:checked ~ .option-14 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-15:checked:checked ~ .option-15,
+#option-16:checked:checked ~ .option-16 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-15:checked:checked ~ .option-15 .dot,
+#option-16:checked:checked ~ .option-16 .dot {
+  background: #fff;
+}
+#option-15:checked:checked ~ .option-15 .dot::before,
+#option-16:checked:checked ~ .option-16 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-17:checked:checked ~ .option-17,
+#option-18:checked:checked ~ .option-18 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-17:checked:checked ~ .option-17 .dot,
+#option-18:checked:checked ~ .option-18 .dot {
+  background: #fff;
+}
+#option-17:checked:checked ~ .option-17 .dot::before,
+#option-18:checked:checked ~ .option-18 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-19:checked:checked ~ .option-19,
+#option-20:checked:checked ~ .option-20 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-19:checked:checked ~ .option-19 .dot,
+#option-20:checked:checked ~ .option-20 .dot {
+  background: #fff;
+}
+#option-19:checked:checked ~ .option-19 .dot::before,
+#option-20:checked:checked ~ .option-20 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-21:checked:checked ~ .option-21,
+#option-22:checked:checked ~ .option-22 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-21:checked:checked ~ .option-21 .dot,
+#option-22:checked:checked ~ .option-22 .dot {
+  background: #fff;
+}
+#option-21:checked:checked ~ .option-21 .dot::before,
+#option-22:checked:checked ~ .option-22 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-23:checked:checked ~ .option-23,
+#option-24:checked:checked ~ .option-24 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-23:checked:checked ~ .option-23 .dot,
+#option-24:checked:checked ~ .option-24 .dot {
+  background: #fff;
+}
+#option-23:checked:checked ~ .option-23 .dot::before,
+#option-24:checked:checked ~ .option-24 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-25:checked:checked ~ .option-25,
+#option-26:checked:checked ~ .option-26 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-25:checked:checked ~ .option-25 .dot,
+#option-26:checked:checked ~ .option-26 .dot {
+  background: #fff;
+}
+#option-25:checked:checked ~ .option-25 .dot::before,
+#option-26:checked:checked ~ .option-26 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-27:checked:checked ~ .option-27,
+#option-28:checked:checked ~ .option-28 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-27:checked:checked ~ .option-27 .dot,
+#option-28:checked:checked ~ .option-28 .dot {
+  background: #fff;
+}
+#option-27:checked:checked ~ .option-27 .dot::before,
+#option-28:checked:checked ~ .option-28 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-29:checked:checked ~ .option-29,
+#option-30:checked:checked ~ .option-30 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-29:checked:checked ~ .option-29 .dot,
+#option-30:checked:checked ~ .option-30 .dot {
+  background: #fff;
+}
+#option-29:checked:checked ~ .option-29 .dot::before,
+#option-30:checked:checked ~ .option-30 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-31:checked:checked ~ .option-31,
+#option-32:checked:checked ~ .option-32 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-31:checked:checked ~ .option-31 .dot,
+#option-32:checked:checked ~ .option-32 .dot {
+  background: #fff;
+}
+#option-31:checked:checked ~ .option-31 .dot::before,
+#option-32:checked:checked ~ .option-32 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-33:checked:checked ~ .option-33,
+#option-34:checked:checked ~ .option-34 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-33:checked:checked ~ .option-33 .dot,
+#option-34:checked:checked ~ .option-34 .dot {
+  background: #fff;
+}
+#option-33:checked:checked ~ .option-33 .dot::before,
+#option-34:checked:checked ~ .option-34 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-35:checked:checked ~ .option-35,
+#option-36:checked:checked ~ .option-36 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-35:checked:checked ~ .option-35 .dot,
+#option-36:checked:checked ~ .option-36 .dot {
+  background: #fff;
+}
+#option-35:checked:checked ~ .option-35 .dot::before,
+#option-36:checked:checked ~ .option-36 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-37:checked:checked ~ .option-37,
+#option-38:checked:checked ~ .option-38 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-37:checked:checked ~ .option-37 .dot,
+#option-38:checked:checked ~ .option-38 .dot {
+  background: #fff;
+}
+#option-37:checked:checked ~ .option-37 .dot::before,
+#option-38:checked:checked ~ .option-38 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-39:checked:checked ~ .option-39,
+#option-40:checked:checked ~ .option-40 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-39:checked:checked ~ .option-39 .dot,
+#option-40:checked:checked ~ .option-40 .dot {
+  background: #fff;
+}
+#option-39:checked:checked ~ .option-39 .dot::before,
+#option-40:checked:checked ~ .option-40 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+#option-41:checked:checked ~ .option-41,
+#option-42:checked:checked ~ .option-42 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-41:checked:checked ~ .option-41 .dot,
+#option-42:checked:checked ~ .option-42 .dot {
+  background: #fff;
+}
+#option-41:checked:checked ~ .option-41 .dot::before,
+#option-42:checked:checked ~ .option-42 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*  */
+#option-43:checked:checked ~ .option-43,
+#option-44:checked:checked ~ .option-44 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-43:checked:checked ~ .option-43 .dot,
+#option-44:checked:checked ~ .option-44 .dot {
+  background: #fff;
+}
+#option-43:checked:checked ~ .option-43 .dot::before,
+#option-44:checked:checked ~ .option-44 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*  */
+#option-45:checked:checked ~ .option-45,
+#option-46:checked:checked ~ .option-46 {
+  border-color: var(--azul);
+  background: var(--azul);
+}
+#option-45:checked:checked ~ .option-45 .dot,
+#option-46:checked:checked ~ .option-46 .dot {
+  background: #fff;
+}
+#option-45:checked:checked ~ .option-45 .dot::before,
+#option-46:checked:checked ~ .option-46 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+/*  */
+.wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+
+/*  */
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span {
+  color: #fff;
+}
+
+#option-3:checked:checked ~ .option-3 span,
+#option-4:checked:checked ~ .option-4 span {
+  color: #fff;
+}
+
+#option-5:checked:checked ~ .option-5 span,
+#option-6:checked:checked ~ .option-6 span {
+  color: #fff;
+}
+
+#option-7:checked:checked ~ .option-7 span,
+#option-8:checked:checked ~ .option-8 span {
+  color: #fff;
+}
+
+#option-9:checked:checked ~ .option-9 span,
+#option-10:checked:checked ~ .option-10 span {
+  color: #fff;
+}
+
+#option-11:checked:checked ~ .option-11 span,
+#option-12:checked:checked ~ .option-12 span {
+  color: #fff;
+}
+
+#option-13:checked:checked ~ .option-13 span,
+#option-14:checked:checked ~ .option-14 span {
+  color: #fff;
+}
+
+#option-15:checked:checked ~ .option-15 span,
+#option-16:checked:checked ~ .option-16 span {
+  color: #fff;
+}
+
+#option-17:checked:checked ~ .option-17 span,
+#option-18:checked:checked ~ .option-18 span {
+  color: #fff;
+}
+
+#option-19:checked:checked ~ .option-19 span,
+#option-20:checked:checked ~ .option-20 span {
+  color: #fff;
+}
+
+#option-21:checked:checked ~ .option-21 span,
+#option-22:checked:checked ~ .option-22 span {
+  color: #fff;
+}
+
+#option-23:checked:checked ~ .option-23 span,
+#option-24:checked:checked ~ .option-24 span {
+  color: #fff;
+}
+
+#option-25:checked:checked ~ .option-25 span,
+#option-26:checked:checked ~ .option-26 span {
+  color: #fff;
+}
+
+#option-27:checked:checked ~ .option-27 span,
+#option-28:checked:checked ~ .option-28 span {
+  color: #fff;
+}
+
+#option-29:checked:checked ~ .option-29 span,
+#option-30:checked:checked ~ .option-30 span {
+  color: #fff;
+}
+
+#option-31:checked:checked ~ .option-31 span,
+#option-32:checked:checked ~ .option-32 span {
+  color: #fff;
+}
+
+#option-33:checked:checked ~ .option-33 span,
+#option-34:checked:checked ~ .option-34 span {
+  color: #fff;
+}
+#option-35:checked:checked ~ .option-35 span,
+#option-36:checked:checked ~ .option-36 span {
+  color: #fff;
+}
+#option-37:checked:checked ~ .option-37 span,
+#option-38:checked:checked ~ .option-38 span {
+  color: #fff;
+}
+
+#option-39:checked:checked ~ .option-39 span,
+#option-40:checked:checked ~ .option-40 span {
+  color: #fff;
+}
+
+#option-41:checked:checked ~ .option-41 span,
+#option-42:checked:checked ~ .option-42 span {
+  color: #fff;
+}
+
+#option-43:checked:checked ~ .option-43 span,
+#option-44:checked:checked ~ .option-44 span {
+  color: #fff;
+}
+
+#option-45:checked:checked ~ .option-45 span,
+#option-46:checked:checked ~ .option-46 span {
+  color: #fff;
+}
+/*  */
+
 .favMarks {
-  margin: 16px auto;
+  margin: 33px auto;
   font-size: 41px;
   width: 56px;
   color: var(--azul);
@@ -319,9 +848,11 @@ header {
 }
 
 @media (max-width: 1100px) {
-  .favMarks {
-    width: 15%;
+  .setMarg {
+    width: 100%;
+    margin: 0;
   }
+
   .linhaD {
     margin-top: 4vh;
   }
@@ -350,7 +881,7 @@ header {
   .box-text-formulario {
     margin: 14vh auto;
     padding: 10px 0;
-    background-position: 59% -34%;
+    background-position: 59% 0;
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
@@ -360,7 +891,8 @@ header {
     width: 100% !important;
   }
   .favMarks {
-    margin: 35px auto 45px auto !important;
+    margin: 50px auto 35px auto !important;
+    padding: 22px;
   }
 
   /*  */
@@ -373,7 +905,7 @@ header {
     display: none;
   }
   .content-cardap {
-    width: 90%;
+    width: 100%;
     margin: 4vh auto;
   }
   .dadosConsulta {
@@ -381,7 +913,7 @@ header {
     font-size: 1.23em;
     width: 100%;
     margin: 3vh 0vh 2vh 0px;
-    display: inline-grid;
+    display: block;
   }
 
   .dadosConsulta label {

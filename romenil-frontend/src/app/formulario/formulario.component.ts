@@ -5,7 +5,7 @@ import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
 import { ApiService } from '../shared/api-service/api.service';
 import { Erro } from '../shared/erros';
-import { Patologia } from './models';
+import { Alergia, Patologia, EstiloVida } from './models';
 declare var $: any;
 
 @Component({
@@ -17,6 +17,8 @@ export class FormularioComponent implements OnInit {
 
   conta = new Conta();
   patologia = new Patologia; 
+  alergia = new Alergia; 
+  estiloVida = new EstiloVida; 
 
   constructor(
     private apiService: ApiService,

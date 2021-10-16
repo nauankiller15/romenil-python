@@ -8,6 +8,7 @@
   position: fixed;
   height: 100%;
   display: none;
+  z-index: 99;
 }
 
 .navbar {
@@ -254,6 +255,7 @@
   }
   .navbar {
     width: 100%;
+    z-index: 999;
   }
 
   #mobile-menu {
