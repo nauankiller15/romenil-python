@@ -76,11 +76,11 @@ header {
 }
 
 .planejamento {
-    width: 355px;
-    padding: 10px;
-    border-left: 2px solid #fff;
-    margin-top: -18vh;
-    animation: scalePlan 0.9s ease-in-out;
+  width: 355px;
+  padding: 10px;
+  border-left: 2px solid #fff;
+  margin-top: -18vh;
+  animation: scalePlan 0.9s ease-in-out;
 }
 
 /* ANIMAÇÕES */
@@ -198,7 +198,6 @@ header {
   padding: 10px;
 }
 
-
 .dadosConsulta h3 {
   font-size: 1.2em;
   border-left: 1px solid #272727;
@@ -209,8 +208,8 @@ header {
 }
 
 .cardBtn {
-  margin: 5vh auto;
-  width: 30%;
+  margin: 3vh auto;
+  width: 35%;
 }
 
 .success {
@@ -230,6 +229,25 @@ header {
   width: 100%;
 }
 
+/* GERAR CARDÁPIO */
+
+.generateCardap {
+  border: 1px solid var(--azul);
+  background-color: var(--azul);
+  color: #0a0e17;
+  font-weight: 500;
+  width: 100%;
+  transition: 0.4s;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.generateCardap:hover {
+  background-color: var(--azul);
+  color: #e0e0e0;
+  font-weight: 500;
+  width: 100%;
+}
 /* ANIMAÇÕES */
 @keyframes slide-left {
   0% {
@@ -309,7 +327,6 @@ header {
 }
 
 @media (max-width: 1100px) {
-
   .linhaD {
     margin-top: 4vh;
   }
