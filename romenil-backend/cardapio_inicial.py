@@ -1588,21 +1588,21 @@ HIAN = [
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Pão integral (Fatia: 1) ou Aipim Cozido(a) (Grama: 50) ou Cuscuz, de milho, cozido com sal (Grama: 55) ou Batata, doce, cozida (Grama: 80) ou Tapioca de goma (Grama: 20) ou Inhame (cozido) (Grama: 55)',
     },
     {
         'refeicao': 1,
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65)',
     },
     {
         'refeicao': 1,
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	chocolate amargo (Tablete: 1)',
     },
 
     # Refeição 2 - Hipertensão - Ansiedade
@@ -1611,14 +1611,21 @@ HIAN = [
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Psylium (Grama: 10) ou Aveia em flocos finos (Colher de sopa (15g): 1)',
     },
     {
         'refeicao': 2,
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou Tangerina (Grama: 160) ou Mamão, Papaia, cru (Grama: 210) ou Melancia (Grama: 250) ou Goiaba (Grama: 160) ou pera (Unidade: 1)',
+    },
+    {
+        'refeicao': 2,
+        'principal': 'HI',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	chá de sene (200ml: 1)',
     },
 
     # Almoço - Hipertensão - Ansiedade
@@ -1627,14 +1634,28 @@ HIAN = [
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 3,
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+    },
+    {
+        'refeicao': 3,
+        'principal': 'HI',
+        'secundaria': 'AN',
+        'ordem': 2,
+        'prato': '⦁	Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão, de arroz, cozido (Grama: 90) ou Macarrão Cozido(a) (Grama: 60)',
+    },
+    {
+        'refeicao': 3,
+        'principal': 'HI',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1)',
     },
 
     # Refeição 4 - Hipertensão - Ansiedade
@@ -1643,14 +1664,21 @@ HIAN = [
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Uva itália (un: 15) ou Manga (Grama: 130) ou Amora (Unidade: 50) ou Morango (Unidade média (12g): 20) ou Tangerina (Grama: 160) ou Melancia (Grama: 250) ou pera (Unidade: 1)',
     },
     {
         'refeicao': 4,
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	chocolate amargo (Tablete: 1)',
+    },
+    {
+        'refeicao': 4,
+        'principal': 'HI',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	chá de cavalinha (200ml: 1)',
     },
 
     # Janta - Hipertensão - Ansiedade
@@ -1659,21 +1687,21 @@ HIAN = [
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 5,
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
     {
         'refeicao': 5,
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	Pão integral (Fatia: 1) ou Batata doce cozida sem sal (Grama: 60) ou Aipim Cozido(a) (Grama: 55) ou Banana da terra (Grama: 70)',
     },
 
 
@@ -1683,7 +1711,21 @@ HIAN = [
         'principal': 'HI',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Água (Copo médio (200ml): 1)',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'HI',
+        'secundaria': 'AN',
+        'ordem': 2,
+        'prato': '⦁	Chá, erva, camomila, ebulição',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'HI',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	Maracujá (Unidade média (45g): 1)',
     },
 ]
 
@@ -2661,10 +2703,6 @@ NPRL = [
         'prato': '',
     },
 ]
-"""
-
-
-
 
 print('inserindo dados')
 alterados = 0
