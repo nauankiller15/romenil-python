@@ -1452,7 +1452,35 @@ HICE = [
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': 'Água (Copo médio (200ml): 1)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'HI',
+        'secundaria': 'CE',
+        'ordem': 2,
+        'prato': 'Propolis (gotas: 15)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'HI',
+        'secundaria': 'CE',
+        'ordem': 3,
+        'prato': 'Gengibre em pó (colher de café: 2)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'HI',
+        'secundaria': 'CE',
+        'ordem': 4,
+        'prato': 'Alcachofra (cozida) (Colher de sopa cheia (20g): 1)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'HI',
+        'secundaria': 'CE',
+        'ordem': 5,
+        'prato': 'Canela em pó (Colher de sobremesa (7,3g): 1',
     },
 
     # Café da Manhã - Hipertensão - Colesterol Elevado
@@ -1461,14 +1489,14 @@ HICE = [
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': 'Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Atum (cru) (Grama: 120) ou Soja (cozida) (Grama: 140) ou Queijo minas frescal (Fatia (30g): 2)',
     },
     {
         'refeicao': 1,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': 'Batata doce cozida sem sal (Grama: 55) ou Cuscuz (Grama: 45) ou Inhame (cozido) (Grama: 50) ou Banana da terra Cozido(a) (Grama: 65)',
     },
 
     # Refeição 2 - Hipertensão - Colesterol Elevado
@@ -1477,7 +1505,7 @@ HICE = [
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Castanha de caju (Unidade: 4) ou Castanha do Pará sem sal (Unidade (4g): 2)',
     },
 
     # Almoço - Hipertensão - Colesterol Elevado
@@ -1486,51 +1514,44 @@ HICE = [
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 3,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': 'Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
     {
         'refeicao': 3,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 3,
-        'prato': '',
+        'prato': 'Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1) ou Grão de bico (cozido) (Colher de sopa (24g): 1)',
     },
     {
         'refeicao': 3,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 4,
-        'prato': '',
+        'prato': 'Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão Cozido(a) (Grama: 60) ou Macarrão, de arroz, cozido (Grama: 90)',
     },
-    {
-        'refeicao': 3,
-        'principal': 'HI',
-        'secundaria': 'CE',
-        'ordem': 5,
-        'prato': '',
-    },
-
+    
     # Refeição 4 - Hipertensão - Colesterol Elevado
     {
         'refeicao': 4,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - (Colher de sopa (15g): 1)',
     },
     {
         'refeicao': 4,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': 'Iogurte desnatado (Copo Americano: 1)',
     },
 
     # Janta - Hipertensão - Colesterol Elevado
@@ -1539,44 +1560,44 @@ HICE = [
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 5,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': 'Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
     {
         'refeicao': 5,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 3,
-        'prato': '',
+        'prato': 'Batata doce cozida sem sal (Grama: 70) ou Cuscuz, de milho, cozido com sal (Grama: 50) ou Inhame (cozido) (Grama: 60) ou Banana da terra (Grama: 40) ou Pão integral (Fatia: 1)',
     },
-    {
-        'refeicao': 5,
-        'principal': 'HI',
-        'secundaria': 'CE',
-        'ordem': 4,
-        'prato': '',
-    },
-
+    
     # Refeição 6 - Hipertensão - Colesterol Elevado
     {
         'refeicao': 6,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Água (Copo médio (200ml): 1)',
     },
     {
         'refeicao': 6,
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': 'Chá, erva, camomila, ebulição (Grama: 2)',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'HI',
+        'secundaria': 'CE',
+        'ordem': 2,
+        'prato': 'Maracujá (Unidade média (45g): 1) \nObs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, gelo à vontade. Sirva em seguida.',
     },
 ]
 
@@ -1939,50 +1960,44 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Limão espremido (Unidade: 1)',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Gengibre (Colher de chá ralado (5g): 1)',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	Própolis (gotas: 15)',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 4,
-        'prato': '',
+        'prato': '⦁	Cúrcuma (Colher de chá (2,05g): 1)',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 5,
-        'prato': '',
+        'prato': '⦁	Pimenta caiena (Pitada (0,70g): 1)',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 6,
-        'prato': '',
+        'prato': '⦁	Água (Copo médio (200ml): 1)',
     },
-    {
-        'refeicao': 0,
-        'principal': 'NP',
-        'secundaria': 'ML',
-        'ordem': 7,
-        'prato': '',
-    },
+    
 
     # Café da Manhã - Nenhuma Patologia Primaria - Metabolismo Lento
     {
@@ -1990,21 +2005,21 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '',
+        'prato': 'Batata, doce, cozida (Grama: 80) ou Inhame (cozido) (Grama: 55) ou Aipim Cozido(a) (Grama: 50)',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65) ou Atum em conserva (Grama: 70)',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	Chá verde (Copo pequeno cheio (165ml): 1)',
     },
     
 
@@ -2014,21 +2029,21 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1)',
     },
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Clara de ovo de galinha (Unidade (34g): 2)',
     },
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	Castanha de caju (Unidade: 6) ou Castanha do Pará sem sal (Unidade (4g): 3)',
     },
 
     # Almoço - Nenhuma Patologia Primaria - Metabolismo Lento
@@ -2037,28 +2052,35 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 200) ou Patinho Assado(a) (Grama: 175) ou Carne moída (Grama: 160) ou Salmão, filé, com pele, fresco, grelhado (Grama: 150) ou Merluza, filé, assado (Grama: 280)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 4,
-        'prato': '',
+        'prato': '⦁	Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão Cozido(a) (Grama: 60) ou Macarrão, de arroz, cozido (Grama: 90)',
+    },
+    {
+        'refeicao': 3,
+        'principal': 'NP',
+        'secundaria': 'ML',
+        'ordem': 5,
+        'prato': '⦁	Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão Cozido(a) (Grama: 60) ou Macarrão, de arroz, cozido (Grama: 90)',
     },
 
     # Refeição 4 - Nenhuma Patologia Primaria - Metabolismo Lento
@@ -2067,9 +2089,22 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
-    
+    {
+        'refeicao': 4,
+        'principal': 'NP',
+        'secundaria': 'ML',
+        'ordem': 2,
+        'prato': '⦁	Iogurte desnatado (Copo Americano: 1)',
+    },
+    {
+        'refeicao': 4,
+        'principal': 'NP',
+        'secundaria': 'ML',
+        'ordem': 3,
+        'prato': '⦁	OMEGA 3 (1 COMPRIMIDO)',
+    },
 
     # Janta - Nenhuma Patologia Primaria - Metabolismo Lento
     {
@@ -2077,22 +2112,16 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
-    {
-        'refeicao': 5,
-        'principal': 'NP',
-        'secundaria': 'ML',
-        'ordem': 3,
-        'prato': '',
-    },
+    
 
     # Refeição 6 - Nenhuma Patologia Primaria - Metabolismo Lento
     {
@@ -2100,21 +2129,7 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '',
-    },
-    {
-        'refeicao': 6,
-        'principal': 'NP',
-        'secundaria': 'ML',
-        'ordem': 2,
-        'prato': '',
-    },
-    {
-        'refeicao': 6,
-        'principal': 'NP',
-        'secundaria': 'ML',
-        'ordem': 3,
-        'prato': '',
+        'prato': '⦁	CHÁ DE CAMOMILA + MULUNGU + PASSIFLORA 3-5 COLHERES DE CADA EM 500ML DE ÁGUA 30/40MIN ANTES DE DORMIR',
     },
 ]
 
