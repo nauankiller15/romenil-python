@@ -341,7 +341,7 @@ DICO = [
         'refeicao': 2,
         'principal': 'DI',
         'secundaria': 'CO',
-        'ordem': 3,
+        'ordem': 2,
         'prato': '⦁	Castanha de caju ( 15 unidades)',
     },
 
@@ -1183,8 +1183,31 @@ HIML = [
         'prato': '⦁	chá de cavalinha (200ml: 1)',
     },
 ]
-"""
+
 HICO = [
+
+    # Desjejum - Hipertensão - Constipação
+    {
+        'refeicao': 0,
+        'principal': 'HI',
+        'secundaria': 'CO',
+        'ordem': 1,
+        'prato': '⦁	Laranja (Unidade pequena (90g): 1)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'HI',
+        'secundaria': 'CO',
+        'ordem': 2,
+        'prato': '⦁	Mamão (Fatia: 1)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'HI',
+        'secundaria': 'CO',
+        'ordem': 3,
+        'prato': '⦁	Água (Copo médio (200ml): 1)',
+    },
 
     # Café da Manhã - Hipertensão - Constipação
     {
@@ -1192,21 +1215,21 @@ HICO = [
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Pão integral (Fatia: 1) ou Aipim Cozido(a) (Grama: 50) ou Cuscuz, de milho, cozido com sal (Grama: 55) ou Batata, doce, cozida (Grama: 80) ou Tapioca de goma (Grama: 20) ou Inhame (cozido) (Grama: 55)',
     },
     {
         'refeicao': 1,
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65)',
     },
     {
         'refeicao': 1,
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	chá de sene (200ml: 1)',
     },
     
     # Refeição 2 - Hipertensão - Constipação
@@ -1215,14 +1238,14 @@ HICO = [
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Psylium (Grama: 10) ou Aveia em flocos finos (Colher de sopa (15g): 1)',
     },
     {
         'refeicao': 2,
         'principal': 'HI',
         'secundaria': 'CO',
-        'ordem': 3,
-        'prato': '',
+        'ordem': 2,
+        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou Tangerina (Grama: 160) ou Mamão, Papaia, cru (Grama: 210) ou Melancia (Grama: 250) ou Goiaba (Grama: 160) ou pera (Unidade: 1)',
     },
 
     # Almoço - Hipertensão - Constipação
@@ -1231,14 +1254,21 @@ HICO = [
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 3,
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+    },
+    {
+        'refeicao': 3,
+        'principal': 'HI',
+        'secundaria': 'CO',
+        'ordem': 3,
+        'prato': '⦁	Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão, de arroz, cozido (Grama: 90) ou Macarrão Cozido(a) (Grama: 60)',
     },
 
     # Refeição 4 - Hipertensão - Constipação
@@ -1247,14 +1277,14 @@ HICO = [
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Iogurte desnatado (Copo Americano: 1)',
     },
     {
         'refeicao': 4,
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Psylium (Grama: 10) ou Aveia em flocos (Colher De Cha: 2)',
     },
 
     # Janta - Hipertensão - Constipação
@@ -1263,21 +1293,21 @@ HICO = [
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 5,
         'principal': 'HI',
         'secundaria': 'CO',
-        'ordem': 1,
-        'prato': '',
+        'ordem': 2,
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
     {
         'refeicao': 5,
         'principal': 'HI',
         'secundaria': 'CO',
-        'ordem': 1,
-        'prato': '',
+        'ordem': 3,
+        'prato': '⦁	Pão integral (Fatia: 1) ou Batata doce cozida sem sal (Grama: 60) ou Aipim Cozido(a) (Grama: 55) ou Banana da terra (Grama: 70)',
     },
 
     # Refeição 6 - Hipertensão - Constipação
@@ -1286,10 +1316,19 @@ HICO = [
         'principal': 'HI',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Aveia em flocos (Colher De Cha: 2)',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'HI',
+        'secundaria': 'CO',
+        'ordem': 2,
+        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Mamão papaia (Grama: 210)',
     },
 ]
 
+
+"""
 HIIN = [
 
     # Desjejum - Hipertensão - Insonia
