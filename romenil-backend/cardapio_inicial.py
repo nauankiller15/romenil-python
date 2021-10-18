@@ -1,5 +1,9 @@
 from cardapio.models import Cardapio
 
+# RODAR SCRIPTS
+# python manage.py shell
+# import cardapio_inicial
+
 '''
 LEGENDA PATOLOGIAS:
 # Patologias principais
@@ -1183,7 +1187,7 @@ HIML = [
         'prato': '⦁	chá de cavalinha (200ml: 1)',
     },
 ]
-"""
+
 HICO = [
 
     # Café da Manhã - Hipertensão - Constipação
@@ -1732,9 +1736,6 @@ HIRL = [
         'prato': '•	Refeição 6 - Hipertensão - Retenção liquida',
     },
 ]
-
-"""
-
 
 
 
