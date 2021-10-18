@@ -1,5 +1,6 @@
-'''
+from cardapio.models import Cardapio
 
+'''
 LEGENDA PATOLOGIAS:
 # Patologias principais
 PDI: Diabetes
@@ -27,29 +28,29 @@ def gerar_cardapio(patologia):
     ansiedade = patologia.ansiedade
     retencao_liquida = patologia.retencao_liquida
 
-    cardapio = ''
+    cardapios = Cardapio.objects.all()
 
     # diabetes
     if diabetes:
-        cardapio += 'PDI'
+        cardapios = cardapios.filter(principal='DI')
     elif hipertensao:
-        cardapio += 'PHI'
+        cardapios = cardapios.filter(principal='HI')
     else:
-        cardapio += 'PNP'
+        cardapios = cardapios.filter(principal='NP')
 
     if metabolismo_lento:
-        cardapio += 'SML'
+        cardapios = cardapios.filter(secundaria='ML')
     elif constipacao:
-        cardapio += 'SCO'
+        cardapios = cardapios.filter(secundaria='CO')
     elif insonia:
-        cardapio += 'SIN'
+        cardapios = cardapios.filter(secundaria='IN')
     elif colesterol_elevado:
-        cardapio += 'SCE'
+        cardapios = cardapios.filter(secundaria='CE')
     elif ansiedade:
-        cardapio += 'SAN'
+        cardapios = cardapios.filter(secundaria='AN')
     elif retencao_liquida:
-        cardapio += 'SRL'
+        cardapios = cardapios.filter(secundaria='RL')
     else:
-        cardapio += 'SNP'
+        cardapios = cardapios.filter(secundaria='NP')
 
-    return cardapio
+    return cardapios

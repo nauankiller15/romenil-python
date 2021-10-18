@@ -179,13 +179,17 @@ header {
   display: inline-grid;
 }
 
-.dadosConsulta p {
+.cardapio {
   text-align: justify;
   font-weight: 400;
   animation: slide-left 1.2s ease-in-out;
 }
 
-.dadosConsulta caption {
+.cardapio p {
+  margin-bottom: -30px;
+}
+
+.dadosConsulta span {
   width: 100%;
   height: auto;
   margin: 15px;

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
@@ -6,6 +5,7 @@ import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
 import { ApiService } from '../shared/api-service/api.service';
 import { Erro } from '../shared/erros';
+import { Cardapio, Cardapios } from './modelos';
 declare var $: any;
 
 @Component({
@@ -16,16 +16,15 @@ declare var $: any;
 export class CardapiosComponent implements OnInit {
 
   conta = new Conta();
-  cardapio: any = null
+  cardapios = new Cardapios;
  
   constructor(
     private accountService: AccountService,
     private apiService: ApiService, 
-    private sanitizer: DomSanitizer,
     private toastrService: ToastrService,
   ) {
     this.getConta();
-    this.getCardapio();
+    this.getCardapios();
     
   }
 
@@ -49,13 +48,17 @@ export class CardapiosComponent implements OnInit {
     );
   }
 
-  getCardapio() {
-    this.apiService.getHtml('cardapio').subscribe(
+  getCardapios() {
+    this.apiService.listar('cardapio').subscribe(
       data => {
-        this.cardapio = data;
-        
-        this.cardapio = this.sanitizer.bypassSecurityTrustHtml(this.cardapio);
-        console.log(this.cardapio)
+        for (let cardapio in data) {
+          console.log(cardapio, data[cardapio], data[cardapio].refeicao);
+          if (data[cardapio].refeicao == 1) {
+            this.cardapios.cafeManha.push(data[cardapio].prato)
+          }
+        }
+
+        console.log(this.cardapios)
       },
       error => {
         console.log(error);

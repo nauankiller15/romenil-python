@@ -18,125 +18,99 @@
           <h3>Alimentação de {{conta.first_name}} {{conta.last_name}}</h3>
         </div>
         <div class="content-cardap">
-          <h1>novo</h1>
-          <div class="dadosConsulta cafeManha" [innerHtml]="cardapio"></div>
-
-          <h1>antigo</h1>
           <div class="dadosConsulta cafeManha">
             <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
             <div class="linhaE"></div>
-            <p>
-              • Pão integral (Fatia: 1) ou Cuscuz, de milho, cozido com sal
-              (Grama: 55) ou Batata, doce, cozida (Grama: 80) ou Banana (ouro,
-              prata, d´água, da terra, etc.) Cozido(a) (Grama: 70) ou Inhame
-              (cozido) (Grama: 55) ou Aipim Cozido(a) (Grama: 50) ou Tapioca de
-              goma (Grama: 20)
-              <caption>
-                COM
-              </caption>
-              • Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal
-              (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou
-              Carne moída Cozido(a) (Grama: 65) ou Atum em conserva (Grama: 70)
-              <caption>
-                COM
-              </caption>
-              • CHÁ DE SENE EM INFUSÃO COM 200ML DE ÁGUA
-            </p>
+
+            <div class="cardapio" *ngIf="cardapios.cafeManha.length > 0">
+              <p>
+                {{cardapios.cafeManha[0]}}
+              <p>
+              <p *ngFor="let prato of cardapios.cafeManha.slice(1)">
+                <caption>
+                  COM
+                </caption>
+                  {{prato}}
+              <p>
+            </div>
           </div>
           <div class="dadosConsulta">
             <label><i class="fas fa-utensils favTit"></i> Refeição 2</label>
             <div class="linhaE"></div>
-            <p>
-              Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De
-              Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g):
-              1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)
-              <caption>
-                COM
-              </caption>
-              • Maçã (Unidade: 1) ou Mamão, Papaia, cru (Grama: 210) ou pera
-              (Unidade: 1) Tangerina (Grama: 160) ou Uva itália (un: 15) ou
-              Morango (Unidade média (12g): 20) ou Abacaxi (Grama: 170) ou
-              Goiaba (Grama: 160) ou Melancia (Grama: 250) ou Kiwi (Grama: 145)
-              ou Manga (Grama: 130)
-            </p>
+            
+            <div class="cardapio" *ngIf="cardapios.refeicao2.length > 0">
+              <p>
+                {{cardapios.refeicao2[0]}}
+              <p>
+              <p *ngFor="let prato of cardapios.refeicao2.slice(1)">
+                <caption>
+                  COM
+                </caption>
+                  {{prato}}
+              <p>
+            </div>
           </div>
           <div class="dadosConsulta almoco">
             <label><i class="fas fa-utensils favTit"></i>  Almoço</label>
             <div class="linhaE"></div>
-            <p>
-              Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De
-              Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g):
-              1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)
-              <caption>
-                COM
-              </caption>
-              • Maçã (Unidade: 1) ou Mamão, Papaia, cru (Grama: 210) ou pera
-              (Unidade: 1) Tangerina (Grama: 160) ou Uva itália (un: 15) ou
-              Morango (Unidade média (12g): 20) ou Abacaxi (Grama: 170) ou
-              Goiaba (Grama: 160) ou Melancia (Grama: 250) ou Kiwi (Grama: 145)
-              ou Manga (Grama: 130)
-            </p>
+            
+            <div class="cardapio" *ngIf="cardapios.almoco.length > 0">
+              <p>
+                {{cardapios.almoco[0]}}
+              <p>
+              <p *ngFor="let prato of cardapios.almoco.slice(1)">
+                <caption>
+                  COM
+                </caption>
+                  {{prato}}
+              <p>
+            </div>
           </div>
           <div class="dadosConsulta">
             <label><i class="fas fa-utensils favTit"></i>  Refeição 4</label>
             <div class="linhaE"></div>
-            <p>
-              • Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2)
-              84g
-              <caption>
-                COM
-              </caption>
-              • Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho
-              Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou
-              Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco,
-              grelhado (Grama: 110)
-              <caption>
-                COM
-              </caption>
-              • Arroz integral (cozido) (Colher de arroz cheia (63g): 2) Ou
-              Macarrão, de arroz, cozido (Grama: 90)
-            </p>
+            <div class="cardapio" *ngIf="cardapios.refeicao4.length > 0">
+              <p>
+                {{cardapios.refeicao4[0]}}
+              <p>
+              <p *ngFor="let prato of cardapios.refeicao4.slice(1)">
+                <caption>
+                  COM
+                </caption>
+                  {{prato}}
+              <p>
+            </div>
           </div>
           <div class="dadosConsulta janta">
             <label><i class="fas fa-utensils favTit"></i>  Janta</label>
             <div class="linhaE"></div>
-            <p>
-              • Pão integral (Fatia: 1) ou Batata, doce, cozida (Grama: 80) Ou
-              Aipim ( 50g) 84g
-              <caption>
-                COM
-              </caption>
-              • Ovo de galinha Cozido(a) (Unidade: 2) ou Atum em conserva
-              (Grama: 70) ou Queijo minas frescal (Grama: 60) ou Peito de
-              galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a)
-              (Grama: 65) ou Salmão, filé, com pele, fresco, grelhado (Grama:
-              60) ou Merluza (cozida) (Grama: 130) ou Patinho Assado(a) (Grama:
-              70)
-            </p>
+            <div class="cardapio" *ngIf="cardapios.janta.length > 0">
+              <p>
+                {{cardapios.janta[0]}}
+              <p>
+              <p *ngFor="let prato of cardapios.janta.slice(1)">
+                <caption>
+                  COM
+                </caption>
+                  {{prato}}
+              <p>
+            </div>
           </div>
           <div class="dadosConsulta">
             <label><i class="fas fa-utensils favTit"></i>  Refeição 6</label>
             <div class="linhaE"></div>
-            <p>
-              • Clara de ovo de galinha (Unidade (34g): 1)
-              <caption>
-                COM
-              </caption>
-              • Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou
-              pera (Unidade: 1) ou Mamão papaia (Grama: 210) ou Morango (Unidade
-              média (12g): 25) ou Amora (Unidade: 50)
-              <caption>
-                COM
-              </caption>
-              • Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De
-              Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g):
-              1) ou Semente de chia (Colher de sopa: 5) ou Psylium (Grama: 10)
-              ou Semente de chia (Colher de sopa: 5)
-              <caption>
-                COM
-              </caption>
-              • chá de MULUNGU COM CAMOMILA ( 10 GR DE ERVA CADA )
-            </p>
+            
+            <div class="cardapio" *ngIf="cardapios.refeicao6.length > 0">
+              <p>
+                {{cardapios.refeicao6[0]}}
+              <p>
+              <p *ngFor="let prato of cardapios.refeicao6.slice(1)">
+                <caption>
+                  COM
+                </caption>
+                  {{prato}}
+              <p>
+            </div>
           </div>
           <div class="cardBtn">
             <div style="padding-top: 25px"></div>
@@ -149,7 +123,7 @@
               >Enviar no Email
             </button>
           </div>
-          <div class="linhaE"></div>
+          <div class="linhaE"></div> -->
         </div>
       </div>
     </div>

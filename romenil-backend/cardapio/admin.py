@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from cardapio.models import Cardapio
+
+admin.site.register(Cardapio)

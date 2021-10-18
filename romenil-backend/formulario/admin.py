@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from formulario.models import Patologia
+
+admin.site.register(Patologia)
