@@ -1,5 +1,47 @@
 from cardapio.models import Cardapio
 
+'''
+LEGENDA PATOLOGIAS:
+# Patologias principais
+PDI: Diabetes
+PHI: Hipertensao
+PNP: Nenhuma Patologia principal
+
+# Patologias secundárias
+ML: Metabolismo Lento
+CO: Constipação
+IS: Insonia
+CE: Colesterol Elevado
+AN: Ansiedade
+RL: Retensão Liquida
+NP: Nenhuma Patologia secundária
+
+# Codigo Completo
+DIML: Diabetes e Metabolismo Lento
+DICO: Diabetes e Constipação
+DIIN: Diabetes e Insonia
+DICE: Diabetes e Colesterol Elevado
+DIAN: Diabetes e Ansiedade
+DIRL: Diabetes e Retensão Liquida
+DINP: Diabetes e Nenhuma Patologia secundária
+
+HIML: Hipertensão e Metabolismo Lento
+HICO: Hipertensão e Constipação
+HIIS: Hipertensão e Insonia
+HICE: Hipertensão e Colesterol Elevado
+HIAN: Hipertensão e Ansiedade
+HIRL: Hipertensão e Retensão Liquida
+HINP: Hipertensão e Nenhuma Patologia secundária
+
+NPML: Nenhuma Patologia Principal e Metabolismo Lento
+NPCO: Nenhuma Patologia Principal e Constipação
+NPIS: Nenhuma Patologia Principal e Insonia
+NPCE: Nenhuma Patologia Principal e Colesterol Elevado
+NPAN: Nenhuma Patologia Principal e Ansiedade
+NPRL: Nenhuma Patologia Principal e Retensão Liquida
+NPNP: Nenhuma Patologia Principal e Nenhuma Patologia secundária
+
+'''
 
 print("Iniciando")
 
@@ -128,20 +170,79 @@ DINP = [
 
 DIML = [
 
+    # Desjejum - Diabetes - Metabolismo Lento
+    {
+        'refeicao': 0,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 1,
+        'prato': '⦁	Curcuma ( 2 colheres de chá cheios) ',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 2,
+        'prato': '⦁	GENGIBRE EM PÓ ( 2 COLHERES DE CHÁ)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 3,
+        'prato': '⦁	Pimenta Caiena (meia colher de chá)',
+    },
+    {
+        'refeicao': 0,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 4,
+        'prato': '⦁	Água morna (200ml)',
+    },
+
     # Café da Manhã - Diabetes - Metabolismo Lento
     {
         'refeicao': 1,
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
+<<<<<<< HEAD
         'prato': '•	DESJEJUM SHOT METABOLISMO - Limão espremido (Unidade: 1)',
+=======
+        'prato': 'Maçã (Unidade: 1) Ou Pera ( 1 und ) Ou Banana ( 1 und)',
+>>>>>>> e7cf8521ed5972ffd55bc95d809d2cb99484fc66
     },
     {
         'refeicao': 1,
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 2,
+<<<<<<< HEAD
         'prato': '• Gengibre (Colher de chá ralado (5g): 1)',
+=======
+        'prato': '⦁	Chá de canela + gengibre ( 200ml)',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 2,
+        'prato': '⦁	Batata doce (70g) Ou aipim (60 g) Ou Inhame (70g)',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 3,
+        'prato': '⦁	Ovos de galinha ( mexidos ou cozidos ) -3 unds',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 4,
+        'prato': '⦁	Queijo (minas ou cotagge) – 1 fatia',
+>>>>>>> e7cf8521ed5972ffd55bc95d809d2cb99484fc66
     },
 
     # Refeição 2 - Diabetes - Metabolismo Lento
@@ -150,7 +251,7 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '•	Refeição 2 - Diabetes - Metabolismo Lento',
+        'prato': '',
     },
 
     # Almoço - Diabetes - Metabolismo Lento
@@ -159,7 +260,14 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '•	almoço - Diabetes - Metabolismo Lento',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Á VONTADE )',
+    },
+    {
+        'refeicao': 3,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 2,
+        'prato': '⦁	Peito de frango (100g) Ou Peixe (Tilápia ou merluza) - 130g',
     },
 
     # Refeição 4 - Diabetes - Metabolismo Lento
@@ -168,7 +276,14 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '•	Refeição 2 - Diabetes - Metabolismo Lento',
+        'prato': '⦁	Iogurte desnatado ( baixa gordura)  (Copo Americano: 1)',
+    },
+    {
+        'refeicao': 4,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 2,
+        'prato': '⦁	Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Semente de chia (Colher de sopa: 5) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
 
     # Janta - Diabetes - Metabolismo Lento
@@ -177,7 +292,21 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '•	Janta - Diabetes - Metabolismo Lento',
+        'prato': '⦁	Ovo de galinha (3 Unidades)',
+    },
+    {
+        'refeicao': 5,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 2,
+        'prato': '⦁	Tomate (2 Colher de sopa cheia em cubos (15g), Orégano seco (1 Colher de café (037g), Orégano seco (1 Colher de café (037g) , Manjericão fresco (5 folhas (3g)',
+    },
+    {
+        'refeicao': 5,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 3,
+        'prato': '⦁	Queijo minas frescal (Fatia (30g): 1)',
     },
 
     # Refeição 6 - Diabetes - Metabolismo Lento
@@ -186,7 +315,7 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '•	Refeição 6 - Diabetes - Metabolismo Lento',
+        'prato': '⦁	Leite de vaca desnatado (Copo Americano: 1)',
     },
 ]
 
