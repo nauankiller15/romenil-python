@@ -20,6 +20,7 @@ class Cardapio(Model):
     )
 
     REFEICAO_CHOICES = (
+        (0, 'Desjejum'),
         (1, 'Café da manhã'),
         (2, 'Refeição 2'),
         (3, 'Almoço'),
