@@ -20,17 +20,17 @@ class Cardapio(Model):
     )
 
     REFEICAO_CHOICES = (
-        ('1', 'Café da manhã'),
-        ('2', 'Refeição 2'),
-        ('3', 'Almoço'),
-        ('4', 'Refeição 4'),
-        ('5', 'Janta'),
-        ('6', 'Refeição 6'),
+        (1, 'Café da manhã'),
+        (2, 'Refeição 2'),
+        (3, 'Almoço'),
+        (4, 'Refeição 4'),
+        (5, 'Janta'),
+        (6, 'Refeição 6'),
     )
 
     principal = CharField(max_length=2, choices=PRINCIPAL_CHOICES)
     secundaria = CharField(max_length=2, choices=SECUNDARIO_CHOICES)
-    refeicao = CharField(max_length=1, choices=REFEICAO_CHOICES)
+    refeicao = IntegerField(choices=REFEICAO_CHOICES)
     ordem = IntegerField()
     prato = TextField()
 
@@ -38,4 +38,4 @@ class Cardapio(Model):
         return f'{self.principal}{self.secundaria} - {self.refeicao} - {self.ordem}'
 
     class Meta:
-        ordering = ['-principal', '-secundaria', '-refeicao', '-ordem']
+        ordering = ['-principal', '-secundaria', '-refeicao', '-ordem', '-id']

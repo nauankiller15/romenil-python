@@ -180,6 +180,7 @@ header {
 }
 
 .cardapio {
+  margin-bottom: 30px;
   text-align: justify;
   font-weight: 400;
   animation: slide-left 1.2s ease-in-out;

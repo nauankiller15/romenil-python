@@ -55,7 +55,17 @@ export class CardapiosComponent implements OnInit {
           console.log(cardapio, data[cardapio], data[cardapio].refeicao);
           if (data[cardapio].refeicao == 1) {
             this.cardapios.cafeManha.push(data[cardapio].prato)
-          }
+          } else if (data[cardapio].refeicao == 2) {
+            this.cardapios.refeicao2.push(data[cardapio].prato)
+          } else if (data[cardapio].refeicao == 3) {
+            this.cardapios.almoco.push(data[cardapio].prato)
+          } else if (data[cardapio].refeicao == 4) {
+            this.cardapios.refeicao4.push(data[cardapio].prato)
+          } else if (data[cardapio].refeicao == 5) {
+            this.cardapios.janta.push(data[cardapio].prato)
+          } else if (data[cardapio].refeicao == 6) {
+            this.cardapios.refeicao6.push(data[cardapio].prato)
+          } 
         }
 
         console.log(this.cardapios)
