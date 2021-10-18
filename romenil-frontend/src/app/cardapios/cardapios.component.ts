@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
@@ -52,8 +51,9 @@ export class CardapiosComponent implements OnInit {
     this.apiService.listar('cardapio').subscribe(
       data => {
         for (let cardapio in data) {
-          console.log(cardapio, data[cardapio], data[cardapio].refeicao);
-          if (data[cardapio].refeicao == 1) {
+          if (data[cardapio].refeicao == 0) {
+            this.cardapios.desjejum.push(data[cardapio].prato)
+          } else if (data[cardapio].refeicao == 1) {
             this.cardapios.cafeManha.push(data[cardapio].prato)
           } else if (data[cardapio].refeicao == 2) {
             this.cardapios.refeicao2.push(data[cardapio].prato)
@@ -67,8 +67,6 @@ export class CardapiosComponent implements OnInit {
             this.cardapios.refeicao6.push(data[cardapio].prato)
           } 
         }
-
-        console.log(this.cardapios)
       },
       error => {
         console.log(error);
