@@ -1,5 +1,47 @@
 from cardapio.models import Cardapio
 
+'''
+LEGENDA PATOLOGIAS:
+# Patologias principais
+PDI: Diabetes
+PHI: Hipertensao
+PNP: Nenhuma Patologia principal
+
+# Patologias secundárias
+ML: Metabolismo Lento
+CO: Constipação
+IS: Insonia
+CE: Colesterol Elevado
+AN: Ansiedade
+RL: Retensão Liquida
+NP: Nenhuma Patologia secundária
+
+# Codigo Completo
+DIML: Diabetes e Metabolismo Lento
+DICO: Diabetes e Constipação
+DIIN: Diabetes e Insonia
+DICE: Diabetes e Colesterol Elevado
+DIAN: Diabetes e Ansiedade
+DIRL: Diabetes e Retensão Liquida
+DINP: Diabetes e Nenhuma Patologia secundária
+
+HIML: Hipertensão e Metabolismo Lento
+HICO: Hipertensão e Constipação
+HIIS: Hipertensão e Insonia
+HICE: Hipertensão e Colesterol Elevado
+HIAN: Hipertensão e Ansiedade
+HIRL: Hipertensão e Retensão Liquida
+HINP: Hipertensão e Nenhuma Patologia secundária
+
+NPML: Nenhuma Patologia Principal e Metabolismo Lento
+NPCO: Nenhuma Patologia Principal e Constipação
+NPIS: Nenhuma Patologia Principal e Insonia
+NPCE: Nenhuma Patologia Principal e Colesterol Elevado
+NPAN: Nenhuma Patologia Principal e Ansiedade
+NPRL: Nenhuma Patologia Principal e Retensão Liquida
+NPNP: Nenhuma Patologia Principal e Nenhuma Patologia secundária
+
+'''
 
 print("Iniciando")
 DINP = [
