@@ -2311,6 +2311,19 @@ p {
   text-align: justify;
 }
 
+caption {
+  font-weight: 800;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: #ffffffd6;
+  text-align: left;
+  border: 1px solid var(--azul);
+  padding: 2px 10px 2px 10px;
+  border-radius: 10px;
+  margin: 14px 0px 8px 0px;
+}
+
+
 u {
   padding: 10px;
   line-height: 10px;

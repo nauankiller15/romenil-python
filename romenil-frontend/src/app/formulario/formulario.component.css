@@ -123,6 +123,8 @@ header {
   margin: -21px auto;
   font-weight: 350;
   animation: scalePlan 1.4s ease-in-out;
+  line-height: 1.6em;
+  padding: 14px 0px 14px 0px;
 }
 
 .content-cardap {
@@ -178,19 +180,6 @@ header {
   text-align: justify;
   font-weight: 400;
   animation: slide-left 1.2s ease-in-out;
-}
-
-.dadosConsulta caption {
-  width: 100%;
-  height: auto;
-  margin: 15px;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid var(--azul);
-  padding: 3px;
-  font-size: 1.4em;
-  animation: slide-left 0.6s ease-in-out;
 }
 
 .option {
@@ -352,16 +341,16 @@ input[type="radio"] {
 }
 /*  */
 #option-13:checked:checked ~ .option-13,
-#optiion-14:checked:checked ~ .option-14 {
+#option-14:checked:checked ~ .option-14 {
   border-color: var(--azul);
   background: var(--azul);
 }
 #option-13:checked:checked ~ .option-13 .dot,
-#optiion-14:checked:checked ~ .option-14 .dot {
+#option-14:checked:checked ~ .option-14 .dot {
   background: #fff;
 }
 #option-13:checked:checked ~ .option-13 .dot::before,
-#optiion-14:checked:checked ~ .option-14 .dot::before {
+#option-14:checked:checked ~ .option-14 .dot::before {
   opacity: 1;
   transform: scale(1);
 }
@@ -745,6 +734,7 @@ input[type="radio"] {
   border-left: 1px solid #272727;
   border-bottom: 1px solid #272727;
   padding-left: 20px;
+  line-height: 1.9em;
 }
 
 .cardBtn {

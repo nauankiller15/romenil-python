@@ -2,9 +2,12 @@ from cardapio.models import Cardapio
 
 
 print("Iniciando")
+
+# TODOS OS CARDÁPIOS DE DIABETES
+
 DINP = [
 
-    # Café da Manhã - Diabetes - Nenuma Patologia Secundaria #
+    # Café da Manhã - Diabetes - Nenhuma Patologia Secundaria #
     {
         'refeicao': 1,
         'principal': 'DI',
@@ -41,7 +44,7 @@ DINP = [
         'prato': '•	Queijo minas frescal (Fatia (30g): 1)',
     },
 
-    # Refeição 2 - Diabetes - Nenuma Patologia Secundaria #
+    # Refeição 2 - Diabetes - Nenhuma Patologia Secundaria #
     {
         'refeicao': 2,
         'principal': 'DI',
@@ -57,7 +60,7 @@ DINP = [
         'prato': '•	Chá de canela + gengibre (200ml)',
     },
 
-    # Almoço - Diabetes - Nenuma Patologia Secundaria #
+    # Almoço - Diabetes - Nenhuma Patologia Secundaria #
     {
         'refeicao': 3,
         'principal': 'DI',
@@ -73,7 +76,7 @@ DINP = [
         'prato': '•	Peixe não especificado (inteiro, em posta, em filé, etc.) Assado(a) (File: 1)',
     },
 
-    # Refeição 4 - Diabetes - Nenuma Patologia Secundaria #
+    # Refeição 4 - Diabetes - Nenhuma Patologia Secundaria #
     {
         'refeicao': 4,
         'principal': 'DI',
@@ -89,7 +92,7 @@ DINP = [
         'prato': '•	Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Semente de chia (Colher de sopa: 5) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
 
-    # Janta - Diabetes - Nenuma Patologia Secundaria #
+    # Janta - Diabetes - Nenhuma Patologia Secundaria #
     {
         'refeicao': 5,
         'principal': 'DI',
@@ -112,7 +115,7 @@ DINP = [
         'prato': '•	Queijo minas frescal (Fatia (30g): 1)',
     },
     
-    # Refeição 6 - Diabetes - Nenuma Patologia Secundaria #
+    # Refeição 6 - Diabetes - Nenhuma Patologia Secundaria #
     {
         'refeicao': 6,
         'principal': 'DI',
@@ -131,7 +134,14 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '•	Café da Manhã - Diabetes - Metabolismo Lento',
+        'prato': '•	DESJEJUM SHOT METABOLISMO - Limão espremido (Unidade: 1)',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'DI',
+        'secundaria': 'ML',
+        'ordem': 2,
+        'prato': '• Gengibre (Colher de chá ralado (5g): 1)',
     },
 
     # Refeição 2 - Diabetes - Metabolismo Lento
@@ -561,7 +571,7 @@ DICE = [
         'principal': 'DI',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': 'chá de carqueja (200ml) ou chá de sálvia (200ml) ou chá de insulina vegetal (200ml)',
+        'prato': 'Chá de carqueja (200ml) ou chá de sálvia (200ml) ou chá de insulina vegetal (200ml)',
     },
 ]
 
@@ -698,7 +708,7 @@ DIRL = [
         'principal': 'DI',
         'secundaria': 'RL',
         'ordem': 1,
-        'prato': '•	almoço - Diabetes - Retenção liquida',
+        'prato': '•	Almoço - Diabetes - Retenção liquida',
     },
 
     # Refeição 4 - Diabetes - Retenção liquida
