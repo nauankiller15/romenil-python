@@ -424,10 +424,9 @@ header {
 }
 
 .result-content {
-  margin-top: 10px;
-  background: #1a1a1a;
-  border-radius: 5px;
-  padding: 15px;
+  background-color: #0a0e17;
+  padding: 10px;
+  border-radius: 10px;
   animation: slide-left 1.3s ease-in-out;
 }
 
