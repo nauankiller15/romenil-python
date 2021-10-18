@@ -1444,8 +1444,6 @@ HIIN = [
     },
 ]
 
-
-"""
 HICE = [
 
     # Desjejum - Hipertensão - Colesterol Elevado
@@ -1757,28 +1755,28 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Queijo branco ( 2 fatias ) ou Atum (Grama: 120)',
+        'prato': '',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': 'Batata doce cozida sem sal (Grama: 55) ou Cuscuz (Grama: 45) ou Inhame (cozido) (Grama: 50) ou Banana da terra Cozido(a) (Grama: 65)',
+        'prato': '',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': 'Mamão (1 fatia)',
+        'prato': '',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 4,
-        'prato': 'Aveia em flocos (Colher De Sopa: 1)',
+        'prato': '',
     },
 
     # Refeição 2 - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1787,14 +1785,14 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou Uva itália (un: 15) ou Amora (Unidade: 50) ou Mamão, Papaia, cru (Grama: 210) ou Goiaba (Grama: 160) ou pera (Unidade: 1)',
+        'prato': '',
     },
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': 'Canela em pó (Colher de sopa (13g): 1)',
+        'prato': '',
     },
 
     # Almoço - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1803,28 +1801,28 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': 'Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': 'Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1) ou Grão de bico (cozido) (Colher de sopa (24g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 4,
-        'prato': 'Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão Cozido(a) (Grama: 60) ou Macarrão, de arroz, cozido (Grama: 90)',
+        'prato': '',
     },
 
     # Refeição 4 - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1833,7 +1831,7 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '⦁	chá de cavalinha (200ml: 1)',
+        'prato': '',
     },
    
 
@@ -1843,21 +1841,21 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': 'Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': 'Batata doce cozida sem sal (Grama: 70) ou Cuscuz, de milho, cozido com sal (Grama: 50) ou Inhame (cozido) (Grama: 60) ou Banana da terra (Grama: 40) ou Pão integral (Fatia: 1)',
+        'prato': '',
     },
     
     # Refeição 6 - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1866,28 +1864,28 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '⦁	Água (Copo médio (200ml): 1)',
+        'prato': '',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': 'Chá, erva, camomila, ebulição (Grama: 2)',
+        'prato': '',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': '⦁	Maracujá (Unidade média (45g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 4,
-        'prato': 'Mel (Colher de chá (7g): 1) Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
+        'prato': '',
     },
 ]
 
@@ -1899,14 +1897,14 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '⦁	Limão espremido (Unidade: 1)',
+        'prato': '',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '⦁	Gengibre (Colher de chá ralado (5g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 0,
@@ -1920,28 +1918,28 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 4,
-        'prato': '⦁	Própolis (gotas: 15)',
+        'prato': '',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 5,
-        'prato': '⦁	Cúrcuma (Colher de chá (2,05g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 6,
-        'prato': '⦁	Pimenta caiena (Pitada (0,70g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 7,
-        'prato': '⦁	Água (Copo médio (200ml): 1)',
+        'prato': '',
     },
 
     # Café da Manhã - Nenhuma Patologia Primaria - Metabolismo Lento
@@ -1950,21 +1948,21 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '⦁	Pão integral (Fatia: 1) ou Cuscuz, de milho, cozido com sal (Grama: 55) ou Batata, doce, cozida (Grama: 80) ou Banana (ouro, prata, d´água, da terra, etc.) Cozido(a) (Grama: 70) ou Inhame (cozido) (Grama: 55) ou Aipim Cozido(a) (Grama: 50) ou Tapioca de goma (Grama: 20)',
+        'prato': '',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '⦁	Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65) ou Atum em conserva (Grama: 70)',
+        'prato': '',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '⦁	chá de sene (200ml: 1)',
+        'prato': '',
     },
     
 
@@ -1974,21 +1972,21 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou Uva itália (un: 15) ou Mamão, Papaia, cru (Grama: 210) ou Abacaxi (Grama: 170) ou Goiaba (Grama: 160)',
+        'prato': '',
     },
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '⦁	Chá verde (Copo pequeno cheio (165ml): 1)',
+        'prato': '',
     },
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '⦁	Castanha de caju (Unidade: 6) ou Castanha do Pará sem sal (Unidade (4g): 3)',
+        'prato': '',
     },
 
     # Almoço - Nenhuma Patologia Primaria - Metabolismo Lento
@@ -1997,28 +1995,28 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '⦁	Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 4,
-        'prato': '⦁	Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão Cozido(a) (Grama: 60) ou Macarrão, de arroz, cozido (Grama: 90)',
+        'prato': '',
     },
 
     # Refeição 4 - Nenhuma Patologia Primaria - Metabolismo Lento
@@ -2027,7 +2025,7 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '⦁	Iogurte desnatado (Copo Americano: 1)',
+        'prato': '',
     },
     
 
@@ -2037,21 +2035,21 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '⦁	Pão integral (Fatia: 1) ou Batata doce cozida sem sal (Grama: 60) ou Aipim Cozido(a) (Grama: 55) ou Banana da terra (Grama: 70)',
+        'prato': '',
     },
 
     # Refeição 6 - Nenhuma Patologia Primaria - Metabolismo Lento
@@ -2060,21 +2058,21 @@ NPML = [
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 1,
-        'prato': '⦁	Clara de ovo de galinha (Unidade (34g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 2,
-        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou pera (Unidade: 1) ou Mamão papaia (Grama: 210) ou Morango (Unidade média (12g): 25) ou Amora (Unidade: 50)',
+        'prato': '',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '⦁	chá de cavalinha (200ml: 1)',
+        'prato': '',
     },
 ]
 
@@ -2086,21 +2084,21 @@ NPCO = [
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '⦁	Laranja (Unidade pequena (90g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '⦁	Mamão (Fatia: 1)',
+        'prato': '',
     },
     {
         'refeicao': 0,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 3,
-        'prato': '⦁	Água (Copo médio (200ml): 1)',
+        'prato': '',
     },
 
     # Café da Manhã - Nenhuma Patologia Primaria - Constipação
@@ -2109,21 +2107,21 @@ NPCO = [
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '⦁	Pão integral (Fatia: 1) ou Aipim Cozido(a) (Grama: 50) ou Cuscuz, de milho, cozido com sal (Grama: 55) ou Batata, doce, cozida (Grama: 80) ou Tapioca de goma (Grama: 20) ou Inhame (cozido) (Grama: 55)',
+        'prato': '',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '⦁	Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65)',
+        'prato': '',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 3,
-        'prato': '⦁	chá de sene (200ml: 1)',
+        'prato': '',
     },
     
     # Refeição 2 - Nenhuma Patologia Primaria - Constipação
@@ -2132,14 +2130,14 @@ NPCO = [
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '⦁	Psylium (Grama: 10) ou Aveia em flocos finos (Colher de sopa (15g): 1)',
+        'prato': '',
     },
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou Tangerina (Grama: 160) ou Mamão, Papaia, cru (Grama: 210) ou Melancia (Grama: 250) ou Goiaba (Grama: 160) ou pera (Unidade: 1)',
+        'prato': '',
     },
 
     # Almoço - Nenhuma Patologia Primaria - Constipação
@@ -2148,21 +2146,21 @@ NPCO = [
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 3,
-        'prato': '⦁	Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão, de arroz, cozido (Grama: 90) ou Macarrão Cozido(a) (Grama: 60)',
+        'prato': '',
     },
 
     # Refeição 4 - Nenhuma Patologia Primaria - Constipação
@@ -2187,21 +2185,21 @@ NPCO = [
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 3,
-        'prato': '⦁	Pão integral (Fatia: 1) ou Batata doce cozida sem sal (Grama: 60) ou Aipim Cozido(a) (Grama: 55) ou Banana da terra (Grama: 70)',
+        'prato': '',
     },
 
     # Refeição 6 - Nenhuma Patologia Primaria - Constipação
@@ -2210,14 +2208,14 @@ NPCO = [
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '⦁	Aveia em flocos (Colher De Cha: 2)',
+        'prato': '',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 2,
-        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Mamão papaia (Grama: 210)',
+        'prato': '',
     },
 ]
 
