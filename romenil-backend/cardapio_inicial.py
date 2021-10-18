@@ -2135,36 +2135,13 @@ NPML = [
 
 NPCO = [
 
-    # Desjejum - Nenhuma Patologia Primaria - Constipação
-    {
-        'refeicao': 0,
-        'principal': 'NP',
-        'secundaria': 'CO',
-        'ordem': 1,
-        'prato': '',
-    },
-    {
-        'refeicao': 0,
-        'principal': 'NP',
-        'secundaria': 'CO',
-        'ordem': 2,
-        'prato': '',
-    },
-    {
-        'refeicao': 0,
-        'principal': 'NP',
-        'secundaria': 'CO',
-        'ordem': 3,
-        'prato': '',
-    },
-
     # Café da Manhã - Nenhuma Patologia Primaria - Constipação
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'CO',
         'ordem': 1,
-        'prato': '',
+        'prato': '50 gramas de banana-da-terra, cozida 1 xicara de café com 1 colher de chá de óleo de coco 1 fatia de mamão',
     },
     {
         'refeicao': 1,
@@ -2278,144 +2255,121 @@ NPCO = [
 
 NPIN = [
 
-    # Desjejum - Nenhuma Patologia Primaria - Insonia
-    {
-        'refeicao': 0,
-        'principal': 'NP',
-        'secundaria': 'IN',
-        'ordem': 1,
-        'prato': '',
-    },
-
-    # Café da Manhã - Nenhuma Patologia Primaria - Insonia
+    # Café da Manhã - Nenhuma Patologia Primaria - Insônia
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Chá de carqueja (200ml)',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Mamão(3 fatias)',
     },
-
-    # Refeição 2 - Nenhuma Patologia Primaria - Insonia
+    {
+        'refeicao': 1,
+        'principal': 'NP',
+        'secundaria': 'IN',
+        'ordem': 3,
+        'prato': '⦁	Ovo de galinha ( 1 und)',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'NP',
+        'secundaria': 'IN',
+        'ordem': 3,
+        'prato': '⦁	Queijo branco( 1 FATIA) ',
+    },
+    
+    # Refeição 2 - Nenhuma Patologia Primaria - Insônia
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	PSILLIUM (10 GR) Ou SEMENTE DE CHIA ( 2 colheres)',
+    },
+    {
+        'refeicao': 2,
+        'principal': 'NP',
+        'secundaria': 'IN',
+        'ordem': 2,
+        'prato': '⦁	Bananas ( 2 unidades)',
     },
 
-    # Almoço - Nenhuma Patologia Primaria - Insonia
+    # Almoço - Nenhuma Patologia Primaria - Insônia
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Salada ou verdura cozida, ou folhas em geral (Á VONTADE )',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 3,
-        'prato': '',
-    },
-    {
-        'refeicao': 3,
-        'principal': 'NP',
-        'secundaria': 'IN',
-        'ordem': 4,
-        'prato': '',
-    },
-    {
-        'refeicao': 3,
-        'principal': 'NP',
-        'secundaria': 'IN',
-        'ordem': 5,
-        'prato': '',
-    },
-    {
-        'refeicao': 3,
-        'principal': 'NP',
-        'secundaria': 'IN',
-        'ordem': 6,
-        'prato': '',
+        'prato': '⦁	Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1)',
     },
 
-    # Refeição 4 - Nenhuma Patologia Primaria - Insonia
+    # Refeição 4 - Nenhuma Patologia Primaria - Insônia
     {
         'refeicao': 4,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Iogurte desnatado (Copo Americano: 1)',
     },
     {
         'refeicao': 4,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Semente de chia (Colher de sopa: 5) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
 
-    # Janta - Nenhuma Patologia Primaria - Insonia
+    # Janta - Nenhuma Patologia Primaria - Insônia
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Pão integral (Fatia: 2) ou Cuscuz, de milho, cozido com sal (Grama: 110) ou Batata, doce, cozida (Grama: 160) ou Banana (ouro, prata, d´água, da terra, etc.) Cozido(a) (Grama: 140)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Ovo de galinha Cozido(a) (Unidade: 2) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Salmão, filé, com pele, fresco, grelhado (Grama: 60) ou Queijo minas frescal (Grama: 60) ou Atum em conserva (Grama: 70) ou Merluza, filé, assado (Grama: 110)',
     },
-    {
-        'refeicao': 5,
-        'principal': 'NP',
-        'secundaria': 'IN',
-        'ordem': 3,
-        'prato': '',
-    },
-    {
-        'refeicao': 5,
-        'principal': 'NP',
-        'secundaria': 'IN',
-        'ordem': 4,
-        'prato': '',
-    },
-    {
-        'refeicao': 5,
-        'principal': 'NP',
-        'secundaria': 'IN',
-        'ordem': 5,
-        'prato': '',
-    },
-
-    # Refeição 6 - Nenhuma Patologia Primaria - Insonia
+    
+    # Refeição 6 - Nenhuma Patologia Primaria - Insônia
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'IN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	CHÁ DE CAMOMILA + MULUNGU + PASSIFLORA 3-5 INLHERES DE CADA EM 500ML DE ÁGUA 30/40MIN ANTES DE DORMIR',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'NP',
+        'secundaria': 'IN',
+        'ordem': 2,
+        'prato': '⦁	Propolís verde , de abelha (20 gotas)',
     },
 ]
 
