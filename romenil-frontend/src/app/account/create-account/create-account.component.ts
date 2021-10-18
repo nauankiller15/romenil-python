@@ -33,7 +33,7 @@ export class CreateAccountComponent implements OnInit {
     if (this.accountService.autenticado()) {
       this.accountService.usuario().subscribe((data) => {
         if (data.usuario) {
-          this.router.navigate(['/welcome']);
+          this.router.navigate(['/formulario']);
         } else {
           this.pagina = 'usuario';
         }
@@ -83,7 +83,7 @@ export class CreateAccountComponent implements OnInit {
     this.accountService.createUser(this.usuario).subscribe(
       (data) => {
         this.toastr.success('Dados cadastrados com sucesso!');
-        this.router.navigate(['/welcome']);
+        this.router.navigate(['/formulario']);
       },
       (error) => {
         this.loading = false;

@@ -12,6 +12,5 @@ class PatologiaViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
-        print(request.user.id)
         request.data['usuario'] = request.user.usuario_set.last().id
         return super().create(request, *args, **kwargs)
