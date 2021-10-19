@@ -32,6 +32,7 @@ export class CardapiosComponent implements OnInit {
     });
     $('body').addClass('noborder');
 
+    // BOTÃO DE PRINTAR A PÁGINA DE CARDÁPIO
     $('#printer').on('click', () => {
       var conteudo = document.getElementById('print')!.innerHTML;
       const tela_impressao = window.open('about:blank');
@@ -45,6 +46,7 @@ export class CardapiosComponent implements OnInit {
       tela_impressao!.window.print();
       tela_impressao!.window.close();
     });
+    //
   }
 
   getConta() {
