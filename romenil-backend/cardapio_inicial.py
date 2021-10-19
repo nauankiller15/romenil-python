@@ -2524,22 +2524,16 @@ NPAN = [
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Mingau de aveia (30 g de aveia)',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Yogurt desnatado – 100ml)',
     },
-    {
-        'refeicao': 1,
-        'principal': 'NP',
-        'secundaria': 'AN',
-        'ordem': 3,
-        'prato': '',
-    },
+    
 
     # Refeição 2 - Nenhuma Patologia Primaria - Ansiedade
     {
@@ -2547,30 +2541,30 @@ NPAN = [
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
-    {
-        'refeicao': 2,
-        'principal': 'NP',
-        'secundaria': 'AN',
-        'ordem': 2,
-        'prato': '',
-    },
-
+    
     # Almoço - Nenhuma Patologia Primaria - Ansiedade
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	SALADA DE FOLHAS A VONTADE',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango Assado(a) (Grama: 200) ou Patinho Assado(a) (Grama: 175) ou Carne moída (Grama: 160) ou Salmão, filé, com pele, fresco, grelhado (Grama: 150) ou Merluza, filé, assado (Grama: 280)',
+    },
+    {
+        'refeicao': 3,
+        'principal': 'NP',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1)',
     },
 
     # Refeição 4 - Nenhuma Patologia Primaria - Ansiedade
@@ -2579,14 +2573,21 @@ NPAN = [
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Banana, prata, crua (Unidade Pequena: 1) ou Uva itália (un: 15) ou Amora (Unidade: 50) ou Tangerina (Grama: 160) ou Abacaxi (Grama: 170)',
     },
     {
         'refeicao': 4,
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	chocolate amargo (Tablete: 1)',
+    },
+    {
+        'refeicao': 4,
+        'principal': 'NP',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	chá de Carqueja (200ml: 1)',
     },
 
     # Janta - Nenhuma Patologia Primaria - Ansiedade
@@ -2595,23 +2596,16 @@ NPAN = [
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Pão integral (Fatia: 2) Ou Banana (da terra .) Cozido(a) (Grama: 140) Ou Sopa de abobora (150g de abobora)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Ovo de galinha Cozido(a) (Unidade: 2) ou Atum em conserva (Grama: 70) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65) ou Salmão, filé, com pele, fresco, grelhado (Grama: 60) ou Merluza (cozida) (Grama: 130) ou Patinho Assado(a) (Grama: 70)',
     },
-    {
-        'refeicao': 5,
-        'principal': 'NP',
-        'secundaria': 'AN',
-        'ordem': 3,
-        'prato': '',
-    },
-
+    
 
     # Refeição 6 - Nenhuma Patologia Primaria - Ansiedade
     {
@@ -2619,7 +2613,21 @@ NPAN = [
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Água (Copo médio (200ml): 1)',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'NP',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	Chá, erva, camomila, ebulição (Grama: 2)',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'NP',
+        'secundaria': 'AN',
+        'ordem': 3,
+        'prato': '⦁	Maracujá (Unidade média (45g): 1) \nObs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
     },
 ]
 
