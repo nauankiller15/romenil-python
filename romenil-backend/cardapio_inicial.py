@@ -997,7 +997,7 @@ HINP = [
         'principal': 'HI',
         'secundaria': 'NP',
         'ordem': 4,
-        'prato': 'Mel (Colher de chá (7g): 1) Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
+        'prato': '⦁	Mel (Colher de chá (7g): 1) ⦁ Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
     },
 ]
 
@@ -1601,7 +1601,7 @@ HICE = [
         'principal': 'HI',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': 'Maracujá (Unidade média (45g): 1) \nObs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, gelo à vontade. Sirva em seguida.',
+        'prato': '⦁	Maracujá (Unidade média (45g): 1) ⦁	Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, gelo à vontade. Sirva em seguida.',
     },
 ]
 
@@ -2382,29 +2382,41 @@ NPIN = [
 
 NPCE = [
 
-    # Desjejum - Nenhuma Patologia Primaria - Colesterol Elevado
-    {
-        'refeicao': 0,
-        'principal': 'NP',
-        'secundaria': 'CE',
-        'ordem': 1,
-        'prato': '',
-    },
-
     # Café da Manhã - Nenhuma Patologia Primaria - Colesterol Elevado
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Leite de vaca, desnatado, UHT (1 Copo Cheio (200ml))',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Banana (1 Unidade média (75g)',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'NP',
+        'secundaria': 'CE',
+        'ordem': 3,
+        'prato': '⦁	Aveia em flocos (3 Colher De Sopa) Ou Semente de chia ( 2 colheres de sopa)',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'NP',
+        'secundaria': 'CE',
+        'ordem': 4,
+        'prato': '⦁	Clara de ovo de galinha (Unidade (34g): 5) Ou Atum ( 100g)',
+    },
+    {
+        'refeicao': 1,
+        'principal': 'NP',
+        'secundaria': 'CE',
+        'ordem': 5,
+        'prato': '⦁	Maçã (1 Unidade) ⦁	Obs: Leite + Banana + Aveia = Batida de Banana',
     },
 
     # Refeição 2 - Nenhuma Patologia Primaria - Colesterol Elevado
@@ -2413,7 +2425,7 @@ NPCE = [
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Melão (1 Fatia média (90g) Ou Melancia ( 1 fatia) Ou Tangerina ( 1 und ) Ou Kiwi ( 1 und)',
     },
 
     # Almoço - Nenhuma Patologia Primaria - Colesterol Elevado
@@ -2422,35 +2434,35 @@ NPCE = [
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Arroz integral (cozido) (Meia Escumadeira média cheia (59g))',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Frango em pedaços Cozido(a) (1 Escumadeira)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	FOLHAS VERDES ESCURAS ( COUVE / REPOLHO/ ALFACE CRESPA ) – A VONTADE',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 4,
-        'prato': '',
+        'prato': '⦁	Abacaxi (2 Fatia pequena)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 5,
-        'prato': '',
+        'prato': '⦁	Peito de galinha ou frango (Bife: 2) Ou Peixe (merluza / cavala / tilápia) - 2 bifes - 150g)',
     },
 
     # Refeição 4 - Nenhuma Patologia Primaria - Colesterol Elevado
@@ -2459,14 +2471,14 @@ NPCE = [
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Castanha do Pará sem sal (3 Unidade (4g))',
     },
     {
         'refeicao': 4,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Uva itália (Bago (12,4g): 1) Ou Banana (1 und) Ou Kiwi (1 und) Ou Maracujá (1 und)',
     },
 
     # Janta - Nenhuma Patologia Primaria - Colesterol Elevado
@@ -2475,28 +2487,35 @@ NPCE = [
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Filé de frango grelhado (1 Filé pequeno (100g)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Arroz integral (cozido) (3 Colher de sopa cheia (20g)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 3,
-        'prato': '',
+        'prato': '⦁	Brócolis (cozido) (3 Colher de sopa picado (13,23g)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 4,
-        'prato': '',
+        'prato': '⦁	Agrião (1 Prato sobremesa cheio picado (20g)',
+    },
+    {
+        'refeicao': 5,
+        'principal': 'NP',
+        'secundaria': 'CE',
+        'ordem': 5,
+        'prato': '⦁	Tomate (5 Fatia média (15g)',
     },
 
     # Refeição 6 - Nenhuma Patologia Primaria - Colesterol Elevado
@@ -2505,14 +2524,21 @@ NPCE = [
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '',
+        'prato': '⦁	Água de coco (Copo médio (200ml): 1)',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'CE',
         'ordem': 2,
-        'prato': '',
+        'prato': '⦁	Chá, erva, camomila, ebulição (Grama: 2)',
+    },
+    {
+        'refeicao': 6,
+        'principal': 'NP',
+        'secundaria': 'CE',
+        'ordem': 2,
+        'prato': '⦁	Maracujá (Unidade média (45g): 1) ⦁	Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
     },
 ]
 
@@ -2627,7 +2653,7 @@ NPAN = [
         'principal': 'NP',
         'secundaria': 'AN',
         'ordem': 3,
-        'prato': '⦁	Maracujá (Unidade média (45g): 1) \nObs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
+        'prato': '⦁	Maracujá (Unidade média (45g): 1) ⦁	Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
     },
 ]
 
