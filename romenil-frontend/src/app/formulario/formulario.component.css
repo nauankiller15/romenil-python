@@ -13,6 +13,41 @@
   align-items: center;
 }
 
+/* TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO */
+#generateCard {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000094;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.box-confirm {
+  border-radius: 10px;
+  border-top: 4px solid var(--azul);
+  background-color: #0a0e17;
+  width: 50%;
+  min-height: 50%;
+  margin: 14vh auto;
+  padding: 10px 5px 20px 5px;
+  font-family: "Montserrat", sans-serif;
+  animation: slide-cardap 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+}
+
+.text-confirm {
+  margin: 4vh auto;
+  text-align: center;
+  color: #e0e0e0;
+  padding: 15px;
+}
+/*  */
+
 header {
   margin-top: 0;
   width: 100%;
@@ -838,6 +873,12 @@ input[type="radio"] {
 }
 
 @media (max-width: 1100px) {
+  .box-confirm {
+    width: 90%;
+    min-height: 50%;
+    margin: 14vh auto;
+  }
+
   .setMarg {
     width: 100%;
     margin: 0;
@@ -907,7 +948,7 @@ input[type="radio"] {
     margin: 1vh 2vh 3vh 21px;
     animation: slide-left 1.2s ease-in-out;
     display: block;
-}
+  }
 
   .dadosConsulta label {
     color: var(--azul);

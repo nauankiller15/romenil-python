@@ -28,7 +28,6 @@
               <h4>Patologias</h4>
             </div>
             <form class="setMarg">
-
               <div class="dadosConsulta">
                 <h3>Diabetes?</h3>
 
@@ -59,7 +58,6 @@
 
               <div class="dadosConsulta">
                 <h3>Hipertensão?</h3>
-                
 
                 <div class="atach">Escolha uma das opções:</div>
                 <div class="wrapper">
@@ -86,7 +84,6 @@
                 </div>
               </div>
 
-              
               <div class="dadosConsulta">
                 <h3>Hipotireoidismo?</h3>
 
@@ -391,14 +388,14 @@
               <form class="">
                 <div class="wrapper">
                   <input
-                  [(ngModel)]="alergia.frutos_do_mar"
+                    [(ngModel)]="alergia.frutos_do_mar"
                     [value]="true"
                     type="radio"
                     name="select25"
                     id="option-25"
                   />
                   <input
-                  [(ngModel)]="alergia.frutos_do_mar"
+                    [(ngModel)]="alergia.frutos_do_mar"
                     [value]="false"
                     type="radio"
                     name="select26"
@@ -423,14 +420,14 @@
               <form class="">
                 <div class="wrapper">
                   <input
-                  [(ngModel)]="alergia.ovo"
+                    [(ngModel)]="alergia.ovo"
                     [value]="true"
                     type="radio"
                     name="select27"
                     id="option-27"
                   />
                   <input
-                  [(ngModel)]="alergia.ovo"
+                    [(ngModel)]="alergia.ovo"
                     [value]="false"
                     type="radio"
                     name="select28"
@@ -455,14 +452,14 @@
               <form class="">
                 <div class="wrapper">
                   <input
-                  [(ngModel)]="alergia.soja"
+                    [(ngModel)]="alergia.soja"
                     [value]="true"
                     type="radio"
                     name="select29"
                     id="option-29"
                   />
                   <input
-                  [(ngModel)]="alergia.soja"
+                    [(ngModel)]="alergia.soja"
                     [value]="false"
                     type="radio"
                     name="select30"
@@ -485,14 +482,14 @@
               <form class="">
                 <div class="wrapper">
                   <input
-                  [(ngModel)]="alergia.amendoim"
+                    [(ngModel)]="alergia.amendoim"
                     [value]="true"
                     type="radio"
                     name="select31"
                     id="option-31"
                   />
                   <input
-                  [(ngModel)]="alergia.amendoim"
+                    [(ngModel)]="alergia.amendoim"
                     [value]="false"
                     type="radio"
                     name="select31"
@@ -523,14 +520,14 @@
               <form class="">
                 <div class="wrapper">
                   <input
-                  [(ngModel)]="estiloVida.vegano"
+                    [(ngModel)]="estiloVida.vegano"
                     [value]="true"
                     type="radio"
                     name="select33"
                     id="option-33"
                   />
                   <input
-                  [(ngModel)]="estiloVida.vegano"
+                    [(ngModel)]="estiloVida.vegano"
                     [value]="false"
                     type="radio"
                     name="select34"
@@ -555,14 +552,14 @@
               <form class="">
                 <div class="wrapper">
                   <input
-                  [(ngModel)]="estiloVida.vegetariano"
+                    [(ngModel)]="estiloVida.vegetariano"
                     [value]="true"
                     type="radio"
                     name="select35"
                     id="option-35"
                   />
                   <input
-                  [(ngModel)]="estiloVida.vegetariano"
+                    [(ngModel)]="estiloVida.vegetariano"
                     [value]="false"
                     type="radio"
                     name="select36"
@@ -579,12 +576,35 @@
             </div>
             <div class="cardBtn">
               <div style="padding-top: 25px"></div>
-              <button class="btn success" (click)="salvarFormulario()">
+              <button class="btn success" id="gerarCardap">
                 <i class="fas fa-clipboard-check" style="margin-right: 10px"></i
                 >Gerar meu Cardápio
               </button>
             </div>
             <div class="linhaE"></div>
+            <div id="generateCard">
+              <div class="box-confirm">
+                <div class="text-confirm">
+                  Tem certeza que deseja gerar o seu cardápio?
+                  <div style="margin-top: 10px">
+                    Por favor tenha o consetimento de que ao gerar o seu
+                    cardápio....
+                  </div>
+                  <div class="cardBtn">
+                    <div style="padding-top: 25px"></div>
+                    <button class="btn success" (click)="salvarFormulario()">
+                      <i class="fas fa-clipboard-check" style="margin-right: 10px"></i
+                      >Gerar meu Cardápio
+                    </button>
+
+                    <button class="btn success" id="closeGenerate">
+                      <i class="fas fa-undo" style="margin-right: 10px"></i
+                      >Voltar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
