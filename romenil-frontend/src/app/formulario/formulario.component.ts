@@ -34,7 +34,15 @@ export class FormularioComponent implements OnInit {
       $('#formulario').fadeOut('100');
       $('body').removeClass('noborder');
     });
-    $('body').addClass('noborder');
+
+    // BOTÃO DE ABRIR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
+    $('#gerarCardap').on('click', function () {
+      $('#generateCard').fadeIn(250);
+    });
+      // BOTÃO DE FECHAR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
+      $('#closeGenerate').on('click', function () {
+        $('#generateCard').fadeOut(250);
+      });
   }
 
   verificarDados() {

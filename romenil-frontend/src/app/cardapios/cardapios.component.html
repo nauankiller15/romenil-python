@@ -11,121 +11,153 @@
           <div class="logo-calc"></div>
         </header>
         <div class="separTe"></div>
-        <div class="container-cart">
-          <div class="planejamento">
-            <h2>Planejamento Alimentar</h2>
+        <div id="print" class="conteudo">
+          <div class="container-cart">
+            <div class="planejamento">
+              <h2>Planejamento Alimentar</h2>
+            </div>
+            <h3>Alimentação de {{ conta.first_name }} {{ conta.last_name }}</h3>
           </div>
-          <h3>Alimentação de {{conta.first_name}} {{conta.last_name}}</h3>
-        </div>
-        <div class="content-cardap">
-          <div class="dadosConsulta2 cafeManha">
-            <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
-            <div class="linhaE"></div>
+          <div class="content-cardap">
+            <div class="dadosConsulta2 cafeManha">
+              <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
+              <div class="linhaE"></div>
 
-            <div class="cardapio" *ngIf="cardapios.cafeManha.length > 0">
-              <p>
-                {{cardapios.cafeManha[0]}}
-              <p>
-              <p *ngFor="let prato of cardapios.cafeManha.slice(1)">
-                <caption>
-                  COM
-                </caption>
-                  {{prato}}
-              <p>
+              <div class="cardapio" *ngIf="cardapios.cafeManha.length > 0">
+                <p>
+                  {{ cardapios.cafeManha[0] }}
+                </p>
+
+                <p></p>
+                <p *ngFor="let prato of cardapios.cafeManha.slice(1)">
+                  <caption>
+                    COM
+                  </caption>
+                  {{ prato }}
+                </p>
+
+                <p></p>
+              </div>
+            </div>
+            <div class="dadosConsulta2">
+              <label><i class="fas fa-utensils favTit"></i> Refeição 2</label>
+              <div class="linhaE"></div>
+
+              <div class="cardapio" *ngIf="cardapios.refeicao2.length > 0">
+                <p>
+                  {{ cardapios.refeicao2[0] }}
+                </p>
+
+                <p></p>
+                <p *ngFor="let prato of cardapios.refeicao2.slice(1)">
+                  <caption>
+                    COM
+                  </caption>
+                  {{ prato }}
+                </p>
+
+                <p></p>
+              </div>
+            </div>
+            <div class="dadosConsulta2 almoco">
+              <label><i class="fas fa-utensils favTit"></i> Almoço</label>
+              <div class="linhaE"></div>
+
+              <div class="cardapio" *ngIf="cardapios.almoco.length > 0">
+                <p>
+                  {{ cardapios.almoco[0] }}
+                </p>
+
+                <p></p>
+                <p *ngFor="let prato of cardapios.almoco.slice(1)">
+                  <caption>
+                    COM
+                  </caption>
+                  {{ prato }}
+                </p>
+
+                <p></p>
+              </div>
+            </div>
+            <div class="dadosConsulta2">
+              <label><i class="fas fa-utensils favTit"></i> Refeição 4</label>
+              <div class="linhaE"></div>
+              <div class="cardapio" *ngIf="cardapios.refeicao4.length > 0">
+                <p>
+                  {{ cardapios.refeicao4[0] }}
+                </p>
+
+                <p></p>
+                <p *ngFor="let prato of cardapios.refeicao4.slice(1)">
+                  <caption>
+                    COM
+                  </caption>
+                  {{ prato }}
+                </p>
+
+                <p></p>
+              </div>
+            </div>
+            <div class="dadosConsulta2 janta">
+              <label><i class="fas fa-utensils favTit"></i> Janta</label>
+              <div class="linhaE"></div>
+              <div class="cardapio" *ngIf="cardapios.janta.length > 0">
+                <p>
+                  {{ cardapios.janta[0] }}
+                </p>
+
+                <p></p>
+                <p *ngFor="let prato of cardapios.janta.slice(1)">
+                  <caption>
+                    COM
+                  </caption>
+                  {{ prato }}
+                </p>
+
+                <p></p>
+              </div>
+            </div>
+            <div class="dadosConsulta2">
+              <label><i class="fas fa-utensils favTit"></i> Refeição 6</label>
+              <div class="linhaE"></div>
+
+              <div class="cardapio" *ngIf="cardapios.refeicao6.length > 0">
+                <p>
+                  {{ cardapios.refeicao6[0] }}
+                </p>
+
+                <p></p>
+                <p *ngFor="let prato of cardapios.refeicao6.slice(1)">
+                  <caption>
+                    COM
+                  </caption>
+                  {{ prato }}
+                </p>
+
+                <p></p>
+              </div>
             </div>
           </div>
-          <div class="dadosConsulta2">
-            <label><i class="fas fa-utensils favTit"></i> Refeição 2</label>
-            <div class="linhaE"></div>
-            
-            <div class="cardapio" *ngIf="cardapios.refeicao2.length > 0">
-              <p>
-                {{cardapios.refeicao2[0]}}
-              <p>
-              <p *ngFor="let prato of cardapios.refeicao2.slice(1)">
-                <caption>
-                  COM
-                </caption>
-                  {{prato}}
-              <p>
-            </div>
-          </div>
-          <div class="dadosConsulta2 almoco">
-            <label><i class="fas fa-utensils favTit"></i>  Almoço</label>
-            <div class="linhaE"></div>
-            
-            <div class="cardapio" *ngIf="cardapios.almoco.length > 0">
-              <p>
-                {{cardapios.almoco[0]}}
-              <p>
-              <p *ngFor="let prato of cardapios.almoco.slice(1)">
-                <caption>
-                  COM
-                </caption>
-                  {{prato}}
-              <p>
-            </div>
-          </div>
-          <div class="dadosConsulta2">
-            <label><i class="fas fa-utensils favTit"></i>  Refeição 4</label>
-            <div class="linhaE"></div>
-            <div class="cardapio" *ngIf="cardapios.refeicao4.length > 0">
-              <p>
-                {{cardapios.refeicao4[0]}}
-              <p>
-              <p *ngFor="let prato of cardapios.refeicao4.slice(1)">
-                <caption>
-                  COM
-                </caption>
-                  {{prato}}
-              <p>
-            </div>
-          </div>
-          <div class="dadosConsulta2 janta">
-            <label><i class="fas fa-utensils favTit"></i>  Janta</label>
-            <div class="linhaE"></div>
-            <div class="cardapio" *ngIf="cardapios.janta.length > 0">
-              <p>
-                {{cardapios.janta[0]}}
-              <p>
-              <p *ngFor="let prato of cardapios.janta.slice(1)">
-                <caption>
-                  COM
-                </caption>
-                  {{prato}}
-              <p>
-            </div>
-          </div>
-          <div class="dadosConsulta2">
-            <label><i class="fas fa-utensils favTit"></i>  Refeição 6</label>
-            <div class="linhaE"></div>
-            
-            <div class="cardapio" *ngIf="cardapios.refeicao6.length > 0">
-              <p>
-                {{cardapios.refeicao6[0]}}
-              <p>
-              <p *ngFor="let prato of cardapios.refeicao6.slice(1)">
-                <caption>
-                  COM
-                </caption>
-                  {{prato}}
-              <p>
-            </div>
-          </div>
-          <div class="cardBtn">
-            <div style="padding-top: 25px"></div>
-            <div class="chooseOptions">Escolha uma das opções:</div>
-            <button class="btn success">
-              <i class="fas fa-print" style="margin-right: 10px"></i
-              >Imprimir a Página
-            </button>
-            <button class="btn success">
-              <i class="fas fa-envelope" style="margin-right: 10px"></i
-              >Enviar para meu Email
-            </button>
-          </div>
-          <div class="linhaE"></div>
         </div>
+
+        <div class="cardBtn">
+          <div style="padding-top: 25px"></div>
+          <div class="chooseOptions">Escolha uma das opções:</div>
+          <button id="printer" class="btn success">
+            <i class="fas fa-print" style="margin-right: 10px"></i>Imprimir a
+            Página
+          </button>
+          <button class="btn success">
+            <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar
+            para meu Email
+          </button>
+          <script>
+                 var myStyle =
+            '<link rel="stylesheet" href="./cardapios.component.css" />';
+            tela_impressao.document.write(myStyle + jQuery('.table_disp').html());
+          </script>
+        </div>
+        <div class="linhaE"></div>
       </div>
     </div>
   </div>

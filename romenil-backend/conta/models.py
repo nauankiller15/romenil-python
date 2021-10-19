@@ -21,5 +21,5 @@ class Usuario(Model):
     def ativo(self):
         eduzz = Eduzz()
         produto_ativo = eduzz.ativo
-        print(dados)
+        print(produto_ativo)
         return
