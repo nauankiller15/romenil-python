@@ -22,4 +22,4 @@ class Usuario(Model):
         eduzz = Eduzz()
         produto_ativo = eduzz.ativo
         print(produto_ativo)
-        return
+        return produto_ativo
