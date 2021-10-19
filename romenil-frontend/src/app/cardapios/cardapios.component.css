@@ -150,11 +150,12 @@ header {
 }
 .almoco {
   color: #fff;
-  background-image: linear-gradient(0deg, #0a0e17 0%, #465853 100%) !important;
+  background-image: linear-gradient(0deg, #0a0e17 0%, #2a2a2a 100%) !important;
   box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
     0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
     0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
 }
+
 .janta {
   color: #fff;
   background-image: linear-gradient(0deg, #0a0e17 0%, #32263e 100%) !important;
@@ -165,12 +166,12 @@ header {
 
 /*  */
 
-.dadosConsulta {
+.dadosConsulta2 {
   transition: all 0.5s;
   box-shadow: 0px 0px 4px 1px #272727;
 }
 
-.dadosConsulta {
+.dadosConsulta2 {
   padding: 13px;
   font-size: 1.23em;
   width: 45%;
@@ -190,7 +191,7 @@ header {
   margin-bottom: -30px;
 }
 
-.dadosConsulta span {
+.dadosConsulta2 span {
   width: 100%;
   height: auto;
   margin: 15px;
@@ -203,7 +204,7 @@ header {
   animation: slide-left 0.6s ease-in-out;
 }
 
-.dadosConsulta label {
+.dadosConsulta2 label {
   color: var(--azul);
   border-right: 1px solid #272727;
   line-height: 23px;
@@ -305,6 +306,13 @@ header {
   width: 100%;
 }
 
+.chooseOptions{
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  color: #e0e0e0;
+}
+
 @media (max-width: 1400px) {
   .cardBtn {
     margin: auto;
@@ -331,11 +339,26 @@ header {
 
   .content-cardap {
     width: 90%;
-    margin: 4vh auto;
+    margin: 5vh auto;
     padding: 0;
   }
 
-  .dadosConsulta label {
+  .dadosConsulta2 {
+    padding: 13px;
+    font-size: 1.23em;
+    width: 90%;
+    margin: 2vh 4vh 2vh 2vh;
+    animation: slide-left 1.2s ease-in-out;
+    display: block;
+  }
+
+  .favTit {
+    width: 14%;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .dadosConsulta2 label {
     color: var(--azul);
     border-bottom: 1px solid #272727;
     border-right: none;

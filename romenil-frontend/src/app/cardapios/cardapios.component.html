@@ -18,24 +18,7 @@
           <h3>Alimentação de {{conta.first_name}} {{conta.last_name}}</h3>
         </div>
         <div class="content-cardap">
-          <div class="dadosConsulta *ngIf="cardapios.desjejum.length > 0">
-            <label><i class="fas fa-mug-hot favTit"></i> Desjejum shot</label>
-            <div class="linhaE"></div>
-
-            <div class="cardapio" *ngIf="cardapios.cafeManha.length > 0">
-              <p>
-                {{cardapios.cafeManha[0]}}
-              <p>
-              <p *ngFor="let prato of cardapios.cafeManha.slice(1)">
-                <caption>
-                  COM
-                </caption>
-                  {{prato}}
-              <p>
-            </div>
-          </div>
-          
-          <div class="dadosConsulta cafeManha">
+          <div class="dadosConsulta2 cafeManha">
             <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
             <div class="linhaE"></div>
 
@@ -51,8 +34,7 @@
               <p>
             </div>
           </div>
-
-          <div class="dadosConsulta">
+          <div class="dadosConsulta2">
             <label><i class="fas fa-utensils favTit"></i> Refeição 2</label>
             <div class="linhaE"></div>
             
@@ -68,7 +50,7 @@
               <p>
             </div>
           </div>
-          <div class="dadosConsulta almoco">
+          <div class="dadosConsulta2 almoco">
             <label><i class="fas fa-utensils favTit"></i>  Almoço</label>
             <div class="linhaE"></div>
             
@@ -84,7 +66,7 @@
               <p>
             </div>
           </div>
-          <div class="dadosConsulta">
+          <div class="dadosConsulta2">
             <label><i class="fas fa-utensils favTit"></i>  Refeição 4</label>
             <div class="linhaE"></div>
             <div class="cardapio" *ngIf="cardapios.refeicao4.length > 0">
@@ -99,7 +81,7 @@
               <p>
             </div>
           </div>
-          <div class="dadosConsulta janta">
+          <div class="dadosConsulta2 janta">
             <label><i class="fas fa-utensils favTit"></i>  Janta</label>
             <div class="linhaE"></div>
             <div class="cardapio" *ngIf="cardapios.janta.length > 0">
@@ -114,7 +96,7 @@
               <p>
             </div>
           </div>
-          <div class="dadosConsulta">
+          <div class="dadosConsulta2">
             <label><i class="fas fa-utensils favTit"></i>  Refeição 6</label>
             <div class="linhaE"></div>
             
@@ -132,16 +114,17 @@
           </div>
           <div class="cardBtn">
             <div style="padding-top: 25px"></div>
+            <div class="chooseOptions">Escolha uma das opções:</div>
             <button class="btn success">
-              <i class="fas fa-file-pdf" style="margin-right: 10px"></i
-              >Salvar em PDF
+              <i class="fas fa-print" style="margin-right: 10px"></i
+              >Imprimir a Página
             </button>
             <button class="btn success">
               <i class="fas fa-envelope" style="margin-right: 10px"></i
-              >Enviar no Email
+              >Enviar para meu Email
             </button>
           </div>
-          <div class="linhaE"></div> -->
+          <div class="linhaE"></div>
         </div>
       </div>
     </div>
