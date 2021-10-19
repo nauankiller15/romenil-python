@@ -14,7 +14,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
     ativo = serializers.SerializerMethodField()
 
     def get_ativo(self, obj):
-        return obj.prioridade()
+        return obj.ativo()
     
     class Meta:
         model = Usuario        

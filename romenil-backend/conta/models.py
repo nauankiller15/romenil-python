@@ -19,7 +19,6 @@ class Usuario(Model):
     celular = CharField(max_length=15)  
 
     def ativo(self):
-        eduzz = Eduzz()
+        eduzz = Eduzz(self.cpf_ou_cnpj)
         produto_ativo = eduzz.ativo
-        print(produto_ativo)
         return produto_ativo
