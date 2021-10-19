@@ -25,7 +25,7 @@ import { NgxLoadingModule } from 'ngx-loading';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
 import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
-import { AdminComponent } from './admin/admin.component';
+import { AdminComponent } from './account/admin/admin.component';
 
 @NgModule({
   declarations: [
