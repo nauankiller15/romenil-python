@@ -1811,9 +1811,6 @@ HIRL = [
     },
 ]
 
-<<<<<<< HEAD
-=======
-
 # TODOS CARDAPIOS SEM PATOLOGIA PRIMARIA
 
 NPNP = [
@@ -1847,7 +1844,6 @@ NPNP = [
         'ordem': 4,
         'prato': '',
     },
->>>>>>> c546aa9852aa8df5bf2242f3134cf442cac9717f
 
     # Refeição 2 - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
     {
