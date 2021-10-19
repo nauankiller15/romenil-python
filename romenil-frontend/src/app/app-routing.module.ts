@@ -9,11 +9,16 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
   { path: 'login', component: LoginComponent },
   { path: 'create-account', component: CreateAccountComponent },
+  {
+    path: 'admin', component: AdminComponent,
+    // canActivate: [AuthGuardService],
+  },
+  { path: '', component: AppComponent },
   {
     path: '',
     component: AppComponent,
@@ -25,7 +30,6 @@ const routes: Routes = [
       { path: 'formulario', component: FormularioComponent },
       { path: 'conversao', component: ConversaoComponent },
     ],
-    
   },
 ];
 
