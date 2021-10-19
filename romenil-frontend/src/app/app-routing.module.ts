@@ -9,13 +9,14 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
-import { AdminComponent } from './admin/admin.component';
+import { AdminComponent } from './account/admin/admin.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'create-account', component: CreateAccountComponent },
   {
-    path: 'admin', component: AdminComponent,
+    path: 'admin',
+    component: AdminComponent,
     // canActivate: [AuthGuardService],
   },
   { path: '', component: AppComponent },
