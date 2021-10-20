@@ -33,7 +33,7 @@ export class ConversaoComponent implements OnInit {
 
   verificarDados() {
     if (this.accountService.autenticado()) {
-      this.getConta();
+      this.getUsuario();
     } else {
       this.router.navigate(['/login']);
     }
@@ -43,7 +43,6 @@ export class ConversaoComponent implements OnInit {
     this.accountService.conta().subscribe(
       (data) => {
         this.conta = data;
-        console.log(this.conta)
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
@@ -51,5 +50,21 @@ export class ConversaoComponent implements OnInit {
       }
     );
   }
-
+  getUsuario() {
+    this.accountService.usuario().subscribe(
+      (data) => {
+        if (!data.usuario) {
+          this.router.navigate(['/create-account']);
+        } else if (data.ativo) {
+          this.router.navigate(['formulario'])
+        } else {
+          this.getConta();
+        }
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
+  }
 }
