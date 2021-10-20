@@ -395,7 +395,7 @@ DICO = [
         'refeicao': 5,
         'principal': 'DI',
         'secundaria': 'CO',
-        'ordem': 1,
+        'ordem': 2,
         'prato': '⦁	Tomate (2 Colher de sopa cheia em cubos (15g), Orégano seco (1 Colher de café (037g), Orégano seco (1 Colher de café (037g) , Manjericão fresco (5 folhas (3g)',
     },
     {
@@ -411,7 +411,7 @@ DICO = [
         'refeicao': 6,
         'principal': 'DI',
         'secundaria': 'CO',
-        'ordem': 1,
+        'ordem': 3,
         'prato': '⦁	Chá de sene + Camomila (Infusão) – 5gr de cada folha – para 300 ml de água',
     },
 ]
@@ -1602,7 +1602,7 @@ HICE = [
         'refeicao': 6,
         'principal': 'HI',
         'secundaria': 'CE',
-        'ordem': 2,
+        'ordem': 3,
         'prato': '⦁	Maracujá (Unidade média (45g): 1) ⦁	Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, gelo à vontade. Sirva em seguida.',
     },
 ]
@@ -1674,14 +1674,14 @@ HIAN = [
         'refeicao': 3,
         'principal': 'HI',
         'secundaria': 'AN',
-        'ordem': 2,
+        'ordem': 3,
         'prato': '⦁	Arroz integral (cozido) (Colher de arroz cheia (63g): 2) ou Macarrão, de arroz, cozido (Grama: 90) ou Macarrão Cozido(a) (Grama: 60)',
     },
     {
         'refeicao': 3,
         'principal': 'HI',
         'secundaria': 'AN',
-        'ordem': 3,
+        'ordem': 4,
         'prato': '⦁	Feijão, carioca, cozido (Colher De Sopa Cheia: 3) ou Lentilha cozida (grãos) (Colher de sopa (24g): 1)',
     },
 
@@ -2300,7 +2300,7 @@ NPIN = [
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'IN',
-        'ordem': 3,
+        'ordem': 4,
         'prato': '⦁	Queijo branco( 1 FATIA) ',
     },
     
@@ -2549,7 +2549,7 @@ NPCE = [
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'CE',
-        'ordem': 2,
+        'ordem': 3,
         'prato': '⦁	Maracujá (Unidade média (45g): 1) ⦁	Obs: Prepare o chá, despejando água fervida sobre a camomila. Deixe tampado por cerca de dez minutos e coe. Bata no liquidificador com a polpa do maracujá, o mel (ou agave) e gelo à vontade. Sirva em seguida.',
     },
 ]
@@ -2657,7 +2657,7 @@ NPAN = [
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'AN',
-        'ordem': 3,
+        'ordem': 2,
         'prato': '⦁	Chá, erva, camomila, ebulição (Grama: 2)',
     },
     {
@@ -2690,7 +2690,7 @@ NPRL = [
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'RL',
-        'ordem': 2,
+        'ordem': 3,
         'prato': '⦁	CHÁ DE sene em infusão com 200ml de água',
     },
 
@@ -2810,7 +2810,7 @@ NPCL = [
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'CL',
-        'ordem': 2,
+        'ordem': 3,
         'prato': '⦁	chá de cavalinha (200ml: 1)',
     },
 
