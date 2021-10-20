@@ -58,8 +58,10 @@ export class FormularioComponent implements OnInit {
       (data) => {
         if (!data.usuario) {
           this.router.navigate(['/create-account']);
-        } else {
+        } else if (data.ativo) {
           this.getConta();
+        } else {
+          this.router.navigate(['conversao'])
         }
       },
       (error) => {
@@ -82,7 +84,6 @@ export class FormularioComponent implements OnInit {
   }
 
   salvarFormulario() {
-    console.log(this.patologia);
     this.apiService.salvar('formulario/patologia', this.patologia).subscribe(
       (data) => {
         this.router.navigate(['cardapios'])

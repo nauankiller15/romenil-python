@@ -53,7 +53,6 @@ export class CardapiosComponent implements OnInit {
   getDados() {
     this.apiService.listar('conta/usuario').subscribe(
       (data) => {
-        console.log(data);
         if (data && data.ativo) {
             this.getConta();
             this.getCardapios();
@@ -107,7 +106,6 @@ export class CardapiosComponent implements OnInit {
         }
       },
       (error) => {
-        console.log(error);
         const erro = new Erro(this.toastrService, error);
         erro.exibir();
       }
