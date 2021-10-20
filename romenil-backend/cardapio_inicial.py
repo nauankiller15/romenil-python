@@ -411,7 +411,7 @@ DICO = [
         'refeicao': 6,
         'principal': 'DI',
         'secundaria': 'CO',
-        'ordem': 3,
+        'ordem': 1,
         'prato': '⦁	Chá de sene + Camomila (Infusão) – 5gr de cada folha – para 300 ml de água',
     },
 ]
