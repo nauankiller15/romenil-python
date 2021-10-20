@@ -162,6 +162,17 @@
   display: block;
 }
 
+.fundo-retAg {
+  background: url(https://1.bp.blogspot.com/-ac0gKYUcMoc/YWnDYKkCBeI/AAAAAAAAHd4/D4knmodtVysg3pBlvw8S7cTp3LlhcgQ9QCLcBGAsYHQ/s0/edit3.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 343px;
+  height: 373px;
+  margin: auto;
+  display: block;
+}
+
+
 .fundo-ret-mobile {
  display: none;
 }

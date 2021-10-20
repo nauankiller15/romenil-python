@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
-#calculadora {
+#aguarde {
   z-index: 9999;
   width: 100%;
   height: 100%;
@@ -60,19 +60,20 @@ header {
   background: #a8da5d;
 }
 /*  */
-.box-text-calculadora {
+.box-text-aguarde {
   border-top: 4px solid var(--azul);
   background-color: #0a0e17;
-  background-image: url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
-  background-position: 0% 50%, -24vh 2px;
+  background-image: url(),
+    url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
+  background-position: 100% 81%, 100% 0;
   background-size: auto, auto;
   background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
   height: 100%;
   margin: 14vh auto;
-  padding: 10px 5px 20px 5px;
+  padding: 0 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-calc 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-page 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {
@@ -119,21 +120,10 @@ header {
   text-align: center;
   background-color: #0a0e17;
   color: #fff;
-  width: 45%;
+  width: 56%;
   margin: -21px auto;
   font-weight: 350;
   animation: scalePlan 1.4s ease-in-out;
-}
-
-/* SELECIONE */
-.selecione {
-  margin-top: -52px;
-  margin-left: 22px;
-  position: static;
-  font-size: 14px;
-  width: 20px;
-  z-index: 0;
-  cursor: default;
 }
 
 .content-cardap {
@@ -153,9 +143,10 @@ header {
 }
 
 .dadosConsulta {
+  color: #ffffff9c;
   padding: 13px;
-  width: 100%;
-  margin: 3vh 4vh 2vh 0px;
+  width: 65%;
+  margin: auto;
   transition: all 0.5s;
   box-shadow: 0px 0px 4px 1px #272727;
   animation: slide-left 1.2s ease-in-out;
@@ -206,6 +197,7 @@ header {
 
 .atach {
   padding: 10px;
+  text-align: justify;
 }
 
 .dadosConsulta h3 {
@@ -213,28 +205,13 @@ header {
   border-left: 1px solid #272727;
   border-bottom: 1px solid #272727;
   padding-left: 20px;
+  line-height: 2.2em;
+  text-align: center;
 }
 
 .cardBtn {
-  margin: 2vh auto;
-  width: 100%;
-  text-align: center;
-  animation: slide-left 1.8s ease-in-out;
-  display: none;
-}
-
-.persist {
-  border-radius: 10px;
-  position: relative;
-  text-align: justify;
-  width: 650px;
-  color: #ffffffc9;
-  margin-bottom: 30px;
-  margin-top: 28px;
-  animation: slide-left 2.2s ease-in-out;
-  margin-left: -105px;
-  border: 2px solid var(--azul);
-  padding: 23px;
+  margin: 5vh auto;
+  width: 30%;
 }
 
 .success {
@@ -254,34 +231,21 @@ header {
   width: 100%;
 }
 
-.changelife {
-  background-color: var(--azul) !important;
-  border: 1px solid var(--azul);
-  color: #222222;
-  font-weight: 900;
-  width: 100%;
-  background: none;
-  transition: 0.4s;
-  line-height: 40px;
-  font-size: 23px;
-  margin-top: 5px;
-}
-
-.heartIcon {
-  color: rgb(235, 0, 0);
-}
-
-.changelife:hover {
-  background-color: transparent;
-  color: #e0e0e0;
-  font-weight: 500;
-  width: 100%;
-}
-
 /* ANIMAÇÕES */
 @keyframes slide-left {
   0% {
     transform: translateX(-260px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-page {
+  0% {
+    transform: translateY(-950px);
     opacity: 0;
   }
   100% {
@@ -321,17 +285,6 @@ header {
   }
 }
 
-@keyframes slide-calc {
-  0% {
-    transform: translateY(950px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .setaAr {
   left: 48%;
   position: absolute;
@@ -348,121 +301,13 @@ header {
   overflow-y: scroll;
 }
 
-/* ESTILO DA CALCULADORA */
-
-.containerED {
-  width: 550px;
-  margin: 0 auto;
-  animation: slide-top 1.7s ease-in-out;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  font-size: 16px;
-  font-family: "Montserrat Semibold", sans-serif;
-  margin-bottom: 0px !important;
-}
-
-.form-group input,
-.form-group select {
-  background: #1a1a1a;
-  width: 100%;
-  height: 45px;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  font-size: 14px;
-  padding: 0 15px;
-  outline: none;
-  transition: border-color 0.2s ease-in;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  border: 2px solid var(--azul);
-}
-
-.form-group button {
-  background-image: linear-gradient(-90deg, var(--azul) 0%, #fddb33 100%);
-  border-radius: 5px;
-  border: 0;
-  height: 45px;
-  color: #1a1a1a;
-  font-size: 16px;
-  font-family: "Montserrat Bold", sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 600;
-}
-
-.form-group button:hover {
-  background-image: linear-gradient(-90deg, var(--azul) 0%, var(--azul) 100%);
-  transform: translate(0px, -2px);
-}
-
-.form-group:last-child {
-  margin-top: 40px;
-}
-
-#resultados {
-  display: none;
-}
-
-.result-container {
-  /* display: none; */
-  color: #fff;
-  margin-left: -110px;
-  margin-top: 50px;
-  width: 655px;
-  animation: slide-left 1.4s ease-in-out;
-}
-
-.result-content {
-  background-color: #0a0e17;
-  padding: 10px;
-  border-radius: 10px;
-  animation: slide-left 1.3s ease-in-out;
-}
-
-.result-content ul {
-  list-style: none;
-}
-
-.result-content ul li {
-  font-size: 14px;
-  font-weight: bold;
-  font-family: "Montserrat Bold", sans-serif;
-  line-height: 30px;
-}
-
-.result-content ul li strong {
-  color: #ff590f;
-}
-
 .separTe {
   margin-top: 12vh;
 }
 
 @media (max-width: 1100px) {
-  .persist {
-    border-radius: 10px;
-    position: relative;
-    text-align: justify;
-    width: 100%;
-    color: #ffffffc9;
-    margin-bottom: 30px;
-    margin-top: 28px;
-    animation: slide-left 2.2s ease-in-out;
-    margin-left: 0px;
-    border: 2px solid var(--azul);
-    padding: 23px;
-    letter-spacing: -1px;
+  .linhaE {
+    margin-bottom: 4vh;
   }
   .separTe {
     margin-top: 10vh;
@@ -474,47 +319,52 @@ header {
   ::-webkit-scrollbar {
     width: 5px;
   }
-  .box-text-calculadora {
+  .box-text-aguarde {
+    width: 100%;
+    height: 100%;
     margin: 14vh auto;
     padding: 10px 0;
-    background-position: 44% 0;
+    background-position: 100% 0%;
     background-size: auto, auto;
-    background-repeat: no-repeat, no-repeat, no-repeat;
   }
-
-  /* ESTILO DA CALCULADORA */
-
-  .result-container {
-    margin-left: 0;
-    margin-top: 50px;
-    color: #fff;
-    width: 100%;
-  }
-
-  .containerED {
+  /* ESTILO PADD */
+  .mobileEstilo {
+    margin-bottom: 1px !important;
     width: 100% !important;
-    margin: 0 auto;
   }
+  
 
   /*  */
   .cardBtn {
-    margin: 2vh auto;
+    margin: auto;
     width: 100%;
   }
-
   .setaAr {
     display: none;
   }
   .content-cardap {
     width: 90%;
-    margin: 4vh auto;
+    margin: 0vh auto;
   }
   .dadosConsulta {
+    background-color: #0a0e17;
     padding: 13px;
     font-size: 1.23em;
     width: 100%;
-    margin: 3vh 0vh 2vh 0px;
+    margin: 1vh 0vh 2vh 0px;
     display: inline-grid;
+  }
+
+  .dadosConsulta h3 {
+    font-size: 0.9em !important;
+    padding-left: 0;
+    padding-bottom: 18px;
+    padding-top: 15px;
+  }
+
+  .atach {
+    padding: 10px;
+    font-size: 0.8em !important;
   }
 
   .dadosConsulta label {
@@ -559,20 +409,8 @@ header {
   }
 }
 
-.erro {
-  color: red;
-  font-size: 15px;
-}
-
-
 
 @media (max-width: 400px) {
-  
-  .containerED{
-    width: 100%;
-    margin: 0 auto;
-    margin-left: -2px;
-}
   .dadosConsulta h3 {
     font-size: 0.72em !important;
     padding-left: 0;
@@ -596,17 +434,16 @@ header {
     padding: 16px;
   }
 
-  .planejamento h2 {
+  .planejamento h2{
     font-size: 1.2em;
     padding: 29px;
     margin-bottom: 10px;
-  }
+}
 
-  .logo-calc {
-    background-size: 100%;
-    padding: 68px 174px 4px 5px;
-    cursor: pointer;
-    z-index: 999;
-  }
-
+.logo-calc {
+  background-size: 100%;
+  padding: 68px 174px 4px 5px;
+  cursor: pointer;
+  z-index: 999;
+}
 }

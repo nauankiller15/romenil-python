@@ -13,7 +13,6 @@
   align-items: center;
 }
 
-
 header {
   margin-top: 0;
   width: 100%;
@@ -307,7 +306,7 @@ header {
   width: 100%;
 }
 
-.chooseOptions{
+.chooseOptions {
   padding: 10px;
   margin: auto;
   text-align: center;
@@ -402,6 +401,9 @@ header {
   }
 }
 
-@media print{
-  
+@media (max-width: 400px) {
+  .cardBtn {
+    margin: -30px auto 27px auto;
+    width: 84%;
+}
 }

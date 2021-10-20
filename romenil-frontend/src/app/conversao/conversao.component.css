@@ -431,3 +431,42 @@ header {
     padding: 44px;
   }
 }
+
+
+@media (max-width: 400px) {
+  .dadosConsulta h3 {
+    font-size: 0.72em !important;
+    padding-left: 0;
+    padding-bottom: 18px;
+    padding-top: 15px;
+  }
+  .atach {
+    padding: 10px;
+    font-size: 0.65em !important;
+}
+
+  .container-cart h3 {
+    font-size: 0.9em;
+    text-align: center;
+    background-color: #0a0e17;
+    color: #fff;
+    width: 96%;
+    margin: -29px auto;
+    font-weight: 350;
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  .planejamento h2{
+    font-size: 1.2em;
+    padding: 29px;
+    margin-bottom: 10px;
+}
+
+.logo-calc {
+  background-size: 100%;
+  padding: 68px 174px 4px 5px;
+  cursor: pointer;
+  z-index: 999;
+}
+}

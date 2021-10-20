@@ -27,6 +27,7 @@ import { ConversaoComponent } from './conversao/conversao.component';
 import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
 import { AdminComponent } from './account/admin/admin.component';
 import { TextMaskModule } from 'angular2-text-mask';
+import { AguardeComponent } from './aguarde/aguarde.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { TextMaskModule } from 'angular2-text-mask';
     ConversaoComponent,
     EscapeHtmlPipe,
     AdminComponent,
+    AguardeComponent,
   ],
   imports: [
     BrowserAnimationsModule,

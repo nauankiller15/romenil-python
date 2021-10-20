@@ -10,6 +10,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
 import { AdminComponent } from './account/admin/admin.component';
+import { AguardeComponent } from './aguarde/aguarde.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'cardapios', component: CardapiosComponent },
       { path: 'formulario', component: FormularioComponent },
       { path: 'conversao', component: ConversaoComponent },
+      { path: 'aguarde', component: AguardeComponent },
     ],
   },
 ];

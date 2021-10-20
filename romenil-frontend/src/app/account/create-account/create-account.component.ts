@@ -6,7 +6,6 @@ import { MustMatch } from './must-match.service';
 
 import { Conta, Usuario } from '../models';
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Erro } from 'src/app/shared/erros';
 
 declare var $: any;
@@ -39,7 +38,10 @@ export class CreateAccountComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    $(document).ready(() => {
+      $('.celular').mask('(00) 00000-0000');
+      $('.cpf').mask('000.000.000-00', { reverse: false });
+    });
     $('body').addClass('noborder');
   }
 
