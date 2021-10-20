@@ -401,3 +401,7 @@ header {
     padding: 44px;
   }
 }
+
+@media print{
+  
+}
