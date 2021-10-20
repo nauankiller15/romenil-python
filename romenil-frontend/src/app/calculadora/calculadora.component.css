@@ -565,7 +565,14 @@ header {
 }
 
 
+
 @media (max-width: 400px) {
+  
+  .containerED{
+    width: 100%;
+    margin: 0 auto;
+    margin-left: -2px;
+}
   .dadosConsulta h3 {
     font-size: 0.72em !important;
     padding-left: 0;
@@ -574,8 +581,8 @@ header {
   }
   .atach {
     padding: 10px;
-    font-size: 0.6em !important;
-  }
+    font-size: 0.65em !important;
+}
 
   .container-cart h3 {
     font-size: 0.9em;
@@ -589,16 +596,17 @@ header {
     padding: 16px;
   }
 
-  .planejamento h2{
+  .planejamento h2 {
     font-size: 1.2em;
     padding: 29px;
     margin-bottom: 10px;
-}
+  }
 
-.logo-calc {
-  background-size: 100%;
-  padding: 68px 174px 4px 5px;
-  cursor: pointer;
-  z-index: 999;
-}
+  .logo-calc {
+    background-size: 100%;
+    padding: 68px 174px 4px 5px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
 }
