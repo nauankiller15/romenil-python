@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
@@ -19,10 +20,10 @@ export class CardapiosComponent implements OnInit {
   constructor(
     private accountService: AccountService,
     private apiService: ApiService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ) {
-    this.getConta();
-    this.getCardapios();
+    this.getDados();
   }
 
   ngOnInit(): void {
@@ -49,6 +50,25 @@ export class CardapiosComponent implements OnInit {
     //
   }
 
+  getDados() {
+    this.apiService.listar('conta/usuario').subscribe(
+      (data) => {
+        console.log(data);
+        if (data && data.ativo) {
+            this.getConta();
+            this.getCardapios();
+        } else {
+          this.router.navigate(['conversao'])
+        }
+        
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
+  }
+
   getConta() {
     this.accountService.conta().subscribe(
       (data) => {
@@ -64,22 +84,26 @@ export class CardapiosComponent implements OnInit {
   getCardapios() {
     this.apiService.listar('cardapio').subscribe(
       (data) => {
-        for (let cardapio in data) {
-          if (data[cardapio].refeicao == 0) {
-            this.cardapios.desjejum.push(data[cardapio].prato);
-          } else if (data[cardapio].refeicao == 1) {
-            this.cardapios.cafeManha.push(data[cardapio].prato);
-          } else if (data[cardapio].refeicao == 2) {
-            this.cardapios.refeicao2.push(data[cardapio].prato);
-          } else if (data[cardapio].refeicao == 3) {
-            this.cardapios.almoco.push(data[cardapio].prato);
-          } else if (data[cardapio].refeicao == 4) {
-            this.cardapios.refeicao4.push(data[cardapio].prato);
-          } else if (data[cardapio].refeicao == 5) {
-            this.cardapios.janta.push(data[cardapio].prato);
-          } else if (data[cardapio].refeicao == 6) {
-            this.cardapios.refeicao6.push(data[cardapio].prato);
+        if (data) {
+          for (let cardapio in data) {
+            if (data[cardapio].refeicao == 0) {
+              this.cardapios.desjejum.push(data[cardapio].prato);
+            } else if (data[cardapio].refeicao == 1) {
+              this.cardapios.cafeManha.push(data[cardapio].prato);
+            } else if (data[cardapio].refeicao == 2) {
+              this.cardapios.refeicao2.push(data[cardapio].prato);
+            } else if (data[cardapio].refeicao == 3) {
+              this.cardapios.almoco.push(data[cardapio].prato);
+            } else if (data[cardapio].refeicao == 4) {
+              this.cardapios.refeicao4.push(data[cardapio].prato);
+            } else if (data[cardapio].refeicao == 5) {
+              this.cardapios.janta.push(data[cardapio].prato);
+            } else if (data[cardapio].refeicao == 6) {
+              this.cardapios.refeicao6.push(data[cardapio].prato);
+            }
           }
+        } else {
+          this.router.navigate(['formulario'])
         }
       },
       (error) => {
