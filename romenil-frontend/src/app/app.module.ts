@@ -26,6 +26,7 @@ import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
 import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
 import { AdminComponent } from './account/admin/admin.component';
+import { AguardeComponent } from './aguarde/aguarde.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AdminComponent } from './account/admin/admin.component';
     ConversaoComponent,
     EscapeHtmlPipe,
     AdminComponent,
+    AguardeComponent,
   ],
   imports: [
     BrowserAnimationsModule,
