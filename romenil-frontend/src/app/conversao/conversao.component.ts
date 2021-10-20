@@ -19,7 +19,9 @@ export class ConversaoComponent implements OnInit {
     private accountService: AccountService,
     private toastrService: ToastrService,
     private router: Router
-  ) { }
+  ) {
+    this.verificarDados();
+  }
 
   ngOnInit(): void {
     $('#fecharBtConversao').on('click', function () {
@@ -41,6 +43,7 @@ export class ConversaoComponent implements OnInit {
     this.accountService.conta().subscribe(
       (data) => {
         this.conta = data;
+        console.log(this.conta)
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
