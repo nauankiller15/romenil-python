@@ -26,6 +26,7 @@ import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
 import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
 import { AdminComponent } from './account/admin/admin.component';
+import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { AdminComponent } from './account/admin/admin.component';
       progressBar: true,
     }),
     NgxLoadingModule,
+    TextMaskModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },

@@ -7,6 +7,7 @@ import { MustMatch } from './must-match.service';
 import { Conta, Usuario } from '../models';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Erro } from 'src/app/shared/erros';
 
 declare var $: any;
 
@@ -21,12 +22,8 @@ export class CreateAccountComponent implements OnInit {
   pagina = 'conta';
   loading = false;
 
-  // registerForm!: FormGroup;
-  // submitted = false;
-
   constructor(
-    private formBuilder: FormBuilder,
-    private toastr: ToastrService,
+    private toastrService: ToastrService,
     private accountService: AccountService,
     private router: Router
   ) {
@@ -42,25 +39,16 @@ export class CreateAccountComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.registerForm = this.formBuilder.group(
-    //   {
-    //     title: ['', Validators.required],
-    //     firstName: ['', Validators.required],
-    //     lastName: ['', Validators.required],
-    //     email: ['', [Validators.required, Validators.email]],
-    //     password: ['', [Validators.required, Validators.minLength(6)]],
-    //     confirmPassword: ['', Validators.required],
-    //     acceptTerms: [false, Validators.requiredTrue],
-    //   },
-    //   {
-    //     validator: MustMatch('password', 'confirmPassword'),
-    //   }
-    // );
+    
     $('body').addClass('noborder');
   }
 
   voltar() {
     this.pagina = 'conta';
+  }
+
+  validarDocumento() {
+
   }
   
   onSubmit() {
@@ -68,12 +56,13 @@ export class CreateAccountComponent implements OnInit {
     this.accountService.createAccount(this.conta).subscribe(
       (data) => {
         this.conta = data;
-        this.toastr.success('Conta criada com sucesso');
+        this.toastrService.success('Conta criada com sucesso');
         this.router.navigate(['/login']);
       },
       (error) => {
         this.loading = false;
-        this.toastr.error('Erro na criação da conta');
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
       }
     );
   }
@@ -82,12 +71,13 @@ export class CreateAccountComponent implements OnInit {
     this.loading = true;
     this.accountService.createUser(this.usuario).subscribe(
       (data) => {
-        this.toastr.success('Dados cadastrados com sucesso!');
+        this.toastrService.success('Dados cadastrados com sucesso!');
         this.router.navigate(['/formulario']);
       },
       (error) => {
         this.loading = false;
-        this.toastr.error('Erro no complemento dos dados');
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
       }
     );
   }
