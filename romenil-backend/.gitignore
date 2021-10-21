@@ -5,6 +5,7 @@ venv
 __pycache__/
 migrations/
 static/admin/
+static/rest_framework/
 variaveis_de_ambiente.py
 
 # Banco
