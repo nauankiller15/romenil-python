@@ -1,5 +1,10 @@
 from cardapio.models import Cardapio
 
+# Como importar os cardápios #
+# python manage.py shell #
+# import cardapio_inicial #
+#
+#
 '''
 LEGENDA PATOLOGIAS:
 # Patologias principais
@@ -206,43 +211,14 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-<<<<<<< HEAD
         'prato': '•	DESJEJUM SHOT METABOLISMO - Limão espremido (Unidade: 1)',
-=======
-        'prato': 'Maçã (Unidade: 1) Ou Pera ( 1 und ) Ou Banana ( 1 und)',
->>>>>>> e7cf8521ed5972ffd55bc95d809d2cb99484fc66
     },
     {
         'refeicao': 1,
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 2,
-<<<<<<< HEAD
         'prato': '• Gengibre (Colher de chá ralado (5g): 1)',
-=======
-        'prato': '⦁	Chá de canela + gengibre ( 200ml)',
-    },
-    {
-        'refeicao': 1,
-        'principal': 'DI',
-        'secundaria': 'ML',
-        'ordem': 2,
-        'prato': '⦁	Batata doce (70g) Ou aipim (60 g) Ou Inhame (70g)',
-    },
-    {
-        'refeicao': 1,
-        'principal': 'DI',
-        'secundaria': 'ML',
-        'ordem': 3,
-        'prato': '⦁	Ovos de galinha ( mexidos ou cozidos ) -3 unds',
-    },
-    {
-        'refeicao': 1,
-        'principal': 'DI',
-        'secundaria': 'ML',
-        'ordem': 4,
-        'prato': '⦁	Queijo (minas ou cotagge) – 1 fatia',
->>>>>>> e7cf8521ed5972ffd55bc95d809d2cb99484fc66
     },
 
     # Refeição 2 - Diabetes - Metabolismo Lento
