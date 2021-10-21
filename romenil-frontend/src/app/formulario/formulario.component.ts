@@ -81,7 +81,7 @@ export class FormularioComponent implements OnInit {
           data_form.setDate(data_form.getDate() + 20)
           let agora = new Date();
 
-          this.editavel = agora <= data_form;
+          this.editavel = agora >= data_form;
         }
       },
       (error) => {
