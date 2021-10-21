@@ -34,7 +34,10 @@
               <i class="fa fa-user"></i>
             </span>
           </div>
-          <div *ngIf="documento_correto == false">Email ou CPF/CNPJ Incorreto!</div>
+          
+          <small *ngIf="documento_correto == false"
+            >Email ou CPF/CNPJ Incorreto!</small
+          >
 
           <div class="form-group">
             <label>Senha:</label>
