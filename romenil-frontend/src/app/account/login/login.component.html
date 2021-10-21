@@ -25,6 +25,7 @@
               id="email_cpf_cnpj"
               [(ngModel)]="login.email_cpf_cnpj"
               placeholder="Digite seu email ou CPF/CNPJ aqui"
+              (focus)="removeMask"
               (blur)="getMask()"
               [mask]="mask"
               required
@@ -33,6 +34,8 @@
               <i class="fa fa-user"></i>
             </span>
           </div>
+          <div *ngIf="documento_correto == false">Email ou CPF/CNPJ Incorreto!</div>
+
           <div class="form-group">
             <label>Senha:</label>
             <input
