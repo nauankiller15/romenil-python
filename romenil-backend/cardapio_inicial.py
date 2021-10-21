@@ -205,20 +205,13 @@ DIML = [
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 1,
-<<<<<<< HEAD
-        'prato': '•	DESJEJUM SHOT METABOLISMO - Limão espremido (Unidade: 1)',
-=======
         'prato': 'Maçã (Unidade: 1) Ou Pera ( 1 und ) Ou Banana ( 1 und)',
->>>>>>> 5f2bcf8d4eaa9c3b8f4edbd99b52b3e26cc4a62e
     },
     {
         'refeicao': 1,
         'principal': 'DI',
         'secundaria': 'ML',
         'ordem': 2,
-<<<<<<< HEAD
-        'prato': '• Gengibre (Colher de chá ralado (5g): 1)',
-=======
         'prato': '⦁	Chá de canela + gengibre ( 200ml)',
     },
     {
@@ -241,7 +234,6 @@ DIML = [
         'secundaria': 'ML',
         'ordem': 5,
         'prato': '⦁	Queijo (minas ou cotagge) – 1 fatia',
->>>>>>> 5f2bcf8d4eaa9c3b8f4edbd99b52b3e26cc4a62e
     },
 
     # Refeição 2 - Diabetes - Metabolismo Lento

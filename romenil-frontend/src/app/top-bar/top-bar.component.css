@@ -281,3 +281,10 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+.loader-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}

@@ -3,24 +3,34 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { LoaderService } from 'src/app/loader/loader.service';
+import { finalize } from 'rxjs/operators';
 
 @Injectable()
 export class AuthTokenInterceptor implements HttpInterceptor {
+  constructor(public loaderService: LoaderService) {}
 
-  constructor() {}
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    this.loaderService.isLoading.next(true);
 
-  intercept(req: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    
     const token = localStorage.getItem('token');
     if (token) {
       const authReq = req.clone({
-        headers: req.headers.set('Authorization', `JWT ${token}`)
+        headers: req.headers.set('Authorization', `JWT ${token}`),
       });
       return next.handle(authReq);
     }
-    return next.handle(req);
+    return next.handle(req).pipe(
+      finalize(() => {
+        this.loaderService.isLoading.next(false);
+      })
+    );
+  
   }
 }

@@ -28,8 +28,7 @@ import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
 import { AdminComponent } from './account/admin/admin.component';
 import { AguardeComponent } from './aguarde/aguarde.component';
 import { NgxMaskModule } from 'ngx-mask';
-
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +47,7 @@ import { NgxMaskModule } from 'ngx-mask';
     AguardeComponent,
   ],
   imports: [
+    MatProgressBarModule,
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
