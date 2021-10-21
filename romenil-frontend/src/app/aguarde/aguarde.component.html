@@ -18,7 +18,7 @@
           </div>
           <h3>
             <!-- Olá {{ conta.first_name }} {{ conta.last_name }}, seja bem-vindo(a) -->
-            Olá {{ conta.first_name }} {{ conta.last_name }}, aguarde um pouquinho!
+            Eii, {{ conta.first_name }}, aguarde um pouquinho!
           </h3>
         </div>
 
@@ -27,8 +27,9 @@
           <div class="dadosConsulta">
             <h3>
               <i class="fas fa-clock" style="margin-right: 10px"></i>
-              Está quase tudo pronto!
+              Está quase tudo pronto...
             </h3>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 
             <div class="atach">
               <div
@@ -47,18 +48,24 @@
                 <div style="margin-top: 13px">
                   Por isso calma, que logo logo você terá em mãos a dieta que
                   irá <b>transformar sua vida.</b>
+
+                  <div style="margin-top: 15px">
+                    <b>Um email será enviado para você</b> após a confecção do seu
+                    cardápio, não se preocupa, pois eu me preocupo muito com
+                    você!
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="cardBtn">
-            <div style="padding-top: 25px"></div>
-            <!-- <button id="hideT" routerLink="/calculadora" class="btn success">
+            <!-- <div class="cardBtn">
+              <div style="padding-top: 25px"></div>
+              <button id="hideT" routerLink="/calculadora" class="btn success">
                 <i class="fas fa-calculator" style="margin-right: 10px"></i
                 >Calcular meu IMC
-              </button> -->
+              </button>
+            </div> -->
+            <div class="linhaE"></div>
           </div>
-          <div class="linhaE"></div>
         </div>
       </div>
     </div>
