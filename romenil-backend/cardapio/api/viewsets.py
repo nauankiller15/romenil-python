@@ -71,12 +71,11 @@ class CardapioEmailViewSet(ViewSet):
 
         subject = u"Cardápio"
         from_email = u'naoresponda@romenilalencar.com.br'
-        msg = EmailMultiAlternatives(subject, cardapio, from_email,        
+        texto = 'teste'
+        msg = EmailMultiAlternatives(subject, texto, from_email,        
                                     [request.user.email])
         msg.attach_alternative(cardapio, "text/html")
         msg.send()
-
-        print('enviado')
        
         status_code = status.HTTP_200_OK
         
