@@ -19,6 +19,27 @@
             <h3>Alimentação de {{ conta.first_name }} {{ conta.last_name }}</h3>
           </div>
           <div class="content-cardap">
+            <div class="dadosConsulta2" *ngIf="cardapios.desjejum.length > 0">
+              <label><i class="fas fa-mug-hot favTit"></i> Desjejum</label>
+              <div class="linhaE"></div>
+
+              <div class="cardapio" *ngIf="cardapios.desjejum.length > 0">
+                <p>
+                  {{ cardapios.desjejum[0] }}
+                </p>
+
+                <p></p>
+                <p *ngFor="let prato of cardapios.desjejum.slice(1)">
+                  <caption>
+                    COM
+                  </caption>
+                  {{ prato }}
+                </p>
+
+                <p></p>
+              </div>
+            </div>
+
             <div class="dadosConsulta2 cafeManha">
               <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
               <div class="linhaE"></div>
@@ -147,7 +168,7 @@
             <i class="fas fa-print" style="margin-right: 10px"></i>Imprimir a
             Página
           </button>
-          <button class="btn success">
+          <button class="btn success" (click)="enviarEmail()">
             <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar
             para meu Email
           </button>

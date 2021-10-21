@@ -14,7 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 
 
-from .variaveis_de_ambiente import SECRET_KEY, DEBUG, ALLOWED_HOSTS, DATABASES
+from .variaveis_de_ambiente import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

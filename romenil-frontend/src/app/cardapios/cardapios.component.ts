@@ -116,4 +116,16 @@ export class CardapiosComponent implements OnInit {
       }
     );
   }
+
+  enviarEmail() {
+    this.apiService.salvar('cardapio/via-email', null).subscribe(
+      (data) => {
+        console.log(data)        
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
+  }
 }
