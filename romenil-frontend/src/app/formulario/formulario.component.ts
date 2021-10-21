@@ -5,7 +5,7 @@ import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
 import { ApiService } from '../shared/api-service/api.service';
 import { Erro } from '../shared/erros';
-import { Alergia, Patologia, EstiloVida } from './models';
+import { Formulario } from './models';
 declare var $: any;
 
 @Component({
@@ -16,9 +16,8 @@ declare var $: any;
 export class FormularioComponent implements OnInit {
 
   conta = new Conta();
-  patologia = new Patologia; 
-  alergia = new Alergia; 
-  estiloVida = new EstiloVida; 
+  formulario = new Formulario;
+  editavel = true; 
 
   constructor(
     private apiService: ApiService,
@@ -34,7 +33,15 @@ export class FormularioComponent implements OnInit {
       $('#formulario').fadeOut('100');
       $('body').removeClass('noborder');
     });
-    $('body').addClass('noborder');
+
+    // BOTÃO DE ABRIR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
+    $('#gerarCardap').on('click', function () {
+      $('#generateCard').fadeIn(250);
+    });
+      // BOTÃO DE FECHAR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
+      $('#closeGenerate').on('click', function () {
+        $('#generateCard').fadeOut(250);
+      });
   }
 
   verificarDados() {
@@ -50,8 +57,31 @@ export class FormularioComponent implements OnInit {
       (data) => {
         if (!data.usuario) {
           this.router.navigate(['/create-account']);
-        } else {
+        } else if (data.ativo) {
           this.getConta();
+          this.getFormulario();
+        } else {
+          this.router.navigate(['conversao'])
+        }
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
+  }
+
+  getFormulario() {
+    this.apiService.listar('formulario').subscribe(
+      (data) => {
+        if (data) {
+          this.formulario = data;
+
+          let data_form = new Date(this.formulario.modificado_em);
+          data_form.setDate(data_form.getDate() + 20)
+          let agora = new Date();
+
+          this.editavel = agora >= data_form;
         }
       },
       (error) => {
@@ -74,8 +104,7 @@ export class FormularioComponent implements OnInit {
   }
 
   salvarFormulario() {
-    console.log(this.patologia);
-    this.apiService.salvar('formulario/patologia', this.patologia).subscribe(
+    this.apiService.salvar('formulario', this.formulario).subscribe(
       (data) => {
         this.router.navigate(['cardapios'])
       },

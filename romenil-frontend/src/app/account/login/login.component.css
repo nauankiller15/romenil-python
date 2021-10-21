@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+/* Importando fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 #login {
   z-index: 9999;
@@ -71,7 +73,7 @@ header {
   background-image: url(),
     url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
   background-position: 100% 0, 0 11%;
-  background-size: auto, auto;
+  background-size: cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
   height: 100%;
@@ -560,4 +562,43 @@ header {
 
 .espera {
   display: none;
+}
+
+
+@media (max-width: 400px) {
+  .dadosConsulta h3 {
+    font-size: 0.72em !important;
+    padding-left: 0;
+    padding-bottom: 18px;
+    padding-top: 15px;
+  }
+  .atach {
+    padding: 10px;
+    font-size: 0.65em !important;
+}
+
+  .container-cart h3 {
+    font-size: 0.9em;
+    text-align: center;
+    background-color: #0a0e17;
+    color: #fff;
+    width: 96%;
+    margin: -29px auto;
+    font-weight: 350;
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  .planejamento h2{
+    font-size: 1.2em;
+    padding: 29px;
+    margin-bottom: 10px;
+}
+
+.logo-calc {
+  background-size: 100%;
+  padding: 68px 174px 4px 5px;
+  cursor: pointer;
+  z-index: 999;
+}
 }

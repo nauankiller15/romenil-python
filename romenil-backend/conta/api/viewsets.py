@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.viewsets import GenericViewSet, ViewSet
 
-
+from coneccao_APIs.models import Eduzz
 from conta.api.serializers import ContaSerializer, UsuarioSerializer
 
 
@@ -33,7 +33,6 @@ class DadosContaViewSet(ViewSet):
     permission_classes = [IsAuthenticated]
 
     def list(self, request):
-        # self.buscar_dados()
         serializer = ContaSerializer(request.user)
                 
         return Response(serializer.data)
@@ -42,7 +41,7 @@ class DadosUsuarioViewSet(ViewSet):
     permission_classes = [IsAuthenticated]
 
     def list(self, request):
-        # self.buscar_dados()
+        
         usuario = request.user.usuario_set.last()
         serializer = UsuarioSerializer(usuario)
                 

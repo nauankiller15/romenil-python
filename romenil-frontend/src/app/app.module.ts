@@ -25,6 +25,10 @@ import { NgxLoadingModule } from 'ngx-loading';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
 import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
+import { AdminComponent } from './account/admin/admin.component';
+import { AguardeComponent } from './aguarde/aguarde.component';
+import { NgxMaskModule } from 'ngx-mask';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +44,8 @@ import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
     TopBarComponent,
     ConversaoComponent,
     EscapeHtmlPipe,
+    AdminComponent,
+    AguardeComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -57,6 +63,7 @@ import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
       progressBar: true,
     }),
     NgxLoadingModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },

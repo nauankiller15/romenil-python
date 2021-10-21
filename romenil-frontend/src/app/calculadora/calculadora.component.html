@@ -142,15 +142,7 @@
                 Aqui está o resultado:
               </p>
 
-              <div
-                class="result-content"
-                style="
-                  background-color: #1a1a1a;
-                  padding: 10px;
-                  border-radius: 10px;
-                  animation: slide-left 1.3s ease-in-out;
-                "
-              >
+              <div class="result-content">
                 <ul
                   style="
                     list-style: none;
@@ -163,7 +155,7 @@
                     <strong style="color: #ff590f">{{
                       imc | number: "1.2-2"
                     }}</strong>
-                    e você está com
+                    e você está
                     <strong style="color: #ff590f">{{ diagnostico }}.</strong>
                   </li>
 
@@ -184,11 +176,6 @@
               </div>
             </div>
             <div class="cardBtn">
-              <button class="btn success" id="refazerIMC">
-                <i class="fas fa-undo" style="margin-right: 10px"></i>Refazer
-                meu IMC
-              </button>
-              ou
               <button class="btn changelife" id="prossegCamp">
                 <i
                   class="fas fa-heart heartIcon"
@@ -196,16 +183,25 @@
                 ></i>
                 MUDAR A MINHA VIDA!
               </button>
+
+              ou
+
+              <button class="btn success" id="refazerIMC">
+                <i class="fas fa-undo" style="margin-right: 10px"></i>Refazer
+                meu IMC
+              </button>
             </div>
           </div>
           <!-- GERAR CARDÁPIO -->
           <div style="display: none" id="prosseg">
             <div class="persist">
-              Hmmm, agora você já sabe quais são os resultados, preparei algo
-              para você. Para ter acesso a um cardápio totalmente personalizado
-              por um <b>Nutricionista profissional</b>, que vai te ajudar a
-              manter a saúde e boa forma, é muito simples, clique no botão
-              abaixo...
+              Hmmm, agora você já sabe quais são os resultados, então preparei
+              algo para você.
+              <div>
+                Para ter acesso a um cardápio totalmente personalizado por um
+                <b>Nutricionista profissional</b>, que vai te ajudar a manter a
+                saúde e boa forma, é muito simples, clique no botão abaixo...
+              </div>
             </div>
             <button routerLink="/formulario" class="btn success">
               <i class="fas fa-clipboard-list" style="margin-right: 10px"></i

@@ -75,15 +75,15 @@ $('#prossegCamp').on('click', function () {
     if (this.imc < 18.5) {
       this.diagnostico = 'abaixo do peso';
     } else if (this.imc >= 18.5 && this.imc < 25) {
-      this.diagnostico = 'peso ideal';
+      this.diagnostico = ' com peso ideal';
     } else if (this.imc >= 25 && this.imc < 30) {
-      this.diagnostico = 'sobrepeso';
+      this.diagnostico = ' com sobrepeso';
     } else if (this.imc >= 30 && this.imc < 35) {
-      this.diagnostico = 'obesidade leve';
+      this.diagnostico = ' com obesidade leve';
     } else if (this.imc >= 35 && this.imc < 40) {
-      this.diagnostico = 'obesidade severa';
+      this.diagnostico = ' com obesidade severa';
     } else {
-      this.diagnostico = 'obesidade mórbida';
+      this.diagnostico = ' com obesidade mórbida';
     }
   }
 

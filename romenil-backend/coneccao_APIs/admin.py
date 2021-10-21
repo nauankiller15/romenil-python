@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from coneccao_APIs.models import Subscription, TokenEduzz
+
+admin.site.register(Subscription)
+admin.site.register(TokenEduzz)

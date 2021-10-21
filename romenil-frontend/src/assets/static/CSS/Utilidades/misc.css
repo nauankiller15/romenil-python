@@ -2313,8 +2313,8 @@ p {
 
 caption {
   font-weight: 800;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   color: #ffffffd6;
   text-align: left;
   border: 1px solid var(--azul);
@@ -2322,7 +2322,6 @@ caption {
   border-radius: 10px;
   margin: 14px 0px 8px 0px;
 }
-
 
 u {
   padding: 10px;
@@ -3181,10 +3180,10 @@ blockquote {
   background-image: url(""),
     url("https://1.bp.blogspot.com/-Ulp2o1lMXm4/YWnOh0DsgMI/AAAAAAAAHeQ/fdCHB0FjXbkeNBZp94f-qhdNW5lPa7fjQCLcBGAsYHQ/s0/bg%2Bromenil%2Bsat.jpg");
   background-position: 100% 0px, 0px 11%;
-  background-size: auto, auto;
+  background-size: cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
-  height: 95vh;
+  min-height: 95vh;
   margin: 0vh auto;
   padding: 10px 5px 20px;
   font-family: Montserrat, sans-serif;
@@ -3214,6 +3213,13 @@ blockquote {
   padding-bottom: 175px;
   margin: 10px auto;
   padding: 25px;
+}
+
+.fundo-verde {
+  background: #0a0e17;
+  z-index: 1;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .espacbackg-rest {
@@ -4053,6 +4059,15 @@ blockquote {
     display: block;
   }
 
+  .fundo-retAg {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 288px;
+    height: 304px;
+    margin: auto;
+    display: block;
+  }
+
   .front-as {
     width: 100%;
     margin: auto;
@@ -4120,7 +4135,7 @@ blockquote {
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
     width: 100%;
-    height: 91vh;
+    min-height: 95vh;
     margin: 0vh auto;
     padding: 10px 5px 20px;
     font-family: Montserrat, sans-serif;
@@ -4158,7 +4173,9 @@ blockquote {
     padding-left: 20px;
     padding-right: 20px;
     margin-left: 0px;
+    margin: -50px auto;
   }
+
   .espacbackg-rest {
     width: 90%;
     padding-bottom: 23px;
@@ -4926,7 +4943,23 @@ blockquote {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
+  .espac-rest {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: -80px auto;
+    /* font-size: 14px !important; */
+  }
+
+  .fundo-verde {
+    z-index: 1;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
   .depoimento-hud span {
     padding: 3px;
     font-weight: 500;

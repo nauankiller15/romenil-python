@@ -102,6 +102,17 @@
 .logo:hover {
   transform: translate(0px, -7px);
 }
+
+.logoTop{
+  position: absolute;
+  background: url(https://1.bp.blogspot.com/-ogJ8wIvPS1E/YW3whRhGe9I/AAAAAAAAHek/IjElGvjvrsYwTFI-v7Mi1vLFq9ME5dDIQCLcBGAsYHQ/s0/R_romenil.png) no-repeat;
+  padding: 46px 118px 28px 15px;
+  background-size: 49%;
+  cursor: pointer;
+  top: 4%;
+  left: 12%;
+}
+
 /*  */
 
 .fechar-button {
@@ -250,6 +261,14 @@ nav .menuItems li:hover::before {
 }
 
 @media (max-width: 1100px) {
+  .logoTop {
+    position: absolute;
+    padding: 46px 118px 28px 15px;
+    background-size: 38%;
+    cursor: pointer;
+    top: 4%;
+    left: 7%;
+}
   .toast-container .ngx-toastr {
     font-size: 0.85em;
     width: 300px !important;
@@ -392,8 +411,8 @@ nav .menuItems li:hover::before {
 .sistemaEnter {
   border: 1px solid var(--azul);
   background: var(--azul);
-  color: #e0e0e0;
-  font-weight: 500;
+  color: #171717;
+  font-weight: 700;
   width: 50%;
   transition: 0.4s;
   line-height: 40px;
@@ -402,8 +421,8 @@ nav .menuItems li:hover::before {
 .sistemaEnter:hover {
   border: 1px solid var(--azul);
   background: var(--azul);
-  color: #000000;
-  font-weight: 600;
+  color: #fff1f1;
+  font-weight: 800;
   transform: translate(0px, -7px);
 }
 

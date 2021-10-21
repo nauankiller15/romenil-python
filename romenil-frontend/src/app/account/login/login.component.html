@@ -20,17 +20,25 @@
             <label>Login:</label>
             <input
               class="form-control"
-              type="email"
-              name="email"
-              id="email"
+              type="text"
+              name="email_cpf_cnpj"
+              id="email_cpf_cnpj"
               [(ngModel)]="login.email_cpf_cnpj"
-              required
               placeholder="Digite seu email ou CPF/CNPJ aqui"
+              (focus)="removeMask()"
+              (blur)="getMask()"
+              [mask]="mask"
+              required
             />
             <span class="symbol-input100">
               <i class="fa fa-user"></i>
             </span>
           </div>
+          
+          <small *ngIf="documento_correto == false"
+            >Email ou CPF/CNPJ Incorreto!</small
+          >
+
           <div class="form-group">
             <label>Senha:</label>
             <input

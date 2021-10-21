@@ -131,8 +131,8 @@
                 [(ngModel)]="usuario.cpf_ou_cnpj"
                 required
                 placeholder="Digite seu CPF ou CNPJ aqui"
-                minlength="10"
-                maxlength="14"
+                mask="CPF_CNPJ"
+                          
               />
               <span class="symbol-input100">
                 <i class="fa fa-id-card"></i>
@@ -142,15 +142,14 @@
             <div class="form-group">
               <label>Celular:</label>
               <input
-                class="form-control"
+                class="celular form-control"
                 type="tel"
                 name="celular"
                 id="celular"
                 [(ngModel)]="usuario.celular"
                 required
                 placeholder="Digite seu celular aqui"
-                minlength="8"
-                maxlength="11"
+                mask="(00) 00000-0000"
               />
               <span class="symbol-input100">
                 <i class="fab fa-whatsapp"></i>

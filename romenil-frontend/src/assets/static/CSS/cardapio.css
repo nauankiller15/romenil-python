@@ -1,5 +1,5 @@
 
-#conversao {
+#cardapio {
   z-index: 9999;
   width: 100%;
   height: 100%;
@@ -59,7 +59,7 @@ header {
   background: #a8da5d;
 }
 /*  */
-.box-text-conversao {
+.box-text-cardapio {
   border-top: 4px solid var(--azul);
   background-color: #0a0e17;
   background-image: url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
@@ -69,16 +69,16 @@ header {
   width: 100%;
   height: 100%;
   margin: 14vh auto;
-  padding: 0 5px 20px 5px;
+  padding: 10px 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-form 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-cardap 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {
-  width: 355px;
+  width: 222px;
   padding: 10px;
   border-left: 2px solid #fff;
-  margin-top: -18vh;
+  margin-top: -17vh;
   animation: scalePlan 0.9s ease-in-out;
 }
 
@@ -118,36 +118,17 @@ header {
   text-align: center;
   background-color: #0a0e17;
   color: #fff;
-  width: 56%;
+  width: 50%;
   margin: -21px auto;
   font-weight: 350;
   animation: scalePlan 1.4s ease-in-out;
+  border-radius: 10px;
 }
 
 .content-cardap {
-  width: 80%;
+  width: 100%;
+  padding: 15px;
   margin: 4vh auto;
-}
-
-.content-cardap h4 {
-  font-size: 1.6em;
-  text-align: center;
-  background-color: #0a0e17;
-  color: #fff;
-  width: 40%;
-  margin: -54px auto;
-  font-weight: 350;
-  animation: scalePlan 1.4s ease-in-out;
-}
-
-.dadosConsulta {
-  color: #ffffff9c;
-  padding: 13px;
-  width: 65%;
-  margin: auto;
-  transition: all 0.5s;
-  box-shadow: 0px 0px 4px 1px #272727;
-  animation: slide-left 1.2s ease-in-out;
 }
 
 .nextDados {
@@ -158,15 +139,58 @@ header {
   padding: 100px;
 }
 
+/* ETIQUETAS */
+.cafeManha {
+  color: #fff;
+  background-image: linear-gradient(0deg, #0a0e17 0%, #3e4214 100%) !important;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+    0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+    0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+}
+.almoco {
+  color: #fff;
+  background-image: linear-gradient(0deg, #0a0e17 0%, #2a2a2a 100%) !important;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+    0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+    0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+}
+
+.janta {
+  color: #fff;
+  background-image: linear-gradient(0deg, #0a0e17 0%, #32263e 100%) !important;
+  box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+    0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+    0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+}
+
 /*  */
 
-.dadosConsulta p {
+.dadosConsulta2 {
+  transition: all 0.5s;
+  box-shadow: 0px 0px 4px 1px #272727;
+}
+
+.dadosConsulta2 {
+  padding: 13px;
+  font-size: 1.23em;
+  width: 45%;
+  margin: 3vh 3vh 2vh 3vh;
+  animation: slide-left 1.2s ease-in-out;
+  display: inline-grid;
+}
+
+.cardapio {
+  margin-bottom: 30px;
   text-align: justify;
   font-weight: 400;
   animation: slide-left 1.2s ease-in-out;
 }
 
-.dadosConsulta caption {
+.cardapio p {
+  margin-bottom: -30px;
+}
+
+.dadosConsulta2 span {
   width: 100%;
   height: auto;
   margin: 15px;
@@ -179,78 +203,26 @@ header {
   animation: slide-left 0.6s ease-in-out;
 }
 
-.option {
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid #272727;
-  width: 120px;
-  display: inline-block;
-  flex-direction: column;
-}
-
-.dadosConsulta label {
-  cursor: pointer;
+.dadosConsulta2 label {
   color: var(--azul);
-}
-
-.atach {
-  padding: 10px;
-}
-
-.dadosConsulta h3 {
-  font-size: 1.2em;
-  border-left: 1px solid #272727;
-  border-bottom: 1px solid #272727;
-  padding-left: 20px;
-  line-height: 2.2em;
-  text-align: center;
-}
-
-.cardBtn {
-  margin: 3vh auto;
-  width: 35%;
-}
-
-.success {
-  border: 1px solid var(--azul);
-  color: var(--azul);
-  font-weight: 500;
+  border-right: 1px solid #272727;
+  line-height: 23px;
   width: 100%;
-  background: none;
-  transition: 0.4s;
-  line-height: 40px;
+  /* line-height: 40px; */
+  font-size: 20px;
+  margin-top: 13px;
 }
 
-.success:hover {
-  background-color: var(--azul);
-  color: #e0e0e0;
-  font-weight: 500;
-  width: 100%;
-}
-
-/* GERAR CARDÁPIO */
-
-.generateCardap {
-  border: 1px solid var(--azul);
-  background-color: var(--azul);
-  color: #0a0e17;
-  font-weight: 500;
-  width: 100%;
-  transition: 0.4s;
-  line-height: 40px;
-  font-weight: 700;
-}
-
-.generateCardap:hover {
-  background-color: var(--azul);
-  color: #e0e0e0;
-  font-weight: 500;
-  width: 100%;
+.favTit {
+  width: 5%;
+  font-size: 32px;
+  margin-bottom: 13px;
 }
 /* ANIMAÇÕES */
-@keyframes slide-left {
+
+@keyframes slide-cardap {
   0% {
-    transform: translateX(-260px);
+    transform: translateX(-2260px);
     opacity: 0;
   }
   100% {
@@ -259,9 +231,9 @@ header {
   }
 }
 
-@keyframes slide-form {
+@keyframes slide-left {
   0% {
-    transform: translateX(-2260px);
+    transform: translateX(-260px);
     opacity: 0;
   }
   100% {
@@ -300,15 +272,6 @@ header {
     opacity: 1;
   }
 }
-
-.setaAr {
-  left: 48%;
-  position: absolute;
-  top: 50vh;
-  animation: nextArrow 0.7s infinite alternate;
-  display: block;
-}
-
 .text-info-box {
   margin: auto;
   width: 100%;
@@ -316,35 +279,45 @@ header {
   height: 100%;
   overflow-y: scroll;
 }
-
 .separTe {
-  margin-top: 14vh;
+  margin-top: 12vh;
 }
 
-.linhaD {
-  margin-top: 7vh;
+.cardBtn {
+  margin: 5vh auto;
+  width: 30%;
 }
 
-@media (max-width: 1100px) {
-  .linhaD {
-    margin-top: 4vh;
+.success {
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  font-weight: 500;
+  width: 100%;
+  background: none;
+  transition: 0.4s;
+  line-height: 40px;
+}
+
+.success:hover {
+  background-color: var(--azul);
+  color: #e0e0e0;
+  font-weight: 500;
+  width: 100%;
+}
+
+.chooseOptions{
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+@media (max-width: 1400px) {
+  .cardBtn {
+    margin: auto;
+    width: 100%;
   }
-  .dadosConsulta h3 {
-    font-size: 0.9em !important;
-    padding-left: 0;
-    padding-bottom: 18px;
-    padding-top: 15px;
-  }
-  .content-cardap h4 {
-    width: 50%;
-  }
-  .atach {
-    font-size: 0.8em;
-    text-align: justify;
-  }
-  .option {
-    font-size: 0.9em;
-  }
+
   .separTe {
     margin-top: 10vh;
   }
@@ -355,45 +328,41 @@ header {
   ::-webkit-scrollbar {
     width: 5px;
   }
-  .box-text-formulario {
+  .box-text-cardapio {
     margin: 14vh auto;
     padding: 10px 0;
     background-position: 59% 0;
     background-size: auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
-  /* ESTILO PADD */
-  .mobileEstilo {
-    margin-bottom: 1px !important;
-    width: 100% !important;
-  }
 
-  /*  */
-  .cardBtn {
-    margin: auto;
-    width: 100%;
-  }
-
-  .setaAr {
-    display: none;
-  }
   .content-cardap {
     width: 90%;
-    margin: 4vh auto;
-  }
-  .dadosConsulta {
-    padding: 13px;
-    font-size: 1.23em;
-    width: 100%;
-    margin: 0vh 0vh 2vh 0px;
-    display: inline-grid;
+    margin: 5vh auto;
+    padding: 0;
   }
 
-  .dadosConsulta label {
+  .dadosConsulta2 {
+    padding: 13px;
+    font-size: 1.23em;
+    width: 90%;
+    margin: 2vh 4vh 2vh 2vh;
+    animation: slide-left 1.2s ease-in-out;
+    display: block;
+  }
+
+  .favTit {
+    width: 14%;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .dadosConsulta2 label {
     color: var(--azul);
     border-bottom: 1px solid #272727;
     border-right: none;
     line-height: 50px;
+    width: 100%;
   }
 
   .container-cart {
@@ -429,43 +398,4 @@ header {
     font-size: 1.2em;
     padding: 44px;
   }
-}
-
-
-@media (max-width: 400px) {
-  .dadosConsulta h3 {
-    font-size: 0.72em !important;
-    padding-left: 0;
-    padding-bottom: 18px;
-    padding-top: 15px;
-  }
-  .atach {
-    padding: 10px;
-    font-size: 0.65em !important;
-}
-
-  .container-cart h3 {
-    font-size: 0.9em;
-    text-align: center;
-    background-color: #0a0e17;
-    color: #fff;
-    width: 96%;
-    margin: -29px auto;
-    font-weight: 350;
-    border-radius: 10px;
-    padding: 16px;
-  }
-
-  .planejamento h2{
-    font-size: 1.2em;
-    padding: 29px;
-    margin-bottom: 10px;
-}
-
-.logo-calc {
-  background-size: 100%;
-  padding: 68px 174px 4px 5px;
-  cursor: pointer;
-  z-index: 999;
-}
 }

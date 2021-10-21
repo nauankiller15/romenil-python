@@ -1,4 +1,5 @@
 export class Cardapios {
+    desjejum: Cardapio[] = [];   
     cafeManha: Cardapio[] = [];   
     refeicao2: Cardapio[] = [];   
     almoco: Cardapio[] = []; 

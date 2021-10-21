@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'conta',
     'formulario',
     'cardapio',
+    'coneccao_APIs',
 ]
 
 MIDDLEWARE = [

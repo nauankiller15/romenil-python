@@ -10,7 +10,11 @@ from rest_framework_jwt.settings import api_settings
 
 
 class UsuarioSerializer(serializers.ModelSerializer):
-    permispermission_classes = [IsAuthenticated]
+
+    ativo = serializers.SerializerMethodField()
+
+    def get_ativo(self, obj):
+        return obj.ativo()
     
     class Meta:
         model = Usuario        
@@ -38,13 +42,6 @@ class ContaSerializer(serializers.ModelSerializer):
             'password': {'write_only': True},
         }
         fields = ['id', 'first_name', 'last_name', 'password', 'email']
-
-class DadosUsuarioSerializer(serializers.ModelSerializer):
-    permispermission_classes = [IsAuthenticated]
-    
-    class Meta:
-        model = Usuario        
-        fields = '__all__'
 
 
 # ========= login ==========================

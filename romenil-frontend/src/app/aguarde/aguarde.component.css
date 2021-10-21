@@ -1,5 +1,5 @@
 
-#conversao {
+#aguarde {
   z-index: 9999;
   width: 100%;
   height: 100%;
@@ -59,11 +59,12 @@ header {
   background: #a8da5d;
 }
 /*  */
-.box-text-conversao {
+.box-text-aguarde {
   border-top: 4px solid var(--azul);
   background-color: #0a0e17;
-  background-image: url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
-  background-position: 0% 50%, -24vh 2px;
+  background-image: url(),
+    url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
+  background-position: 100% 81%, 100% 0;
   background-size: cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
@@ -71,14 +72,14 @@ header {
   margin: 14vh auto;
   padding: 0 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-form 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-page 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {
-  width: 355px;
+  width: 222px;
   padding: 10px;
   border-left: 2px solid #fff;
-  margin-top: -18vh;
+  margin-top: -17vh;
   animation: scalePlan 0.9s ease-in-out;
 }
 
@@ -195,6 +196,7 @@ header {
 
 .atach {
   padding: 10px;
+  text-align: justify;
 }
 
 .dadosConsulta h3 {
@@ -207,8 +209,8 @@ header {
 }
 
 .cardBtn {
-  margin: 3vh auto;
-  width: 35%;
+  margin: 5vh auto;
+  width: 30%;
 }
 
 .success {
@@ -228,25 +230,6 @@ header {
   width: 100%;
 }
 
-/* GERAR CARDÁPIO */
-
-.generateCardap {
-  border: 1px solid var(--azul);
-  background-color: var(--azul);
-  color: #0a0e17;
-  font-weight: 500;
-  width: 100%;
-  transition: 0.4s;
-  line-height: 40px;
-  font-weight: 700;
-}
-
-.generateCardap:hover {
-  background-color: var(--azul);
-  color: #e0e0e0;
-  font-weight: 500;
-  width: 100%;
-}
 /* ANIMAÇÕES */
 @keyframes slide-left {
   0% {
@@ -259,9 +242,9 @@ header {
   }
 }
 
-@keyframes slide-form {
+@keyframes slide-page {
   0% {
-    transform: translateX(-2260px);
+    transform: translateY(-950px);
     opacity: 0;
   }
   100% {
@@ -318,32 +301,12 @@ header {
 }
 
 .separTe {
-  margin-top: 14vh;
-}
-
-.linhaD {
-  margin-top: 7vh;
+  margin-top: 12vh;
 }
 
 @media (max-width: 1100px) {
-  .linhaD {
-    margin-top: 4vh;
-  }
-  .dadosConsulta h3 {
-    font-size: 0.9em !important;
-    padding-left: 0;
-    padding-bottom: 18px;
-    padding-top: 15px;
-  }
-  .content-cardap h4 {
-    width: 50%;
-  }
-  .atach {
-    font-size: 0.8em;
-    text-align: justify;
-  }
-  .option {
-    font-size: 0.9em;
+  .linhaE {
+    margin-bottom: 4vh;
   }
   .separTe {
     margin-top: 10vh;
@@ -355,38 +318,52 @@ header {
   ::-webkit-scrollbar {
     width: 5px;
   }
-  .box-text-formulario {
+  .box-text-aguarde {
+    width: 100%;
+    height: 100%;
     margin: 14vh auto;
     padding: 10px 0;
-    background-position: 59% 0;
+    background-position: 100% 0%;
     background-size: auto, auto;
-    background-repeat: no-repeat, no-repeat, no-repeat;
   }
   /* ESTILO PADD */
   .mobileEstilo {
     margin-bottom: 1px !important;
     width: 100% !important;
   }
+  
 
   /*  */
   .cardBtn {
     margin: auto;
     width: 100%;
   }
-
   .setaAr {
     display: none;
   }
   .content-cardap {
     width: 90%;
-    margin: 4vh auto;
+    margin: 0vh auto;
   }
   .dadosConsulta {
+    background-color: #0a0e17;
     padding: 13px;
     font-size: 1.23em;
     width: 100%;
-    margin: 0vh 0vh 2vh 0px;
+    margin: 1vh 0vh 2vh 0px;
     display: inline-grid;
+  }
+
+  .dadosConsulta h3 {
+    font-size: 0.9em !important;
+    padding-left: 0;
+    padding-bottom: 18px;
+    padding-top: 15px;
+  }
+
+  .atach {
+    padding: 10px;
+    font-size: 0.8em !important;
   }
 
   .dadosConsulta label {

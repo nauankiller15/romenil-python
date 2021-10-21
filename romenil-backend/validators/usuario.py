@@ -3,12 +3,12 @@ from re import match
 
 def cpf_pattern(cpf):
 
-   pattern = r"^(\d{3}.){2}\d{3}-\d{2}$"
-
-   return bool(match(pattern, cpf))
+    pattern = r"^\d{11}$"
+   
+    return bool(match(pattern, cpf))
 
 def cnpj_pattern(cnpj):
-   pattern = r"^\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}$"
+   pattern = r"^\d{14}$"
 
    return bool(match(pattern, cnpj))
 
