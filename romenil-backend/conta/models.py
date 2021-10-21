@@ -22,3 +22,8 @@ class Usuario(Model):
         eduzz = Eduzz(self.cpf_ou_cnpj)
         produto_ativo = eduzz.ativo
         return produto_ativo
+
+    def data_formulario(self):
+        patologia = self.patologia_set.last()
+
+        return patologia.modificado_em

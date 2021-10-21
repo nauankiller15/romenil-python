@@ -84,21 +84,26 @@ export class CardapiosComponent implements OnInit {
     this.apiService.listar('cardapio').subscribe(
       (data) => {
         if (data) {
-          for (let cardapio in data) {
-            if (data[cardapio].refeicao == 0) {
-              this.cardapios.desjejum.push(data[cardapio].prato);
-            } else if (data[cardapio].refeicao == 1) {
-              this.cardapios.cafeManha.push(data[cardapio].prato);
-            } else if (data[cardapio].refeicao == 2) {
-              this.cardapios.refeicao2.push(data[cardapio].prato);
-            } else if (data[cardapio].refeicao == 3) {
-              this.cardapios.almoco.push(data[cardapio].prato);
-            } else if (data[cardapio].refeicao == 4) {
-              this.cardapios.refeicao4.push(data[cardapio].prato);
-            } else if (data[cardapio].refeicao == 5) {
-              this.cardapios.janta.push(data[cardapio].prato);
-            } else if (data[cardapio].refeicao == 6) {
-              this.cardapios.refeicao6.push(data[cardapio].prato);
+          if (data.pronto == false) {
+            this.router.navigate(['aguarde'])
+          }
+
+          let dados = data.dados;
+          for (let cardapio in dados) {
+            if (dados[cardapio].refeicao == 0) {
+              this.cardapios.desjejum.push(dados[cardapio].prato);
+            } else if (dados[cardapio].refeicao == 1) {
+              this.cardapios.cafeManha.push(dados[cardapio].prato);
+            } else if (dados[cardapio].refeicao == 2) {
+              this.cardapios.refeicao2.push(dados[cardapio].prato);
+            } else if (dados[cardapio].refeicao == 3) {
+              this.cardapios.almoco.push(dados[cardapio].prato);
+            } else if (dados[cardapio].refeicao == 4) {
+              this.cardapios.refeicao4.push(dados[cardapio].prato);
+            } else if (dados[cardapio].refeicao == 5) {
+              this.cardapios.janta.push(dados[cardapio].prato);
+            } else if (dados[cardapio].refeicao == 6) {
+              this.cardapios.refeicao6.push(dados[cardapio].prato);
             }
           }
         } else {

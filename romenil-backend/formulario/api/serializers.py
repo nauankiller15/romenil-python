@@ -1,10 +1,16 @@
+from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from formulario.models import Patologia
+from formulario.models import Formulario
 
 
-class PatologiaSerializer(ModelSerializer):
+class FormularioSerializer(ModelSerializer):
+
+    ativo = SerializerMethodField()
+
+    def get_ativo(self, obj):
+        return obj.usuario.ativo()
 
     class Meta:
-        model = Patologia        
+        model = Formulario        
         fields = '__all__'
