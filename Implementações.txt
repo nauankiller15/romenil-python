@@ -1,0 +1,8 @@
+## backend
+restringir alteração do formulario no backend
+reutilizar codigos de restrição
+
+## frontend
+otimizar a pagina
+centralizar a exibição de erros
+ 

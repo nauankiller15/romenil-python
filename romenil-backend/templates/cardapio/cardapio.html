@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.api.romenilalencar.com.br/static/cardapio/css/cardapio.css' %}">
+</head>
+
+<body>
+    
+    <div class="containerED">
+        <header>
+            <div class="logo-calc"></div>
+        </header>
+        <div class="separTe"></div>
+        <div id="print" class="conteudo">
+            <div class="container-cart">
+                <div class="planejamento">
+                    <h2>Planejamento Alimentar</h2>
+                </div>
+                <h3 style="color: blue;">Alimentação de {{ conta.first_name }} {{ conta.last_name }}</h3>
+            </div>
+            <div class="content-cardap">
+                {% if desjejum|length > 0 %}
+                <div class="dadosConsulta2 cafeManha">
+                    <label><i class="fas fa-mug-hot favTit"></i> Desjejum</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio">
+                        <p>
+                            {{ desjejum.0 }}
+                        </p>
+
+                        <p></p>
+                        {% for prato in desjejum|slice:"1:" %}
+                        <p>
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato }}
+                        </p>
+                        <p></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if cafeManha|length > 0 %}
+                <div class="dadosConsulta2 cafeManha">
+                    <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio">
+                        <p>
+                            {{ cafeManha.0 }}
+                        </p>
+
+                        <p></p>
+                        {% for prato in cafeManha|slice:"1:" %}
+                        <p>
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato }}
+                        </p>
+                        <p></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if refeicao2|length > 0 %}
+                <div class="dadosConsulta2">
+                    <label><i class="fas fa-utensils favTit"></i> Refeição 2</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio">
+                        <p>
+                            {{ refeicao2.0 }}
+                        </p>
+
+                        <p></p>
+                        {% for prato in refeicao2|slice:"1:" %}
+                        <p>
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato }}
+                        </p>
+                        <p></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if almoco|length > 0 %}
+                <div class="dadosConsulta2 almoco">
+                    <label><i class="fas fa-utensils favTit"></i> Almoço</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio">
+                        <p>
+                            {{ almoco.0 }}
+                        </p>
+
+                        <p></p>
+                        {% for prato in almoco|slice:"1:" %}
+                        <p>
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato }}
+                        </p>
+                        <p></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if refeicao4|length > 0 %}
+                <div class="dadosConsulta2">
+                    <label><i class="fas fa-utensils favTit"></i> Refeição 4</label>
+                    <div class="linhaE"></div>
+                    <div class="cardapio">
+                        <p>
+                            {{ refeicao4.0 }}
+                        </p>
+
+                        <p></p>
+                        {% for prato in refeicao4|slice:"1:" %}
+                        <p>
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato }}
+                        </p>
+                        <p></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if janta|length > 0 %}
+                <div class="dadosConsulta2 janta">
+                    <label><i class="fas fa-utensils favTit"></i> Janta</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio">
+                        <p>
+                            {{ janta.0 }}
+                        </p>
+
+                        <p></p>
+                        {% for prato in janta|slice:"1:" %}
+                        <p>
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato }}
+                        </p>
+                        <p></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if refeicao6|length > 0 %}
+                <div class="dadosConsulta2">
+                    <label><i class="fas fa-utensils favTit"></i> Refeição 6</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio">
+                        <p>
+                            {{ refeicao6.0 }}
+                        </p>
+
+                        <p></p>
+                        {% for prato in refeicao6|slice:"1:" %}
+                        <p>
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato }}
+                        </p>
+                        <p></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
