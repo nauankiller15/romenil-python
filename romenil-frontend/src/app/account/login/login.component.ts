@@ -15,6 +15,7 @@ declare var $: any;
 export class LoginComponent implements OnInit {
   login = new Login();
   carregando = false;
+  mask = ''
 
   constructor(
     private toastrService: ToastrService,
@@ -37,6 +38,12 @@ export class LoginComponent implements OnInit {
       $('#criarconta').fadeIn('100');
       $('#login').fadeOut('100');
     });
+  }
+
+  getMask() {
+    if (this.login.email_cpf_cnpj.match(/^\d{11}$|^\d{14}$|^(\d{3}.){2}\d{3}\-\d{2}$|^\d{2}.\d{3}.\d{3}\/\d{4}\-\d{2}$/)) {
+        console.log('cpf ou cnpj')
+    }
   }
 
   onSubmit() {
