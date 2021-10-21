@@ -1,6 +1,5 @@
-import json
-from django.http.response import JsonResponse
-from rest_framework.renderers import StaticHTMLRenderer, TemplateHTMLRenderer, JSONRenderer
+from datetime import datetime, timedelta, timezone
+
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ViewSet
@@ -20,9 +19,14 @@ class CardapioViewSet(ViewSet):
         usuario = request.user.usuario_set.last()
         formulario = usuario.formulario_set.last()
         dados = None
+        pronto = False
 
         if Formulario:
-            cardapios = gerar_cardapio(formulario)
-            dados = CardapioSerializer(cardapios, many=True).data
+            print(datetime.now(timezone.utc), formulario.modificado_em, datetime.now(timezone.utc) - timedelta(hours=2))
+            print(formulario.modificado_em < datetime.now(timezone.utc) - timedelta(hours=2))
+            if formulario.modificado_em < datetime.now(timezone.utc) - timedelta(hours=2):
+                cardapios = gerar_cardapio(formulario)
+                dados = CardapioSerializer(cardapios, many=True).data
+                pronto = True
 
-        return Response(dados)
+        return Response({'pronto': pronto, 'dados': dados})
