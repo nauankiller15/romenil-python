@@ -1,4 +1,5 @@
-export class Patologia {
+export class Formulario {
+  modificado_em = ''
   hipertensao = false;
   diabetes = false;
   metabolismo_lento = false;
@@ -11,16 +12,14 @@ export class Patologia {
   ansiedade = false;
   gordura_no_figado = false;
   anemia = false;
-}
 
-export class Alergia {
+  // Alergia
   frutos_do_mar = false;
   ovo = false;
   amendoim = false;
   soja = false;
-}
 
-export class EstiloVida {
+  //Estilo de Vida
   vegano = false;
   vegetariano = false;
 }

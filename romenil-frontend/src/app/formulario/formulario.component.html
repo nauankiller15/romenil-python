@@ -27,21 +27,26 @@
             <div class="container-cart">
               <h4>Patologias</h4>
             </div>
-            <form class="setMarg">
+            <div>
+              <h6>Modificado em: {{formulario.modificado_em | date: 'dd/M/Y'}}</h6>
+            </div>
+            <form class="setMarg" (disabled)="true">
               <div class="dadosConsulta">
                 <h3>Diabetes?</h3>
 
                 <div class="atach">Escolha uma das opções:</div>
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.diabetes"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.diabetes"
                     [value]="true"
                     type="radio"
                     name="select1"
                     id="option-1"
                   />
-                  <input
-                    [(ngModel)]="patologia.diabetes"
+                  <input 
+                    [disabled]="!editavel" 
+                    [(ngModel)]="formulario.diabetes"
                     [value]="false"
                     type="radio"
                     name="select2"
@@ -61,15 +66,17 @@
 
                 <div class="atach">Escolha uma das opções:</div>
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.hipertensao"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.hipertensao"
                     [value]="true"
                     name="select3"
                     type="radio"
                     id="option-3"
                   />
-                  <input
-                    [(ngModel)]="patologia.hipertensao"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.hipertensao"
                     [value]="false"
                     name="select4"
                     type="radio"
@@ -89,15 +96,17 @@
 
                 <div class="atach">Escolha uma das opções:</div>
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.hipotireoidismo"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.hipotireoidismo"
                     [value]="true"
                     type="radio"
                     name="select5"
                     id="option-5"
                   />
-                  <input
-                    [(ngModel)]="patologia.hipotireoidismo"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.hipotireoidismo"
                     [value]="false"
                     type="radio"
                     name="select6"
@@ -118,15 +127,17 @@
                 <div class="atach">Escolha uma das opções:</div>
 
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.metabolismo_lento"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.metabolismo_lento"
                     [value]="true"
                     type="radio"
                     name="select7"
                     id="option-7"
                   />
-                  <input
-                    [(ngModel)]="patologia.metabolismo_lento"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.metabolismo_lento"
                     [value]="false"
                     type="radio"
                     name="select8"
@@ -147,15 +158,17 @@
                 <div class="atach">Escolha uma das opções:</div>
 
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.retencao_liquida"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.retencao_liquida"
                     [value]="true"
                     type="radio"
                     name="select9"
                     id="option-9"
                   />
-                  <input
-                    [(ngModel)]="patologia.retencao_liquida"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.retencao_liquida"
                     [value]="false"
                     type="radio"
                     name="select10"
@@ -176,15 +189,17 @@
                 <div class="atach">Escolha uma das opções:</div>
 
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.insonia"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.insonia"
                     [value]="true"
                     type="radio"
                     name="select11"
                     id="option-11"
                   />
-                  <input
-                    [(ngModel)]="patologia.insonia"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.insonia"
                     [value]="false"
                     type="radio"
                     name="select11"
@@ -205,15 +220,17 @@
                 <div class="atach">Escolha uma das opções:</div>
 
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.gluten"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.gluten"
                     [value]="true"
                     type="radio"
                     name="select13"
                     id="option-13"
                   />
-                  <input
-                    [(ngModel)]="patologia.gluten"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.gluten"
                     [value]="false"
                     type="radio"
                     name="select14"
@@ -233,15 +250,17 @@
 
                 <div class="atach">Escolha uma das opções:</div>
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.constipacao"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.constipacao"
                     [value]="true"
                     type="radio"
                     name="select15"
                     id="option-15"
                   />
-                  <input
-                    [(ngModel)]="patologia.constipacao"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.constipacao"
                     [value]="false"
                     type="radio"
                     name="select16"
@@ -261,15 +280,17 @@
 
                 <div class="atach">Escolha uma das opções:</div>
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.colesterol_elevado"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.colesterol_elevado"
                     [value]="true"
                     type="radio"
                     name="select17"
                     id="option-17"
                   />
-                  <input
-                    [(ngModel)]="patologia.colesterol_elevado"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.colesterol_elevado"
                     [value]="false"
                     type="radio"
                     name="select18"
@@ -290,15 +311,17 @@
                 <div class="atach">Escolha uma das opções:</div>
 
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.ansiedade"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.ansiedade"
                     [value]="true"
                     type="radio"
                     name="select19"
                     id="option-19"
                   />
-                  <input
-                    [(ngModel)]="patologia.ansiedade"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.ansiedade"
                     [value]="false"
                     type="radio"
                     name="select20"
@@ -319,15 +342,17 @@
                 <div class="atach">Escolha uma das opções:</div>
 
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.gordura_no_figado"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.gordura_no_figado"
                     [value]="true"
                     type="radio"
                     name="select21"
                     id="option-21"
                   />
-                  <input
-                    [(ngModel)]="patologia.gordura_no_figado"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.gordura_no_figado"
                     [value]="false"
                     type="radio"
                     name="select22"
@@ -348,15 +373,17 @@
                 <div class="atach">Escolha uma das opções:</div>
 
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="patologia.anemia"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.anemia"
                     [value]="true"
                     type="radio"
                     name="select23"
                     id="option-23"
                   />
-                  <input
-                    [(ngModel)]="patologia.anemia"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.anemia"
                     [value]="false"
                     type="radio"
                     name="select24"
@@ -387,15 +414,17 @@
               <div class="atach">Escolha uma das opções:</div>
               <form class="">
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="alergia.frutos_do_mar"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.frutos_do_mar"
                     [value]="true"
                     type="radio"
                     name="select25"
                     id="option-25"
                   />
-                  <input
-                    [(ngModel)]="alergia.frutos_do_mar"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.frutos_do_mar"
                     [value]="false"
                     type="radio"
                     name="select26"
@@ -412,22 +441,23 @@
             </div>
 
             <div class="dadosConsulta">
-              <!-- NÃO RODAR ALGORITIMO -->
-              <!--  -->
+              
               <h3>Ovo?</h3>
 
               <div class="atach">Escolha uma das opções:</div>
               <form class="">
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="alergia.ovo"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.ovo"
                     [value]="true"
                     type="radio"
                     name="select27"
                     id="option-27"
                   />
-                  <input
-                    [(ngModel)]="alergia.ovo"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.ovo"
                     [value]="false"
                     type="radio"
                     name="select28"
@@ -444,22 +474,23 @@
             </div>
 
             <div class="dadosConsulta">
-              <!-- NÃO RODAR ALGORITIMO -->
-              <!--  -->
+             
               <h3>Soja?</h3>
 
               <div class="atach">Escolha uma das opções:</div>
               <form class="">
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="alergia.soja"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.soja"
                     [value]="true"
                     type="radio"
                     name="select29"
                     id="option-29"
                   />
-                  <input
-                    [(ngModel)]="alergia.soja"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.soja"
                     [value]="false"
                     type="radio"
                     name="select30"
@@ -481,15 +512,15 @@
               <div class="atach">Escolha uma das opções:</div>
               <form class="">
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="alergia.amendoim"
+                  <input [disabled]="!editavel"
+                    [(ngModel)]="formulario.amendoim"
                     [value]="true"
                     type="radio"
                     name="select31"
                     id="option-31"
                   />
-                  <input
-                    [(ngModel)]="alergia.amendoim"
+                  <input [disabled]="!editavel"
+                    [(ngModel)]="formulario.amendoim"
                     [value]="false"
                     type="radio"
                     name="select31"
@@ -512,22 +543,23 @@
               <h4 class="mobileEstilo">Estilo de Vida</h4>
             </div>
             <div class="dadosConsulta">
-              <!-- NÃO RODAR ALGORITIMO -->
-              <!--  -->
+              
               <h3>Vegano?</h3>
 
               <div class="atach">Escolha uma das opções:</div>
               <form class="">
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="estiloVida.vegano"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.vegano"
                     [value]="true"
                     type="radio"
                     name="select33"
                     id="option-33"
                   />
-                  <input
-                    [(ngModel)]="estiloVida.vegano"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.vegano"
                     [value]="false"
                     type="radio"
                     name="select34"
@@ -544,22 +576,23 @@
             </div>
 
             <div class="dadosConsulta">
-              <!-- NÃO RODAR ALGORITIMO -->
-              <!--  -->
+              
               <h3>Vegetariano (Ovo lacto)?</h3>
 
               <div class="atach">Escolha uma das opções:</div>
               <form class="">
                 <div class="wrapper">
-                  <input
-                    [(ngModel)]="estiloVida.vegetariano"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.vegetariano"
                     [value]="true"
                     type="radio"
                     name="select35"
                     id="option-35"
                   />
-                  <input
-                    [(ngModel)]="estiloVida.vegetariano"
+                  <input 
+                    [disabled]="!editavel"
+                    [(ngModel)]="formulario.vegetariano"
                     [value]="false"
                     type="radio"
                     name="select36"
@@ -576,7 +609,7 @@
             </div>
             <div class="cardBtn">
               <div style="padding-top: 25px"></div>
-              <button class="btn success" id="gerarCardap">
+              <button [disabled]="!editavel" class="btn success" id="gerarCardap">
                 <i class="fas fa-clipboard-check" style="margin-right: 10px"></i
                 >Gerar meu Cardápio
               </button>

@@ -7,9 +7,8 @@ from django.db.models.fields import DateTimeField
 
 from conta.models import Usuario
 
-class Patologia(Model):
+class Formulario(Model):
 
-    data = DateField(auto_now_add=True)
     usuario = ForeignKey(Usuario, on_delete=CASCADE)
 
     hipertensao = BooleanField()
@@ -25,21 +24,12 @@ class Patologia(Model):
     anemia = BooleanField()
     modificado_em = DateTimeField(auto_now=True)
 
-class Alergia(Model):
-
-    data = DateField(auto_now_add=True)
-    usuario = ForeignKey(Usuario, on_delete=CASCADE)
-
-    lactose = BooleanField()
+    # Alergia
     frutos_do_mar = BooleanField()
     ovo = BooleanField()
     soja = BooleanField()
     amendoim = BooleanField()
    
-class EstiloDeVida(Model):
-
-    data = DateField(auto_now_add=True)
-    usuario = ForeignKey(Usuario, on_delete=CASCADE)
-
+    # EstiloDeVida
     vegano = BooleanField()
     vegetariano = BooleanField()
