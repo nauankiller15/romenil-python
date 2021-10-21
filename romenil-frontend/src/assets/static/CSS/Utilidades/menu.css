@@ -411,8 +411,8 @@ nav .menuItems li:hover::before {
 .sistemaEnter {
   border: 1px solid var(--azul);
   background: var(--azul);
-  color: #e0e0e0;
-  font-weight: 500;
+  color: #171717;
+  font-weight: 700;
   width: 50%;
   transition: 0.4s;
   line-height: 40px;
@@ -421,8 +421,8 @@ nav .menuItems li:hover::before {
 .sistemaEnter:hover {
   border: 1px solid var(--azul);
   background: var(--azul);
-  color: #000000;
-  font-weight: 600;
+  color: #fff1f1;
+  font-weight: 800;
   transform: translate(0px, -7px);
 }
 
