@@ -3,6 +3,7 @@ from django.db.models import CASCADE
 from django.db.models import DateField
 from django.db.models import ForeignKey
 from django.db.models import Model
+from django.db.models.fields import DateTimeField
 
 from conta.models import Usuario
 
@@ -22,6 +23,7 @@ class Patologia(Model):
     hipotireoidismo = BooleanField()
     gordura_no_figado = BooleanField()
     anemia = BooleanField()
+    modificado_em = DateTimeField(auto_now=True)
 
 class Alergia(Model):
 

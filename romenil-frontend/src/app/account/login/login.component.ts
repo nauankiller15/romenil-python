@@ -15,8 +15,7 @@ declare var $: any;
 export class LoginComponent implements OnInit {
   login = new Login();
   carregando = false;
-  mask = ''
-  
+  mask = '';
   documento_correto = true;
 
   constructor(
@@ -52,9 +51,9 @@ export class LoginComponent implements OnInit {
     if (this.login.email_cpf_cnpj.match(/^\d{11}$|^\d{14}$|^(\d{3}.){2}\d{3}\-\d{2}$|^\d{2}.\d{3}.\d{3}\/\d{4}\-\d{2}$/)) {
       if (isNaN(Number((this.login.email_cpf_cnpj)))) {
         this.login.email_cpf_cnpj = this.login.email_cpf_cnpj.replace(/\./g, '').replace('-', '').replace('/', '');
-        this.mask = 'CPF_CNPJ'
-        this.documento_correto = true;
       }
+      this.mask = 'CPF_CNPJ'
+      this.documento_correto = true;
     } else if (this.login.email_cpf_cnpj.match(/^\w+\@\w+(\.\w+){1,2}$/)) {
       this.documento_correto = true;
     } else {

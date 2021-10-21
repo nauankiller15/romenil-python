@@ -25,7 +25,7 @@
               id="email_cpf_cnpj"
               [(ngModel)]="login.email_cpf_cnpj"
               placeholder="Digite seu email ou CPF/CNPJ aqui"
-              (focus)="removeMask"
+              (focus)="removeMask()"
               (blur)="getMask()"
               [mask]="mask"
               required
