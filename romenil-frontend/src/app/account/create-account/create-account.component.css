@@ -71,7 +71,7 @@ header {
   background-image: url(),
     url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
   background-position: 100% 81%, 100% 0;
-  background-size: auto, auto;
+  background-size: cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
   height: 100%;

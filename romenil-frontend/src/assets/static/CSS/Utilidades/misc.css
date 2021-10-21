@@ -3180,7 +3180,7 @@ blockquote {
   background-image: url(""),
     url("https://1.bp.blogspot.com/-Ulp2o1lMXm4/YWnOh0DsgMI/AAAAAAAAHeQ/fdCHB0FjXbkeNBZp94f-qhdNW5lPa7fjQCLcBGAsYHQ/s0/bg%2Bromenil%2Bsat.jpg");
   background-position: 100% 0px, 0px 11%;
-  background-size: auto, auto;
+  background-size: cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
   min-height: 95vh;
