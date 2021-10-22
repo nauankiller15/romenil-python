@@ -17,6 +17,10 @@ declare var $: any;
 export class AguardeComponent implements OnInit {
 
   conta = new Conta;
+  data_form = new Date();
+  timer = {horas: 0, minutos: 0, segundos:0};
+  time = 0;
+  intervalo:any = null;
 
   constructor(
     private apiService: ApiService,
@@ -58,7 +62,11 @@ export class AguardeComponent implements OnInit {
     this.apiService.listar('formulario').subscribe(
       (data) => {
         if (data) {
-          this.router.navigate(['cardapios'])
+          let agora = new Date();
+          this.data_form = new Date(data.modificado_em);
+          let atualizacao = new Date(data.modificado_em);
+          this.time = 2 * 3600 - (agora.valueOf() - atualizacao.valueOf()) / 1000 + 1;
+          this.intervalo = setInterval(() => { this.getTimer(); }, 1000);
         }
       },
       (error) => {
@@ -78,5 +86,17 @@ export class AguardeComponent implements OnInit {
         erro.exibir();
       }
     );
+  }
+  
+  getTimer() {
+    this.time --;
+    console.log(this.time)
+    this.timer.horas = Math.floor(this.time / 3600);
+    this.timer.minutos = Math.floor((this.time % 3600) / 60);
+    this.timer.segundos = Math.floor((this.time % 3600) % 60);
+
+    if (this.time <= 1) {
+      this.router.navigate(['cardapios']);
+    }
   }
 }
