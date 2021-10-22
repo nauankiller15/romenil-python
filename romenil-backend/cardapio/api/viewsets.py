@@ -40,7 +40,6 @@ class CardapioEmailViewSet(ViewSet):
     def post(self, request):
         usuario = request.user.usuario_set.last()
         formulario = usuario.formulario_set.last()
-        dados = None
         pronto = False
 
         if Formulario:
@@ -67,13 +66,16 @@ class CardapioEmailViewSet(ViewSet):
             'janta': janta[0],
             'refeicao6': refeicao6[0]
         })  
-        print(cardapio)
 
         subject = u"Cardápio"
         from_email = u'naoresponda@romenilalencar.com.br'
         texto = 'teste'
-        msg = EmailMultiAlternatives(subject, texto, from_email,        
-                                    [request.user.email])
+        msg = EmailMultiAlternatives(
+            subject, 
+            texto, 
+            from_email,        
+            [request.user.email]
+        )
         msg.attach_alternative(cardapio, "text/html")
         msg.send()
        
