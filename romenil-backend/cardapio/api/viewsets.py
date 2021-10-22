@@ -58,13 +58,13 @@ class CardapioEmailViewSet(ViewSet):
         cardapio = render_to_string('cardapio/cardapio.html',{
             'pronto': pronto, 
             'conta': request.user,
-            'desjejum': desjejum[0],
-            'cafeManha': cafeManha[0],
-            'refeicao2': refeicao2[0],
-            'almoco': almoco[0],
-            'refeicao4': refeicao4[0],
-            'janta': janta[0],
-            'refeicao6': refeicao6[0]
+            'desjejum': desjejum[0] if len(desjejum) > 0 else [],
+            'cafeManha': cafeManha[0] if len(cafeManha) > 0 else [],
+            'refeicao2': refeicao2[0] if len(refeicao2) > 0 else [],
+            'almoco': almoco[0] if len(almoco) > 0 else [],
+            'refeicao4': refeicao4[0] if len(refeicao4) > 0 else [],
+            'janta': janta[0] if len(janta) > 0 else [],
+            'refeicao6': refeicao6[0] if len(refeicao6) > 0 else []
         })  
 
         subject = u"Cardápio"
