@@ -41,8 +41,27 @@
                 Nutricionista <b>Romenil Alencar</b>.
               </div>
               <div style="margin-top: 13px">
-                O tempo de espera é de até <b>{{timer.horas}} horas, {{timer.minutos}} minutos e {{timer.segundos}} segundos</b>, afinal o que iremos
-                entregar é algo totalmente personalizado com o que foi analisado
+                O tempo de espera é de até
+                <span *ngIf="timer.horas > 0">
+                  <b>{{timer.horas}}</b>
+                  <span *ngIf="timer.horas > 1"> horas</span>
+                  <span *ngIf="timer.horas == 1"> hora</span>
+                </span>
+                
+                <span *ngIf="timer.minutos > 0">
+                  <span *ngIf="timer.segundos > 0">, </span>
+                  <span *ngIf="timer.segundos == 0"> e </span>
+                  <b>{{timer.minutos}}</b>
+                  <span *ngIf="timer.minutos > 1"> minutos</span>
+                  <span *ngIf="timer.minutos == 1"> minuto</span>
+                </span>
+
+                <span *ngIf="timer.segundos > 0">
+                  e <b>{{timer.segundos}}</b>
+                  <span *ngIf="timer.segundos > 1"> segundos</span>
+                  <span *ngIf="timer.segundos == 1"> segundo</span>
+                </span>
+                , afinal o que iremos entregar é algo totalmente personalizado com o que foi analisado
                 sobre você!
                 <div style="margin-top: 13px">
                   Por isso calma, que logo logo você terá em mãos a dieta que
