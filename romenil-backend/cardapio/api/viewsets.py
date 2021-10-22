@@ -54,17 +54,17 @@ class CardapioEmailViewSet(ViewSet):
                 refeicao4 = cardapios.filter(refeicao=4).values_list('prato')
                 janta = cardapios.filter(refeicao=5).values_list('prato')
                 refeicao6 = cardapios.filter(refeicao=6).values_list('prato')
-             
+       
         cardapio = render_to_string('cardapio/cardapio.html',{
             'pronto': pronto, 
             'conta': request.user,
-            'desjejum': desjejum[0] if len(desjejum) > 0 else [],
-            'cafeManha': cafeManha[0] if len(cafeManha) > 0 else [],
-            'refeicao2': refeicao2[0] if len(refeicao2) > 0 else [],
-            'almoco': almoco[0] if len(almoco) > 0 else [],
-            'refeicao4': refeicao4[0] if len(refeicao4) > 0 else [],
-            'janta': janta[0] if len(janta) > 0 else [],
-            'refeicao6': refeicao6[0] if len(refeicao6) > 0 else []
+            'desjejum': desjejum,
+            'cafeManha': cafeManha,
+            'refeicao2': refeicao2,
+            'almoco': almoco,
+            'refeicao4': refeicao4,
+            'janta': janta,
+            'refeicao6': refeicao6
         })  
 
         subject = u"Cardápio"
