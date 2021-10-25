@@ -43,7 +43,6 @@
   text-align: center;
   color: #e0e0e0;
   padding: 16px 15px 0px 15px;
-  overflow-y: auto;
 }
 /*  */
 
@@ -883,7 +882,7 @@ input[type="radio"] {
 @media (max-width: 1100px) {
   .box-confirm {
     width: 100%;
-    min-height: 50%;
+    min-height: 100%;
     margin: 0vh auto;
   }
 
@@ -1011,7 +1010,6 @@ input[type="radio"] {
     color: #e0e0e0;
     padding: 0px 4px 0px 4px;
     font-size: 0.8em;
-    overflow-x: scroll;
   }
   .dadosConsulta h3 {
     font-size: 0.92em !important;
