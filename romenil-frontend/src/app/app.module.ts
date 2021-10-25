@@ -29,6 +29,7 @@ import { AdminComponent } from './account/admin/admin.component';
 import { AguardeComponent } from './aguarde/aguarde.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { WelcomePagoComponent } from './welcome-pago/welcome-pago.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     EscapeHtmlPipe,
     AdminComponent,
     AguardeComponent,
+    WelcomePagoComponent,
   ],
   imports: [
     MatProgressBarModule,

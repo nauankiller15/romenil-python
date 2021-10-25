@@ -1,0 +1,67 @@
+<div id="bemvindo-pago">
+  <div class="box-text-welcome">
+    <div class="text-info-box">
+      <a id="fecharBtWelcomePago">
+        <div class="fechar-button">X</div>
+      </a>
+      <!-- <app-top-bar [conta]="conta"></app-top-bar> -->
+      <app-top-bar></app-top-bar>
+
+      <div class="containerED">
+        <header>
+          <div class="logo-calc"></div>
+        </header>
+        <div class="separTe"></div>
+        <div class="container-cart">
+          <div class="planejamento">
+            <h2>Faça sua Consulta Alimentar</h2>
+          </div>
+          <h3>
+            <!-- Olá {{ conta.first_name }} {{ conta.last_name }}, seja bem-vindo(a) -->
+            Olá "fname", seja bem-vindo(a)
+          </h3>
+        </div>
+
+        <div style="padding-top: 30px"></div>
+        <div class="content-cardap">
+          <div class="dadosConsulta">
+            <h3>
+              <i class="fas fa-home" style="margin-right: 10px"></i>
+              Acesso exclusivo para você:
+            </h3>
+
+            <!-- SE POSSÍVEL CRIAR ALGUMA CONDIÇÃO PARA CRIAR A COPY PARA OS BOTÕES -->
+            <div class="atach">
+              <!--  -->
+              <!-- 1 condição -->
+              Disponibilizamos para você um acesso exclusivo a um gerador de
+              cardápio!
+              <div style="margin-top: 15px">
+                <!--  -->
+                <!-- 2 condição -->
+                Acesse aqui seu cardápio gerado:
+              </div>
+              <!--  -->
+            </div>
+          </div>
+          <div class="cardBtn">
+            <!-- 1 condição -->
+            <div style="padding-top: 5px"></div>
+            <button id="hideT" routerLink="/formulario" class="btn success">
+              <i class="fas fa-check" style="margin-right: 10px"></i>Preparar
+              meu Cardápio
+            </button>
+            <!--  -->
+            <!-- 2 condição -->
+            <button id="hideT" routerLink="/formulario" class="btn success">
+              <i class="fas fa-clipboard-check" style="margin-right: 10px"></i
+              >Acessar meu Cardápio
+            </button>
+          </div>
+          <!--  -->
+          <div class="linhaE"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
