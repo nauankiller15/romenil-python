@@ -36,11 +36,11 @@ export class FormularioComponent implements OnInit {
 
     // BOTÃO DE ABRIR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
     $('#gerarCardap').on('click', function () {
-      $('#generateCard').fadeIn(250);
+      $('#generateCard').slideDown(550);
     });
       // BOTÃO DE FECHAR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
       $('#closeGenerate').on('click', function () {
-        $('#generateCard').fadeOut(250);
+        $('#generateCard').slideUp(650);
       });
   }
 
