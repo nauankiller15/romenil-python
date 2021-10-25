@@ -3189,7 +3189,6 @@ blockquote {
   font-family: Montserrat, sans-serif;
   animation: 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68) 0s 1 normal none running
     slide-page;
-  overflow: hidden;
 }
 
 .fundo-tit {
@@ -4141,7 +4140,6 @@ blockquote {
     font-family: Montserrat, sans-serif;
     animation: 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68) 0s 1 normal none
       running slide-page;
-    overflow: hidden;
   }
 
   .centerTp {
@@ -5190,6 +5188,13 @@ blockquote {
 }
 
 @media screen and (max-width: 320px) {
+  .color-rest {
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    width: 100%;
+    min-height: 115vh;
+    padding: 10 px 5 px 20 px;
+  }
+
   .e1400-alunos {
     margin-top: 20px;
     border-radius: 10px;
