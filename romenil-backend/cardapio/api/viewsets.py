@@ -40,7 +40,6 @@ class CardapioEmailViewSet(ViewSet):
     def post(self, request):
         usuario = request.user.usuario_set.last()
         formulario = usuario.formulario_set.last()
-        dados = None
         pronto = False
 
         if Formulario:
@@ -55,25 +54,28 @@ class CardapioEmailViewSet(ViewSet):
                 refeicao4 = cardapios.filter(refeicao=4).values_list('prato')
                 janta = cardapios.filter(refeicao=5).values_list('prato')
                 refeicao6 = cardapios.filter(refeicao=6).values_list('prato')
-             
+       
         cardapio = render_to_string('cardapio/cardapio.html',{
             'pronto': pronto, 
             'conta': request.user,
-            'desjejum': desjejum[0],
-            'cafeManha': cafeManha[0],
-            'refeicao2': refeicao2[0],
-            'almoco': almoco[0],
-            'refeicao4': refeicao4[0],
-            'janta': janta[0],
-            'refeicao6': refeicao6[0]
+            'desjejum': desjejum,
+            'cafeManha': cafeManha,
+            'refeicao2': refeicao2,
+            'almoco': almoco,
+            'refeicao4': refeicao4,
+            'janta': janta,
+            'refeicao6': refeicao6
         })  
-        print(cardapio)
 
         subject = u"Cardápio"
         from_email = u'naoresponda@romenilalencar.com.br'
         texto = 'teste'
-        msg = EmailMultiAlternatives(subject, texto, from_email,        
-                                    [request.user.email])
+        msg = EmailMultiAlternatives(
+            subject, 
+            texto, 
+            from_email,        
+            [request.user.email]
+        )
         msg.attach_alternative(cardapio, "text/html")
         msg.send()
        
