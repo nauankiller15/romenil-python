@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
       }
       this.mask = 'CPF_CNPJ'
       this.documento_correto = true;
-    } else if (this.login.email_cpf_cnpj.match(/^\w+\@\w+(\.\w+){1,2}$/)) {
+    } else if (this.login.email_cpf_cnpj.match(/^[\.\_\w]+\@\w+(\.\w+){1,2}$/)) {
       this.documento_correto = true;
     } else {
       this.documento_correto = false;
