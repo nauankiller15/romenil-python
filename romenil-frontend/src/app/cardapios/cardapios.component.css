@@ -400,7 +400,7 @@ header {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   .cardBtn {
     margin: -30px auto 27px auto;
     width: 84%;

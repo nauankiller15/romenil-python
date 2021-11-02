@@ -13,7 +13,6 @@ declare var $: any;
   styleUrls: ['./calculadora.component.css'],
 })
 export class CalculadoraComponent implements OnInit {
-
   conta = new Conta();
   calculadora = {} as Calculadora;
   imc = 0;
@@ -22,7 +21,10 @@ export class CalculadoraComponent implements OnInit {
   loseWeight = 0;
   gainWeight = 0;
 
-  constructor(private accountService: AccountService, private toastrService:ToastrService) { 
+  constructor(
+    private accountService: AccountService,
+    private toastrService: ToastrService
+  ) {
     this.getConta();
   }
 
@@ -43,12 +45,19 @@ export class CalculadoraComponent implements OnInit {
       $('#resultados').slideUp(450);
       $('.cardBtn').slideDown(250);
     });
-// GERAR CARDÁPIO ANIM
-$('#prossegCamp').on('click', function () {
-  $('#prosseg').fadeIn(450);
-  $('#resultados').fadeOut(450);
-});
-// 
+    // GERAR CARDÁPIO ANIM
+    $('#prossegCamp').on('click', function () {
+      $('#prosseg').fadeIn(450);
+      $('#resultados').fadeOut(450);
+    });
+    //
+    $('.select1').on('change', () => {
+      'male' === $(this).val()
+        ? $('.choose1').fadeIn(250)
+        : $('.choose1').fadeOut(250);
+      //
+    });
+
     $('.select1').on('click', function () {
       $('.choose1').fadeOut(250);
     });
@@ -70,7 +79,9 @@ $('#prossegCamp').on('click', function () {
   }
 
   calcularIMC() {
-    this.imc = this.calculadora.peso / (this.calculadora.altura * this.calculadora.altura/10000);
+    this.imc =
+      this.calculadora.peso /
+      ((this.calculadora.altura * this.calculadora.altura) / 10000);
 
     if (this.imc < 18.5) {
       this.diagnostico = 'abaixo do peso';
@@ -90,14 +101,22 @@ $('#prossegCamp').on('click', function () {
   calcularTMB() {
     const tmb = Math.round(
       this.calculadora.sexo == 'male'
-      ? 66 + (13.8 * this.calculadora.peso) + (5 * this.calculadora.altura) - (6.8 * this.calculadora.idade)
-      : 655 + (9.6 * this.calculadora.peso) + (1.8 * this.calculadora.altura) - (4.7 * this.calculadora.idade)
+        ? 66 +
+            13.8 * this.calculadora.peso +
+            5 * this.calculadora.altura -
+            6.8 * this.calculadora.idade
+        : 655 +
+            9.6 * this.calculadora.peso +
+            1.8 * this.calculadora.altura -
+            4.7 * this.calculadora.idade
     );
-          
-    this.maintenance = Math.round(tmb * Number(this.calculadora.nivel_atividade));
+
+    this.maintenance = Math.round(
+      tmb * Number(this.calculadora.nivel_atividade)
+    );
     this.loseWeight = this.maintenance - 450;
     this.gainWeight = this.maintenance + 450;
-}
+  }
 
   submit() {
     this.calcularIMC();

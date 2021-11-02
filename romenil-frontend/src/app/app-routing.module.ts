@@ -11,6 +11,7 @@ import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
 import { AdminComponent } from './account/admin/admin.component';
 import { AguardeComponent } from './aguarde/aguarde.component';
+import { WelcomePagoComponent } from './welcome-pago/welcome-pago.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     children: [
       { path: 'welcome', component: WelcomeComponent },
+      { path: 'welcome_exclusive', component: WelcomePagoComponent },
       { path: 'calculadora', component: CalculadoraComponent },
       { path: 'cardapios', component: CardapiosComponent },
       { path: 'formulario', component: FormularioComponent },
