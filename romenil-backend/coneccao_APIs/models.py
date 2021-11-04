@@ -54,7 +54,7 @@ class Eduzz:
         if contrato is None:
             subscriptions = self.subscription_list()
             for subscription in subscriptions:
-                if subscription['client_document'] == self.client_document and subscription['product_id'] == 1048167:
+                if subscription['client_document'] == self.client_document and subscription['product_id'] in (1048167, 1048227, 1048233):
                     contrato = Subscription.objects.create(
                         client_document = subscription['client_document'],
                         contract_id = subscription['contract_id'],

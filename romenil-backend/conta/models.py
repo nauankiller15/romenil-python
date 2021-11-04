@@ -27,3 +27,7 @@ class Usuario(Model):
         patologia = self.patologia_set.last()
 
         return patologia.modificado_em
+
+    def __str__(self):
+        return f'{self.usuario.first_name} {self.usuario.last_name} - {self.cpf_ou_cnpj}'
+    
