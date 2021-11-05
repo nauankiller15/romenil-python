@@ -1,6 +1,3 @@
-import re
-from django.db.models.fields import DateField, EmailField, IntegerField
-from django.utils import timezone
 from django.contrib.auth.models import User
 from django.db.models import CASCADE
 from django.db.models import CharField
