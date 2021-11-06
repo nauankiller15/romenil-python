@@ -120,7 +120,9 @@ export class CardapiosComponent implements OnInit {
   enviarEmail() {
     this.apiService.salvar('cardapio/via-email', null).subscribe(
       (data) => {
-        console.log(data)        
+        console.log(data);
+        this.toastrService.success('Cardápio enviado para o seu Email!');
+
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
