@@ -12,16 +12,6 @@ from django.utils import timezone
 
 from romenil.variaveis_de_ambiente import APIKEY, PUBLICKEY, EMAIL_API
 
-class Subscription(Model):
-
-    client_document = CharField(max_length=14)
-    contract_id = IntegerField()
-    client_id = IntegerField()
-    product_id = IntegerField()
-    client_email = EmailField()
-    contract_status = CharField(max_length=15)  
-    atualizado_em = DateTimeField(auto_now=True)
-
 class Sale(Model):
 
     client_document = CharField(max_length=14)
