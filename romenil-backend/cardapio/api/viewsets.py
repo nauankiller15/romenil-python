@@ -23,16 +23,17 @@ class CardapioViewSet(ViewSet):
 
         usuario = request.user.usuario_set.last()
         formulario = usuario.formulario_set.last()
+        completed_form = formulario is not None
         dados = None
         pronto = False
 
-        if Formulario:
+        if completed_form:
             if formulario.modificado_em < datetime.now(timezone.utc) - timedelta(hours=2):
                 cardapios = gerar_cardapio(formulario)
                 dados = CardapioSerializer(cardapios, many=True).data
                 pronto = True
 
-        return Response({'pronto': pronto, 'dados': dados})
+        return Response({'pronto': pronto, 'dados': dados, 'completed_form': completed_form})
 
 class CardapioEmailViewSet(ViewSet):
     permission_classes = [IsAuthenticated]

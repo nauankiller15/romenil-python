@@ -26,10 +26,14 @@ class Sale(Model):
 
     client_document = CharField(max_length=14)
     sale_id = IntegerField()
-    product_id = IntegerField()
+    content_id = IntegerField()
     client_email = EmailField()
     sale_status = IntegerField()
     atualizado_em = DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.client_email} - {self.client_document}'
+    
 
 
 class TokenEduzz(Model):
@@ -115,9 +119,9 @@ class Eduzz:
                 print(sale)
                 print('==================')
                 
-                sale_object, created = Subscription.objects.update_or_create(
+                sale_object, created = Sale.objects.update_or_create(
                     client_document = sale['client_document'],
-                    product_id = sale['product_id'],
+                    content_id = sale['content_id'],
                     client_email = sale['client_email'],
                     sale_status = sale['sale_status'],
                     defaults={'sale_id': sale['sale_id']}
@@ -155,7 +159,7 @@ class Eduzz:
 
     def sale_list(self):
         end_date = datetime.now().date()
-        start_date = (end_date - timedelta(days=6*30)).date()
+        start_date = (end_date - timedelta(days=6*30))
         
         params = {
             'client_document': self.client_document,

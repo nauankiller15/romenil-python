@@ -7,7 +7,6 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.viewsets import GenericViewSet, ViewSet
 
-from coneccao_APIs.models import Eduzz
 from conta.api.serializers import ContaSerializer, UsuarioSerializer
 
 

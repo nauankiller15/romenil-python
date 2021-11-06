@@ -83,11 +83,8 @@ export class CardapiosComponent implements OnInit {
   getCardapios() {
     this.apiService.listar('cardapio').subscribe(
       (data) => {
-        if (data) {
-          if (data.pronto == false) {
-            this.router.navigate(['aguarde'])
-          }
-
+        
+        if (data.pronto == true) {
           let dados = data.dados;
           for (let cardapio in dados) {
             if (dados[cardapio].refeicao == 0) {
@@ -107,8 +104,12 @@ export class CardapiosComponent implements OnInit {
             }
           }
         } else {
-          this.router.navigate(['formulario'])
-        }
+          if (data.completed_form == true) {
+            this.router.navigate(['aguarde'])
+          } else {
+            this.router.navigate(['formulario'])
+          }
+        }       
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
