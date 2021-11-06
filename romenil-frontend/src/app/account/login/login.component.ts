@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) { 
     if (this.accountService.autenticado()) {
-      this.router.navigate(['/welcome']);
+      this.redirectPage();
     }
   }
 
@@ -67,13 +67,32 @@ export class LoginComponent implements OnInit {
       (data) => {
         window.localStorage.setItem('token', data.token);
         this.toastrService.success('Login efetuado com sucesso!');
-        this.router.navigate(['/welcome']);
+        
+        this.redirectPage();
       },
 
       (error) => {
         this.carregando = false;
         const erro = new Erro(this.toastrService, error);
         erro.exibir()        
+      }
+    );
+  }
+
+  redirectPage() {
+    // verifica se o usuário está ativo e faz o devido redirecionamento
+
+    this.accountService.usuario().subscribe(
+      (data) => {
+        if (data.ativo == true) {
+          this.router.navigate(['welcome_exclusive'])
+        } else {
+          this.router.navigate(['welcome'])
+        }
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
       }
     );
   }
