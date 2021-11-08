@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'formulario',
     'cardapio',
     'coneccao_APIs',
+    'dashboard',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,138 @@
+#cardapios {
+  background: #0a0e17;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+
+.cardapios-dashboard {
+  padding-top: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.menu-patologias {
+  margin-top: 50px;
+  position: static;
+  text-align: justify;
+}
+
+.patologia {
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 99;
+}
+
+.patologia ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(0deg, #0a0e17 0%, #2a2a2a 100%);
+  border-bottom: solid #272727;
+}
+
+.patologia ul li {
+  text-align: center;
+  width: 30%;
+  float: left;
+  list-style: none;
+}
+
+.patologia ul li:hover {
+  background: rgb(225, 225, 225);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 0 -2px 0 2px rgb(225, 225, 225);
+  cursor: pointer;
+}
+
+.active {
+  background: #fff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.content-cardap {
+    width: 100%;
+    padding: 15px;
+    padding-top: 20px;
+    margin: 4vh auto;
+}
+
+.container-cart {
+    width: 80%;
+    margin: auto;
+    border-top: 2px solid var(--azul);
+    padding: 10px 0px 10px 0px;
+    animation: slide-top 0.9 ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .container-cart h3 {
+    font-size: 2em;
+    text-align: center;
+    background-color: #0a0e17;
+    color: #fff;
+    width: 75%;
+    margin: -21px auto;
+    font-weight: 350;
+    animation: scalePlan 1.4s ease-in-out;
+    border-radius: 10px;
+  }
+
+.refeicao {
+    padding: 13px;
+    font-size: 1.23em;
+    width: 90%;
+    margin: 2vh 4vh 2vh 2vh;
+    animation: slide-left 1.2s ease-in-out;
+    display: block;
+}
+
+.refeicao label {
+    color: var(--azul);
+    border-bottom: 1px solid #272727;
+    border-right: none;
+    line-height: 50px;
+    width: 100%;
+}
+
+.cardapio {
+    margin-bottom: 30px;
+    text-align: justify;
+    font-weight: 400;
+    animation: slide-left 1.2s ease-in-out;
+}
+  
+.cardapio p {
+    margin-bottom: -30px;
+}
+
+.cafeManha {
+    color: #fff;
+    background-image: linear-gradient(0deg, #0a0e17 0%, #3e4214 100%) !important;
+    box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+      0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+      0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  }
+  .almoco {
+    color: #fff;
+    background-image: linear-gradient(0deg, #0a0e17 0%, #2a2a2a 100%) !important;
+    box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+      0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+      0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  }
+  
+  .janta {
+    color: #fff;
+    background-image: linear-gradient(0deg, #0a0e17 0%, #32263e 100%) !important;
+    box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
+      0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
+      0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+  }

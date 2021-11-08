@@ -9,18 +9,26 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthGuardService } from './shared/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
-import { AdminComponent } from './account/admin/admin.component';
 import { AguardeComponent } from './aguarde/aguarde.component';
 import { WelcomePagoComponent } from './welcome-pago/welcome-pago.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/dashboard-cardapios.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'create-account', component: CreateAccountComponent },
   {
-    path: 'admin',
-    component: AdminComponent,
-    // canActivate: [AuthGuardService],
+    path: 'dashboard',
+    children: [
+      {
+        path: '', component: DashboardComponent, 
+      },
+      {
+        path: 'cardapios', component: DashboardCardapiosComponent, 
+      },
+    ]
   },
+    
   { path: '', component: AppComponent },
   {
     path: '',

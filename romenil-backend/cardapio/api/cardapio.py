@@ -10,7 +10,7 @@ PNP: Nenhuma Patologia principal
 # Patologias secundárias
 ML: Metabolismo Lento
 CO: Constipação
-IS: Insonia
+IN: Insonia
 CE: Colesterol Elevado
 AN: Ansiedade
 RL: Retensão Liquida
@@ -49,7 +49,11 @@ def gerar_cardapio(patologia):
     elif ansiedade:
         cardapios = cardapios.filter(secundaria='AN')
     elif retencao_liquida:
-        cardapios = cardapios.filter(secundaria='RL')
+        # retenção liquida não conta se tiver diabetes ou hipertensão
+        if diabetes or hipertensao:
+            cardapios = cardapios.filter(secundaria='NP')
+        else:
+            cardapios = cardapios.filter(secundaria='RL')
     else:
         cardapios = cardapios.filter(secundaria='NP')
 

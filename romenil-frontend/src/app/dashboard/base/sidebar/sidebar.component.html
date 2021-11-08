@@ -1,0 +1,32 @@
+<div class="sidebar-dashboard">
+    <ul>
+        <li [ngClass]="{'active-menu': ativo == 'dashboard'}">
+            <a routerLink="/dashboard">
+                <span class="icon"><i class="fas fa-chart-line"></i></span>
+                <span class="title">Dashboard</span>
+            </a>
+        </li>
+
+        <li [ngClass]="{'active-menu': ativo == 'cardapios'}">
+            <a routerLink="/dashboard/cardapios">
+                <span class="icon"><i class="fas fa-utensils"></i></span>
+                <span class="title">Cardápios</span>
+            </a>
+        </li>
+
+        <li [ngClass]="{'active-menu': ativo == 'clientes-ativos'}">
+            <a routerLink="/dashboard">
+                <span class="icon"><i class="fas fa-users"></i></span>
+                <span class="title">Clientes ativos</span>
+            </a>
+        </li>
+
+        <li [ngClass]="{'active-menu': ativo == 'cardapio-email'}">
+            <a routerLink="dashboard">
+                <span class="icon"><i class="fas fa-utensils"></i></span>
+                <span class="title">Cardápio E-mail</span>
+            </a>
+        </li>
+    </ul>
+</div>
+  

@@ -1,0 +1,19 @@
+.dashboard-content {
+    position: relative;
+    width: 100%;
+    background-color: #0a0e17;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.dashboard-container {
+    position: relative;
+    width: 100%;
+}
+
+.dashboard-main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+}
+

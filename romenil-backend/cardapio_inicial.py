@@ -14,7 +14,7 @@ NP: Nenhuma Patologia principal
 # Patologias secundárias
 ML: Metabolismo Lento
 CO: Constipação
-IS: Insonia
+IN: Insonia
 CE: Colesterol Elevado
 AN: Ansiedade
 RL: Retensão Liquida
@@ -32,7 +32,7 @@ DINP: Diabetes e Nenhuma Patologia secundária
 
 HIML: Hipertensão e Metabolismo Lento
 HICO: Hipertensão e Constipação
-HIIS: Hipertensão e Insonia
+HIIN: Hipertensão e Insonia
 HICE: Hipertensão e Colesterol Elevado
 HIAN: Hipertensão e Ansiedade
 HIRL: Hipertensão e Retensão Liquida
@@ -40,7 +40,7 @@ HINP: Hipertensão e Nenhuma Patologia secundária
 
 NPML: Nenhuma Patologia Principal e Metabolismo Lento
 NPCO: Nenhuma Patologia Principal e Constipação
-NPIS: Nenhuma Patologia Principal e Insonia
+NPIN: Nenhuma Patologia Principal e Insonia
 NPCE: Nenhuma Patologia Principal e Colesterol Elevado
 NPAN: Nenhuma Patologia Principal e Ansiedade
 NPRL: Nenhuma Patologia Principal e Retensão Liquida
@@ -1025,34 +1025,27 @@ HIML = [
         'principal': 'HI',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '',
+        'prato': '•	Própolis (gotas: 15)',
     },
     {
         'refeicao': 0,
         'principal': 'HI',
         'secundaria': 'ML',
         'ordem': 4,
-        'prato': '⦁	Própolis (gotas: 15)',
+        'prato': '•	Cúrcuma (Colher de chá (2,05g): 1)',
     },
     {
         'refeicao': 0,
         'principal': 'HI',
         'secundaria': 'ML',
         'ordem': 5,
-        'prato': '⦁	Cúrcuma (Colher de chá (2,05g): 1)',
+        'prato': '•	Pimenta caiena (Pitada (0,70g): 1)',
     },
     {
         'refeicao': 0,
         'principal': 'HI',
         'secundaria': 'ML',
         'ordem': 6,
-        'prato': '⦁	Pimenta caiena (Pitada (0,70g): 1)',
-    },
-    {
-        'refeicao': 0,
-        'principal': 'HI',
-        'secundaria': 'ML',
-        'ordem': 7,
         'prato': '⦁	Água (Copo médio (200ml): 1)',
     },
 

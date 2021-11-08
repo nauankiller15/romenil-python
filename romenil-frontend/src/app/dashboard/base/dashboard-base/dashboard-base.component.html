@@ -1,0 +1,14 @@
+<div class="dashboard-content">
+    <div class="dashboard-container">
+        <app-sidebar [ativo]="ativo"></app-sidebar>
+        <div class="dashboard-main">
+            <div class="topbar"></div>
+            <div class="toggle">
+                <i class="fa fa-menu"></i>
+            </div>
+            <div>
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

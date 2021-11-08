@@ -1,0 +1,173 @@
+<div id="cardapios">
+    <app-dashboard-base [ativo]="ativo">
+        <div class="cardapios-dashboard">
+            <div class="container-cart">
+                <h3>Cardápios</h3>
+            </div>
+
+            <div class="menu-patologias">
+                <div class="patologia">
+                    <ul>
+                        <li *ngFor="let principal of principais" (click)="selectPrincipal(principal[0])"
+                            [ngClass]="{'active': principal[0] == patologiaPrincipal}"
+                        >
+                            {{principal[1]}}
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="patologia">
+                    <ul >
+                        <li *ngFor="let secundaria of secundarias" (click)="selectSecundaria(secundaria[0])"
+                        [ngClass]="{'active': secundaria[0] == patologiaSecundaria}"
+                        >
+                            {{secundaria[1]}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-cardap">
+                <div class="refeicao" *ngIf="cardapios.desjejum.length > 0">
+                    <label><i class="fas fa-mug-hot favTit"></i> Desjejum</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio" *ngIf="cardapios.desjejum.length > 0">
+                        <p>
+                            {{ cardapios.desjejum[0].prato }}
+                        </p>
+
+                        <p></p>
+                        <p *ngFor="let prato of cardapios.desjejum.slice(1)">
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato.prato }}
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="refeicao cafeManha">
+                    <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio" *ngIf="cardapios.cafeManha.length > 0">
+                        <p>
+                            {{ cardapios.cafeManha[0].prato }}
+                        </p>
+
+                        <p></p>
+                        <p *ngFor="let prato of cardapios.cafeManha.slice(1)">
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato.prato }}
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+                <div class="refeicao">
+                    <label><i class="fas fa-utensils favTit"></i> Refeição 2</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio" *ngIf="cardapios.refeicao2.length > 0">
+                        <p>
+                            {{ cardapios.refeicao2[0].prato }}
+                        </p>
+
+                        <p></p>
+                        <p *ngFor="let prato of cardapios.refeicao2.slice(1)">
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato.prato }}
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+                <div class="refeicao almoco">
+                    <label><i class="fas fa-utensils favTit"></i> Almoço</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio" *ngIf="cardapios.almoco.length > 0">
+                        <p>
+                            {{ cardapios.almoco[0].prato }}
+                        </p>
+
+                        <p></p>
+                        <p *ngFor="let prato of cardapios.almoco.slice(1)">
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato.prato }}
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+                <div class="refeicao">
+                    <label><i class="fas fa-utensils favTit"></i> Refeição 4</label>
+                    <div class="linhaE"></div>
+                    <div class="cardapio" *ngIf="cardapios.refeicao4.length > 0">
+                        <p>
+                            {{ cardapios.refeicao4[0].prato }}
+                        </p>
+
+                        <p></p>
+                        <p *ngFor="let prato of cardapios.refeicao4.slice(1)">
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato.prato }}
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+                <div class="refeicao janta">
+                    <label><i class="fas fa-utensils favTit"></i> Janta</label>
+                    <div class="linhaE"></div>
+                    <div class="cardapio" *ngIf="cardapios.janta.length > 0">
+                        <p>
+                            {{ cardapios.janta[0].prato }}
+                        </p>
+
+                        <p></p>
+                        <p *ngFor="let prato of cardapios.janta.slice(1)">
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato.prato }}
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+                <div class="refeicao">
+                    <label><i class="fas fa-utensils favTit"></i> Refeição 6</label>
+                    <div class="linhaE"></div>
+
+                    <div class="cardapio" *ngIf="cardapios.refeicao6.length > 0">
+                        <p>
+                            {{ cardapios.refeicao6[0].prato }}
+                        </p>
+
+                        <p></p>
+                        <p *ngFor="let prato of cardapios.refeicao6.slice(1)">
+                            <caption>
+                                COM
+                            </caption>
+                            {{ prato.prato }}
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </app-dashboard-base>
+</div>

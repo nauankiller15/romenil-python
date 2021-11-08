@@ -1,0 +1,120 @@
+.sidebar-dashboard {
+    color: #0a0e17;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--azul);
+    border-left: 10px solid var(--azul);
+    overflow: hidden;
+}
+
+.sidebar-dashboard ul {
+    color: #0a0e17;
+    margin-left: -32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar-dashboard ul li {
+    position: relative;
+    width: 112.5%;
+    list-style: none;
+}
+
+.sidebar-dashboard ul li:hover {
+    background: #0a0e17;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.sidebar-dashboard ul li a {
+    color: #0a0e17;
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+}
+
+.sidebar-dashboard ul li:hover a {
+    color: #fff;
+}
+
+.sidebar-dashboard ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;    
+    text-align: center;
+    padding-top: 11px;
+}
+
+.sidebar-dashboard ul li a .title {
+    position: relative;
+    display: block;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.sidebar-dashboard ul li:hover a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -60px;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 30px 30px 0 0px #0a0e17;
+    pointer-events: none;
+}
+
+.sidebar-dashboard ul li:hover a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 30px -30px 0 0px #0a0e17;
+    pointer-events: none;
+}
+
+.sidebar-dashboard .active-menu{
+    background: #0a0e17;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.sidebar-dashboard ul .active-menu a {
+    color: #fff;
+}
+
+.sidebar-dashboard ul .active-menu a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -60px;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 30px 30px 0 0px #0a0e17;
+    pointer-events: none;
+}
+
+.sidebar-dashboard ul .active-menu a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 30px -30px 0 0px #0a0e17;
+    pointer-events: none;
+}
