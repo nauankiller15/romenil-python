@@ -8,7 +8,7 @@ declare var $: any;
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  ativo = 'dashboard';
+  pagina = 'dashboard';
 
   constructor() { }
 

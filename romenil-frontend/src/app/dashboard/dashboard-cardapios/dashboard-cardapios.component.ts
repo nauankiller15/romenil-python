@@ -13,7 +13,7 @@ declare var $: any;
 })
 export class DashboardCardapiosComponent implements OnInit {
 
-  ativo = 'cardapios';
+  pagina = 'cardapios';
   todosCardapios: CardapioCompleto[] = [];
   cardapios = new CardapiosCompletos();
   principais = [['DI', 'Diabetes'], ['HI', 'Hipertensao'], ['NP', 'Nenhuma Patologia principal']];

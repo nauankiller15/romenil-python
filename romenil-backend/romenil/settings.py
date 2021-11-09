@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'cardapio',
     'coneccao_APIs',
     'dashboard',
+    'permissoes',
 ]
 
 MIDDLEWARE = [

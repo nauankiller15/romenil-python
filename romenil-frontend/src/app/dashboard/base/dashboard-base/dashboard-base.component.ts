@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-base.component.css']
 })
 export class DashboardBaseComponent implements OnInit {
-  @Input() ativo = '';
+  @Input() pagina = '';
   
   constructor() { }
 

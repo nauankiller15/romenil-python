@@ -33,6 +33,7 @@ import { DashboardBaseComponent } from './dashboard/base/dashboard-base/dashboar
 import { SidebarComponent } from './dashboard/base/sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/dashboard-cardapios.component';
+import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/das
     SidebarComponent,
     DashboardBaseComponent,
     DashboardCardapiosComponent,
+    PermissoesComponent,
   ],
   imports: [
     MatProgressBarModule,

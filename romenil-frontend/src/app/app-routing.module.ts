@@ -13,19 +13,17 @@ import { AguardeComponent } from './aguarde/aguarde.component';
 import { WelcomePagoComponent } from './welcome-pago/welcome-pago.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/dashboard-cardapios.component';
+import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'create-account', component: CreateAccountComponent },
   {
-    path: 'dashboard',
+    path: 'dashboard', canActivate: [AuthGuardService],
     children: [
-      {
-        path: '', component: DashboardComponent, 
-      },
-      {
-        path: 'cardapios', component: DashboardCardapiosComponent, 
-      },
+      {path: '', component: DashboardComponent},
+      {path: 'cardapios', component: DashboardCardapiosComponent},
+      {path: 'permissoes', component: PermissoesComponent},
     ]
   },
     
