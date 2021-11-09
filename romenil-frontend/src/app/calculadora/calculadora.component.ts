@@ -50,6 +50,9 @@ export class CalculadoraComponent implements OnInit {
       $('#prosseg').fadeIn(450);
       $('#resultados').fadeOut(450);
     });
+    $('.generateCardap').on('click', function () {
+      $('.loader-wrapper').fadeIn(250).delay(1000).fadeOut(250);
+    });
     //
     $('.select1').on('change', () => {
       'male' === $(this).val()

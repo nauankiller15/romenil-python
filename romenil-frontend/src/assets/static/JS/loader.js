@@ -8,9 +8,9 @@ $(window).on("load", function () {
 });
 
 $(document).ajaxStart(function () {
-  $(".loader-wrapper").show();
+  $(".loader-wrapper").fadeIn(250);
 });
 
 $(document).ajaxStop(function () {
-  $(".loader-wrapper").hide();
+  $(".loader-wrapper").fadeOut(250);
 });

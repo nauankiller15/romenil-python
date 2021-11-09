@@ -9,11 +9,10 @@ declare var $: any;
 @Component({
   selector: 'app-conversao',
   templateUrl: './conversao.component.html',
-  styleUrls: ['./conversao.component.css']
+  styleUrls: ['./conversao.component.css'],
 })
 export class ConversaoComponent implements OnInit {
   conta = new Conta();
-
 
   constructor(
     private accountService: AccountService,
@@ -24,9 +23,8 @@ export class ConversaoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    $('#fecharBtConversao').on('click', function () {
-      $('#conversao').fadeOut('100');
-      $('body').removeClass('noborder');
+    $('.generateCardap').on('click', function () {
+      $('.loader-wrapper').fadeIn(250).delay(1560).fadeOut(250);
     });
     $('body').addClass('noborder');
   }
@@ -56,7 +54,7 @@ export class ConversaoComponent implements OnInit {
         if (!data.usuario) {
           this.router.navigate(['/create-account']);
         } else if (data.ativo) {
-          this.router.navigate(['formulario'])
+          this.router.navigate(['formulario']);
         } else {
           this.getConta();
         }

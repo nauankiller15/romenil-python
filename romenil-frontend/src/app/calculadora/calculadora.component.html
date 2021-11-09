@@ -1,4 +1,4 @@
-<div class="dashFundo"  style="display: block !important"></div>
+<div class="dashFundo" style="display: block !important"></div>
 
 <div id="calculadora">
   <div class="box-text-calculadora">
@@ -34,6 +34,7 @@
                 [class.is-valid]="sexo.valid && sexo.touched"
                 placeholder="Selecione"
               >
+                <option value="">Selecione</option>
                 <option value="male">Masculino</option>
                 <option value="female">Feminino</option>
               </select>
@@ -114,6 +115,7 @@
                   nivel_atividade.valid && nivel_atividade.touched
                 "
               >
+                <option value="">Selecione</option>
                 <option value="1.2">Sedentário</option>
                 <option value="1.375">Pouca atividade</option>
                 <option value="1.55">Atividade moderada</option>
@@ -202,7 +204,7 @@
                 saúde e boa forma, é muito simples, clique no botão abaixo...
               </div>
             </div>
-            <button routerLink="/formulario" class="btn success">
+            <button routerLink="/formulario" class="btn success generateCardap">
               <i class="fas fa-clipboard-list" style="margin-right: 10px"></i
               >Gerar meu Cardápio
             </button>
