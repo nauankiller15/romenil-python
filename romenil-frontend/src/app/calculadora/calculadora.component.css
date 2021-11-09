@@ -223,7 +223,7 @@ header {
   color: #ffffffc9;
   margin-bottom: 30px;
   margin-top: 28px;
-  animation: slide-left 2.2s ease-in-out;
+  animation: slide-left 1.22s ease-in-out;
   margin-left: -105px;
   border: 2px solid var(--azul);
   padding: 23px;

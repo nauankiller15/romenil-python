@@ -44,6 +44,7 @@
   list-style: none;
   padding: 12px;
   color: #fff;
+  transition: 0.32s all;
 }
 
 .patologia ul li:hover {

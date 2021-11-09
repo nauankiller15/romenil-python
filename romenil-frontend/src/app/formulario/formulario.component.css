@@ -98,7 +98,7 @@ header {
   margin: 14vh auto;
   padding: 0 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-formForm 1.4s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-formForm 0.79s cubic-bezier(0.85, 0.18, 0.32, 0.68);
 }
 
 .planejamento {

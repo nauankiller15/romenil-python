@@ -1,4 +1,4 @@
-<div class="dashFundo"  style="display: block !important"></div>
+<div class="dashFundo" style="display: block !important"></div>
 
 <div id="formulario">
   <div class="box-text-formulario">
@@ -27,7 +27,8 @@
             </div>
             <div>
               <h5 class="modifcadoT">
-                Cardápio gerado em: {{ formulario.modificado_em | date: "dd/M/Y" }}
+                Cardápio gerado em:
+                {{ formulario.modificado_em | date: "dd/M/Y" }}
               </h5>
             </div>
             <form class="setMarg" (disabled)="(true)">
@@ -616,7 +617,10 @@
                 >Gerar meu Cardápio
               </button>
               <button id="hideT" routerLink="/cardapios" class="btn success">
-                <i class="fas fa-clipboard-check" style="margin-right: 10px"></i>
+                <i
+                  class="fas fa-clipboard-check"
+                  style="margin-right: 10px"
+                ></i>
                 Acessar meu Cardápio
               </button>
             </div>
@@ -637,7 +641,13 @@
                   </div>
                   <div style="margin-top: 2px">
                     Caso esteja tudo correto, só clicar no botão de
-                    <b class="azul">Gerar meu Cardápio!</b>
+                    <b class="azul"
+                      ><i
+                        class="fas fa-clipboard-check"
+                        style="margin-right: 6px; margin-left: 8px"
+                      ></i
+                      >Gerar meu Cardápio!</b
+                    >
                   </div>
                   <div class="cardBtn2">
                     <div style="padding-top: 25px"></div>
