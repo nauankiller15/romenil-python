@@ -16,8 +16,8 @@ export class DashboardCardapiosComponent implements OnInit {
   pagina = 'cardapios';
   todosCardapios: CardapioCompleto[] = [];
   cardapios = new CardapiosCompletos();
-  principais = [['DI', 'Diabetes'], ['HI', 'Hipertensao'], ['NP', 'Nenhuma Patologia principal']];
-  secundarias = [['ML', 'Metabolismo Lento'], ['CO', 'Constipação'], ['IN', 'Insônia'], ['CE', 'Colesterol Elevado'], ['AN', 'Ansiedade'], ['RL', 'Retensão Liquida'], ['CL', 'Celíaco'], ['NP', 'Nenhuma Patologia secundária']];
+  principais = [['DI', 'Diabetes'], ['HI', 'Hipertensão'], ['NP', 'Nenhuma Patologia principal']];
+  secundarias = [['ML', 'Metabolismo Lento'], ['CO', 'Constipação'], ['IN', 'Insônia'], ['CE', 'Colesterol Elevado'], ['AN', 'Ansiedade'], ['RL', 'Retenção Liquida'], ['CL', 'Celíaco'], ['NP', 'Nenhuma Patologia secundária']];
   patologiaPrincipal = 'DI';
   patologiaSecundaria = "ML"
   

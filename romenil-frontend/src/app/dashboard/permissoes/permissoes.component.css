@@ -9,13 +9,23 @@
   overflow-y: scroll;
 }
 
-.titulo {
-  background: #0a0e17;
-  color: #fff;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: bold;
+.container-cart {
+  width: 80%;
+  margin: auto;
+  padding: 10px 0px 10px 0px;
+  animation: slide-top 0.9 ease-in-out;
+  border-radius: 10px;
+}
+
+.container-cart h3 {
+  font-size: 2em;
   text-align: center;
+  color: #fff;
+  width: 75%;
+  margin: -25px auto -7px auto;
+  font-weight: 350;
+  animation: scalePlan 1.4s ease-in-out;
+  border-radius: 10px;
 }
 
 .novo .botao {
