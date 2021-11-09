@@ -60,7 +60,7 @@ export class DashboardCardapiosComponent implements OnInit {
   setCardapio() {
     let principal = this.patologiaPrincipal;
     let secundaria = this.patologiaSecundaria;
-    if (principal != 'NP' && secundaria == 'RL') {
+    if (principal != 'NP' && (secundaria == 'RL' || secundaria == 'CL')) {
       secundaria = 'NP'
     }
 

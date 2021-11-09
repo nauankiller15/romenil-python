@@ -2,11 +2,11 @@ export class Formulario {
   modificado_em = ''
   hipertensao = false;
   diabetes = false;
+  celiaco = false;
   metabolismo_lento = false;
   hipotireoidismo = false;
   retencao_liquida = false;
   insonia = false;
-  gluten = false;
   constipacao = false;
   colesterol_elevado = false;
   ansiedade = false;

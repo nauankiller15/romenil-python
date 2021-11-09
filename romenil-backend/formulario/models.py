@@ -13,6 +13,7 @@ class Formulario(Model):
 
     hipertensao = BooleanField()
     diabetes = BooleanField()
+    celiaco = BooleanField()
     metabolismo_lento = BooleanField()
     constipacao = BooleanField()
     insonia = BooleanField()
@@ -22,7 +23,6 @@ class Formulario(Model):
     hipotireoidismo = BooleanField()
     gordura_no_figado = BooleanField()
     anemia = BooleanField()
-    modificado_em = DateTimeField(auto_now=True)
 
     # Alergia
     frutos_do_mar = BooleanField()
@@ -33,3 +33,5 @@ class Formulario(Model):
     # EstiloDeVida
     vegano = BooleanField()
     vegetariano = BooleanField()
+    
+    modificado_em = DateTimeField(auto_now=True)

@@ -8,6 +8,7 @@ PHI: Hipertensao
 PNP: Nenhuma Patologia principal
 
 # Patologias secundárias
+CL: Celíaco
 ML: Metabolismo Lento
 CO: Constipação
 IN: Insonia
@@ -21,6 +22,7 @@ def gerar_cardapio(patologia):
 
     diabetes = patologia.diabetes
     hipertensao = patologia.hipertensao
+    gluten = patologia.gluten
     metabolismo_lento = patologia.metabolismo_lento
     constipacao = patologia.constipacao
     insonia = patologia.insonia
@@ -38,7 +40,13 @@ def gerar_cardapio(patologia):
     else:
         cardapios = cardapios.filter(principal='NP')
 
-    if metabolismo_lento:
+    if gluten:
+        # Gluten não conta se tiver diabetes ou hipertensão
+        if diabetes or hipertensao:
+            cardapios = cardapios.filter(secundaria='NP')
+        else:
+            cardapios = cardapios.filter(secundaria='GL')
+    elif metabolismo_lento:
         cardapios = cardapios.filter(secundaria='ML')
     elif constipacao:
         cardapios = cardapios.filter(secundaria='CO')
