@@ -15,6 +15,7 @@ class Usuario(Model):
     cpf_ou_cnpj = CharField(max_length=18, unique=True, validators=[cpf_or_cnpj_valid])
     celular = CharField(max_length=15)  
 
+    @property
     def ativo(self):
         eduzz = Eduzz(self.cpf_ou_cnpj)
         produto_ativo = eduzz.ativo

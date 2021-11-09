@@ -22,7 +22,7 @@ def gerar_cardapio(patologia):
 
     diabetes = patologia.diabetes
     hipertensao = patologia.hipertensao
-    gluten = patologia.gluten
+    gluten = patologia.celiaco
     metabolismo_lento = patologia.metabolismo_lento
     constipacao = patologia.constipacao
     insonia = patologia.insonia

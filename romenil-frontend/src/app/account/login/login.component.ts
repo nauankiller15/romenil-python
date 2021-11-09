@@ -47,7 +47,6 @@ export class LoginComponent implements OnInit {
 
   getMask() {
     
-    console.log(this.login.email_cpf_cnpj);
     if (this.login.email_cpf_cnpj.match(/^\d{11}$|^\d{14}$|^(\d{3}.){2}\d{3}\-\d{2}$|^\d{2}.\d{3}.\d{3}\/\d{4}\-\d{2}$/)) {
       if (isNaN(Number((this.login.email_cpf_cnpj)))) {
         this.login.email_cpf_cnpj = this.login.email_cpf_cnpj.replace(/\./g, '').replace('-', '').replace('/', '');
@@ -55,6 +54,8 @@ export class LoginComponent implements OnInit {
       this.mask = 'CPF_CNPJ'
       this.documento_correto = true;
     } else if (this.login.email_cpf_cnpj.match(/^[\.\_\w]+\@\w+(\.\w+){1,2}$/)) {
+      this.documento_correto = true;
+    } else if (this.login.email_cpf_cnpj.match(/^[\w]+$/)) {
       this.documento_correto = true;
     } else {
       this.documento_correto = false;

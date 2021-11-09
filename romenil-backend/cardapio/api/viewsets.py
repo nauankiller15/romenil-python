@@ -9,7 +9,6 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ViewSet
 from cardapio.api.serializers import CardapioSerializer
-from cardapio.models import Cardapio
 
 from formulario.models import Formulario
 

@@ -7,13 +7,14 @@ import { LoginComponent } from './account/login/login.component';
 import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { AuthGuardService } from './shared/auth-guard/auth.guard';
+import { AuthGuardService } from './shared/guards/auth-guard/auth.guard';
 import { ConversaoComponent } from './conversao/conversao.component';
 import { AguardeComponent } from './aguarde/aguarde.component';
 import { WelcomePagoComponent } from './welcome-pago/welcome-pago.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/dashboard-cardapios.component';
 import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
+import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizado.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
       {path: '', component: DashboardComponent},
       {path: 'cardapios', component: DashboardCardapiosComponent},
       {path: 'permissoes', component: PermissoesComponent},
+      {path: 'nao-autorizado', component: NaoAutorizadoComponent}
     ]
   },
     

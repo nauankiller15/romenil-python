@@ -1,16 +1,14 @@
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.viewsets import ViewSet
-from cardapio.models import Cardapio
-from dashboard.api.serializers import CardapiosSerializer
+from rest_framework.viewsets import ModelViewSet, ViewSet
+
+from permissions.dashboard import Desenvolvedor
+
+from permissoes.api.serializers import CargoSerializer
+from permissoes.models import Cargo
 
 
-class CardapiosViewSet(ViewSet):
-    permission_classes = [IsAuthenticated]
-
-    def list(self, request):  
-
-        cardapios = Cardapio.objects.all()        
-        dados = CardapiosSerializer(cardapios, many=True).data
-
-        return Response(dados)
+class CargoViewSet(ModelViewSet):
+    queryset = Cargo.objects.all()
+    serializer_class = CargoSerializer
+    permission_classes = [IsAuthenticated, Desenvolvedor]

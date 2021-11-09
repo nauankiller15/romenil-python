@@ -26,7 +26,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { WelcomePagoComponent } from './welcome-pago/welcome-pago.component';
 
 import { AuthTokenInterceptor } from './shared/http-interceptor/auth-token.interceptor';
-import { AuthGuardService } from './shared/auth-guard/auth.guard';
+import { AuthGuardService } from './shared/guards/auth-guard/auth.guard';
 import { EscapeHtmlPipe } from './shared/pipes/keep-html.pipe';
 
 import { DashboardBaseComponent } from './dashboard/base/dashboard-base/dashboard-base.component';
@@ -34,6 +34,7 @@ import { SidebarComponent } from './dashboard/base/sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/dashboard-cardapios.component';
 import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
+import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizado.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { PermissoesComponent } from './dashboard/permissoes/permissoes.component
     DashboardBaseComponent,
     DashboardCardapiosComponent,
     PermissoesComponent,
+    NaoAutorizadoComponent,
   ],
   imports: [
     MatProgressBarModule,

@@ -23,9 +23,8 @@ class UsuarioViewSet(CreateAPIView, GenericViewSet):
     serializer_class = UsuarioSerializer
     permission_classes = [IsAuthenticated]
 
-    def create(self, request, *args, **kwargs):
-        request.data['usuario'] = request.user.id
-        return super().create(request, *args, **kwargs)
+    def perform_create(self, serializer):
+        serializer.save(usuario=self.request.user.id)
 
 
 class DadosContaViewSet(ViewSet):

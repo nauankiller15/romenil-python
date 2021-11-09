@@ -14,7 +14,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
     ativo = serializers.SerializerMethodField()
 
     def get_ativo(self, obj):
-        return obj.ativo()
+        return obj.ativo
     
     class Meta:
         model = Usuario        
@@ -36,12 +36,24 @@ class ContaSerializer(serializers.ModelSerializer):
         
         return user
     
+    perfil = serializers.SerializerMethodField()
+
+    def get_perfil(self, obj):
+        if obj.is_staff:
+            return 'desenvolvedor'
+       
+        cargo = obj.cargo_set.last()
+        if cargo:
+            return cargo.cargo
+        else:
+            return 'usuario'
+
     class Meta:
         model = User
         extra_kwargs = {
             'password': {'write_only': True},
         }
-        fields = ['id', 'first_name', 'last_name', 'password', 'email']
+        fields = ['id', 'first_name', 'last_name', 'password', 'email', 'perfil']
 
 
 # ========= login ==========================

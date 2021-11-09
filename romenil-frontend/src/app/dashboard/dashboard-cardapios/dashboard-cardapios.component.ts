@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { CardapioCompleto, Cardapios, CardapiosCompletos } from 'src/app/cardapios/modelos';
+import { CardapioCompleto, CardapiosCompletos } from 'src/app/cardapios/modelos';
+import { AccountService } from 'src/app/shared/account-service/account.service';
 import { ApiService } from 'src/app/shared/api-service/api.service';
 import { Erro } from 'src/app/shared/erros';
+import { Conta } from '../models';
 
 declare var $: any;
 
@@ -13,6 +16,7 @@ declare var $: any;
 })
 export class DashboardCardapiosComponent implements OnInit {
 
+  conta = new Conta;
   pagina = 'cardapios';
   todosCardapios: CardapioCompleto[] = [];
   cardapios = new CardapiosCompletos();
@@ -22,14 +26,33 @@ export class DashboardCardapiosComponent implements OnInit {
   patologiaSecundaria = "ML"
   
   constructor(
+    private router: Router,
+    private accountService: AccountService,
     private apiService: ApiService,
     private toastrService: ToastrService,
   ) { 
-    this.getCardapios();
+    this.getConta();
   }
 
   ngOnInit(): void {
     $('body').addClass('noborder');
+  }
+
+  getConta() {
+    this.accountService.conta().subscribe(
+      (data) => {
+        this.conta = data;
+        if (!(['desenvolvedor','administrador'].includes(this.conta.perfil))) {
+          this.router.navigate(['dashboard/nao-autorizado']);
+        } else {
+          this.getCardapios();
+        }
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
   }
 
   getCardapios() {
@@ -84,6 +107,5 @@ export class DashboardCardapiosComponent implements OnInit {
         }
       }
     }
-    console.log(this.cardapios);
   }
 }

@@ -23,18 +23,23 @@
             <th></th>
           </thead>
           <tbody>
-            <tr *ngFor="let usuario of usuarios">
-              <td>{{ usuario.first_name }} {{ usuario.last_name }}</td>
-              <td>{{ usuario.cargo }}</td>
+            <tr *ngFor="let cargo of cargos">
+              <td>{{ cargo.first_name }} {{ cargo.last_name }}</td>
+              <td>{{ cargo.cargo }}</td>
               <td>
-                <button class="btn btn-primary" (click)="editar(usuario)">
+                <button class="btn btn-primary" (click)="editar(cargo)">
                   Editar
                 </button>
               </td>
               <td>
-                <button class="btn btn-danger" (click)="excluir(usuario)">
+                <button class="btn btn-danger" (click)="excluir(cargo)">
                   Excluir
                 </button>
+              </td>
+            </tr>
+            <tr **ngIf="cargos.length < 1">
+              <td rowspan="4">
+                Nenhum cargo cadastrado
               </td>
             </tr>
           </tbody>
