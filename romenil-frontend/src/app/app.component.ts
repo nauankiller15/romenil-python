@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    $('#entrarprog').on('click', function () {
 
+      $('.dashFundo').fadeIn(250);
+
+    });
   }
 }

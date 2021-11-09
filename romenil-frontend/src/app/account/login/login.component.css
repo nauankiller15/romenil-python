@@ -9,7 +9,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #00000094;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,19 +67,12 @@ header {
 }
 /*  */
 .box-text-login {
-  border-top: 4px solid var(--azul);
-  background-color: #0a0e17;
-  background-image: url(),
-    url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
-  background-position: 100% 0, 0 11%;
-  background-size: cover;
-  background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
   height: 100%;
   margin: 14vh auto;
   padding: 10px 5px 20px 5px;
   font-family: "Montserrat", sans-serif;
-  animation: slide-page 1.2s cubic-bezier(0.85, 0.18, 0.32, 0.68);
+  animation: slide-page 0.75s cubic-bezier(0.85, 0.18, 0.32, 0.68);
   overflow: hidden;
 }
 

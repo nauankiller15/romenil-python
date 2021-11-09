@@ -5,7 +5,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #00000094;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,12 +58,6 @@ header {
 }
 /*  */
 .box-text-cardapio {
-  border-top: 4px solid var(--azul);
-  background-color: #0a0e17;
-  background-image: url(https://1.bp.blogspot.com/-2GtGYZchSCU/YWnR2QsoS3I/AAAAAAAAHeY/uz73yVgahXksqJ3KE4z4Gy05UTDbpo5hwCLcBGAsYHQ/s0/bg%2Bcardap.jpg);
-  background-position: 0% 50%, -24vh 2px;
-  background-size: cover;
-  background-repeat: no-repeat, no-repeat, no-repeat;
   width: 100%;
   height: 100%;
   margin: 14vh auto;
