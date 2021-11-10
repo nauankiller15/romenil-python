@@ -27,7 +27,9 @@ export class ConversaoComponent implements OnInit {
       $('.loader-wrapper').fadeIn(250).delay(1560).fadeOut(250);
     });
     $('body').addClass('noborder');
+
   }
+  
 
   verificarDados() {
     if (this.accountService.autenticado()) {

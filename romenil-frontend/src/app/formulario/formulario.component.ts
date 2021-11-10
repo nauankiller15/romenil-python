@@ -14,16 +14,15 @@ declare var $: any;
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent implements OnInit {
-
   conta = new Conta();
-  formulario = new Formulario;
-  editavel = true; 
+  formulario = new Formulario();
+  editavel = true;
 
   constructor(
     private apiService: ApiService,
     private accountService: AccountService,
     private toastrService: ToastrService,
-    private router: Router, 
+    private router: Router
   ) {
     this.verificarDados();
   }
@@ -32,16 +31,17 @@ export class FormularioComponent implements OnInit {
     $('#fecharBtForm').on('click', function () {
       $('#formulario').fadeOut('100');
       $('body').removeClass('noborder');
+
     });
 
     // BOTÃO DE ABRIR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
     $('#gerarCardap').on('click', function () {
       $('#generateCard').slideDown(550);
     });
-      // BOTÃO DE FECHAR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
-      $('#closeGenerate').on('click', function () {
-        $('#generateCard').slideUp(650);
-      });
+    // BOTÃO DE FECHAR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
+    $('#closeGenerate').on('click', function () {
+      $('#generateCard').slideUp(650);
+    });
   }
 
   verificarDados() {
@@ -61,7 +61,7 @@ export class FormularioComponent implements OnInit {
           this.getConta();
           this.getFormulario();
         } else {
-          this.router.navigate(['conversao'])
+          this.router.navigate(['conversao']);
         }
       },
       (error) => {
@@ -78,7 +78,7 @@ export class FormularioComponent implements OnInit {
           this.formulario = data;
 
           let data_form = new Date(this.formulario.modificado_em);
-          data_form.setDate(data_form.getDate() + 20)
+          data_form.setDate(data_form.getDate() + 20);
           let agora = new Date();
 
           this.editavel = agora >= data_form;
@@ -106,7 +106,7 @@ export class FormularioComponent implements OnInit {
   salvarFormulario() {
     this.apiService.salvar('formulario', this.formulario).subscribe(
       (data) => {
-        this.router.navigate(['cardapios'])
+        this.router.navigate(['cardapios']);
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
