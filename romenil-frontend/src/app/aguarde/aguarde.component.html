@@ -35,12 +35,12 @@
               Agora eu preciso de um pouco de paciência da sua parte…
               <div style="margin-top: 13px">
                 Seu cardápio já foi solicitado e está sendo preparado por nosso
-                Nutricionista <b>Romenil Alencar</b>.
+                nutricionista <b class="azul">Romenil Alencar</b>.
               </div>
               <div style="margin-top: 13px">
                 O tempo de espera é de até
                 <span *ngIf="timer.horas > 0">
-                  <b>{{timer.horas}}</b>
+                  <b class="azul">{{timer.horas}}</b>
                   <span *ngIf="timer.horas > 1"> horas</span>
                   <span *ngIf="timer.horas == 1"> hora</span>
                 </span>
@@ -48,24 +48,23 @@
                 <span *ngIf="timer.minutos > 0">
                   <span *ngIf="timer.segundos > 0">, </span>
                   <span *ngIf="timer.segundos == 0"> e </span>
-                  <b>{{timer.minutos}}</b>
+                  <b class="azul">{{timer.minutos}}</b>
                   <span *ngIf="timer.minutos > 1"> minutos</span>
                   <span *ngIf="timer.minutos == 1"> minuto</span>
                 </span>
 
                 <span *ngIf="timer.segundos > 0">
-                  e <b>{{timer.segundos}}</b>
+                  e <b class="azul">{{timer.segundos}}</b>
                   <span *ngIf="timer.segundos > 1"> segundos</span>
                   <span *ngIf="timer.segundos == 1"> segundo</span>
-                </span>
-                , afinal o que iremos entregar é algo totalmente personalizado com o que foi analisado
+                </span>, afinal o que iremos entregar é algo <b class="azul">totalmente personalizado</b> com o que foi analisado
                 sobre você!
                 <div style="margin-top: 13px">
                   Por isso calma, que logo logo você terá em mãos a dieta que
-                  irá <b>transformar sua vida.</b>
+                  irá <b class="azul">transformar sua vida.</b>
 
                   <div style="margin-top: 15px">
-                    <b>Um email será enviado para você</b> após a confecção do seu
+                    <b class="azul">Uma notificação será enviada para você em forma de email</b> após a confecção do seu
                     cardápio, não se preocupa, pois eu me preocupo muito com
                     você!
                   </div>
