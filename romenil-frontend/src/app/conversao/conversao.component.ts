@@ -23,8 +23,8 @@ export class ConversaoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    $('.generateCardap').on('click', function () {
-      $('.loader-wrapper').fadeIn(250).delay(1560).fadeOut(250);
+    $(document).ready(function () {
+      $('.loader-wrapper').fadeIn(250).delay(1000).fadeOut(250);
     });
     $('body').addClass('noborder');
 

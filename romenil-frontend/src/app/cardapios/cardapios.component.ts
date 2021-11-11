@@ -27,6 +27,9 @@ export class CardapiosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    $(document).ready(function () {
+      $('.loader-wrapper').fadeIn(250).delay(1200).fadeOut(250);
+    });
     $('#fecharBtCardp').on('click', function () {
       $('#cardapio').fadeOut('100');
       $('body').removeClass('noborder');

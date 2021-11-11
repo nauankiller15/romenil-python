@@ -6,32 +6,33 @@ import { AccountService } from '../shared/account-service/account.service';
 import { ApiService } from '../shared/api-service/api.service';
 import { Erro } from '../shared/erros';
 
-
 declare var $: any;
 
 @Component({
   selector: 'app-aguarde',
   templateUrl: './aguarde.component.html',
-  styleUrls: ['./aguarde.component.css']
+  styleUrls: ['./aguarde.component.css'],
 })
 export class AguardeComponent implements OnInit {
-
-  conta = new Conta;
+  conta = new Conta();
   data_form = new Date();
-  timer = {horas: 0, minutos: 0, segundos:0};
+  timer = { horas: 0, minutos: 0, segundos: 0 };
   time = 0;
-  intervalo:any = null;
+  intervalo: any = null;
 
   constructor(
     private apiService: ApiService,
     private accountService: AccountService,
     private toastrService: ToastrService,
-    private router: Router,
-  ) { 
-    this.getUsuario()
+    private router: Router
+  ) {
+    this.getUsuario();
   }
 
   ngOnInit(): void {
+    $(document).ready(function () {
+      $('.loader-wrapper').fadeIn(250).delay(1000).fadeOut(250);
+    });
     $('#fecharBtAguarde').on('click', function () {
       $('#aguarde').fadeOut('100');
       $('body').removeClass('noborder');
@@ -48,7 +49,7 @@ export class AguardeComponent implements OnInit {
           this.getConta();
           this.getFormulario();
         } else {
-          this.router.navigate(['conversao'])
+          this.router.navigate(['conversao']);
         }
       },
       (error) => {
@@ -65,8 +66,11 @@ export class AguardeComponent implements OnInit {
           let agora = new Date();
           this.data_form = new Date(data.modificado_em);
           let atualizacao = new Date(data.modificado_em);
-          this.time = 2 * 3600 - (agora.valueOf() - atualizacao.valueOf()) / 1000 + 1;
-          this.intervalo = setInterval(() => { this.getTimer(); }, 1000);
+          this.time =
+            2 * 3600 - (agora.valueOf() - atualizacao.valueOf()) / 1000 + 1;
+          this.intervalo = setInterval(() => {
+            this.getTimer();
+          }, 1000);
         }
       },
       (error) => {
@@ -87,10 +91,10 @@ export class AguardeComponent implements OnInit {
       }
     );
   }
-  
+
   getTimer() {
-    this.time --;
-    console.log(this.time)
+    this.time--;
+    console.log(this.time);
     this.timer.horas = Math.floor(this.time / 3600);
     this.timer.minutos = Math.floor((this.time % 3600) / 60);
     this.timer.segundos = Math.floor((this.time % 3600) % 60);
