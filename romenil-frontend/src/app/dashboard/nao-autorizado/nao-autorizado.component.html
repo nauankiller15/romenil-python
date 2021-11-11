@@ -1,15 +1,51 @@
-<div id="forbidden">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card-header">
-                    <h4 class="card-title">Acesso não autorizado</h4>
-                </div>
-                <div class="card-body">
-                    <p>Você não tem permissão para acessar esta página.</p>
-                    <a class="btn btn-primary" [routerLink]="['/welcome']"> Inicio</a>
-                </div>
-            </div>
+<div class="dashFundo" style="display: block !important"></div>
+
+<div id="naoautorizado">
+  <div class="box-text-aguarde">
+    <div class="text-info-box">
+      <div class="containerED">
+        <header>
+          <div class="logo-calc"></div>
+        </header>
+        <div class="separTe"></div>
+        <div class="container-cart">
+          <div class="planejamento">
+            <h2>Sem permissão!</h2>
+          </div>
+          <h3>Você não tem permissão para acessar esta página.</h3>
         </div>
+
+        <div style="padding-top: 30px"></div>
+        <div class="content-cardap">
+          <div class="dadosConsulta">
+            <h3>
+              <i class="fas fa-exclamation-triangle" style="margin-right: 10px"></i>
+              Opa, pode dar meia volta...
+            </h3>
+
+            <div class="atach">
+              <div
+                class="fundo-retAg"
+                style="animation: positDas 1.8s ease-in-out; text-align: center;"
+              ></div>
+              Esta página está autorizada somente aos administradores do programa!
+            </div>
+          </div>
+
+          <div class="linhaE"></div>
+        </div>
+        <div class="cardBtn">
+          <div style="padding-top: 25px"></div>
+          <button
+            id="hideT"
+            routerLink="/welcome_exclusive"
+            class="btn success"
+          >
+            <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar pro
+            inicio
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
