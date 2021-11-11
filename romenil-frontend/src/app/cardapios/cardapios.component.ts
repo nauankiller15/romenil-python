@@ -16,6 +16,7 @@ declare var $: any;
 export class CardapiosComponent implements OnInit {
   conta = new Conta();
   cardapios = new Cardapios();
+  public loading = false;
 
   constructor(
     private accountService: AccountService,
@@ -57,12 +58,11 @@ export class CardapiosComponent implements OnInit {
     this.apiService.listar('conta/usuario').subscribe(
       (data) => {
         if (data && data.ativo) {
-            this.getConta();
-            this.getCardapios();
+          this.getConta();
+          this.getCardapios();
         } else {
-          this.router.navigate(['conversao'])
+          this.router.navigate(['conversao']);
         }
-        
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
@@ -86,7 +86,6 @@ export class CardapiosComponent implements OnInit {
   getCardapios() {
     this.apiService.listar('cardapio').subscribe(
       (data) => {
-        
         if (data.pronto == true) {
           let dados = data.dados;
           for (let cardapio in dados) {
@@ -108,11 +107,11 @@ export class CardapiosComponent implements OnInit {
           }
         } else {
           if (data.completed_form == true) {
-            this.router.navigate(['aguarde'])
+            this.router.navigate(['aguarde']);
           } else {
-            this.router.navigate(['formulario'])
+            this.router.navigate(['formulario']);
           }
-        }       
+        }
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
@@ -122,13 +121,18 @@ export class CardapiosComponent implements OnInit {
   }
 
   enviarEmail() {
+    $('.loaderBtn').fadeIn(200);
+    this.loading = true;
     this.apiService.salvar('cardapio/via-email', null).subscribe(
       (data) => {
+        $('.loaderBtn').fadeOut(200);
+        this.loading = false;
         console.log(data);
         this.toastrService.success('Cardápio enviado para o seu Email!');
-
       },
       (error) => {
+        $('.loaderBtn').fadeOut(200);
+        this.loading = false;
         const erro = new Erro(this.toastrService, error);
         erro.exibir();
       }

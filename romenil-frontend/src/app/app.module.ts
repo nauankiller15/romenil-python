@@ -75,7 +75,7 @@ import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizad
       enableHtml: true,
       progressBar: true,
     }),
-    NgxLoadingModule,
+    NgxLoadingModule.forRoot({}),
     NgxMaskModule.forRoot(),
   ],
   providers: [

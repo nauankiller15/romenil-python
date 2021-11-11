@@ -1,4 +1,4 @@
-<div class="dashFundo"  style="display: block !important"></div>
+<div class="dashFundo" style="display: block !important"></div>
 
 <div id="cardapio">
   <div class="box-text-cardapio">
@@ -171,10 +171,20 @@
             <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar
             para meu Email
           </button>
+          <div class="loaderBtn">
+          <ngx-loading
+            [show]="loading"
+            [config]="{ backdropBorderRadius: '3px' }"
+            [template]="customLoadingTemplate"
+          ></ngx-loading>
+          <ng-template #customLoadingTemplate> </ng-template>
+        </div>
           <script>
-                 var myStyle =
-            '<link rel="stylesheet" href="./cardapios.component.css" />';
-            tela_impressao.document.write(myStyle + jQuery('.table_disp').html());
+            var myStyle =
+              '<link rel="stylesheet" href="./cardapios.component.css" />';
+            tela_impressao.document.write(
+              myStyle + jQuery(".table_disp").html()
+            );
           </script>
         </div>
         <div class="linhaE"></div>
