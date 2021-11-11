@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  RouteConfigLoadEnd,
+  RouteConfigLoadStart,
+  Router,
+  RouterEvent,
+} from '@angular/router';
 
 declare var $: any;
 @Component({
@@ -11,13 +17,12 @@ export class AppComponent implements OnInit {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  constructor() {}
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     $('#entrarprog').on('click', function () {
-
       $('.dashFundo').fadeIn(250);
-
     });
   }
 }
