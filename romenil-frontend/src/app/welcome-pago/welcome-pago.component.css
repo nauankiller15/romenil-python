@@ -189,7 +189,7 @@
   
   .atach {
     padding: 10px;
-    text-align: justify;
+    text-align: center;
   }
   
   .dadosConsulta h3 {
@@ -377,7 +377,7 @@
       text-align: center;
       background-color: #0a0e17;
       color: #fff;
-      width: 70%;
+      width: 95%;
       margin: -29px auto;
       font-weight: 350;
       border-radius: 10px;

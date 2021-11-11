@@ -12,7 +12,7 @@
 }
 
 header {
-  margin-top: 0;
+  margin-top: 3vh;
   width: 100%;
   height: 100px;
   display: flex;
@@ -304,7 +304,7 @@ header {
     margin-top: 10vh;
   }
   header {
-    margin-top: -60px;
+    margin-top: 2vh;
   }
   /* SIDEBAR */
   ::-webkit-scrollbar {
@@ -343,7 +343,7 @@ header {
     font-size: 1.23em;
     width: 100%;
     margin: 1vh 0vh 2vh 0px;
-    display: inline-grid;
+    display: block;
   }
 
   .dadosConsulta h3 {
@@ -402,6 +402,10 @@ header {
 
 
 @media (max-width: 400px) {
+  .cardBtn {
+    margin: auto;
+    width: 85%;
+  }
   .dadosConsulta h3 {
     font-size: 0.72em !important;
     padding-left: 0;
