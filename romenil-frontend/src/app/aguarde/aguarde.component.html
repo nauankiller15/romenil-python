@@ -1,4 +1,4 @@
-<div class="dashFundo"  style="display: block !important"></div>
+<div class="dashFundo" style="display: block !important"></div>
 
 <div id="aguarde">
   <div class="box-text-aguarde">
@@ -13,9 +13,7 @@
           <div class="planejamento">
             <h2>Meu Planejamento Alimentar!</h2>
           </div>
-          <h3>
-            Eii, {{ conta.first_name }}, aguarde um pouquinho!
-          </h3>
+          <h3>Eii, {{ conta.first_name }}, aguarde um pouquinho!</h3>
         </div>
 
         <div style="padding-top: 30px"></div>
@@ -40,45 +38,54 @@
               <div style="margin-top: 13px">
                 O tempo de espera é de até
                 <span *ngIf="timer.horas > 0">
-                  <b class="azul">{{timer.horas}}</b>
+                  <b class="azul">{{ timer.horas }}</b>
                   <span *ngIf="timer.horas > 1"> horas</span>
                   <span *ngIf="timer.horas == 1"> hora</span>
                 </span>
-                
+
                 <span *ngIf="timer.minutos > 0">
                   <span *ngIf="timer.segundos > 0">, </span>
                   <span *ngIf="timer.segundos == 0"> e </span>
-                  <b class="azul">{{timer.minutos}}</b>
+                  <b class="azul">{{ timer.minutos }}</b>
                   <span *ngIf="timer.minutos > 1"> minutos</span>
                   <span *ngIf="timer.minutos == 1"> minuto</span>
                 </span>
 
                 <span *ngIf="timer.segundos > 0">
-                  e <b class="azul">{{timer.segundos}}</b>
+                  e <b class="azul">{{ timer.segundos }}</b>
                   <span *ngIf="timer.segundos > 1"> segundos</span>
-                  <span *ngIf="timer.segundos == 1"> segundo</span>
-                </span>, afinal o que iremos entregar é algo <b class="azul">totalmente personalizado</b> com o que foi analisado
-                sobre você!
+                  <span *ngIf="timer.segundos == 1"> segundo</span> </span
+                >, afinal o que iremos entregar é algo
+                <b class="azul">totalmente personalizado</b> com o que foi
+                analisado sobre você!
                 <div style="margin-top: 13px">
                   Por isso calma, que logo logo você terá em mãos a dieta que
                   irá <b class="azul">transformar sua vida.</b>
 
                   <div style="margin-top: 15px">
-                    <b class="azul">Uma notificação será enviada para você em forma de email</b> após a confecção do seu
-                    cardápio, não se preocupa, pois eu me preocupo muito com
-                    você!
+                    <b class="azul"
+                      >Uma notificação será enviada para você em forma de
+                      email</b
+                    >
+                    após a confecção do seu cardápio, não se preocupa, pois eu
+                    me preocupo muito com você!
                   </div>
                 </div>
               </div>
             </div>
-            <!-- <div class="cardBtn">
-              <div style="padding-top: 25px"></div>
-              <button id="hideT" routerLink="/calculadora" class="btn success">
-                <i class="fas fa-calculator" style="margin-right: 10px"></i
-                >Calcular meu IMC
-              </button>
-            </div> -->
+
             <div class="linhaE"></div>
+          </div>
+          <div class="cardBtn">
+            <div style="padding-top: 25px"></div>
+            <button
+              id="hideT"
+              routerLink="/welcome_exclusive"
+              class="btn success"
+            >
+              <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar pro
+              inicio
+            </button>
           </div>
         </div>
       </div>

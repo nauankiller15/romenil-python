@@ -23,6 +23,9 @@ export class WelcomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    $(document).ready(function () {
+      $('.loader-wrapper').fadeIn(250).delay(2000).fadeOut(250);
+    });
     $('#fecharBtWelcome').on('click', function () {
       $('#bemvindo').fadeOut('100');
       $('body').removeClass('noborder');

@@ -22,6 +22,9 @@ export class WelcomePagoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    $(document).ready(function () {
+      $('.loader-wrapper').fadeIn(250).delay(1200).fadeOut(250);
+    });
     $('#fecharBtWelcomePago').on('click', function () {
       $('#bemvindo-pago').fadeOut('100');
       $('body').removeClass('noborder');
