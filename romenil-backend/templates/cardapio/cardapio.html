@@ -3,9 +3,9 @@
 {% load static %}
 
 <head>
-    <title>Document</title>
-    <link rel="stylesheet" href="https://www.api.romenilalencar.com.br/static/cardapio/css/cardapio.css">
-    <style type="text/css">
+    <title>Cardápio</title>
+    
+<style type="text/css">
    #cardapio {
   width: 100%;
   height: 100%;
@@ -130,7 +130,7 @@ header {
                 <div class="planejamento">
                     <h2>Planejamento Alimentar</h2>
                 </div>
-                <h3>Alimentação de {{ conta.first_name }} {{ conta.last_name }}</h3>
+                <h3>Alimentação de {{ conta.first_name|title }} {{ conta.last_name|title }}</h3>
             </div>
             <div class="content-cardap">
                 {% if desjejum|length > 0 %}
@@ -140,16 +140,16 @@ header {
 
                     <div class="cardapio">
                         <p>
-                            {{ desjejum.0 }}
+                            {{ desjejum.0.prato }}
                         </p>
 
                         <p></p>
-                        {% for prato in desjejum|slice:"1:" %}
+                        {% for cardapio in desjejum|slice:"1:" %}
                         <p>
                             <caption>
                                 COM
                             </caption>
-                            {{ prato }}
+                            {{ cardapio.prato }}
                         </p>
                         <p></p>
                         {% endfor %}
@@ -164,16 +164,16 @@ header {
 
                     <div class="cardapio">
                         <p>
-                            {{ cafeManha.0 }}
+                            {{ cafeManha.0.prato }}
                         </p>
 
                         <p></p>
-                        {% for prato in cafeManha|slice:"1:" %}
+                        {% for cardapio in cafeManha|slice:"1:" %}
                         <p>
                             <caption>
                                 COM
                             </caption>
-                            {{ prato }}
+                            {{ cardapio.prato }}
                         </p>
                         <p></p>
                         {% endfor %}
@@ -188,16 +188,16 @@ header {
 
                     <div class="cardapio">
                         <p>
-                            {{ refeicao2.0 }}
+                            {{ refeicao2.0.prato }}
                         </p>
 
                         <p></p>
-                        {% for prato in refeicao2|slice:"1:" %}
+                        {% for cardapio in refeicao2|slice:"1:" %}
                         <p>
                             <caption>
                                 COM
                             </caption>
-                            {{ prato }}
+                            {{ cardapio.prato }}
                         </p>
                         <p></p>
                         {% endfor %}
@@ -212,16 +212,16 @@ header {
 
                     <div class="cardapio">
                         <p>
-                            {{ almoco.0 }}
+                            {{ almoco.0.prato }}
                         </p>
 
                         <p></p>
-                        {% for prato in almoco|slice:"1:" %}
+                        {% for cardapio in almoco|slice:"1:" %}
                         <p>
                             <caption>
                                 COM
                             </caption>
-                            {{ prato }}
+                            {{ cardapio.prato }}
                         </p>
                         <p></p>
                         {% endfor %}
@@ -235,7 +235,7 @@ header {
                     <div class="linhaE"></div>
                     <div class="cardapio">
                         <p>
-                            {{ refeicao4.0 }}
+                            {{ refeicao4.0.prato }}
                         </p>
 
                         <p></p>
@@ -244,7 +244,7 @@ header {
                             <caption>
                                 COM
                             </caption>
-                            {{ prato }}
+                            {{ cardapio.prato }}
                         </p>
                         <p></p>
                         {% endfor %}
@@ -259,16 +259,16 @@ header {
 
                     <div class="cardapio">
                         <p>
-                            {{ janta.0 }}
+                            {{ janta.0.prato }}
                         </p>
 
                         <p></p>
-                        {% for prato in janta|slice:"1:" %}
+                        {% for cardapio in janta|slice:"1:" %}
                         <p>
                             <caption>
                                 COM
                             </caption>
-                            {{ prato }}
+                            {{ cardapio.prato }}
                         </p>
                         <p></p>
                         {% endfor %}
@@ -283,7 +283,7 @@ header {
 
                     <div class="cardapio">
                         <p>
-                            {{ refeicao6.0 }}
+                            {{ refeicao6.0.prato }}
                         </p>
 
                         <p></p>
@@ -292,7 +292,7 @@ header {
                             <caption>
                                 COM
                             </caption>
-                            {{ prato }}
+                            {{ cardapio.prato }}
                         </p>
                         <p></p>
                         {% endfor %}
