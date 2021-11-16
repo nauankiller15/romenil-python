@@ -80,7 +80,6 @@ class Eduzz:
             dados = rq.json()
 
             return dados
-        print(rq.content)
         raise RequestAborted
 
     @property
@@ -106,9 +105,7 @@ class Eduzz:
         else:
             sales = self.sale_list()
             for sale in sales:
-                print(sale)
-                print('==================')
-                
+                                
                 sale_object, created = Sale.objects.update_or_create(
                     client_document = sale['client_document'],
                     content_id = sale['content_id'],
@@ -140,7 +137,6 @@ class Eduzz:
                 sale_data = self.get_sale(sale.sale_id)
                 sale.sale_status = sale_data['sale_status']
                 sale.save()
-                print('sale save')
             
             if sale.sale_status == 3:
                 return True
