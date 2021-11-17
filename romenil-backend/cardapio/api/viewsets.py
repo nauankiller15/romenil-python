@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta, timezone
 
 from django.core.mail import EmailMultiAlternatives
-from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 from rest_framework import status
@@ -47,13 +46,13 @@ class CardapioEmailViewSet(ViewSet):
                 cardapios = gerar_cardapio(formulario)
                 pronto = True
 
-                desjejum = cardapios.filter(refeicao=0).values_list('prato')
-                cafeManha = cardapios.filter(refeicao=1).values_list('prato')
-                refeicao2 = cardapios.filter(refeicao=2).values_list('prato')
-                almoco = cardapios.filter(refeicao=3).values_list('prato')
-                refeicao4 = cardapios.filter(refeicao=4).values_list('prato')
-                janta = cardapios.filter(refeicao=5).values_list('prato')
-                refeicao6 = cardapios.filter(refeicao=6).values_list('prato')
+                desjejum = cardapios.filter(refeicao=0)
+                cafeManha = cardapios.filter(refeicao=1)
+                refeicao2 = cardapios.filter(refeicao=2)
+                almoco = cardapios.filter(refeicao=3)
+                refeicao4 = cardapios.filter(refeicao=4)
+                janta = cardapios.filter(refeicao=5)
+                refeicao6 = cardapios.filter(refeicao=6)
        
         cardapio = render_to_string('cardapio/cardapio.html',{
             'pronto': pronto, 
@@ -67,9 +66,9 @@ class CardapioEmailViewSet(ViewSet):
             'refeicao6': refeicao6
         })  
 
-        subject = u"Cardápio"
-        from_email = u'naoresponda@romenilalencar.com.br'
-        texto = 'teste'
+        subject = "Cardápio"
+        from_email = 'Romenil Alencar <naoresponda@romenilalencar.com.br>'
+        texto = cardapio
         msg = EmailMultiAlternatives(
             subject, 
             texto, 

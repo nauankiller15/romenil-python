@@ -61,28 +61,28 @@ DINP = [
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Iogurte desnatado (Copo Americano: 1)',
+        'prato': '• Iogurte desnatado (Copo Americano: 1)',
     },
     {
         'refeicao': 1,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Pão integral (Fatia: 2) Ou Raizes ( Banana da terra - 1 pedaço - 50g/ Batata doce - 1 pedaço 60g/ Aipim -1 pedaço - 70g)',
+        'prato': '• Pão integral (Fatia: 2) Ou Raizes ( Banana da terra - 1 pedaço - 50g/ Batata doce - 1 pedaço 60g/ Aipim -1 pedaço - 70g)',
     },
     {
         'refeicao': 1,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': '•	Ovo de galinha ( Forma de cozinhar - pode ser mexido ou cozido) (Unidade: 2)',
+        'prato': '• Ovo de galinha ( Forma de cozinhar - pode ser mexido ou cozido) (Unidade: 2)',
     },
     {
         'refeicao': 1,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 4,
-        'prato': '•	Queijo minas frescal (Fatia (30g): 1)',
+        'prato': '• Queijo minas frescal (Fatia (30g): 1)',
     },
 
     # Refeição 2 - Diabetes - Nenhuma Patologia Secundaria #
@@ -91,14 +91,14 @@ DINP = [
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	 Maçã (Unidade: 1)',
+        'prato': '•  Maçã (Unidade: 1)',
     },
     {
         'refeicao': 2,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Chá de canela + gengibre (200ml)',
+        'prato': '• Chá de canela + gengibre (200ml)',
     },
 
     # Almoço - Diabetes - Nenhuma Patologia Secundaria #
@@ -107,14 +107,14 @@ DINP = [
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Salada ou verdura cozida, ou folhas em geral (Á VONTADE )',
+        'prato': '• Salada ou verdura cozida, ou folhas em geral (Á VONTADE )',
     },
     {
         'refeicao': 3,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Peixe não especificado (inteiro, em posta, em filé, etc.) Assado(a) (File: 1)',
+        'prato': '• Peixe não especificado (inteiro, em posta, em filé, etc.) Assado(a) (File: 1)',
     },
 
     # Refeição 4 - Diabetes - Nenhuma Patologia Secundaria #
@@ -123,14 +123,14 @@ DINP = [
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Iogurte desnatado (Copo Americano: 1) ',
+        'prato': '• Iogurte desnatado (Copo Americano: 1) ',
     },
     {
         'refeicao': 4,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Semente de chia (Colher de sopa: 5) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
+        'prato': '• Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Semente de chia (Colher de sopa: 5) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
 
     # Janta - Diabetes - Nenhuma Patologia Secundaria #
@@ -139,21 +139,21 @@ DINP = [
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Ovo de galinha (3 Unidades)',
+        'prato': '• Ovo de galinha (3 Unidades)',
     },
     {
         'refeicao': 5,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Tomate (2 Colher de sopa cheia em cubos (15g), Orégano seco (1 Colher de café (037g), Orégano seco (1 Colher de café (037g) , Manjericão fresco (5 folhas (3g)',
+        'prato': '• Tomate (2 Colher de sopa cheia em cubos (15g), Orégano seco (1 Colher de café (037g), Orégano seco (1 Colher de café (037g) , Manjericão fresco (5 folhas (3g)',
     },
     {
         'refeicao': 5,
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': '•	Queijo minas frescal (Fatia (30g): 1)',
+        'prato': '• Queijo minas frescal (Fatia (30g): 1)',
     },
     
     # Refeição 6 - Diabetes - Nenhuma Patologia Secundaria #
@@ -162,7 +162,7 @@ DINP = [
         'principal': 'DI',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Leite de vaca desnatado (Copo Americano: 1)',
+        'prato': '• Leite de vaca desnatado (Copo Americano: 1)',
     },
 ]
 
@@ -592,7 +592,7 @@ DICE = [
         'principal': 'DI',
         'secundaria': 'CE',
         'ordem': 1,
-        'prato': '•	Castanha de caju (Unidade: 4) ou Castanha do Pará sem sal (Unidade (4g): 2) ',
+        'prato': '• Castanha de caju (Unidade: 4) ou Castanha do Pará sem sal (Unidade (4g): 2) ',
     },
 
     # Almoço - Diabetes - Colesterol Elevado
@@ -774,7 +774,7 @@ DIAN = [
         'principal': 'DI',
         'secundaria': 'AN',
         'ordem': 1,
-        'prato': '•	Ovo de galinha(mexido ou cozido) (3 Unidades) Ou Atum (120g)',
+        'prato': '• Ovo de galinha(mexido ou cozido) (3 Unidades) Ou Atum (120g)',
     },
     {
         'refeicao': 5,
@@ -810,7 +810,7 @@ DIRL = [
         'principal': 'DI',
         'secundaria': 'RL',
         'ordem': 1,
-        'prato': '•	Café da Manhã - Diabetes - Retenção liquida',
+        'prato': '• Café da Manhã - Diabetes - Retenção liquida',
     },
 
     # Refeição 2 - Diabetes - Retenção liquida
@@ -819,7 +819,7 @@ DIRL = [
         'principal': 'DI',
         'secundaria': 'RL',
         'ordem': 1,
-        'prato': '•	Refeição 2 - Diabetes - Retenção liquida',
+        'prato': '• Refeição 2 - Diabetes - Retenção liquida',
     },
 
     # Almoço - Diabetes - Retenção liquida
@@ -828,7 +828,7 @@ DIRL = [
         'principal': 'DI',
         'secundaria': 'RL',
         'ordem': 1,
-        'prato': '•	Almoço - Diabetes - Retenção liquida',
+        'prato': '• Almoço - Diabetes - Retenção liquida',
     },
 
     # Refeição 4 - Diabetes - Retenção liquida
@@ -837,7 +837,7 @@ DIRL = [
         'principal': 'DI',
         'secundaria': 'RL',
         'ordem': 1,
-        'prato': '•	Refeição 2 - Diabetes - Retenção liquida',
+        'prato': '• Refeição 2 - Diabetes - Retenção liquida',
     },
 
     # Janta - Diabetes - Retenção liquida
@@ -846,7 +846,7 @@ DIRL = [
         'principal': 'DI',
         'secundaria': 'RL',
         'ordem': 1,
-        'prato': '•	Janta - Diabetes - Retenção liquida',
+        'prato': '• Janta - Diabetes - Retenção liquida',
     },
 
     # Refeição 6 - Diabetes - Retenção liquida
@@ -855,7 +855,7 @@ DIRL = [
         'principal': 'DI',
         'secundaria': 'RL',
         'ordem': 1,
-        'prato': '•	Refeição 6 - Diabetes - Retenção liquida',
+        'prato': '• Refeição 6 - Diabetes - Retenção liquida',
     },
 ]
 
@@ -1025,21 +1025,21 @@ HIML = [
         'principal': 'HI',
         'secundaria': 'ML',
         'ordem': 3,
-        'prato': '•	Própolis (gotas: 15)',
+        'prato': '• Própolis (gotas: 15)',
     },
     {
         'refeicao': 0,
         'principal': 'HI',
         'secundaria': 'ML',
         'ordem': 4,
-        'prato': '•	Cúrcuma (Colher de chá (2,05g): 1)',
+        'prato': '• Cúrcuma (Colher de chá (2,05g): 1)',
     },
     {
         'refeicao': 0,
         'principal': 'HI',
         'secundaria': 'ML',
         'ordem': 5,
-        'prato': '•	Pimenta caiena (Pitada (0,70g): 1)',
+        'prato': '• Pimenta caiena (Pitada (0,70g): 1)',
     },
     {
         'refeicao': 0,
@@ -1816,7 +1816,7 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Chá verde 400ml',
+        'prato': '• Chá verde 400ml',
     },
 
     # Café da Manhã - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1825,14 +1825,14 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Pão integral (Fatia: 1) ou Aipim Cozido(a) (Grama: 50) ou Cuscuz, de milho, cozido com sal (Grama: 55) ou Batata, doce, cozida (Grama: 80) ou Tapioca de goma (Grama: 20) ou Inhame (cozido) (Grama: 55)',
+        'prato': '• Pão integral (Fatia: 1) ou Aipim Cozido(a) (Grama: 50) ou Cuscuz, de milho, cozido com sal (Grama: 55) ou Batata, doce, cozida (Grama: 80) ou Tapioca de goma (Grama: 20) ou Inhame (cozido) (Grama: 55)',
     },
     {
         'refeicao': 1,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65) ou Atum em conserva (Grama: 70)',
+        'prato': '• Ovo de galinha Cozido(a) (Unidade: 2) ou Queijo minas frescal (Grama: 60) ou Peito de galinha ou frango Assado(a) (Grama: 80) ou Carne moída Cozido(a) (Grama: 65) ou Atum em conserva (Grama: 70)',
     },
 
     # Refeição 2 - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1841,14 +1841,14 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
+        'prato': '• Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
     {
         'refeicao': 2,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou Mamão, Papaia, cru (Grama: 210) ou pera (Unidade: 1) ou Abacate (Grama: 55) ou Tangerina (Grama: 160) ou Uva itália (un: 15) ou Morango (Unidade média (12g): 20) ou Abacaxi (Grama: 170) ou Goiaba (Grama: 160) ou Melancia (Grama: 250) ou Kiwi (Grama: 145) ou Manga (Grama: 130) ou Amora (Unidade: 50)',
+        'prato': '• Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou Mamão, Papaia, cru (Grama: 210) ou pera (Unidade: 1) ou Abacate (Grama: 55) ou Tangerina (Grama: 160) ou Uva itália (un: 15) ou Morango (Unidade média (12g): 20) ou Abacaxi (Grama: 170) ou Goiaba (Grama: 160) ou Melancia (Grama: 250) ou Kiwi (Grama: 145) ou Manga (Grama: 130) ou Amora (Unidade: 50)',
     },
 
     # Almoço - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1857,35 +1857,35 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '• Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '• Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': '•	Feijão, carioca, cozido (Colher De Sopa Cheia: 4) ou Grão de bico (cozido) (Colher de sopa (24g): 2)',
+        'prato': '• Feijão, carioca, cozido (Colher De Sopa Cheia: 4) ou Grão de bico (cozido) (Colher de sopa (24g): 2)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 4,
-        'prato': '•	Arroz integral (cozido) (Colher de arroz cheia (63g): 4) ou Lentilha cozida (grãos) (Colher de sopa (24g): 7) ou Macarrão (cozido) (Colher de servir (56g): 2) ou Macarrão, de arroz cozido (Grama: 180)',
+        'prato': '• Arroz integral (cozido) (Colher de arroz cheia (63g): 4) ou Lentilha cozida (grãos) (Colher de sopa (24g): 7) ou Macarrão (cozido) (Colher de servir (56g): 2) ou Macarrão, de arroz cozido (Grama: 180)',
     },
     {
         'refeicao': 3,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 5,
-        'prato': '•	Tangerina (Unidade: 1) ou Kiwi (Unidade: 1) ou Laranja (Unidade: 1)',
+        'prato': '• Tangerina (Unidade: 1) ou Kiwi (Unidade: 1) ou Laranja (Unidade: 1)',
     },
 
     # Refeição 4 - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1894,14 +1894,14 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
+        'prato': '• Granola (Colher de sopa (13g): 1) ou Linhaça, semente (Colher De Chá: 3) ou Aveia em flocos finos - Quaker® (Colher de sopa (15g): 1) ou Psylium (Grama: 10) ou Semente de chia (Colher de sopa: 5)',
     },
     {
         'refeicao': 4,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Iogurte desnatado (Copo Americano: 1)',
+        'prato': '• Iogurte desnatado (Copo Americano: 1)',
     },
    
 
@@ -1911,35 +1911,35 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
+        'prato': '• Salada ou verdura cozida, ou folhas em geral (Escumadeira: 2) 84g',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
+        'prato': '• Peito de galinha ou frango Assado(a) (Grama: 150) ou Patinho Assado(a) (Grama: 130) ou Merluza, filé, assado (Grama: 210) ou Carne moída (Grama: 120) ou Salmão, filé, com pele, fresco, grelhado (Grama: 110)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': '•	Batata doce cozida sem sal (Grama: 70) ou Cuscuz, de milho, cozido com sal (Grama: 50) ou Inhame (cozido) (Grama: 60) ou Pão integral (Fatia: 1)',
+        'prato': '• Batata doce cozida sem sal (Grama: 70) ou Cuscuz, de milho, cozido com sal (Grama: 50) ou Inhame (cozido) (Grama: 60) ou Pão integral (Fatia: 1)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 4,
-        'prato': '•	Brócolis (Grama: 50)',
+        'prato': '• Brócolis (Grama: 50)',
     },
     {
         'refeicao': 5,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 5,
-        'prato': '•	chocolate amargo (Tablete: 1)',
+        'prato': '• chocolate amargo (Tablete: 1)',
     },
     
     # Refeição 6 - Nenhuma Patologia Primaria - Nenhuma Patologia Secundaria #
@@ -1948,21 +1948,21 @@ NPNP = [
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 1,
-        'prato': '•	Clara de ovo de galinha (Unidade (34g): 1)',
+        'prato': '• Clara de ovo de galinha (Unidade (34g): 1)',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 2,
-        'prato': '•	Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou pera (Unidade: 1) ou Mamão papaia (Grama: 210) ou Morango (Unidade média (12g): 25) ou Amora (Unidade: 50)',
+        'prato': '• Banana, prata, crua (Unidade Pequena: 1) ou Maçã (Unidade: 1) ou pera (Unidade: 1) ou Mamão papaia (Grama: 210) ou Morango (Unidade média (12g): 25) ou Amora (Unidade: 50)',
     },
     {
         'refeicao': 6,
         'principal': 'NP',
         'secundaria': 'NP',
         'ordem': 3,
-        'prato': '•	chá de cavalinha (200ml: 1)',
+        'prato': '• chá de cavalinha (200ml: 1)',
     },
 ]
 
