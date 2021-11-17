@@ -24,7 +24,7 @@ class UsuarioViewSet(CreateAPIView, GenericViewSet):
     permission_classes = [IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
-        request.data['usuario'] = request.user.id
+        request.data['user'] = request.user.id
         return super().create(request, *args, **kwargs)
 
 

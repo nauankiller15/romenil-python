@@ -1,0 +1,74 @@
+
+<div class="dashFundo"  style="display: block !important"></div>
+
+<div id="usuario">
+  <div class="box-text-criarAcc">
+    <div class="text-info-box">
+      <header>
+        <div class="logo-calc"></div>
+      </header>
+      <div class="separTe"></div>
+      
+      <div>
+        <div class="container-cart">
+          <h3>Complemente seus dados:</h3>
+        </div>
+        <div class="containerED">
+          <form (ngSubmit)="onSubmitUsuario()" #formUsuario="ngForm">
+            <div class="form-group">
+              <label>CPF / CNPJ:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="cpf_ou_cnpj"
+                id="cpf_ou_cnpj"
+                [(ngModel)]="usuario.cpf_ou_cnpj"
+                required
+                placeholder="Digite seu CPF ou CNPJ aqui"
+                mask="CPF_CNPJ"
+                          
+              />
+              <span class="symbol-input100">
+                <i class="fa fa-id-card"></i>
+              </span>
+            </div>
+
+            <div class="form-group">
+              <label>Celular:</label>
+              <input
+                class="celular form-control"
+                type="tel"
+                name="celular"
+                id="celular"
+                [(ngModel)]="usuario.celular"
+                required
+                placeholder="Digite seu celular aqui"
+                mask="(00) 00000-0000"
+              />
+              <span class="symbol-input100">
+                <i class="fab fa-whatsapp"></i>
+              </span>
+            </div>
+
+            <button
+              type="submit"
+              class="btn criarcontaBt"
+              [disabled]="formUsuario.form.invalid"
+            >
+              <i class="fas fa-plus" style="margin-right: 10px"></i>Adicionar
+              dados
+            </button>
+            <button
+              id="voltarParaLogin"
+              type="button"
+              class="btn success"
+              routerLink="/login"
+            >
+              <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

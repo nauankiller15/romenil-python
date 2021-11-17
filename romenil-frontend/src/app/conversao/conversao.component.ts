@@ -53,12 +53,14 @@ export class ConversaoComponent implements OnInit {
   getUsuario() {
     this.accountService.usuario().subscribe(
       (data) => {
-        if (!data.usuario) {
-          this.router.navigate(['/create-account']);
-        } else if (data.ativo) {
-          this.router.navigate(['formulario']);
+        if (data.user) {
+          if (data.ativo) {
+            this.router.navigate(['welcome_exclusive']);
+          } else {
+            this.getConta();
+          }
         } else {
-          this.getConta();
+          this.router.navigate(['criar-usuario']);
         }
       },
       (error) => {

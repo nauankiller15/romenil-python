@@ -57,11 +57,15 @@ export class CardapiosComponent implements OnInit {
   getDados() {
     this.apiService.listar('conta/usuario').subscribe(
       (data) => {
-        if (data && data.ativo) {
-          this.getConta();
-          this.getCardapios();
+        if (data.user) {
+          if (data.ativo) {
+            this.getConta();
+            this.getCardapios();
+          } else {
+            this.router.navigate(['conversao']);
+          }
         } else {
-          this.router.navigate(['conversao']);
+          this.router.navigate(['criar-usuario']);
         }
       },
       (error) => {

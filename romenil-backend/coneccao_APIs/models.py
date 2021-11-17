@@ -75,18 +75,18 @@ class Eduzz:
     def connect(self, url, params={}):
         self.set_headers()
         rq = requests.get(url, headers=self.headers, params=params)
-        
+
         if rq.status_code == 200:
             dados = rq.json()
-
             return dados
-        raise RequestAborted
+        else:
+            raise RequestAborted(rq.status_code)
 
     @property
     def ativo(self):
         """Conecta à API e verifica se cliente possui compra ativa"""
 
-        active = self.any_sale_active()    
+        active = self.any_sale_active()
 
         return active
        
@@ -101,7 +101,6 @@ class Eduzz:
         active_in_db = self.select_sale_active_db()
         if active_in_db:
             return True
-
         else:
             sales = self.sale_list()
             for sale in sales:
@@ -131,7 +130,6 @@ class Eduzz:
 
         expiration = datetime.now(timezone.utc) - timedelta(days=2)
         for sale in sales:
-
             # se o cadastro foi atualizado a mais de 1 dia, atualiza o status
             if sale.atualizado_em < expiration:
                 sale_data = self.get_sale(sale.sale_id)

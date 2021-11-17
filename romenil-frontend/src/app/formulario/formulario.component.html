@@ -616,7 +616,7 @@
                 <i class="fas fa-clipboard-check" style="margin-right: 10px"></i
                 >Gerar meu Cardápio
               </button>
-              <button id="hideT" routerLink="/cardapios" class="btn success">
+              <button *ngIf="formulario.modificado_em" id="hideT" routerLink="/cardapios" class="btn success">
                 <i
                   class="fas fa-clipboard-check"
                   style="margin-right: 10px"

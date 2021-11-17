@@ -58,13 +58,15 @@ export class FormularioComponent implements OnInit {
   getUsuario() {
     this.accountService.usuario().subscribe(
       (data) => {
-        if (!data.usuario) {
-          this.router.navigate(['/create-account']);
-        } else if (data.ativo) {
-          this.getConta();
-          this.getFormulario();
+        if (data.user) {
+          if (data.ativo) {
+            this.getConta();
+            this.getFormulario();
+          } else {
+            this.router.navigate(['conversao']);
+          }
         } else {
-          this.router.navigate(['conversao']);
+          this.router.navigate(['/criar-usuario']);
         }
       },
       (error) => {
@@ -109,7 +111,7 @@ export class FormularioComponent implements OnInit {
   salvarFormulario() {
     this.apiService.salvar('formulario', this.formulario).subscribe(
       (data) => {
-        this.router.navigate(['cardapios']);
+        this.router.navigate(['aguarde']);
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);

@@ -35,3 +35,6 @@ class Formulario(Model):
     vegetariano = BooleanField()
     
     modificado_em = DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.usuario.user.username} ({self.modificado_em})'

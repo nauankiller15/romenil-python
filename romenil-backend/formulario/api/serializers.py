@@ -6,11 +6,6 @@ from formulario.models import Formulario
 
 class FormularioSerializer(ModelSerializer):
 
-    ativo = SerializerMethodField()
-
-    def get_ativo(self, obj):
-        return obj.usuario.ativo
-
     class Meta:
         model = Formulario        
         fields = '__all__'

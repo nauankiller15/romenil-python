@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { AccountService } from 'src/app/shared/account-service/account.service';
 import { MustMatch } from './must-match.service';
 
-import { Conta, Usuario } from '../models';
+import { Conta } from '../models';
 
 import { Erro } from 'src/app/shared/erros';
 
@@ -17,8 +17,6 @@ declare var $: any;
 })
 export class CreateAccountComponent implements OnInit {
   conta = new Conta();
-  usuario = new Usuario();
-  pagina = 'conta';
   loading = false;
 
   constructor(
@@ -28,22 +26,16 @@ export class CreateAccountComponent implements OnInit {
   ) {
     if (this.accountService.autenticado()) {
       this.accountService.usuario().subscribe((data) => {
-        if (data.usuario) {
-          this.router.navigate(['/formulario']);
-        } else {
-          this.pagina = 'usuario';
+        if (data.user && data.ativo == true) {
+          this.router.navigate(['/welcome_exclusive']);
+        this.router.navigate(['/welcome']);
         }
       });
     }
   }
 
   ngOnInit(): void {
-
     $('body').addClass('noborder');
-  }
-
-  voltar() {
-    this.pagina = 'conta';
   }
     
   onSubmit() {
@@ -52,22 +44,8 @@ export class CreateAccountComponent implements OnInit {
       (data) => {
         this.conta = data;
         this.toastrService.success('Conta criada com sucesso');
-        this.router.navigate(['/login']);
-      },
-      (error) => {
         this.loading = false;
-        const erro = new Erro(this.toastrService, error);
-        erro.exibir();
-      }
-    );
-  }
-
-  onSubmitUsuario() {
-    this.loading = true;
-    this.accountService.createUser(this.usuario).subscribe(
-      (data) => {
-        this.toastrService.success('Dados cadastrados com sucesso!');
-        this.router.navigate(['/formulario']);
+        this.router.navigate(['/login']);
       },
       (error) => {
         this.loading = false;

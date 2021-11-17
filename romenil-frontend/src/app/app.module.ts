@@ -16,7 +16,6 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
-import { AuthenticationComponent } from './account/authentication/authentication.component';
 import { CardapiosComponent } from './cardapios/cardapios.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -35,6 +34,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/dashboard-cardapios.component';
 import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
 import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizado.component';
+import { UsuarioComponent } from './account/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,6 @@ import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizad
     CalculadoraComponent,
     LoginComponent,
     CreateAccountComponent,
-    AuthenticationComponent,
     CardapiosComponent,
     FormularioComponent,
     WelcomeComponent,
@@ -58,6 +57,7 @@ import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizad
     DashboardCardapiosComponent,
     PermissoesComponent,
     NaoAutorizadoComponent,
+    UsuarioComponent,
   ],
   imports: [
     MatProgressBarModule,

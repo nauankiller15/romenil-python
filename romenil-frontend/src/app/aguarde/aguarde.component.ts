@@ -43,13 +43,15 @@ export class AguardeComponent implements OnInit {
   getUsuario() {
     this.accountService.usuario().subscribe(
       (data) => {
-        if (!data.usuario) {
-          this.router.navigate(['/create-account']);
-        } else if (data.ativo) {
-          this.getConta();
-          this.getFormulario();
+        if (data.user) {
+          if (data.ativo) {
+            this.getConta();
+            this.getFormulario();
+          } else {
+            this.router.navigate(['conversao']);
+          }
         } else {
-          this.router.navigate(['conversao']);
+          this.router.navigate(['criar-usuario']);
         }
       },
       (error) => {
@@ -71,6 +73,8 @@ export class AguardeComponent implements OnInit {
           this.intervalo = setInterval(() => {
             this.getTimer();
           }, 1000);
+        } else {
+          this.router.navigate(['formulario']);
         }
       },
       (error) => {
@@ -94,7 +98,6 @@ export class AguardeComponent implements OnInit {
 
   getTimer() {
     this.time--;
-    console.log(this.time);
     this.timer.horas = Math.floor(this.time / 3600);
     this.timer.minutos = Math.floor((this.time % 3600) / 60);
     this.timer.segundos = Math.floor((this.time % 3600) % 60);

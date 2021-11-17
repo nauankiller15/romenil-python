@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/dashboard-cardapios.component';
 import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
 import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizado.component';
+import { UsuarioComponent } from './account/usuario/usuario.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
       { path: 'formulario', component: FormularioComponent },
       { path: 'conversao', component: ConversaoComponent },
       { path: 'aguarde', component: AguardeComponent },
+      { path: 'criar-usuario', component: UsuarioComponent },
     ],
   },
 ];
