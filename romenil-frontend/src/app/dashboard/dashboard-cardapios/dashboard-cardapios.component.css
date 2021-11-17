@@ -31,34 +31,33 @@
 }
 
 .patologia ul {
+  font-size: 0.84em;
   padding: 0 10px 0 10px;
   margin: 0;
   display: flex;
   width: 100%;
-  border-bottom: solid var(--azul);
+  border-bottom: 1px solid #2a313a;
 }
 
 .patologia ul li {
   text-align: center;
   float: left;
   list-style: none;
-  padding: 12px;
+  padding: 12px 20px 5px 20px;
   color: #fff;
   transition: 0.32s all;
+
 }
 
 .patologia ul li:hover {
-  background: var(--azul);
-  color: #0a0e17;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom: 2px solid #2a2f38;
+  color: #d1d4d9;
   cursor: pointer;
-  font-weight: 600;
 }
 
 .active {
   color: #0a0e17;
-  background: var(--azul);
+  border-bottom: 2px solid var(--azul);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   font-weight: 600;
