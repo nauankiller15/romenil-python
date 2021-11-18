@@ -16,20 +16,23 @@ import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/das
 import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
 import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizado.component';
 import { UsuarioComponent } from './account/usuario/usuario.component';
+import { ProfileComponent } from './account/profile/profile.component';
+import { TrocarSenhaComponent } from './account/trocar-senha/trocar-senha.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'create-account', component: CreateAccountComponent },
   {
-    path: 'dashboard', canActivate: [AuthGuardService],
+    path: 'dashboard',
+    canActivate: [AuthGuardService],
     children: [
-      {path: '', component: DashboardComponent},
-      {path: 'cardapios', component: DashboardCardapiosComponent},
-      {path: 'permissoes', component: PermissoesComponent},
-      {path: 'nao-autorizado', component: NaoAutorizadoComponent}
-    ]
+      { path: '', component: DashboardComponent },
+      { path: 'cardapios', component: DashboardCardapiosComponent },
+      { path: 'permissoes', component: PermissoesComponent },
+      { path: 'nao-autorizado', component: NaoAutorizadoComponent },
+    ],
   },
-    
+
   { path: '', component: AppComponent },
   {
     path: '',
@@ -44,6 +47,8 @@ const routes: Routes = [
       { path: 'conversao', component: ConversaoComponent },
       { path: 'aguarde', component: AguardeComponent },
       { path: 'criar-usuario', component: UsuarioComponent },
+      { path: 'perfil', component: ProfileComponent },
+      { path: 'trocar_senha', component: TrocarSenhaComponent },
     ],
   },
 ];

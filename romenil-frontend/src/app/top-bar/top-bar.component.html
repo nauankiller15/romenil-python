@@ -12,12 +12,13 @@
     </div>
     <ul class="nav-menu">
       <div class="drop-btn">
-        <i class="fas fa-user" style="margin-right: 10px"></i>{{conta.first_name}}
+        <i class="fas fa-user" style="margin-right: 10px"></i
+        >{{ conta.first_name }}
         <i class="fas fa-caret-down" style="margin-left: 4px"></i>
       </div>
       <div class="wrapper">
         <ul class="menu-bar">
-          <li>
+          <li routerLink="/perfil">
             <a>
               <div class="icon"><span class="fas fa-user"></span></div>
               Meu perfil
@@ -29,7 +30,7 @@
               Configurações <i class="fas fa-angle-right"></i>
             </a>
           </li> -->
-          <li>
+          <li routerLink="/trocar_senha">
             <a>
               <div class="icon"><span class="fas fa-lock"></span></div>
               Trocar senha

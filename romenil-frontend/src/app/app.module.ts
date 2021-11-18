@@ -35,6 +35,8 @@ import { DashboardCardapiosComponent } from './dashboard/dashboard-cardapios/das
 import { PermissoesComponent } from './dashboard/permissoes/permissoes.component';
 import { NaoAutorizadoComponent } from './dashboard/nao-autorizado/nao-autorizado.component';
 import { UsuarioComponent } from './account/usuario/usuario.component';
+import { ProfileComponent } from './account/profile/profile.component';
+import { TrocarSenhaComponent } from './account/trocar-senha/trocar-senha.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { UsuarioComponent } from './account/usuario/usuario.component';
     PermissoesComponent,
     NaoAutorizadoComponent,
     UsuarioComponent,
+    ProfileComponent,
+    TrocarSenhaComponent,
   ],
   imports: [
     MatProgressBarModule,

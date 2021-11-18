@@ -1,0 +1,74 @@
+<div class="dashFundo" style="display: block !important"></div>
+
+<div id="perfil">
+  <div class="box-text-perfil">
+    <div class="text-info-box">
+      <header>
+        <div class="logo-calc"></div>
+      </header>
+      <div class="separTe"></div>
+      <div class="container-cart">
+        <h3>Meus dados</h3>
+      </div>
+      <div class="containerED">
+        <form #form="ngForm">
+          <div class="formPerfil">
+            <div class="fset">
+              <div class="nameOps form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="Alterar meu nome"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Meu nome</label>
+              </div>
+              <div class="lastOps form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="Alterar meu sobrenome"
+                  name="lastname"
+                  id="lastname"
+                  required
+                />
+                <label for="lastname" class="form__label">Meu sobrenome</label>
+              </div>
+            </div>
+            <div class="form__group field">
+              <input
+                type="input"
+                class="form__field"
+                placeholder="Alterar meu email"
+                name="email"
+                id="email"
+                required
+              />
+              <label for="email" class="form__label">Meu email</label>
+            </div>
+            <div class="form__group field">
+              <input
+                type="input"
+                class="form__field"
+                placeholder="Alterar meu cpf/cnpj"
+                name="cpf/cnpj"
+                id="cpf/cnpj"
+                required
+              />
+              <label for="cpf/cnpj" class="form__label">Meu CPF/CNPJ</label>
+            </div>
+          </div>
+          <button id="abrirConta" type="button" class="btn success">
+            <i class="fas fa-check" style="margin-right: 10px"></i>Salvar
+            alterações
+          </button>
+          <button id="abrirConta" type="button" class="btn success" routerLink="/welcome_exclusive">
+            <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

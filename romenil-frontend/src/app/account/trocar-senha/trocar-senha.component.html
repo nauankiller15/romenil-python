@@ -1,0 +1,50 @@
+<div class="dashFundo" style="display: block !important"></div>
+
+<div id="trocar-senha">
+  <div class="box-text-trocar-senha">
+    <div class="text-info-box">
+      <header>
+        <div class="logo-calc"></div>
+      </header>
+      <div class="separTe"></div>
+      <div class="container-cart">
+        <h3>Trocar senha</h3>
+      </div>
+      <div class="containerED">
+        <form #form="ngForm">
+          <div class="formPerfil">
+            <div class="form__group field">
+              <input
+                type="password"
+                class="form__field"
+                placeholder="Alterar minha senha"
+                name="senha"
+                id="senha"
+                required
+              />
+              <label for="senha" class="form__label">Minha senha</label>
+            </div>
+            <div class="form__group field">
+              <input
+                type="password"
+                class="form__field"
+                placeholder="Alterar minha senha"
+                name="senhaForce"
+                id="senhaForce"
+                required
+              />
+              <label for="senhaForce" class="form__label">Confirmar senha</label>
+            </div>
+          </div>
+          <button id="abrirConta" type="button" class="btn success">
+            <i class="fas fa-check" style="margin-right: 10px"></i>Salvar
+            alterações
+          </button>
+          <button id="abrirConta" type="button" class="btn success" routerLink="/welcome_exclusive">
+            <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
