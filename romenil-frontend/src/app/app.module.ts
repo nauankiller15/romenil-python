@@ -71,7 +71,7 @@ import { UsuarioComponent } from './account/usuario/usuario.component';
       timeOut: 3800,
       extendedTimeOut: 3500,
       closeButton: true,
-      positionClass: 'toast-bottom-right',
+      positionClass: 'toast-bottom-left',
       enableHtml: true,
       progressBar: true,
     }),
