@@ -17,12 +17,13 @@ export class LoginComponent implements OnInit {
   carregando = false;
   mask = '';
   documento_correto = true;
+  public loading = false;
 
   constructor(
     private toastrService: ToastrService,
     private accountService: AccountService,
     private router: Router
-  ) { 
+  ) {
     if (this.accountService.autenticado()) {
       this.redirectPage();
     }
@@ -42,18 +43,26 @@ export class LoginComponent implements OnInit {
   }
 
   removeMask() {
-    this.mask = ''
+    this.mask = '';
   }
 
   getMask() {
-    
-    if (this.login.email_cpf_cnpj.match(/^\d{11}$|^\d{14}$|^(\d{3}.){2}\d{3}\-\d{2}$|^\d{2}.\d{3}.\d{3}\/\d{4}\-\d{2}$/)) {
-      if (isNaN(Number((this.login.email_cpf_cnpj)))) {
-        this.login.email_cpf_cnpj = this.login.email_cpf_cnpj.replace(/\./g, '').replace('-', '').replace('/', '');
+    if (
+      this.login.email_cpf_cnpj.match(
+        /^\d{11}$|^\d{14}$|^(\d{3}.){2}\d{3}\-\d{2}$|^\d{2}.\d{3}.\d{3}\/\d{4}\-\d{2}$/
+      )
+    ) {
+      if (isNaN(Number(this.login.email_cpf_cnpj))) {
+        this.login.email_cpf_cnpj = this.login.email_cpf_cnpj
+          .replace(/\./g, '')
+          .replace('-', '')
+          .replace('/', '');
       }
-      this.mask = 'CPF_CNPJ'
+      this.mask = 'CPF_CNPJ';
       this.documento_correto = true;
-    } else if (this.login.email_cpf_cnpj.match(/^[\.\_\w]+\@\w+(\.\w+){1,2}$/)) {
+    } else if (
+      this.login.email_cpf_cnpj.match(/^[\.\_\w]+\@\w+(\.\w+){1,2}$/)
+    ) {
       this.documento_correto = true;
     } else if (this.login.email_cpf_cnpj.match(/^[\w]+$/)) {
       this.documento_correto = true;
@@ -63,19 +72,26 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.carregando = true;
+    $('.loaderBtn').fadeIn(200);
+    this.loading = true;
+    
     this.accountService.login(this.login).subscribe(
       (data) => {
+        $('.loaderBtn').fadeOut(200);
+        this.loading = false;
+
         window.localStorage.setItem('token', data.token);
         this.toastrService.success('Login efetuado com sucesso!');
-        
+
         this.redirectPage();
       },
 
       (error) => {
-        this.carregando = false;
+        $('.loaderBtn').fadeOut(200);
+        this.loading = false;
+
         const erro = new Erro(this.toastrService, error);
-        erro.exibir()        
+        erro.exibir();
       }
     );
   }
@@ -86,9 +102,9 @@ export class LoginComponent implements OnInit {
     this.accountService.usuario().subscribe(
       (data) => {
         if (data.ativo == true) {
-          this.router.navigate(['welcome_exclusive'])
+          this.router.navigate(['welcome_exclusive']);
         } else {
-          this.router.navigate(['welcome'])
+          this.router.navigate(['welcome']);
         }
       },
       (error) => {

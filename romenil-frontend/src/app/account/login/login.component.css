@@ -208,6 +208,24 @@ header {
   width: 30%;
 }
 
+.loaderBtn {
+  width: 100%;
+  height: 54px;
+  position: relative;
+  margin-top: -64px;
+  margin-left: 5px;
+  background-color: #020611;
+  border: 1px solid var(--azul);
+  border-radius: 0.25rem;
+  align-items: center;
+  padding-top: 8px;
+  display: none;
+  color: var(--azul);
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+}
+
 .creatS {
   text-align: center;
   padding: 10px;
