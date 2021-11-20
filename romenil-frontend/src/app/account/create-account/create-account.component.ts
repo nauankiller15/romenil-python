@@ -36,6 +36,15 @@ export class CreateAccountComponent implements OnInit {
 
   ngOnInit(): void {
     $('body').addClass('noborder');
+
+    // BOTÃO DE ABRIR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
+    $('#criar-conta').on('click', function () {
+      $('#generateCard').slideDown(550);
+    });
+    // BOTÃO DE FECHAR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
+    $('#closeGenerate').on('click', function () {
+      $('#generateCard').slideUp(650);
+    });
   }
     
   onSubmit() {

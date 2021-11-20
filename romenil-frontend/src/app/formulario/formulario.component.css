@@ -43,6 +43,11 @@
   color: #e0e0e0;
   padding: 16px 15px 0px 15px;
 }
+
+.cardBtn2 {
+  margin: 5vh auto;
+  width: 60%;
+}
 /*  */
 
 header {
@@ -770,11 +775,6 @@ input[type="radio"] {
 .cardBtn {
   margin: 5vh auto;
   width: 30%;
-}
-
-.cardBtn2 {
-  margin: 5vh auto;
-  width: 60%;
 }
 
 .success {

@@ -616,7 +616,12 @@
                 <i class="fas fa-clipboard-check" style="margin-right: 10px"></i
                 >Gerar meu Cardápio
               </button>
-              <button *ngIf="formulario.modificado_em" id="hideT" routerLink="/cardapios" class="btn success">
+              <button
+                *ngIf="formulario.modificado_em"
+                id="hideT"
+                routerLink="/cardapios"
+                class="btn success"
+              >
                 <i
                   class="fas fa-clipboard-check"
                   style="margin-right: 10px"
@@ -625,6 +630,7 @@
               </button>
             </div>
             <div class="linhaE"></div>
+            <!-- TELA DE CONFIRMAÇÃO -->
             <div id="generateCard">
               <div class="box-confirm">
                 <div class="text-confirm">
@@ -668,6 +674,7 @@
               </div>
             </div>
           </div>
+          <!--  -->
         </div>
       </div>
     </div>
