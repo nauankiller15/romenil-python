@@ -64,7 +64,13 @@
               <label for="cpf/cnpj" class="form__label">Meu CPF/CNPJ</label>
             </div>
           </div>
-          <button id="abrirConta" type="button" class="btn success" (click)="atualizarDados()">
+          <button 
+            (click)="atualizarDados()"
+            id="abrirConta" 
+            type="button" 
+            class="btn success" 
+            [disabled]="form.form.invalid || !form.form.touched"
+          >
             <i class="fas fa-check" style="margin-right: 10px"></i>Salvar
             alterações
           </button>

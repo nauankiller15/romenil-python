@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from 'src/app/shared/account-service/account.service';
 import { ApiService } from 'src/app/shared/api-service/api.service';
@@ -27,6 +28,7 @@ export class ProfileComponent implements OnInit {
     private accountService: AccountService,
     private apiService: ApiService,
     private toastrService: ToastrService,
+    private router: Router
   ) { 
     this.getUsuario();
     this.getConta();
@@ -67,7 +69,9 @@ export class ProfileComponent implements OnInit {
     this.conta.username = this.conta.email;
     this.apiService.atualizar('conta/atualizar', this.conta).subscribe(
       (data) => {
+        window.localStorage.removeItem('token');
         this.toastrService.success('Dados atualizados com sucesso.');
+        this.router.navigate(['/login']);
       },
       (error) => {
         const erro = new Erro(this.toastrService, error);
