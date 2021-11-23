@@ -16,6 +16,7 @@ export class ProfileComponent implements OnInit {
     first_name: '',
     last_name: '',
     email: '',
+    username: '',
   }
 
   usuario = {
@@ -63,6 +64,7 @@ export class ProfileComponent implements OnInit {
   }
 
   atualizarDados() {
+    this.conta.username = this.conta.email;
     this.apiService.atualizar('conta/atualizar', this.conta).subscribe(
       (data) => {
         this.toastrService.success('Dados atualizados com sucesso.');

@@ -58,7 +58,7 @@ class ContaSerializer(serializers.ModelSerializer):
 class AtualizarContaSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'first_name', 'last_name', 'email']
+        fields = ['id', 'username', 'first_name', 'last_name', 'email']
 
 # ========= login ==========================
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
