@@ -5,7 +5,7 @@ import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
 import { ApiService } from '../shared/api-service/api.service';
 import { Erro } from '../shared/erros';
-import { Cardapio, Cardapios } from './modelos';
+import { Cardapios } from './modelos';
 declare var $: any;
 
 @Component({

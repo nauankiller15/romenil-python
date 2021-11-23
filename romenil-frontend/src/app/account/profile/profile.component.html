@@ -16,6 +16,7 @@
             <div class="fset">
               <div class="nameOps form__group field">
                 <input
+                  [(ngModel)]="conta.first_name"
                   type="input"
                   class="form__field"
                   placeholder="Alterar meu nome"
@@ -27,6 +28,7 @@
               </div>
               <div class="lastOps form__group field">
                 <input
+                  [(ngModel)]="conta.last_name"
                   type="input"
                   class="form__field"
                   placeholder="Alterar meu sobrenome"
@@ -39,7 +41,8 @@
             </div>
             <div class="form__group field">
               <input
-                type="input"
+                [(ngModel)]="conta.email"
+                type="email"
                 class="form__field"
                 placeholder="Alterar meu email"
                 name="email"
@@ -50,17 +53,18 @@
             </div>
             <div class="form__group field">
               <input
-                type="input"
+                type="text"
+                value="{{usuario.cpf_ou_cnpj|mask: '000.000.000-00'}}"
                 class="form__field"
                 placeholder="Alterar meu cpf/cnpj"
                 name="cpf/cnpj"
                 id="cpf/cnpj"
-                required
+                readonly
               />
               <label for="cpf/cnpj" class="form__label">Meu CPF/CNPJ</label>
             </div>
           </div>
-          <button id="abrirConta" type="button" class="btn success">
+          <button id="abrirConta" type="button" class="btn success" (click)="atualizarDados()">
             <i class="fas fa-check" style="margin-right: 10px"></i>Salvar
             alterações
           </button>

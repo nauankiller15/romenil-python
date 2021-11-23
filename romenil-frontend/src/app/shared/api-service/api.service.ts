@@ -21,15 +21,14 @@ export class ApiService {
     });
   }
 
-  getHtml(url: string): Observable<any> {
-    return this.httpClient.get(this.baseUrl + url +'/', {
-      responseType: 'text',
-      headers: this.httpHeaders2,
+  salvar(url: string, dados: any): Observable<any> {
+    return this.httpClient.post(this.baseUrl + url +'/', dados, {
+      headers: this.httpHeaders,
     });
   }
 
-  salvar(url: string, dados: any): Observable<any> {
-    return this.httpClient.post(this.baseUrl + url +'/', dados, {
+  atualizar(url: string, dados: any): Observable<any> {
+    return this.httpClient.put(this.baseUrl + url + `/${dados.id}`, dados, {
       headers: this.httpHeaders,
     });
   }
