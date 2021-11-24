@@ -10,11 +10,17 @@
 }
 
 .sidebar-dashboard ul {
+  padding-top:25px;
   margin-left: -32px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.redcolor{
+  color: #9b2222;
+  font-weight: bold;
 }
 
 .sidebar-dashboard ul li {

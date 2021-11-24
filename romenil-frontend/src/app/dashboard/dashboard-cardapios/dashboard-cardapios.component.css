@@ -46,7 +46,6 @@
   padding: 12px 20px 5px 20px;
   color: #fff;
   transition: 0.32s all;
-
 }
 
 .patologia ul li:hover {
@@ -68,6 +67,7 @@
   padding: 15px;
   padding-top: 20px;
   margin: 4vh auto;
+  animation: fadein 1.0s ease-in-out;
 }
 
 .container-cart {
@@ -94,8 +94,8 @@
   font-size: 1.23em;
   width: 90%;
   margin: 2vh 4vh 2vh 2vh;
-  animation: slide-left 1.2s ease-in-out;
   display: block;
+  box-shadow: 0px 0px 4px 1px #272727;
 }
 
 .refeicao label {
@@ -110,7 +110,7 @@
   margin-bottom: 30px;
   text-align: justify;
   font-weight: 400;
-  animation: slide-left 1.2s ease-in-out;
+  animation: fadein 1.0s ease-in-out;
 }
 
 .cardapio p {
@@ -138,4 +138,13 @@
   box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%),
     0 0.9375rem 1.40625rem rgb(4 9 20 / 3%),
     0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
