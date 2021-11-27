@@ -25,29 +25,38 @@ export class CreateAccountComponent implements OnInit {
     private router: Router
   ) {
     if (this.accountService.autenticado()) {
-      this.accountService.usuario().subscribe((data) => {
-        if (data.user && data.ativo == true) {
-          this.router.navigate(['/welcome_exclusive']);
-        this.router.navigate(['/welcome']);
+      this.accountService.usuario().subscribe(
+        (data) => {
+          if (data.user) {
+            if (data.ativo == true) {
+              this.router.navigate(['/welcome_exclusive']);
+            } else {
+              this.router.navigate(['/welcome']);
+            }
+          }
+        },
+        (error) => {
+          this.loading = false;
+          const erro = new Erro(this.toastrService, error);
+          erro.exibir();
         }
-      });
+      );
     }
   }
 
   ngOnInit(): void {
     $('body').addClass('noborder');
 
-    // BOTÃO DE ABRIR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
-    $('#criar-conta').on('click', function () {
-      $('#generateCard').slideDown(550);
-    });
-    // BOTÃO DE FECHAR TELA DE CONFIRMAÇÃO DE GERAR CARDÁPIO
     $('#closeGenerate').on('click', function () {
       $('#generateCard').slideUp(650);
     });
   }
-    
+
   onSubmit() {
+    $('#generateCard').slideDown(550);
+  }
+    
+  criarConta() {
     this.loading = true;
     this.accountService.createAccount(this.conta).subscribe(
       (data) => {
