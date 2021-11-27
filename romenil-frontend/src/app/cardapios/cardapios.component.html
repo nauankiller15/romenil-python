@@ -165,20 +165,21 @@
           <div class="chooseOptions">Escolha uma das opções:</div>
           <button id="printer" class="btn success">
             <i class="fas fa-print" style="margin-right: 10px"></i>Imprimir a
-            Página
+            página
           </button>
           <button class="btn success" (click)="enviarEmail()">
             <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar
-            para meu Email
+            para meu email
           </button>
           <div class="loaderBtn">
-            <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar para meu Email
+            <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar para meu email
             <ngx-loading
               [show]="loading"
               [config]="{ backdropBorderRadius: '3px' }"
               [template]="customLoadingTemplate"
             ></ngx-loading>
             <ng-template #customLoadingTemplate> </ng-template>
+           
           </div>
           <script>
             var myStyle =
@@ -187,6 +188,9 @@
               myStyle + jQuery(".table_disp").html()
             );
           </script>
+           <button class="btn success" routerLink="/welcome_exclusive">
+            <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar para o início
+          </button>
         </div>
         <div class="linhaE"></div>
       </div>
