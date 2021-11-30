@@ -24,5 +24,6 @@ export class AppComponent implements OnInit {
     $('#entrarprog').on('click', function () {
       $('.dashFundo').fadeIn(250);
     });
+
   }
 }

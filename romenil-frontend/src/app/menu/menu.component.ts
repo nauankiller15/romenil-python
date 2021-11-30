@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+  
     // ANIMAÇÃO LOGIN ABRIR
     $('#loginBt').on('click', function () {
       $('#login').fadeIn('100');
