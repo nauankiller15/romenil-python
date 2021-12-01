@@ -107,8 +107,9 @@
             <!-- TELA DE CONFIRMAÇÃO DA CRIAÇÃO DA CONTA -->
             <div id="generateCard">
               <div class="box-confirm">
+                <div id="closeGenerate" class="fechar-button-create">X</div>
                 <div class="text-confirm">
-                  <h6>Você já comprou o nosso serviço?</h6>
+                  <h6 class="titleS">Já comprou o nosso serviço?</h6>
                   <div style="margin-top: 10px">
                     Se você já <b class="azul">comprou</b> o nosso serviço, por
                     favor clica em <b class="azul">Já comprei</b>, se não
@@ -121,7 +122,11 @@
                       comprei
                     </button>
 
-                    <button type="submit" class="btn success" (click)="criarConta()">
+                    <button
+                      type="submit"
+                      class="btn success"
+                      (click)="criarConta()"
+                    >
                       <i class="fas fa-ban" style="margin-right: 10px"></i>Ainda
                       não
                     </button>

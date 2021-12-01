@@ -48,12 +48,13 @@ export class CreateAccountComponent implements OnInit {
     $('body').addClass('noborder');
 
     $('#closeGenerate').on('click', function () {
-      $('#generateCard').slideUp(650);
+      $('#generateCard').slideUp(350);
     });
+    
   }
 
   onSubmit() {
-    $('#generateCard').slideDown(550);
+    $('#generateCard').slideDown(450);
   }
     
   criarConta() {
