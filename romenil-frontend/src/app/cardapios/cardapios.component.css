@@ -214,7 +214,6 @@ header {
   font-size: 1.23em;
   width: 45%;
   margin: 3vh 3vh 2vh 3vh;
-  animation: slide-left 1.2s ease-in-out;
   display: inline-grid;
 }
 
@@ -222,7 +221,6 @@ header {
   margin-bottom: 30px;
   text-align: justify;
   font-weight: 400;
-  animation: slide-left 1.2s ease-in-out;
 }
 
 .cardapio p {
@@ -404,7 +402,6 @@ header {
     font-size: 1.23em;
     width: 90%;
     margin: 2vh 4vh 2vh 2vh;
-    animation: slide-left 1.2s ease-in-out;
     display: block;
   }
 
