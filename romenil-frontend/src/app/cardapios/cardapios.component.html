@@ -136,7 +136,7 @@
               </ngx-skeleton-loader>
 
               <div class="cardapio" *ngIf="cardapios.refeicao2.length > 0">
-                <div  class="fadeIn" *ngIf="contentLoaded">
+                <div class="fadeIn" *ngIf="contentLoaded">
                   <p>
                     {{ cardapios.refeicao2[0] }}
                   </p>
@@ -154,47 +154,49 @@
               </div>
             </div>
             <div class="dadosConsulta2 almoco">
-              <label class="fadeIn" *ngIf="contentLoaded"><i class="fas fa-utensils favTit"></i> Almoço</label>
+              <label class="fadeIn" *ngIf="contentLoaded"
+                ><i class="fas fa-utensils favTit"></i> Almoço</label
+              >
               <div class="linhaE"></div>
 
               <ngx-skeleton-loader
-              *ngIf="!contentLoaded"
-              [theme]="{
-                'border-radius': '5px',
-                height: '50px',
-                'background-color': '#0e1420'
-              }"
-              animation="progress"
-            >
-            </ngx-skeleton-loader>
-            <ngx-skeleton-loader
-              *ngIf="!contentLoaded"
-              [theme]="{
-                'border-radius': '5px',
-                height: '150px',
-                'background-color': '#0e1420'
-              }"
-              animation="progress"
-            >
-            </ngx-skeleton-loader>
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '150px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
 
               <div class="cardapio" *ngIf="cardapios.almoco.length > 0">
                 <div class="fadeIn" ngIf="contentLoaded">
-                <p>
-                  {{ cardapios.almoco[0] }}
-                </p>
+                  <p>
+                    {{ cardapios.almoco[0] }}
+                  </p>
 
-                <p></p>
-                <p *ngFor="let prato of cardapios.almoco.slice(1)">
-                  <caption>
-                    COM
-                  </caption>
-                  {{ prato }}
-                </p>
+                  <p></p>
+                  <p *ngFor="let prato of cardapios.almoco.slice(1)">
+                    <caption>
+                      COM
+                    </caption>
+                    {{ prato }}
+                  </p>
 
-                <p></p>
+                  <p></p>
+                </div>
               </div>
-            </div>
             </div>
             <div class="dadosConsulta2">
               <label class="fadeIn" *ngIf="contentLoaded"
@@ -293,25 +295,25 @@
               <div class="linhaE"></div>
 
               <ngx-skeleton-loader
-              *ngIf="!contentLoaded"
-              [theme]="{
-                'border-radius': '5px',
-                height: '50px',
-                'background-color': '#0e1420'
-              }"
-              animation="progress"
-            >
-            </ngx-skeleton-loader>
-            <ngx-skeleton-loader
-              *ngIf="!contentLoaded"
-              [theme]="{
-                'border-radius': '5px',
-                height: '150px',
-                'background-color': '#0e1420'
-              }"
-              animation="progress"
-            >
-            </ngx-skeleton-loader>
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '150px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
 
               <div class="cardapio" *ngIf="cardapios.refeicao6.length > 0">
                 <div class="fadeIn" *ngIf="contentLoaded">
