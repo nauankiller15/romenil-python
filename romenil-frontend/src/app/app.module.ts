@@ -38,6 +38,8 @@ import { UsuarioComponent } from './account/usuario/usuario.component';
 import { ProfileComponent } from './account/profile/profile.component';
 import { TrocarSenhaComponent } from './account/trocar-senha/trocar-senha.component';
 
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +66,7 @@ import { TrocarSenhaComponent } from './account/trocar-senha/trocar-senha.compon
     TrocarSenhaComponent,
   ],
   imports: [
+    NgxSkeletonLoaderModule.forRoot(),
     MatProgressBarModule,
     BrowserAnimationsModule,
     BrowserModule,

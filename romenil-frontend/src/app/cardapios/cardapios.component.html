@@ -19,71 +19,167 @@
           </div>
           <div class="content-cardap">
             <div class="dadosConsulta2" *ngIf="cardapios.desjejum.length > 0">
-              <label><i class="fas fa-mug-hot favTit"></i> Desjejum</label>
+              <label class="fadeIn" *ngIf="contentLoaded"
+                ><i class="fas fa-mug-hot favTit"></i> Desjejum</label
+              >
               <div class="linhaE"></div>
 
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '300px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
               <div class="cardapio" *ngIf="cardapios.desjejum.length > 0">
-                <p>
-                  {{ cardapios.desjejum[0] }}
-                </p>
+                <div class="fadeIn" *ngIf="contentLoaded">
+                  <p>
+                    {{ cardapios.desjejum[0] }}
+                  </p>
 
-                <p></p>
-                <p *ngFor="let prato of cardapios.desjejum.slice(1)">
-                  <caption>
-                    COM
-                  </caption>
-                  {{ prato }}
-                </p>
+                  <p></p>
+                  <p *ngFor="let prato of cardapios.desjejum.slice(1)">
+                    <caption>
+                      COM
+                    </caption>
+                    {{ prato }}
+                  </p>
 
-                <p></p>
+                  <p></p>
+                </div>
               </div>
             </div>
 
             <div class="dadosConsulta2 cafeManha">
-              <label><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label>
+              <label class="fadeIn" *ngIf="contentLoaded"
+                ><i class="fas fa-mug-hot favTit"></i> Café da Manhã</label
+              >
               <div class="linhaE"></div>
 
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '300px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+
               <div class="cardapio" *ngIf="cardapios.cafeManha.length > 0">
-                <p>
-                  {{ cardapios.cafeManha[0] }}
-                </p>
+                <div class="fadeIn" *ngIf="contentLoaded">
+                  <p>
+                    {{ cardapios.cafeManha[0] }}
+                  </p>
 
-                <p></p>
-                <p *ngFor="let prato of cardapios.cafeManha.slice(1)">
-                  <caption>
-                    COM
-                  </caption>
-                  {{ prato }}
-                </p>
+                  <p></p>
+                  <p *ngFor="let prato of cardapios.cafeManha.slice(1)">
+                    <caption>
+                      COM
+                    </caption>
+                    {{ prato }}
+                  </p>
 
-                <p></p>
+                  <p></p>
+                </div>
               </div>
             </div>
             <div class="dadosConsulta2">
-              <label><i class="fas fa-utensils favTit"></i> Refeição 2</label>
+              <label class="fadeIn" *ngIf="contentLoaded"
+                ><i class="fas fa-utensils favTit"></i> Refeição 2</label
+              >
               <div class="linhaE"></div>
 
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '300px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+
               <div class="cardapio" *ngIf="cardapios.refeicao2.length > 0">
-                <p>
-                  {{ cardapios.refeicao2[0] }}
-                </p>
+                <div  class="fadeIn" *ngIf="contentLoaded">
+                  <p>
+                    {{ cardapios.refeicao2[0] }}
+                  </p>
 
-                <p></p>
-                <p *ngFor="let prato of cardapios.refeicao2.slice(1)">
-                  <caption>
-                    COM
-                  </caption>
-                  {{ prato }}
-                </p>
+                  <p></p>
+                  <p *ngFor="let prato of cardapios.refeicao2.slice(1)">
+                    <caption>
+                      COM
+                    </caption>
+                    {{ prato }}
+                  </p>
 
-                <p></p>
+                  <p></p>
+                </div>
               </div>
             </div>
             <div class="dadosConsulta2 almoco">
-              <label><i class="fas fa-utensils favTit"></i> Almoço</label>
+              <label class="fadeIn" *ngIf="contentLoaded"><i class="fas fa-utensils favTit"></i> Almoço</label>
               <div class="linhaE"></div>
 
+              <ngx-skeleton-loader
+              *ngIf="!contentLoaded"
+              [theme]="{
+                'border-radius': '5px',
+                height: '50px',
+                'background-color': '#0e1420'
+              }"
+              animation="progress"
+            >
+            </ngx-skeleton-loader>
+            <ngx-skeleton-loader
+              *ngIf="!contentLoaded"
+              [theme]="{
+                'border-radius': '5px',
+                height: '300px',
+                'background-color': '#0e1420'
+              }"
+              animation="progress"
+            >
+            </ngx-skeleton-loader>
+
               <div class="cardapio" *ngIf="cardapios.almoco.length > 0">
+                <div class="fadeIn" ngIf="contentLoaded">
                 <p>
                   {{ cardapios.almoco[0] }}
                 </p>
@@ -99,62 +195,140 @@
                 <p></p>
               </div>
             </div>
+            </div>
             <div class="dadosConsulta2">
-              <label><i class="fas fa-utensils favTit"></i> Refeição 4</label>
+              <label class="fadeIn" *ngIf="contentLoaded"
+                ><i class="fas fa-utensils favTit"></i> Refeição 4</label
+              >
               <div class="linhaE"></div>
+
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '300px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+
               <div class="cardapio" *ngIf="cardapios.refeicao4.length > 0">
-                <p>
-                  {{ cardapios.refeicao4[0] }}
-                </p>
+                <div class="fadeIn" *ngIf="contentLoaded">
+                  <p>
+                    {{ cardapios.refeicao4[0] }}
+                  </p>
 
-                <p></p>
-                <p *ngFor="let prato of cardapios.refeicao4.slice(1)">
-                  <caption>
-                    COM
-                  </caption>
-                  {{ prato }}
-                </p>
+                  <p></p>
+                  <p *ngFor="let prato of cardapios.refeicao4.slice(1)">
+                    <caption>
+                      COM
+                    </caption>
+                    {{ prato }}
+                  </p>
 
-                <p></p>
+                  <p></p>
+                </div>
               </div>
             </div>
             <div class="dadosConsulta2 janta">
-              <label><i class="fas fa-utensils favTit"></i> Janta</label>
+              <label class="fadeIn" *ngIf="contentLoaded"
+                ><i class="fas fa-utensils favTit"></i> Janta</label
+              >
               <div class="linhaE"></div>
+
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+              <ngx-skeleton-loader
+                *ngIf="!contentLoaded"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '300px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+
               <div class="cardapio" *ngIf="cardapios.janta.length > 0">
-                <p>
-                  {{ cardapios.janta[0] }}
-                </p>
+                <div class="fadeIn" *ngIf="contentLoaded">
+                  <p>
+                    {{ cardapios.janta[0] }}
+                  </p>
 
-                <p></p>
-                <p *ngFor="let prato of cardapios.janta.slice(1)">
-                  <caption>
-                    COM
-                  </caption>
-                  {{ prato }}
-                </p>
+                  <p></p>
+                  <p *ngFor="let prato of cardapios.janta.slice(1)">
+                    <caption>
+                      COM
+                    </caption>
+                    {{ prato }}
+                  </p>
 
-                <p></p>
+                  <p></p>
+                </div>
               </div>
             </div>
             <div class="dadosConsulta2">
-              <label><i class="fas fa-utensils favTit"></i> Refeição 6</label>
+              <label class="fadeIn" *ngIf="contentLoaded"
+                ><i class="fas fa-utensils favTit"></i> Refeição 6</label
+              >
               <div class="linhaE"></div>
 
+              <ngx-skeleton-loader
+              *ngIf="!contentLoaded"
+              [theme]="{
+                'border-radius': '5px',
+                height: '50px',
+                'background-color': '#0e1420'
+              }"
+              animation="progress"
+            >
+            </ngx-skeleton-loader>
+            <ngx-skeleton-loader
+              *ngIf="!contentLoaded"
+              [theme]="{
+                'border-radius': '5px',
+                height: '300px',
+                'background-color': '#0e1420'
+              }"
+              animation="progress"
+            >
+            </ngx-skeleton-loader>
+
               <div class="cardapio" *ngIf="cardapios.refeicao6.length > 0">
-                <p>
-                  {{ cardapios.refeicao6[0] }}
-                </p>
+                <div class="fadeIn" *ngIf="contentLoaded">
+                  <p>
+                    {{ cardapios.refeicao6[0] }}
+                  </p>
 
-                <p></p>
-                <p *ngFor="let prato of cardapios.refeicao6.slice(1)">
-                  <caption>
-                    COM
-                  </caption>
-                  {{ prato }}
-                </p>
+                  <p></p>
+                  <p *ngFor="let prato of cardapios.refeicao6.slice(1)">
+                    <caption>
+                      COM
+                    </caption>
+                    {{ prato }}
+                  </p>
 
-                <p></p>
+                  <p></p>
+                </div>
               </div>
             </div>
           </div>
@@ -172,14 +346,14 @@
             para meu email
           </button>
           <div class="loaderBtn">
-            <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar para meu email
+            <i class="fas fa-envelope" style="margin-right: 10px"></i>Enviar
+            para meu email
             <ngx-loading
               [show]="loading"
               [config]="{ backdropBorderRadius: '3px' }"
               [template]="customLoadingTemplate"
             ></ngx-loading>
             <ng-template #customLoadingTemplate> </ng-template>
-           
           </div>
           <script>
             var myStyle =
@@ -188,8 +362,9 @@
               myStyle + jQuery(".table_disp").html()
             );
           </script>
-           <button class="btn success" routerLink="/welcome_exclusive">
-            <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar para o início
+          <button class="btn success" routerLink="/welcome_exclusive">
+            <i class="fas fa-undo" style="margin-right: 10px"></i>Voltar para o
+            início
           </button>
         </div>
         <div class="linhaE"></div>
