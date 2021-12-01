@@ -181,7 +181,7 @@
               </ngx-skeleton-loader>
 
               <div class="cardapio" *ngIf="cardapios.almoco.length > 0">
-                <div class="fadeIn" ngIf="contentLoaded">
+                <div class="fadeIn" *ngIf="contentLoaded">
                   <p>
                     {{ cardapios.almoco[0] }}
                   </p>
