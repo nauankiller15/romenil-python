@@ -247,6 +247,7 @@ nav .menuItems li:hover::before {
   box-shadow: 0 0 12px #1111114f !important;
   color: #ffffff;
   font-size: 0.83em;
+  top: 20px;
 }
 
 .toast-container * {

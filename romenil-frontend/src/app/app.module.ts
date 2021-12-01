@@ -78,7 +78,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
       timeOut: 3800,
       extendedTimeOut: 3500,
       closeButton: true,
-      positionClass: 'toast-bottom-left',
+      positionClass: 'toast-top-center',
       enableHtml: true,
       progressBar: true,
     }),
