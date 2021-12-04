@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Conta } from '../account/models';
 import { AccountService } from '../shared/account-service/account.service';
@@ -17,8 +18,9 @@ export class WelcomePagoComponent implements OnInit {
   constructor(
     private accountService: AccountService,
     private toastrService: ToastrService,
+    private router: Router
   ) { 
-    this.getConta();
+    this.getUsuario();
   }
 
   ngOnInit(): void {
@@ -30,6 +32,26 @@ export class WelcomePagoComponent implements OnInit {
       $('body').removeClass('noborder');
     });
     $('body').addClass('noborder');
+  }
+
+  getUsuario() {
+    this.accountService.usuario().subscribe(
+      (data) => {
+        if (data.user) {
+          if (data.ativo) {
+            this.getConta();
+          } else {
+            this.router.navigate(['/conversao']);
+          }
+        } else {
+          this.router.navigate(['/welcome']);
+        }
+      },
+      (error) => {
+        const erro = new Erro(this.toastrService, error);
+        erro.exibir();
+      }
+    );
   }
 
   getConta() {
