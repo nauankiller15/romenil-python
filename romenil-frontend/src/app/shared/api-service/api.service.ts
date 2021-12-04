@@ -10,7 +10,6 @@ export class ApiService {
 
   private readonly baseUrl = environment.baseUrl;
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json'});
-  private httpHeaders2 = new HttpHeaders({ 'Content-Type': 'text/html'});
   
 
   constructor(private httpClient: HttpClient) {}
@@ -28,7 +27,7 @@ export class ApiService {
   }
 
   atualizar(url: string, dados: any): Observable<any> {
-    return this.httpClient.put(this.baseUrl + url + `/${dados.id}`, dados, {
+    return this.httpClient.put(this.baseUrl + url + `/${dados.id}/`, dados, {
       headers: this.httpHeaders,
     });
   }

@@ -3,7 +3,6 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 
 from rest_framework import serializers
-from rest_framework.permissions import IsAuthenticated
 
 from rest_framework_jwt.serializers import JSONWebTokenSerializer
 from rest_framework_jwt.settings import api_settings
@@ -59,6 +58,13 @@ class AtualizarContaSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'first_name', 'last_name', 'email']
+
+class MudarSenhaSerializer(serializers.Serializer):
+    old_password = serializers.CharField(required=True)
+    password1 = serializers.CharField(required=True)
+    password2 = serializers.CharField(required=True)
+
+
 
 # ========= login ==========================
 jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER

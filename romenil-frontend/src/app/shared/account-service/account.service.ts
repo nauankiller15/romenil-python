@@ -89,9 +89,19 @@ export class AccountService {
     }
     return false;
   }
+
+  getId() {
+    const token = this.getAuthorizationToken();
+    if (token) {
+      const dataToken = this.getDataToken(token);
+      return dataToken.user_id;
+    }
+    return 0;
+  }
 }
 
 interface Token {
   token: string;
   exp: number;
+  user_id: number;
 }

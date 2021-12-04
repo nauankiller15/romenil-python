@@ -11,28 +11,46 @@
         <h3>Trocar senha</h3>
       </div>
       <div class="containerED">
-        <form #form="ngForm">
+        <form #form="ngForm" (submit)="mudarSenha()">
           <div class="formPerfil">
             <div class="form__group field">
               <input
+                [(ngModel)]="dados.old_password"
                 type="password"
                 class="form__field"
-                placeholder="Alterar minha senha"
-                name="senha"
-                id="senha"
+                placeholder="Senha antiga"
+                name="old_password"
+                id="old_password"
                 required
               />
               <label for="senha" class="form__label"
-                >Digite aqui sua nova senha</label
+                >Digite aqui sua senha antiga</label
               >
             </div>
+
             <div class="form__group field">
               <input
+                [(ngModel)]="dados.password1"
                 type="password"
                 class="form__field"
                 placeholder="Alterar minha senha"
-                name="senhaForce"
-                id="senhaForce"
+                name="password1"
+                id="password1"
+                required
+              />
+              <label for="password1" class="form__label"
+                >Digite aqui sua nova senha</label
+              >
+            </div>
+
+            <div class="form__group field">
+              <input
+                [(ngModel)]="dados.password2"
+                type="password"
+                class="form__field"
+                placeholder="Alterar minha senha"
+                name="password2"
+                id="password2"
                 required
               />
               <label for="senhaForce" class="form__label"
@@ -40,12 +58,12 @@
               >
             </div>
           </div>
-          <button id="abrirConta" type="button" class="btn enviarbt">
+          <button id="mudarSenha" type="submit" class="btn enviarbt">
             <i class="fas fa-check" style="margin-right: 10px"></i>Salvar
             alterações
           </button>
           <button
-            id="abrirConta"
+            id="voltar"
             type="button"
             class="btn success"
             routerLink="/welcome_exclusive"
