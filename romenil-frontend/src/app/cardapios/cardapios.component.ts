@@ -18,13 +18,15 @@ export class CardapiosComponent implements OnInit {
   cardapios = new Cardapios();
   public loading = false;
 
-  // CARREGADOR
+  // CARREGADOR NG SKELETON
   animation = 'pulse';
   contentLoaded = false;
+  contentLoadedPerfil = false;
   count = 10;
   widthHeightSizeInPixels = 50;
 
   intervalId: number | null = null;
+  //
 
   constructor(
     private accountService: AccountService,
@@ -36,11 +38,7 @@ export class CardapiosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // CARREGADOR TIMEOUT
-    setTimeout(() => {
-      this.contentLoaded = true;
-    }, 3500);
-
+    // SKELETON LOADER
     this.intervalId = window.setInterval(() => {
       this.animation = this.animation === 'pulse' ? 'progress-dark' : 'pulse';
       this.count = this.count === 4 ? 5 : 4;
@@ -97,11 +95,13 @@ export class CardapiosComponent implements OnInit {
   }
 
   getConta() {
+    this.contentLoadedPerfil = true;
     this.accountService.conta().subscribe(
       (data) => {
         this.conta = data;
       },
       (error) => {
+        this.contentLoadedPerfil = false;
         const erro = new Erro(this.toastrService, error);
         erro.exibir();
       }
@@ -112,6 +112,7 @@ export class CardapiosComponent implements OnInit {
     this.apiService.listar('cardapio').subscribe(
       (data) => {
         if (data.pronto == true) {
+          this.contentLoaded = true;
           let dados = data.dados;
           for (let cardapio in dados) {
             if (dados[cardapio].refeicao == 0) {

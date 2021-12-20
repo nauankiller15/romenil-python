@@ -15,7 +15,25 @@
             <div class="planejamento">
               <h2>Planejamento Alimentar</h2>
             </div>
-            <h3>Alimentação de {{ conta.first_name }} {{ conta.last_name }}</h3>
+            <h3>
+              Alimentação de
+              <b class="fadeIn" *ngIf="contentLoadedPerfil"
+                >{{ conta.first_name }} {{ conta.last_name }}
+              </b>
+              <ngx-skeleton-loader
+              *ngIf="!contentLoadedPerfil"
+                [theme]="{
+                  'border-radius': '5px',
+                  height: '50px',
+                  width: '300px',
+                  'margin-bottom': '-13px',
+                  'margin-left': '3px',
+                  'background-color': '#0e1420'
+                }"
+                animation="progress"
+              >
+              </ngx-skeleton-loader>
+            </h3>
           </div>
           <div class="content-cardap">
             <div class="dadosConsulta2" *ngIf="cardapios.desjejum.length > 0">

@@ -28,7 +28,22 @@
             <div>
               <h5 class="modifcadoT">
                 Cardápio gerado em:
-                {{ formulario.modificado_em | date: "dd/M/Y" }}
+                <b class="fadeIn" *ngIf="contentLoadedData">{{
+                  formulario.modificado_em | date: "dd/M/Y"
+                }}</b>
+                <ngx-skeleton-loader
+                  *ngIf="!contentLoadedData"
+                  [theme]="{
+                    'border-radius': '5px',
+                    height: '34px',
+                    width: '170px',
+                    'margin-bottom': '-12px',
+                    'margin-left': '10px',
+                    'background-color': '#0e1420'
+                  }"
+                  animation="progress"
+                >
+                </ngx-skeleton-loader>
               </h5>
             </div>
             <form class="setMarg" (disabled)="(true)">

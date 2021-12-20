@@ -17,6 +17,7 @@ export class TopBarComponent implements OnInit {
     public loaderService:LoaderService) {}
 
   ngOnInit(): void {
+    
     $('.menu-box').on('click', function () {
       $('.box-menu').toggle(200);
     });
