@@ -23,6 +23,9 @@ class UsuarioSerializer(serializers.ModelSerializer):
 class ContaSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
+        if User.objects.filter(username=validated_data['email']).last():
+            raise serializers.ValidationError({'Email': 'Este Email já está cadastrado!'})
+
         user = User.objects.create(
             username = validated_data['email'], 
             first_name = validated_data['first_name'], 
