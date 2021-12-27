@@ -104,7 +104,12 @@ export class LoginComponent implements OnInit {
         if (data.ativo == true) {
           this.router.navigate(['welcome_exclusive']);
         } else {
-          this.router.navigate(['welcome']);
+          let next = localStorage.getItem('next');
+          if (next && next == 'criar-usuario') {
+            this.router.navigate(['criar-usuario']);
+          } else {
+            this.router.navigate(['welcome']);
+          }
         }
       },
       (error) => {
