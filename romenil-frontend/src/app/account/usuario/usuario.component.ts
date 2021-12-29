@@ -41,6 +41,7 @@ export class UsuarioComponent implements OnInit {
     this.loading = true;
     this.accountService.createUser(this.usuario).subscribe(
       (data) => {
+        localStorage.removeItem('next')
         this.toastrService.success('Dados cadastrados com sucesso!');
         this.router.navigate(['/formulario']);
       },

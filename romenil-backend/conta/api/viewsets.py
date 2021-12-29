@@ -19,6 +19,7 @@ class ContaViewSet(CreateAPIView, GenericViewSet):
     queryset = User.objects.all()
     serializer_class = ContaSerializer
     permission_classes = [AllowAny]
+    
 
 class AtualizarContaViewSet(UpdateAPIView, GenericViewSet):
     

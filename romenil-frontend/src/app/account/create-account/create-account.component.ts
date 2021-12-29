@@ -57,13 +57,16 @@ export class CreateAccountComponent implements OnInit {
     $('#generateCard').slideDown(450);
   }
     
-  criarConta() {
+  criarConta(next: string) {
     this.loading = true;
     this.accountService.createAccount(this.conta).subscribe(
       (data) => {
         this.conta = data;
         this.toastrService.success('Conta criada com sucesso');
         this.loading = false;
+        if (next == 'criar-usuario') {
+          localStorage.setItem('next', 'criar-usuario');
+        }
         this.router.navigate(['/login']);
       },
       (error) => {

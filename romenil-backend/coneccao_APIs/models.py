@@ -38,7 +38,7 @@ class Eduzz:
     headers = {
         'token': ''
     }
-    content_ids = (1048167, 1048227, 1048233, 1048233)
+    content_ids = (1048167, 1048227, 1048233, 1048233, 1108538)
 
     def __init__(self, cpf_cnpj: str):
         self.client_document = cpf_cnpj.replace('.', '').replace('-', '').replace('/', '')    
